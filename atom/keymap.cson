@@ -1,0 +1,9 @@
+# Because Atom needs to work more like sublime!
+
+'atom-workspace atom-text-editor:not([mini])':
+  'ctrl-up': 'core:move-up'
+  'ctrl-down': 'core:move-down'
+
+'body':
+  'ctrl-shift-up': 'editor:move-line-up'
+  'ctrl-shift-down': 'editor:move-line-down'
