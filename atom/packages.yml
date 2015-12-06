@@ -21,6 +21,4 @@ packages:
     - react
     - script
     - trailint-spaces
-
-themes:
     - monokai
