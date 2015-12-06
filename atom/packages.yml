@@ -1,24 +1,23 @@
-packages:
-    - sublime-style-column-selection
-    - zen
-    - activate-power-mode
-    - atom-alignment
-    - atom-html-preview
-    - autoclose-html
-    - change-case
-    - file-icons
-    - glowing-cursor
-    - highlight-selected
-    - keybinding-cheatsheet
-    - language-babel
-    - linter
-    - linter-eslint
-    - merge-conflicts
-    - minimap
-    - minimap-highlight-selected
-    - multi-cursor
-    - open-recent
-    - react
-    - script
-    - trailint-spaces
-    - monokai
+- sublime-style-column-selection
+- zen
+- activate-power-mode
+- atom-alignment
+- atom-html-preview
+- autoclose-html
+- change-case
+- file-icons
+- glowing-cursor
+- highlight-selected
+- keybinding-cheatsheet
+- language-babel
+- linter
+- linter-eslint
+- merge-conflicts
+- minimap
+- minimap-highlight-selected
+- multi-cursor
+- open-recent
+- react
+- script
+- trailint-spaces
+- monokai
