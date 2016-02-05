@@ -1,0 +1,18 @@
+GTK+ Theme: Numix
+Icons: Ultra-Flat-Orange
+Cursor: Adwaita (default)
+Shell Theme: unity-gnome
+Desktop Icons:
+  - Home
+  - Network Servers
+  - Trash
+Power button action: Interactive
+Close lid:
+  Battery: Nothing
+  Plugged in: Nothing
+Clock:
+  - Date
+  - Seconds
+Titlebar buttons:
+  - Maximize
+  - Minimize
