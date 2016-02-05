@@ -1,0 +1,3 @@
+- Coverflow alt-tab
+- Drop down terminal
+- Lock Keys
