@@ -18,6 +18,7 @@ if __name__ == '__main__':
         args = ['sudo', sys.executable] + sys.argv + [os.environ]
         os.execlpe('sudo', *args)
     elif input("Are you sure you want to install (allthethings)? [Y/N]: ").lower() == 'y':
+        os.system('./install-waf.sh')
         waf_scripts = []
         for key, func in get_functions().items():
             if type(func).__name__ == 'function':
@@ -26,4 +27,4 @@ if __name__ == '__main__':
         for func in waf_scripts:
             cmd = "waf {}".format(func)
             print("Running {}".format(cmd))
-            os.system(cmd)
+            os.system("sudo " + cmd)
