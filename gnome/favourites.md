@@ -1,0 +1,4 @@
+- Firefox
+- Atom
+- Files
+- spotify
