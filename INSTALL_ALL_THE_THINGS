@@ -11,12 +11,13 @@ def get_functions():
     return ns
 
 if __name__ == '__main__':
-    waf_scripts = []
-    for key, func in get_functions().items():
-        if type(func).__name__ == 'function':
-            waf_scripts.append(key)
+    if input("Are you sure you want to install (allthethings)? [Y/N]: ").lower() == 'y':
+        waf_scripts = []
+        for key, func in get_functions().items():
+            if type(func).__name__ == 'function':
+                waf_scripts.append(key)
 
-    for func in waf_scripts:
-        cmd = "waf {}".format(func)
-        print("Running {}".format(cmd))
-        os.system(cmd)
+        for func in waf_scripts:
+            cmd = "waf {}".format(func)
+            print("Running {}".format(cmd))
+            os.system(cmd)
