@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 
 import os
+import sys
+
 
 def get_functions():
     ns = {}
@@ -11,7 +13,11 @@ def get_functions():
     return ns
 
 if __name__ == '__main__':
-    if input("Are you sure you want to install (allthethings)? [Y/N]: ").lower() == 'y':
+    if os.geteuid() != 0:
+        print("Not running as root. Elevating...")
+        args = ['sudo', sys.executable] + sys.argv + [os.environ]
+        os.execlpe('sudo', *args)
+    elif input("Are you sure you want to install (allthethings)? [Y/N]: ").lower() == 'y':
         waf_scripts = []
         for key, func in get_functions().items():
             if type(func).__name__ == 'function':
