@@ -1,3 +1,8 @@
 - Coverflow alt-tab
+- Dash to Dock
 - Drop down terminal
+- Laine
 - Lock Keys
+- Removable Drive Menu
+- Sound output device chooser
+- TopIcons Plus
