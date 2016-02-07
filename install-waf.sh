@@ -11,7 +11,6 @@ wget https://waf.io/waf-1.8.19
 mv waf-1.8.19 $WAF_DIR/waf
 chmod +x $WAF_DIR/waf
 
-echo "PATH=$WAF_DIR:$PATH" >> ~/.bashrc
-. ~/.bashrc
+PATH=$WAF_DIR:$PATH
 
 echo "Waf Installed Successfully!"
