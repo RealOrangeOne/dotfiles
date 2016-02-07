@@ -30,6 +30,17 @@ def apt_install_extras(ctx):
     for package in packages:
         print("apt-get install {} -y".format(package))
 
+def install_atom(ctx):
+    FILENAME = "atom.deb"
+    os.system('wget https://atom.io/download/deb -O {}'.format(FILENAME))
+    os.system('dpkg -i {}'.format(FILENAME))
+    os.remove(FILENAME)
+
+def install_atom_packages(ctx):
+    packages = json.load(open(DIR + '/atom/packages.json'))
+    packages = " ".join(packages)
+    os.system("apm install {}".format(packages))
+
 
 if __name__ == '__main__':
     print("Please run this file using waf, not directly.")
