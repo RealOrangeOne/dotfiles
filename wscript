@@ -3,6 +3,9 @@ import json, os, shutil
 
 DIR = os.getcwd()
 
+def get_json(path):
+    return json.load(open(DIR + path))
+
 def update_and_upgrade(ctx):
     os.system('apt-get update -y')
     os.system('apt-get upgrade -y')
@@ -10,14 +13,12 @@ def update_and_upgrade(ctx):
 
 
 def apt_install_core(ctx):
-    packages = json.load(open(DIR + '/apt/apt-installs-core.json'))
-    for package in packages:
+    for package in get_json('/apt/apt-installs-core.json'):
         os.system("apt-get install {} -y".format(package))
 
 
 def add_apt_keys(ctx):
-    keys = json.load(open(DIR + '/apt/apt-keys.json'))
-    for key in keys:
+    for key in get_json('/apt/apt-keys.json'):
         os.system("wget -O - {} | apt-key add -".format(key))
 
 
@@ -26,14 +27,12 @@ def add_apt_sources(ctx):
 
 
 def add_apt_repos(ctx):
-    repos = json.load(open(DIR + '/apt/apt-repos.json'))
-    for repo in repos:
+    for repo in get_json('/apt/apt-repos.json'):
         os.system("add-apt-repository {} -y".format(repo))
 
 
 def apt_install_extras(ctx):
-    packages = json.load(open(DIR + '/apt/apt-installs-extra.json'))
-    for package in packages:
+    for package in get_json('/apt/apt-installs-extra.json'):
         os.system("apt-get install {} -y".format(package))
 
 
@@ -42,8 +41,7 @@ def run_custom_installs(ctx):
 
 
 def install_atom_packages(ctx):
-    packages = json.load(open(DIR + '/atom/packages.json'))
-    packages = " ".join(packages)
+    packages = " ".join(get_json('/atom/packages.json'))
     os.system("apm install {}".format(packages))
 
 

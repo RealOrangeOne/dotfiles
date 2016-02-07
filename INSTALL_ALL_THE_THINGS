@@ -14,9 +14,7 @@ def get_functions():
 
 if __name__ == '__main__':
     if os.geteuid() != 0:
-        print("Not running as root. Elevating...")
-        args = ['sudo', sys.executable] + sys.argv + [os.environ]
-        os.execlpe('sudo', *args)
+        print("Please run as root!")
     elif input("Are you sure you want to install (allthethings)? [Y/N]: ").lower() == 'y':
         os.system('./install-waf.sh')
         waf_scripts = []
