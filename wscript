@@ -3,7 +3,7 @@ import json, os, shutil
 
 DIR = os.getcwd()
 
-def get_json(path):
+def _get_json(path):
     return json.load(open(DIR + path))
 
 def update_and_upgrade(ctx):
@@ -13,12 +13,12 @@ def update_and_upgrade(ctx):
 
 
 def apt_install_core(ctx):
-    for package in get_json('/apt/apt-installs-core.json'):
+    for package in _get_json('/apt/apt-installs-core.json'):
         os.system("apt-get install {} -y".format(package))
 
 
 def add_apt_keys(ctx):
-    for key in get_json('/apt/apt-keys.json'):
+    for key in _get_json('/apt/apt-keys.json'):
         os.system("wget -O - {} | apt-key add -".format(key))
 
 
@@ -27,12 +27,12 @@ def add_apt_sources(ctx):
 
 
 def add_apt_repos(ctx):
-    for repo in get_json('/apt/apt-repos.json'):
+    for repo in _get_json('/apt/apt-repos.json'):
         os.system("add-apt-repository {} -y".format(repo))
 
 
 def apt_install_extras(ctx):
-    for package in get_json('/apt/apt-installs-extra.json'):
+    for package in _get_json('/apt/apt-installs-extra.json'):
         os.system("apt-get install {} -y".format(package))
 
 
@@ -41,7 +41,7 @@ def run_custom_installs(ctx):
 
 
 def install_atom_packages(ctx):
-    packages = " ".join(get_json('/atom/packages.json'))
+    packages = " ".join(_get_json('/atom/packages.json'))
     os.system("apm install {}".format(packages))
 
 
@@ -50,5 +50,5 @@ def install_configs(ctx):
 
 
 if __name__ == '__main__':
-    print("Please run this file using waf, not directly.")
+    print("Please run this file using the install script, not directly.")
     exit(1)
