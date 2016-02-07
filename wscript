@@ -36,11 +36,10 @@ def apt_install_extras(ctx):
     for package in packages:
         os.system("apt-get install {} -y".format(package))
 
-def install_atom(ctx):
-    FILENAME = "atom.deb"
-    os.system('wget https://atom.io/download/deb -O {}'.format(FILENAME))
-    os.system('dpkg -i {}'.format(FILENAME))
-    os.remove(FILENAME)
+
+def run_custom_installs(ctx):
+    os.system('apt/custom-installs.sh')
+
 
 def install_atom_packages(ctx):
     packages = json.load(open(DIR + '/atom/packages.json'))
@@ -50,6 +49,7 @@ def install_atom_packages(ctx):
 
 def install_configs(ctx):
     shutil.copyfile(DIR + "/config/terminator.conf", "~/.config/terminator/config")
+
 
 if __name__ == '__main__':
     print("Please run this file using waf, not directly.")
