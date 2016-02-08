@@ -3,8 +3,10 @@ import json, os, shutil
 
 DIR = os.getcwd()
 
+
 def _get_json(path):
     return json.load(open(DIR + path))
+
 
 def update_and_upgrade():
     os.system('apt-get update -y')
@@ -43,6 +45,10 @@ def run_custom_installs():
 def install_atom_packages():
     packages = " ".join(_get_json('/atom/packages.json'))
     os.system("apm install {}".format(packages))
+
+
+def export_atom_config():
+    os.system("cp -R atom/* ~/.atom/")
 
 
 def install_configs():
