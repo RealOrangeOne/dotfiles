@@ -7,9 +7,11 @@ DIR = os.getcwd()
 def _get_json(path):
     return json.load(open(DIR + path))
 
-
-def update_and_upgrade():
+def update():
     os.system('apt-get update -y')
+
+
+def apt_upgrade():
     os.system('apt-get upgrade -y')
     os.system('apt-get dist-upgrade -y')
 

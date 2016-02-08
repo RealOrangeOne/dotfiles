@@ -2,24 +2,28 @@
 
 import os
 import sys
+from scripts.install_dotfiles import *
 
+EXEC_ORDER = [
+    update,
+    apt_upgrade,
+    apt_install_core,
+    add_apt_keys,
+    add_apt_sources,
+    add_apt_repos,
+    update,
+    apt_install_extra,
+    run_custom_installs,
+    install_atom_packages,
+    export_atom_config,
+    install_configs
+]
 
-def get_functions():
-    ns = {}
-    fn = os.path.join(os.path.dirname(__file__), 'wscript')
-    with open(fn) as f:
-        code = compile(f.read(), fn, 'exec')
-        eval(code, ns, ns)
-    return ns
 
 if __name__ == '__main__':
     if os.geteuid() != 0:
         print("Please run as root!")
     elif input("Are you sure you want to install (allthethings)? [Y/N]: ").lower() == 'y':
-        scripts = []
-        for key, func in get_functions().items():
-            if type(func).__name__ == 'function' and func.__name__[0] != '_':
-                scripts.append(func)
-
-        for func in scripts:
-            func()
+        for script in EXEC_ORDER:
+            script()
+            print("\n>>{} Executed.\n".format(script.__name__))
