@@ -2,12 +2,11 @@
 Settings and Preferences for transfer between machines
 
 ## Usage
-First, install waf using the `install-waf.sh` script.
-
-Next, simply run `waf <section>` to install the specific section.
-
-
-## Automation
-Alternatively, you can run `./INSTALL_ALL_THE_THINGS` to install all the section automatically.
-
-__Note__: This script will run them in the order they appear in the `wscript` file. If something needs to be done first, put it first in the file!
+Simple:
+1. run `sudo ./INSTALL_ALL_THE_THINGS`
+2. Sit back
+3. Wait
+4. Wait some more
+5. Fixany errors that come up
+6. Wait some more
+7. Enjoy computer!
