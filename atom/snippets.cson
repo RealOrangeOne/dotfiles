@@ -1,0 +1,4 @@
+'.source.java':
+  'System.out.println()':
+    'prefix': 'sout'
+    'body': 'System.out.println($1);$2'
