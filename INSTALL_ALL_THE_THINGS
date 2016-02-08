@@ -12,7 +12,7 @@ EXEC_ORDER = [
     add_apt_sources,
     add_apt_repos,
     update,
-    apt_install_extra,
+    apt_install_extras,
     run_custom_installs,
     install_atom_packages,
     export_atom_config,
