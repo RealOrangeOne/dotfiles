@@ -55,6 +55,7 @@ def export_atom_config():
 
 def install_configs():
     shutil.copyfile(DIR + "/config/terminator.conf", "~/.config/terminator/config")
+    shutil.copyfile(DIR + "/bash/.bash_aliases", "~/.bashrc")
 
 
 if __name__ == '__main__':
