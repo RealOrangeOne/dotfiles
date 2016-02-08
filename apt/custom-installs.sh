@@ -20,6 +20,7 @@ apt-get install nodejs -y
 echo ">> Installing other packages..."
 wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.30.2/install.sh | bash
 wget -O - https://raw.githubusercontent.com/nvbn/thefuck/master/install.sh | sh - && $0
+wget -qO- http://plasmasturm.org/code/vistafonts-installer/vistafonts-installer | bash
 
 
 echo ">> Cleaning up..."
