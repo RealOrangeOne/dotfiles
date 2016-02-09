@@ -14,5 +14,5 @@ jsonlint -q atom/packages.json
 echo ">> Validating Python..."
 pip install flake8
 
-flake8 *.py --ignore=E128,E501 --exclude=__init__.py
+flake8 scripts/install_dotfiles.py --ignore=E128,E501
 flake8 INSTALL_ALL_THE_THINGS --ignore=E128,E501
