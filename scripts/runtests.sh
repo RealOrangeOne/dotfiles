@@ -14,4 +14,4 @@ jsonlint -q atom/packages.json
 echo ">> Validating Python..."
 pip install flake8
 
-flake8 * --ignore=E128,E501 --exclude=env/,node_modules/
+flake8 * --ignore=E128,E501 --exclude=venv/,node_modules/
