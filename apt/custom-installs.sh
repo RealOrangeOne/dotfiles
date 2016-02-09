@@ -6,7 +6,7 @@ set -e
 echo ">> Collecting Packages..."
 wget https://atom.io/download/deb -O atom.deb
 wget "https://www.astrill.com/downloads/astrill-setup-linux64.deb?mirror=uk" -O astrill.deb
-curl -sL https://deb.nodesource.com/setup_5.x | -E bash -
+curl -sL https://deb.nodesource.com/setup_5.x | bash -
 
 echo ">> Installing Packages..."
 dpkg -i atom.deb
