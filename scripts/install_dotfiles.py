@@ -19,7 +19,7 @@ def apt_upgrade():
 
 
 def apt_install_core():
-    packages = " ".join(_get_json('/apt/apt-installs-core.json')):
+    packages = " ".join(_get_json('/apt/apt-installs-core.json'))
     os.system("apt-get install {} -y".format(packages))
 
 
@@ -38,7 +38,7 @@ def add_apt_repos():
 
 
 def apt_install_extras():
-    packages = " ".join(_get_json('/apt/apt-installs-extra.json')):
+    packages = " ".join(_get_json('/apt/apt-installs-extra.json'))
     os.system("apt-get install {} -y".format(packages))
 
 
