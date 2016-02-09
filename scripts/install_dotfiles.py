@@ -1,11 +1,13 @@
 #!/usr/bin/env python3
 import json, os, shutil
 
+
 DIR = os.getcwd()
 
 
 def _get_json(path):
     return json.load(open(DIR + path))
+
 
 def update():
     os.system('apt-get update -y')
