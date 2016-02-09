@@ -11,8 +11,9 @@ EXEC_ORDER = [
     add_apt_sources,
     add_apt_repos,
     update,
-    apt_install_extras,
     run_custom_installs,
+    update,
+    apt_install_extras,
     install_atom_packages,
     export_atom_config,
     install_configs

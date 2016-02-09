@@ -19,8 +19,8 @@ def apt_upgrade():
 
 
 def apt_install_core():
-    for package in _get_json('/apt/apt-installs-core.json'):
-        os.system("apt-get install {} -y".format(package))
+    packages = " ".join(_get_json('/apt/apt-installs-core.json')):
+    os.system("apt-get install {} -y".format(packages))
 
 
 def add_apt_keys():
@@ -38,8 +38,8 @@ def add_apt_repos():
 
 
 def apt_install_extras():
-    for package in _get_json('/apt/apt-installs-extra.json'):
-        os.system("apt-get install {} -y".format(package))
+    packages = " ".join(_get_json('/apt/apt-installs-extra.json')):
+    os.system("apt-get install {} -y".format(packages))
 
 
 def run_custom_installs():
@@ -52,10 +52,12 @@ def install_atom_packages():
 
 
 def export_atom_config():
+    os.mkdir("~/.atom/")
     os.system("cp -R atom/* ~/.atom/")
 
 
 def install_configs():
+    os.mkdir("~/.config/terminator/")
     shutil.copyfile(DIR + "/config/terminator.conf", "~/.config/terminator/config")
     shutil.copyfile(DIR + "/bash/.bash_aliases", "~/.bashrc")
 
