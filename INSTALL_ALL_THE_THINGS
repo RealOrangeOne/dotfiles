@@ -14,6 +14,7 @@ EXEC_ORDER = [
     run_custom_installs,
     update,
     apt_install_extras,
+    source,
     install_atom_packages,
     export_atom_config,
     install_configs

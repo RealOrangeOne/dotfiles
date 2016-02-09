@@ -52,14 +52,18 @@ def install_atom_packages():
 
 
 def export_atom_config():
-    os.mkdir("~/.atom/")
+    os.makedirs("~/.atom", exist_ok=True)
     os.system("cp -R atom/* ~/.atom/")
 
 
 def install_configs():
-    os.mkdir("~/.config/terminator/")
+    os.makedirs("~/.config/terminator/", exist_ok=True)
     shutil.copyfile(DIR + "/config/terminator.conf", "~/.config/terminator/config")
-    shutil.copyfile(DIR + "/bash/.bash_aliases", "~/.bashrc")
+    shutil.copyfile(DIR + "/bash/.bash_aliases", "~/.bash_aliases")
+
+
+def source():
+    os.system(". ~/.bashrc")
 
 
 if __name__ == '__main__':
