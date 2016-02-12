@@ -5,6 +5,9 @@
   "mutate",
   "nodejs",
   "owncloud-client",
+  "remmina",
+  "remmina-plugin-rdp",
+  "libfreerdp-plugins-standard",
   "virtualbox-5.0",
   "zeal"
 ]
