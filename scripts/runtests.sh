@@ -3,7 +3,7 @@
 set -e
 
 echo ">> Validating JSON..."
-npm install jsonlint -g
+npm install jsonlint
 jsonlint -q apt/apt-installs-core.json
 jsonlint -q apt/apt-installs-extra.json
 jsonlint -q apt/apt-keys.json
