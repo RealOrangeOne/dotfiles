@@ -1,21 +1,24 @@
 #!/usr/bin/env bash
 
+HCLINE="deb http://downloads.hipchat.com/linux/apt stable main"
+HCFILE=/etc/apt/sources.list.d/atlassian-hipchat.list
 
-if [ -a /etc/apt/sources.list.d/atlassian-hipchat.list ]; then
-  echo "deb http://downloads.hipchat.com/linux/apt stable main" >> /etc/apt/sources.list.d/atlassian-hipchat.list
-fi
+ILINE="deb http://apt.insynchq.com/ubuntu wily non-free contrib"
+IFILE=/etc/apt/sources.list.d/atlassian-hipchat.list
 
+VLINE="deb http://download.virtualbox.org/virtualbox/debian wily contrib"
+VFILE=/etc/apt/sources.list.d/virtualbox.list
 
-if [ -a /etc/apt/sources.list.d/insync.list ]; then
-  echo "deb http://apt.insynchq.com/ubuntu wily non-free contrib" >> /etc/apt/sources.list.d/insync.list
-fi
-
-
-if [ -a /etc/apt/sources.list.d/virtualbox.list ]; then
-  echo "deb http://download.virtualbox.org/virtualbox/debian wily contrib" >> /etc/apt/sources.list.d/virtualbox.list
-if
+OCLINE="deb http://download.opensuse.org/repositories/isv:/ownCloud:/desktop/xUbuntu_15.10/ /"
+OCFILE=/etc/apt/sources.list.d/owncloud-client.list
 
 
-if [ -a /etc/apt/sources.list.d/owncloud-client.list ]; then
-  echo 'deb http://download.opensuse.org/repositories/isv:/ownCloud:/desktop/xUbuntu_15.10/ /' >> /etc/apt/sources.list.d/owncloud-client.list
-fi
+echo ">> Removing old files..."
+rm -rf $HCFILE $IFILE $VFILE $OCFILE
+touch $HCFILE $IFILE $VFILE $OCFILE
+
+echo "Adding new sources..."
+echo "$HCLINE" >> "$HCFILE"
+echo "$ILINE" >> "$IFILE"
+echo "$VLINE" >> "$VFILE"
+echo "$OCLINE" >> "$OCFILE"

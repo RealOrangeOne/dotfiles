@@ -3,6 +3,7 @@ import json, os, shutil
 
 
 DIR = os.getcwd()
+HOME = os.path.expanduser('~')
 
 
 def _get_json(path):
@@ -10,36 +11,36 @@ def _get_json(path):
 
 
 def update():
-    os.system('apt-get update -y')
+    os.system('sudo apt-get update -y')
 
 
 def apt_upgrade():
-    os.system('apt-get upgrade -y')
-    os.system('apt-get dist-upgrade -y')
+    os.system('sudo apt-get upgrade -y')
+    os.system('sudo apt-get dist-upgrade -y')
 
 
 def apt_install_core():
     packages = " ".join(_get_json('/apt/apt-installs-core.json'))
-    os.system("apt-get install {} -y".format(packages))
+    os.system("sudo apt-get install {} -y".format(packages))
 
 
 def add_apt_keys():
     for key in _get_json('/apt/apt-keys.json'):
-        os.system("wget -O - {} | apt-key add -".format(key))
+        os.system("wget -O - {} | sudo apt-key add -".format(key))
 
 
 def add_apt_sources():
-    os.system('apt/add-apt-sources.sh')
+    os.system('sudo apt/add-apt-sources.sh')
 
 
 def add_apt_repos():
     for repo in _get_json('/apt/apt-repos.json'):
-        os.system("add-apt-repository {} -y".format(repo))
+        os.system("sudo add-apt-repository {} -y".format(repo))
 
 
 def apt_install_extras():
     packages = " ".join(_get_json('/apt/apt-installs-extra.json'))
-    os.system("apt-get install {} -y".format(packages))
+    os.system("sudo apt-get install {} -y".format(packages))
 
 
 def run_custom_installs():
@@ -58,8 +59,8 @@ def export_atom_config():
 
 def install_configs():
     os.makedirs("~/.config/terminator/", exist_ok=True)
-    shutil.copyfile(DIR + "/config/terminator.conf", "~/.config/terminator/config")
-    shutil.copyfile(DIR + "/bash/.bash_aliases", "~/.bash_aliases")
+    shutil.copyfile(os.path.join(DIR, "config/terminator.conf"), os.path.expanduser("~/.config/terminator/config"))
+    shutil.copyfile(os.path.join(DIR, "bash/.bash_aliases"), os.path.expanduser("~/.bash_aliases"))
 
 
 def source():
