@@ -14,7 +14,7 @@
       "monokai"
     ]
   editor:
-    fontSize: 15
+    fontSize: 13
     invisibles:
       tab: "-"
     scrollPastEnd: true
@@ -46,6 +46,8 @@
   minimap:
     plugins:
       "highlight-selected": true
+  pigments:
+    markerType: "outline"
   "tree-view": {}
   welcome:
     showOnStartup: false
