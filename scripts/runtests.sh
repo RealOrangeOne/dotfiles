@@ -17,7 +17,7 @@ jsonlint -q yaourt/packages.json
 
 
 echo ">> Validating Python..."
-flake8 apt/exports.py --ignore=E128,E501,E401,F403
+flake8 apt/export.py --ignore=E128,E501,E401,F403
 flake8 scripts/installers.py --ignore=E128,E501,E401,F403
-flake8 yaourt/exports.py --ignore=E128,E501,E401,F403
+flake8 yaourt/export.py --ignore=E128,E501,E401,F403
 flake8 INSTALL_ALL_THE_THINGS --ignore=E128,E501,E401,F403
