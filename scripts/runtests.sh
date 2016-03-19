@@ -9,6 +9,7 @@ jsonlint -q apt/apt-installs-extra.json
 jsonlint -q apt/apt-keys.json
 jsonlint -q apt/apt-repos.json
 jsonlint -q atom/packages.json
+jsonlint -q yaourt/packages.json
 
 
 echo ">> Validating Python..."
