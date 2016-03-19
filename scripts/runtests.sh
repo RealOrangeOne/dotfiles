@@ -2,8 +2,12 @@
 
 set -e
 
-echo ">> Validating JSON..."
+echo ">> Setting up tests"
 npm install jsonlint -g
+pip install flake8
+
+
+echo ">> Validating JSON..."
 jsonlint -q apt/apt-installs-core.json
 jsonlint -q apt/apt-installs-extra.json
 jsonlint -q apt/apt-keys.json
@@ -13,8 +17,6 @@ jsonlint -q yaourt/packages.json
 
 
 echo ">> Validating Python..."
-pip install flake8
-
 flake8 atom/exports.py --ignore=E128,E501,E401,F403
 flake8 scripts/installers.py --ignore=E128,E501,E401,F403
 flake8 yaourt/exports.py --ignore=E128,E501,E401,F403
