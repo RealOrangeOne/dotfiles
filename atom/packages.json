@@ -22,5 +22,6 @@
   "trailing-spaces",
   "monokai",
   "css-edit-groups",
-  "pigments"
+  "pigments",
+  "atom-django"
 ]
