@@ -1,27 +1,517 @@
 [
-  "sublime-style-column-selection",
-  "zen",
-  "activate-power-mode",
-  "atom-alignment",
-  "atom-html-preview",
-  "change-case",
-  "file-icons",
-  "glowing-cursor",
-  "highlight-selected",
-  "keybinding-cheatsheet",
-  "language-babel",
-  "linter",
-  "linter-eslint",
-  "merge-conflicts",
-  "minimap",
-  "minimap-highlight-selected",
-  "multi-cursor",
-  "open-recent",
-  "react",
-  "script",
-  "trailing-spaces",
-  "monokai",
-  "css-edit-groups",
-  "pigments",
-  "atom-django"
+	{
+		"name": "Sublime-Style-Column-Selection",
+		"version": "1.5.1"
+	},
+	{
+		"name": "Zen",
+		"version": "0.16.4"
+	},
+	{
+		"name": "about",
+		"version": "1.4.2"
+	},
+	{
+		"name": "activate-power-mode",
+		"version": "0.5.2"
+	},
+	{
+		"name": "aesthetic-ui",
+		"version": "1.0.1",
+		"theme": "ui"
+	},
+	{
+		"name": "archive-view",
+		"version": "0.61.1"
+	},
+	{
+		"name": "atom-alignment",
+		"version": "0.12.1"
+	},
+	{
+		"name": "atom-dark-syntax",
+		"version": "0.27.0",
+		"theme": "syntax"
+	},
+	{
+		"name": "atom-dark-ui",
+		"version": "0.51.0",
+		"theme": "ui"
+	},
+	{
+		"name": "atom-django",
+		"version": "0.3.2"
+	},
+	{
+		"name": "atom-html-preview",
+		"version": "0.1.19"
+	},
+	{
+		"name": "atom-light-syntax",
+		"version": "0.28.0",
+		"theme": "syntax"
+	},
+	{
+		"name": "atom-light-ui",
+		"version": "0.43.0",
+		"theme": "ui"
+	},
+	{
+		"name": "atom-material-ui",
+		"version": "1.2.11",
+		"theme": "ui"
+	},
+	{
+		"name": "autocomplete-atom-api",
+		"version": "0.10.0"
+	},
+	{
+		"name": "autocomplete-css",
+		"version": "0.11.0"
+	},
+	{
+		"name": "autocomplete-html",
+		"version": "0.7.2"
+	},
+	{
+		"name": "autocomplete-plus",
+		"version": "2.29.1"
+	},
+	{
+		"name": "autocomplete-snippets",
+		"version": "1.10.0"
+	},
+	{
+		"name": "autoflow",
+		"version": "0.27.0"
+	},
+	{
+		"name": "autosave",
+		"version": "0.23.1"
+	},
+	{
+		"name": "background-tips",
+		"version": "0.26.0"
+	},
+	{
+		"name": "base16-tomorrow-dark-theme",
+		"version": "1.1.0",
+		"theme": "syntax"
+	},
+	{
+		"name": "base16-tomorrow-light-theme",
+		"version": "1.1.1",
+		"theme": "syntax"
+	},
+	{
+		"name": "bookmarks",
+		"version": "0.38.2"
+	},
+	{
+		"name": "bracket-matcher",
+		"version": "0.81.0"
+	},
+	{
+		"name": "change-case",
+		"version": "0.6.0"
+	},
+	{
+		"name": "color-picker",
+		"version": "2.1.1"
+	},
+	{
+		"name": "command-palette",
+		"version": "0.38.0"
+	},
+	{
+		"name": "css-edit-groups",
+		"version": "0.4.2"
+	},
+	{
+		"name": "deprecation-cop",
+		"version": "0.54.1"
+	},
+	{
+		"name": "dev-live-reload",
+		"version": "0.47.0"
+	},
+	{
+		"name": "encoding-selector",
+		"version": "0.21.0"
+	},
+	{
+		"name": "file-icons",
+		"version": "1.7.9"
+	},
+	{
+		"name": "find-and-replace",
+		"version": "0.199.0"
+	},
+	{
+		"name": "fuzzy-finder",
+		"version": "1.0.5"
+	},
+	{
+		"name": "git-diff",
+		"version": "1.0.1"
+	},
+	{
+		"name": "glowing-cursor",
+		"version": "0.1.1"
+	},
+	{
+		"name": "go-to-line",
+		"version": "0.30.0"
+	},
+	{
+		"name": "grammar-selector",
+		"version": "0.48.1"
+	},
+	{
+		"name": "highlight-selected",
+		"version": "0.11.2"
+	},
+	{
+		"name": "image-view",
+		"version": "0.57.0"
+	},
+	{
+		"name": "incompatible-packages",
+		"version": "0.25.1"
+	},
+	{
+		"name": "keybinding-cheatsheet",
+		"version": "0.1.0"
+	},
+	{
+		"name": "keybinding-resolver",
+		"version": "0.35.0"
+	},
+	{
+		"name": "language-babel",
+		"version": "2.19.4"
+	},
+	{
+		"name": "language-c",
+		"version": "0.51.1"
+	},
+	{
+		"name": "language-clojure",
+		"version": "0.20.0"
+	},
+	{
+		"name": "language-coffee-script",
+		"version": "0.46.1"
+	},
+	{
+		"name": "language-csharp",
+		"version": "0.12.0"
+	},
+	{
+		"name": "language-css",
+		"version": "0.36.0"
+	},
+	{
+		"name": "language-gfm",
+		"version": "0.85.0"
+	},
+	{
+		"name": "language-git",
+		"version": "0.12.1"
+	},
+	{
+		"name": "language-go",
+		"version": "0.42.0"
+	},
+	{
+		"name": "language-html",
+		"version": "0.44.1"
+	},
+	{
+		"name": "language-hyperlink",
+		"version": "0.16.0"
+	},
+	{
+		"name": "language-java",
+		"version": "0.17.0"
+	},
+	{
+		"name": "language-javascript",
+		"version": "0.110.0"
+	},
+	{
+		"name": "language-json",
+		"version": "0.17.6"
+	},
+	{
+		"name": "language-less",
+		"version": "0.29.0"
+	},
+	{
+		"name": "language-make",
+		"version": "0.21.0"
+	},
+	{
+		"name": "language-mustache",
+		"version": "0.13.0"
+	},
+	{
+		"name": "language-objective-c",
+		"version": "0.15.1"
+	},
+	{
+		"name": "language-perl",
+		"version": "0.32.0"
+	},
+	{
+		"name": "language-php",
+		"version": "0.37.0"
+	},
+	{
+		"name": "language-property-list",
+		"version": "0.8.0"
+	},
+	{
+		"name": "language-python",
+		"version": "0.43.0"
+	},
+	{
+		"name": "language-ruby",
+		"version": "0.68.3"
+	},
+	{
+		"name": "language-ruby-on-rails",
+		"version": "0.25.0"
+	},
+	{
+		"name": "language-sass",
+		"version": "0.46.0"
+	},
+	{
+		"name": "language-shellscript",
+		"version": "0.21.0"
+	},
+	{
+		"name": "language-source",
+		"version": "0.9.0"
+	},
+	{
+		"name": "language-sql",
+		"version": "0.20.0"
+	},
+	{
+		"name": "language-text",
+		"version": "0.7.1"
+	},
+	{
+		"name": "language-todo",
+		"version": "0.27.0"
+	},
+	{
+		"name": "language-toml",
+		"version": "0.18.0"
+	},
+	{
+		"name": "language-xml",
+		"version": "0.34.4"
+	},
+	{
+		"name": "language-yaml",
+		"version": "0.25.1"
+	},
+	{
+		"name": "lcov-info",
+		"version": "0.11.0"
+	},
+	{
+		"name": "line-ending-selector",
+		"version": "0.3.1"
+	},
+	{
+		"name": "link",
+		"version": "0.31.1"
+	},
+	{
+		"name": "linter",
+		"version": "1.11.4"
+	},
+	{
+		"name": "linter-eslint",
+		"version": "7.2.2"
+	},
+	{
+		"name": "linter-flake8",
+		"version": "1.13.0"
+	},
+	{
+		"name": "markdown-preview",
+		"version": "0.158.0"
+	},
+	{
+		"name": "markdown-scroll-sync",
+		"version": "2.1.2"
+	},
+	{
+		"name": "merge-conflicts",
+		"version": "1.4.2"
+	},
+	{
+		"name": "minimap",
+		"version": "4.23.5"
+	},
+	{
+		"name": "minimap-highlight-selected",
+		"version": "4.4.0"
+	},
+	{
+		"name": "monokai",
+		"version": "0.18.0",
+		"theme": "syntax"
+	},
+	{
+		"name": "move-panes",
+		"version": "0.2.0"
+	},
+	{
+		"name": "multi-cursor",
+		"version": "2.1.3"
+	},
+	{
+		"name": "notifications",
+		"version": "0.63.1"
+	},
+	{
+		"name": "one-dark-syntax",
+		"version": "1.2.0",
+		"theme": "syntax"
+	},
+	{
+		"name": "one-dark-ui",
+		"version": "1.2.0",
+		"theme": "ui"
+	},
+	{
+		"name": "one-light-syntax",
+		"version": "1.2.0",
+		"theme": "syntax"
+	},
+	{
+		"name": "one-light-ui",
+		"version": "1.2.0",
+		"theme": "ui"
+	},
+	{
+		"name": "open-on-github",
+		"version": "1.0.1"
+	},
+	{
+		"name": "open-recent",
+		"version": "5.0.0"
+	},
+	{
+		"name": "package-generator",
+		"version": "1.0.0"
+	},
+	{
+		"name": "pain-split",
+		"version": "1.4.0"
+	},
+	{
+		"name": "pane-split-moves-tab",
+		"version": "0.1.0"
+	},
+	{
+		"name": "pigments",
+		"version": "0.26.2"
+	},
+	{
+		"name": "project-manager",
+		"version": "2.9.7"
+	},
+	{
+		"name": "react",
+		"version": "0.15.0"
+	},
+	{
+		"name": "script",
+		"version": "3.7.1"
+	},
+	{
+		"name": "settings-view",
+		"version": "0.235.1"
+	},
+	{
+		"name": "snippets",
+		"version": "1.0.1"
+	},
+	{
+		"name": "solarized-dark-syntax",
+		"version": "1.0.0",
+		"theme": "syntax"
+	},
+	{
+		"name": "solarized-light-syntax",
+		"version": "1.0.0",
+		"theme": "syntax"
+	},
+	{
+		"name": "spell-check",
+		"version": "0.67.0"
+	},
+	{
+		"name": "status-bar",
+		"version": "1.1.2"
+	},
+	{
+		"name": "styleguide",
+		"version": "0.45.2"
+	},
+	{
+		"name": "symbols-view",
+		"version": "0.112.0"
+	},
+	{
+		"name": "sync-settings",
+		"version": "0.7.2"
+	},
+	{
+		"name": "tab-title",
+		"version": "0.3.3"
+	},
+	{
+		"name": "tabs",
+		"version": "0.92.0"
+	},
+	{
+		"name": "timecop",
+		"version": "0.33.1"
+	},
+	{
+		"name": "todo-show",
+		"version": "1.6.0"
+	},
+	{
+		"name": "trailing-spaces",
+		"version": "0.3.2"
+	},
+	{
+		"name": "tree-view",
+		"version": "0.205.0"
+	},
+	{
+		"name": "update-package-dependencies",
+		"version": "0.10.0"
+	},
+	{
+		"name": "welcome",
+		"version": "0.34.0"
+	},
+	{
+		"name": "whitespace",
+		"version": "0.32.2"
+	},
+	{
+		"name": "wrap-guide",
+		"version": "0.38.1"
+	}
 ]

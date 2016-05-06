@@ -1,0 +1,114 @@
+{
+	"activate-power-mode": {
+		"autoToggle": false
+	},
+	"color-picker": {
+		"abbreviateValues": true,
+		"preferredFormat": "HEX",
+		"uppercaseColorValues": true
+	},
+	"core": {
+		"autoHideMenuBar": true,
+		"closeEmptyWindows": false,
+		"openEmptyEditorOnStart": false,
+		"packagesWithKeymapsDisabled": [
+			"merge-conflicts",
+			"lcov-info",
+			"activate-power-mode",
+			"encoding-selector"
+		],
+		"themes": [
+			"one-dark-ui",
+			"monokai"
+		]
+	},
+	"editor": {
+		"backUpBeforeSaving": true,
+		"fontSize": 13,
+		"invisibles": {
+			"tab": "-"
+		},
+		"scrollPastEnd": true,
+		"showIndentGuide": true,
+		"tabType": "soft"
+	},
+	"exception-reporting": {
+		"userId": "78a3a259-396e-edee-6010-e8552cf30255"
+	},
+	"file-icons": {
+		"forceShow": true
+	},
+	"file-watcher": {
+		"promptWhenFileHasChangedOnDisk": false
+	},
+	"glowing-cursor": {
+		"glowColor": {
+			"red": 255,
+			"green": 127,
+			"blue": 0,
+			"alpha": 1
+		},
+		"innerColor": {
+			"red": 255,
+			"green": 127,
+			"blue": 0,
+			"alpha": 1
+		}
+	},
+	"linter": {
+		"errorPanelHeight": 27
+	},
+	"linter-eslint": {
+		"disableWhenNoEslintConfig": false,
+		"showRuleIdInMessage": false
+	},
+	"linter-flake8": {
+		"executablePath": "$PROJECT/env/bin/flake8",
+		"ignoreErrorCodes": [
+			"E128",
+			"E501",
+			"E401",
+			"E402"
+		]
+	},
+	"minimap": {
+		"plugins": {
+			"highlight-selected": true,
+			"highlight-selectedDecorationsZIndex": 0
+		},
+		"scrollAnimation": true
+	},
+	"nuclide": {
+		"nuclide-home": {
+			"showHome": false
+		}
+	},
+	"pigments": {
+		"markerType": "outline",
+		"traverseIntoSymlinkDirectories": true
+	},
+	"project-manager": {
+		"sortBy": "last modified"
+	},
+	"project-plus": {
+		"notifications": false,
+		"projectHome": "/home/jake/Projects",
+		"showPath": true
+	},
+	"react": {
+		"enabledForAllJavascriptFiles": true
+	},
+	"script": {
+		"stopOnRerun": true
+	},
+	"sync-settings": {
+		"analytics": false,
+		"quietUpdateCheck": true
+	},
+	"trailing-spaces": {
+		"enableForIndentation": true
+	},
+	"welcome": {
+		"showOnStartup": false
+	}
+}

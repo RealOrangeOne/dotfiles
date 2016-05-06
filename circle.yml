@@ -1,10 +1,12 @@
-## Customize the test machine
 machine:
-  python:
-    version: 3.5.0
   node:
     version: 5.3.0
 
 test:
   override:
-    - scripts/runtests.sh
+    - npm install -g jsonlint
+    - jsonlint -q yaourt/packages.json
+    - jsonlint -q apt/apt-installs-core.json
+    - jsonlint -q apt/apt-installs-extra.json
+    - jsonlint -q apt/apt-repos.json
+    - jsonlint -q apt/apt-keys.json
