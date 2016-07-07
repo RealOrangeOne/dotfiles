@@ -2,6 +2,11 @@
 	"activate-power-mode": {
 		"autoToggle": false
 	},
+	"atom-beautify": {
+		"general": {
+			"_analyticsUserId": "3e7a84e3-1c7f-49a9-8c68-1b1e030cf498"
+		}
+	},
 	"color-picker": {
 		"abbreviateValues": true,
 		"preferredFormat": "HEX",
@@ -10,6 +15,7 @@
 	"core": {
 		"autoHideMenuBar": true,
 		"closeEmptyWindows": false,
+		"excludeVcsIgnoredPaths": false,
 		"openEmptyEditorOnStart": false,
 		"packagesWithKeymapsDisabled": [
 			"merge-conflicts",
@@ -41,6 +47,9 @@
 	"file-watcher": {
 		"promptWhenFileHasChangedOnDisk": false
 	},
+	"fonts": {
+		"fontFamily": "Roboto Mono"
+	},
 	"glowing-cursor": {
 		"glowColor": {
 			"red": 255,
@@ -56,7 +65,7 @@
 		}
 	},
 	"linter": {
-		"errorPanelHeight": 27
+		"errorPanelHeight": 26
 	},
 	"linter-eslint": {
 		"disableWhenNoEslintConfig": false,

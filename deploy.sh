@@ -22,7 +22,6 @@ git clone --depth=1 git@gist.github.com:9f9a4dd799ad01aa0502a09f06cbf454.git ato
 rm -rf atom/.git
 mv atom/Atom\ Settings.md atom/README.md
 
-
 echo ">> Saving changes..."
 git config user.name "Jake Howard"
 git config user.email "git@theorangeone.net"
