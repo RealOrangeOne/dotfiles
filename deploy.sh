@@ -4,6 +4,9 @@ echo "> Deploying to GitHub..."
 
 set -e
 
+echo ">> Removing any existing..."
+rm -rf /tmp/existing-dotfiles || "No Existing Found"
+
 echo ">> Downloading existing dotfiles..."
 git clone --depth=1 git@github.com:RealOrangeOne/dotfiles.git /tmp/existing-dotfiles
 
