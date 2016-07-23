@@ -70,7 +70,12 @@ fi
 # Load Programs
 export NVM_DIR="/home/jake/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # Load on ubuntu
+
 eval $(thefuck --alias)
+
+export PATH="~/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
 
 
 # Export some variables
@@ -80,7 +85,7 @@ export ANDROID_HOME=/opt/android-sdk
 export PATH=${PATH}:${ANDROID_HOME}/tools
 export PATH=${PATH}:${ANDROID_HOME}/platform-tools
 export PATH=${PATH}:/opt/genymobile/genymotion
-export PATH=~/.bin:${PATH}
+export PATH=~/.dotfiles/bin:${PATH}
 
 # Export Java home on ubuntu
 if [ -f "$(command -v lsb_release)" ]; then
@@ -145,13 +150,18 @@ alias ctfs="cd ~/catfish && ./start && cd - > /dev/null"
 alias src="source ~/.bashrc"
 alias refresh="cd $PWD > /dev/null"
 alias c="clear"
+alias yolo="yaourt -Syau"
 export EDITOR=/bin/nano
 
 # git aliases
 alias gs="git status"
 alias gd="git diff"
 gh() {
-  command git clone git@github.com:${1}/${2}  # My bash isnt great...
+  if [ $# -eq 1 ]; then
+    command git clone git@github.com:RealOrangeOne/${1}
+  else
+    command git clone git@github.com:${1}/${2}
+  fi
 }
 
 
@@ -172,3 +182,5 @@ alias gdu="gd-unlock"
 alias y="yoga"
 alias ym="yoga mode"
 alias serve="python -m SimpleHTTPServer"
+alias make-dotfiles="cd ~/.dotfiles/ && make && cd - > /dev/null"
+alias edit-dotfiles="atom ~/.dotfiles/"

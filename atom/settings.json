@@ -21,7 +21,8 @@
 			"merge-conflicts",
 			"lcov-info",
 			"activate-power-mode",
-			"encoding-selector"
+			"encoding-selector",
+			"sort-lines"
 		],
 		"themes": [
 			"one-dark-ui",

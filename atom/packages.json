@@ -125,7 +125,7 @@
 	},
 	{
 		"name": "color-picker",
-		"version": "2.2.1"
+		"version": "2.2.2"
 	},
 	{
 		"name": "command-palette",
@@ -197,7 +197,7 @@
 	},
 	{
 		"name": "language-babel",
-		"version": "2.30.1"
+		"version": "2.31.0"
 	},
 	{
 		"name": "language-c",
@@ -434,7 +434,7 @@
 	},
 	{
 		"name": "pigments",
-		"version": "0.31.0"
+		"version": "0.31.1"
 	},
 	{
 		"name": "project-manager",
@@ -483,6 +483,10 @@
 		"name": "solarized-light-syntax",
 		"version": "1.0.2",
 		"theme": "syntax"
+	},
+	{
+		"name": "sort-lines",
+		"version": "0.14.0"
 	},
 	{
 		"name": "spell-check",
