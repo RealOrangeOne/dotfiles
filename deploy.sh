@@ -25,7 +25,8 @@ mv atom/Atom\ Settings.md atom/README.md
 echo ">> Preparing Git..."
 git config user.name "Jake Howard"
 git config user.email "git@theorangeone.net"
-
+git add .
+git reset HEAD .
 echo ">> Ready!"
 echo "1. Add and commit files."
 echo "2. git push -f origin master"

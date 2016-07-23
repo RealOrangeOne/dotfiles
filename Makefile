@@ -1,8 +1,11 @@
 DOTFILES=$(PWD)
 
 
-install: apt bash config gnome yaourt
+install: apt bash bin config gnome yaourt
+	chmod +x $(DOTFILES)/deploy.sh
 
+bin:
+	chmod +x $(DOTFILES)/bin/*
 
 bash: yaourt
 	ln -sfP $(DOTFILES)/bash/.bashrc ~/.bashrc
@@ -16,7 +19,7 @@ gnome: yaourt
 	rm -rf ~/Templates/*
 	ln -sfP $(DOTFILES)/gnome/Templates/* ~/Templates/
 
-yaourt: pacman python-fix
+yaourt: pacman hot\-fix
 	yaourt -Syau  # Install any updates before extra packages
 	yaourt -S `cat $(DOTFILES)/yaourt/packages.conf` --needed
 	ln -sfP $(DOTFILES)/yaourt/.yaourtrc ~/.yaourtrc
@@ -28,7 +31,7 @@ pacman:
 	sudo pacman-key --lsign-key 962DDE58
 	gpg --keyserver pool.sks-keyservers.net --recv-keys 2E1AC68ED40814E0  # gotta be a way to add to pacman, not my GPG
 
-python-fix:
+hot\-fix:
 	sudo ln -sfP /usr/bin/python2 /usr/bin/python  # Set the default python version to be python 2
 
-.PHONY: apt bash config gnome yaourt pacman python-fix
+.PHONY: apt bash bin config gnome yaourt pacman hot-fix

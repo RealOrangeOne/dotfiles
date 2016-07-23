@@ -5,7 +5,6 @@ machine:
 test:
   override:
     - npm install -g jsonlint
-    - jsonlint -q yaourt/packages.json
     - jsonlint -q apt/apt-installs-core.json
     - jsonlint -q apt/apt-installs-extra.json
     - jsonlint -q apt/apt-repos.json
