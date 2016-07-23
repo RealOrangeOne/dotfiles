@@ -22,14 +22,11 @@ git clone --depth=1 git@gist.github.com:9f9a4dd799ad01aa0502a09f06cbf454.git ato
 rm -rf atom/.git
 mv atom/Atom\ Settings.md atom/README.md
 
-echo ">> Saving changes..."
+echo ">> Preparing Git..."
 git config user.name "Jake Howard"
 git config user.email "git@theorangeone.net"
-git add .
-git commit -m "GitHub deploy at $(date +%d/%m/%Y)."
-git push -f origin master
 
-echo "> Deployment Complete."
-
-cd -
-rm -rf /tmp/existing-dotfiles
+echo ">> Ready!"
+echo "1. Add and commit files."
+echo "2. git push -f origin master"
+echo "3. Remove $PWD"
