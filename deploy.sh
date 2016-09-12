@@ -33,4 +33,4 @@ git reset HEAD .
 echo ">> Ready!"
 echo "1. Add and commit files."
 echo "2. git push -f origin master"
-echo "3. Remove $PWD"
+echo "3. rm -rf $PWD"
