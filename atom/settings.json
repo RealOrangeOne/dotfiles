@@ -1,15 +1,44 @@
 {
 	"activate-power-mode": {
-		"autoToggle": false
+		"autoToggle": false,
+		"particles": {
+			"spawnCount": {
+				"max": 25
+			}
+		}
 	},
 	"atom-beautify": {
 		"general": {
-			"_analyticsUserId": "3e7a84e3-1c7f-49a9-8c68-1b1e030cf498"
+			"_analyticsUserId": "bec507f4-ff13-410b-b0d6-bf9a8b891403"
+		}
+	},
+	"atom-material-ui": {
+		"colors": {
+			"abaseColor": {
+				"red": 126,
+				"green": 126,
+				"blue": 126,
+				"alpha": 1
+			},
+			"genAccent": true,
+			"predefinedColor": "Grey"
+		},
+		"tabs": {
+			"compactTabs": true,
+			"tintedTabBar": true
+		},
+		"treeView": {
+			"compactList": true
+		},
+		"ui": {
+			"panelContrast": true,
+			"panelShadows": true
 		}
 	},
 	"color-picker": {
 		"abbreviateValues": true,
 		"preferredFormat": "HEX",
+		"randomColor": false,
 		"uppercaseColorValues": true
 	},
 	"core": {
@@ -25,13 +54,13 @@
 			"sort-lines"
 		],
 		"themes": [
-			"one-dark-ui",
+			"atom-material-ui",
 			"monokai"
 		]
 	},
 	"editor": {
 		"backUpBeforeSaving": true,
-		"fontSize": 13,
+		"fontSize": 15,
 		"invisibles": {
 			"tab": "-"
 		},
@@ -52,6 +81,7 @@
 		"fontFamily": "Roboto Mono"
 	},
 	"glowing-cursor": {
+		"cursorWidth": 2,
 		"glowColor": {
 			"red": 255,
 			"green": 127,
@@ -63,10 +93,12 @@
 			"green": 127,
 			"blue": 0,
 			"alpha": 1
-		}
+		},
+		"transitionDuration": 700
 	},
 	"linter": {
-		"errorPanelHeight": 26
+		"errorPanelHeight": 26,
+		"ignoreVCSIgnoredFiles": false
 	},
 	"linter-eslint": {
 		"disableWhenNoEslintConfig": false,
@@ -80,6 +112,9 @@
 			"E401",
 			"E402"
 		]
+	},
+	"linter-sass-lint": {
+		"noConfigDisable": true
 	},
 	"minimap": {
 		"plugins": {
