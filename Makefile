@@ -31,7 +31,7 @@ pacman:
 	sudo pacman-key --lsign-key 962DDE58
 	gpg --keyserver pool.sks-keyservers.net --recv-keys 2E1AC68ED40814E0  # gotta be a way to add to pacman, not my GPG
 
-hot\-fix:
+hot-fix:
 	sudo ln -sfP /usr/bin/python2 /usr/bin/python  # Set the default python version to be python 2
 
 .PHONY: apt bash bin config gnome yaourt pacman hot-fix
