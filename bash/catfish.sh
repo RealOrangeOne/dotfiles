@@ -1,19 +1,20 @@
+alias ctpr="echo ctf project run --"  # shortcut helper for ctp
 
 ctp() {
   if [[ $1 == "shell" ]]; then
-    command ctf project run manage.py shell
+    ctpr manage.py shell
   elif [[ $1 == "build" ]]; then
-    command ctf project run build
+    ctpr build
   elif [ $1 == "test" ] || [ $1 == "t" ]; then
-    command ctf project run -- runtests ${@:2}
+    ctpr runtests ${@:2}
   elif [[ $1 == "run" ]]; then
-    command ctf project run -- ${@:2}
+    ctpr ${@:2}
   elif [[ $1 == "manage" ]]; then
-    command ctf project run -- manage.py ${@:2}
+    ctpr manage.py ${@:2}
   elif [[ $1 == "migrate" ]]; then
-    command ctf project run -- manage.py migrate ${@:2}
+    ctpr manage.py migrate ${@:2}
   elif [[ $1 == "makemigrations" ]]; then
-    command ctf project run -- manage.py makemigrations ${@:2}
+    ctpr manage.py makemigrations ${@:2}
   elif [[ $1 == "route" ]]; then
     command ctf router ${PWD##*/}.ctf.sh --ident ${PWD##*/}:development:web
   else
