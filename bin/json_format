@@ -8,9 +8,8 @@ ARGS = sys.argv[1:]
 if not os.isatty(0):
     data = sys.stdin.read()
 else:
-    with open(ARGS[0]) as f:
+    with open(ARGS.pop(0)) as f:
         data = '\n'.join(f.readlines())
-    ARGS.pop(0)
 
 parsed_data = json.dumps(json.loads(data), indent=2, sort_keys=True)
 
