@@ -9,6 +9,7 @@ bin:
 
 bash: yaourt
 	ln -sfP $(DOTFILES)/bash/.bashrc ~/.bashrc
+	mkdir -p ~/.nvm/
 	ln -sfP /usr/share/nvm/init-nvm.sh ~/.nvm/nvm.sh
 
 config: yaourt
@@ -18,8 +19,9 @@ config: yaourt
 gnome: yaourt
 	rm -rf ~/Templates/*
 	ln -sfP $(DOTFILES)/gnome/Templates/* ~/Templates/
+	gsettings set org.gnome.desktop.interface show-battery-percentage true
 
-yaourt: pacman hot\-fix
+yaourt: pacman
 	yaourt -Syau  # Install any updates before extra packages
 	yaourt -S `cat $(DOTFILES)/yaourt/packages.conf` --needed
 	ln -sfP $(DOTFILES)/yaourt/.yaourtrc ~/.yaourtrc
