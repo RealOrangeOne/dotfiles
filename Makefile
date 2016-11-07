@@ -12,9 +12,10 @@ bash: yaourt
 	mkdir -p ~/.nvm/
 	ln -sfP /usr/share/nvm/init-nvm.sh ~/.nvm/nvm.sh
 
-config: yaourt
+config:
 	mkdir -p ~/.config/terminator
-	cp $(DOTFILES)/config/terminator.conf ~/.config/terminator/config
+	ln -sfP $(DOTFILES)/config/terminator.conf ~/.config/terminator/config
+	sudo ln -sfP $(DOTFILES)/config/libinput-gestures.conf /etc/libinput-gestures.conf
 
 gnome: yaourt
 	rm -rf ~/Templates/*
