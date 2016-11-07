@@ -1,9 +1,13 @@
 {
 	"activate-power-mode": {
 		"autoToggle": false,
+		"comboMode": {
+			"enabled": false
+		},
 		"particles": {
+			"colours": {},
 			"spawnCount": {
-				"max": 25
+				"max": 20
 			}
 		}
 	},
@@ -14,12 +18,7 @@
 	},
 	"atom-material-ui": {
 		"colors": {
-			"abaseColor": {
-				"red": 126,
-				"green": 126,
-				"blue": 126,
-				"alpha": 1
-			},
+			"abaseColor": "#7e7e7e",
 			"genAccent": true,
 			"predefinedColor": "Grey"
 		},
@@ -53,6 +52,7 @@
 			"encoding-selector",
 			"sort-lines"
 		],
+		"telemetryConsent": "no",
 		"themes": [
 			"atom-material-ui",
 			"monokai"
@@ -60,7 +60,6 @@
 	},
 	"editor": {
 		"backUpBeforeSaving": true,
-		"fontSize": 15,
 		"invisibles": {
 			"tab": "-"
 		},
@@ -82,18 +81,8 @@
 	},
 	"glowing-cursor": {
 		"cursorWidth": 2,
-		"glowColor": {
-			"red": 255,
-			"green": 127,
-			"blue": 0,
-			"alpha": 1
-		},
-		"innerColor": {
-			"red": 255,
-			"green": 127,
-			"blue": 0,
-			"alpha": 1
-		},
+		"glowColor": "#ff7f00",
+		"innerColor": "#ff7f00",
 		"transitionDuration": 700
 	},
 	"linter": {
@@ -128,6 +117,7 @@
 			"showHome": false
 		}
 	},
+	"one-dark-ui": {},
 	"pigments": {
 		"markerType": "outline",
 		"traverseIntoSymlinkDirectories": true

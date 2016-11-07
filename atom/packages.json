@@ -4,20 +4,12 @@
 		"version": "1.7.2"
 	},
 	{
-		"name": "Zen",
-		"version": "0.16.4"
-	},
-	{
 		"name": "about",
-		"version": "1.5.3"
+		"version": "1.7.0"
 	},
 	{
 		"name": "activate-power-mode",
-		"version": "0.8.1"
-	},
-	{
-		"name": "advanced-open-file",
-		"version": "0.16.4"
+		"version": "1.1.0"
 	},
 	{
 		"name": "aesthetic-ui",
@@ -29,12 +21,8 @@
 		"version": "0.61.1"
 	},
 	{
-		"name": "atom-alignment",
-		"version": "0.12.1"
-	},
-	{
 		"name": "atom-beautify",
-		"version": "0.29.11"
+		"version": "0.29.13"
 	},
 	{
 		"name": "atom-dark-syntax",
@@ -74,20 +62,12 @@
 		"version": "0.0.27"
 	},
 	{
-		"name": "atom-yeoman",
-		"version": "0.3.15"
-	},
-	{
 		"name": "autocomplete-atom-api",
 		"version": "0.10.0"
 	},
 	{
 		"name": "autocomplete-css",
 		"version": "0.11.2"
-	},
-	{
-		"name": "autocomplete-emojis",
-		"version": "2.5.0"
 	},
 	{
 		"name": "autocomplete-html",
@@ -115,17 +95,17 @@
 	},
 	{
 		"name": "base16-tomorrow-dark-theme",
-		"version": "1.1.0",
+		"version": "1.2.0",
 		"theme": "syntax"
 	},
 	{
 		"name": "base16-tomorrow-light-theme",
-		"version": "1.1.1",
+		"version": "1.2.0",
 		"theme": "syntax"
 	},
 	{
 		"name": "bookmarks",
-		"version": "0.41.0"
+		"version": "0.42.0"
 	},
 	{
 		"name": "bracket-matcher",
@@ -161,23 +141,23 @@
 	},
 	{
 		"name": "exception-reporting",
-		"version": "0.39.0"
+		"version": "0.40.0"
 	},
 	{
 		"name": "file-icons",
-		"version": "1.7.19"
+		"version": "1.7.24"
 	},
 	{
 		"name": "find-and-replace",
-		"version": "0.201.0"
+		"version": "0.201.1"
 	},
 	{
 		"name": "fonts",
-		"version": "1.6.0"
+		"version": "1.7.0"
 	},
 	{
 		"name": "fuzzy-finder",
-		"version": "1.3.0"
+		"version": "1.4.0"
 	},
 	{
 		"name": "git-diff",
@@ -193,7 +173,7 @@
 	},
 	{
 		"name": "grammar-selector",
-		"version": "0.48.1"
+		"version": "0.48.2"
 	},
 	{
 		"name": "highlight-selected",
@@ -201,7 +181,7 @@
 	},
 	{
 		"name": "image-view",
-		"version": "0.58.2"
+		"version": "0.59.0"
 	},
 	{
 		"name": "incompatible-packages",
@@ -209,7 +189,7 @@
 	},
 	{
 		"name": "keybinding-cheatsheet",
-		"version": "0.1.0"
+		"version": "0.1.1"
 	},
 	{
 		"name": "keybinding-resolver",
@@ -217,7 +197,7 @@
 	},
 	{
 		"name": "language-babel",
-		"version": "2.37.1"
+		"version": "2.47.0"
 	},
 	{
 		"name": "language-c",
@@ -344,6 +324,10 @@
 		"version": "0.18.0"
 	},
 	{
+		"name": "language-typescript-grammars-only",
+		"version": "1.5.0"
+	},
+	{
 		"name": "language-xml",
 		"version": "0.34.9"
 	},
@@ -365,23 +349,23 @@
 	},
 	{
 		"name": "linter",
-		"version": "1.11.16"
+		"version": "1.11.18"
 	},
 	{
 		"name": "linter-eslint",
-		"version": "7.3.0"
+		"version": "8.0.0"
 	},
 	{
 		"name": "linter-flake8",
-		"version": "1.13.4"
+		"version": "2.0.2"
+	},
+	{
+		"name": "linter-tslint",
+		"version": "0.11.1"
 	},
 	{
 		"name": "markdown-preview",
 		"version": "0.158.0"
-	},
-	{
-		"name": "markdown-scroll-sync",
-		"version": "2.1.2"
 	},
 	{
 		"name": "material-ui",
@@ -394,11 +378,11 @@
 	},
 	{
 		"name": "metrics",
-		"version": "0.53.1"
+		"version": "1.1.1"
 	},
 	{
 		"name": "minimap",
-		"version": "4.25.0"
+		"version": "4.25.6"
 	},
 	{
 		"name": "minimap-highlight-selected",
@@ -424,7 +408,7 @@
 	},
 	{
 		"name": "notifications",
-		"version": "0.65.0"
+		"version": "0.65.1"
 	},
 	{
 		"name": "one-dark-syntax",
@@ -433,7 +417,7 @@
 	},
 	{
 		"name": "one-dark-ui",
-		"version": "1.5.0",
+		"version": "1.6.0",
 		"theme": "ui"
 	},
 	{
@@ -443,7 +427,7 @@
 	},
 	{
 		"name": "one-light-ui",
-		"version": "1.5.0",
+		"version": "1.6.0",
 		"theme": "ui"
 	},
 	{
@@ -468,15 +452,15 @@
 	},
 	{
 		"name": "pigments",
-		"version": "0.34.0"
+		"version": "0.37.0"
 	},
 	{
 		"name": "project-manager",
-		"version": "3.2.0"
+		"version": "3.3.3"
 	},
 	{
 		"name": "react",
-		"version": "0.16.0"
+		"version": "0.16.1"
 	},
 	{
 		"name": "redmond-syntax",
@@ -490,19 +474,19 @@
 	},
 	{
 		"name": "rest-client",
-		"version": "1.2.4"
+		"version": "1.3.1"
 	},
 	{
 		"name": "script",
-		"version": "3.9.0"
+		"version": "3.11.1"
 	},
 	{
 		"name": "set-syntax",
-		"version": "0.3.0"
+		"version": "0.3.2"
 	},
 	{
 		"name": "settings-view",
-		"version": "0.241.2"
+		"version": "0.242.2-hotfix1"
 	},
 	{
 		"name": "snippets",
@@ -524,7 +508,7 @@
 	},
 	{
 		"name": "spell-check",
-		"version": "0.67.1"
+		"version": "0.68.2"
 	},
 	{
 		"name": "status-bar",
@@ -536,7 +520,7 @@
 	},
 	{
 		"name": "symbols-view",
-		"version": "0.113.0"
+		"version": "0.113.1"
 	},
 	{
 		"name": "sync-settings",
@@ -548,7 +532,7 @@
 	},
 	{
 		"name": "tabs",
-		"version": "0.100.2"
+		"version": "0.101.0"
 	},
 	{
 		"name": "timecop",
@@ -556,7 +540,7 @@
 	},
 	{
 		"name": "todo-show",
-		"version": "1.7.0"
+		"version": "1.8.0"
 	},
 	{
 		"name": "toggle-quotes",
@@ -568,7 +552,7 @@
 	},
 	{
 		"name": "tree-view",
-		"version": "0.208.2"
+		"version": "0.209.3"
 	},
 	{
 		"name": "update-package-dependencies",
@@ -576,7 +560,7 @@
 	},
 	{
 		"name": "welcome",
-		"version": "0.34.0"
+		"version": "0.35.1"
 	},
 	{
 		"name": "whitespace",
@@ -584,6 +568,6 @@
 	},
 	{
 		"name": "wrap-guide",
-		"version": "0.38.1"
+		"version": "0.38.2"
 	}
 ]
