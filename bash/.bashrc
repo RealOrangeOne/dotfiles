@@ -3,6 +3,7 @@ export DOTFILES="$HOME/.dotfiles"
 source $DOTFILES/bash/boilerplate.sh
 source $DOTFILES/bash/catfish.sh
 source $DOTFILES/bash/javascript.sh
+source $DOTFILES/bash/applications.sh
 
 if [ -f "$(command -v lsb_release)" ]; then
   source $DOTFILES/bash/ubuntu.sh  # Ubuntu only stuff
