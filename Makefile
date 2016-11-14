@@ -16,6 +16,8 @@ config:
 	mkdir -p ~/.config/terminator
 	ln -sfP $(DOTFILES)/config/terminator.conf ~/.config/terminator/config
 	sudo ln -sfP $(DOTFILES)/config/libinput-gestures.conf /etc/libinput-gestures.conf
+	git config --global core.excludesfile ~/.dotfiles/config/gitignore_global
+
 
 gnome: yaourt
 	rm -rf ~/Templates/*
