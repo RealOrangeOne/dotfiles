@@ -28,3 +28,4 @@ alias nvmu="nvm use"
 # React-native extras
 export REACT_EDITOR=atom
 alias rnl="adb logcat | grep ReactNative"
+alias rn="react-native"
