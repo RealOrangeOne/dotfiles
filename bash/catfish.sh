@@ -1,4 +1,4 @@
-alias ctpr="echo ctf project run --"  # shortcut helper for ctp
+alias ctpr="ctf project run --"  # shortcut helper for ctp
 
 ctp() {
   if [[ $1 == "shell" ]]; then
