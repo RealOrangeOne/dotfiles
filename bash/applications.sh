@@ -4,9 +4,13 @@ export NVM_DIR="$HOME/.nvm"
 
 eval $(thefuck --alias)
 
-# export PATH="$HOME/.pyenv/bin:$PATH"
-# eval "$(pyenv init -)"
-# eval "$(pyenv virtualenv-init -)"
+if [ -s "$HOME/.pyenv/bin/pyenv" ];
+then
+  export PATH="$HOME/.pyenv/bin:$PATH"
+  eval "$(pyenv init -)"
+  eval "$(pyenv virtualenv-init -)"
+fi
+
 
 
 # git aliases
