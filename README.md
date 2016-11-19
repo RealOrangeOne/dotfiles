@@ -1,4 +1,4 @@
-# dotfiles [![Circle CI](https://circleci.com/gh/RealOrangeOne/dotfiles.svg?style=svg)](https://circleci.com/gh/RealOrangeOne/dotfiles)
+# dotfiles
 Settings and Preferences for transfer between machines
 
 ## Usage
