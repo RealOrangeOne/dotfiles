@@ -14,6 +14,17 @@ nb() {
   fi
 }
 
+nw() {
+  if [ $# -eq 0 ]; then
+    command npm run watch
+  else
+    for arg in "$@"
+    do
+      command npm run watch-${arg}
+    done
+  fi
+}
+
 nr() {
   for arg in "$@"
   do
