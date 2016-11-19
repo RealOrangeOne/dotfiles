@@ -1,31 +1,47 @@
-export DOTFILES="$HOME/.dotfiles"
+# If not running interactively, don't do anything
+case $- in
+  *i*) ;;
+  *) return;;
+esac
 
-source $DOTFILES/bash/boilerplate.sh
-source $DOTFILES/bash/catfish.sh
-source $DOTFILES/bash/javascript.sh
-source $DOTFILES/bash/applications.sh
+# don't put duplicate lines or lines starting with space in the history.
+HISTCONTROL=ignoreboth
+# append to the history file, don't overwrite it
+shopt -s histappend
 
-if [ -f "$(command -v lsb_release)" ]; then
-  source $DOTFILES/bash/ubuntu.sh  # Ubuntu only stuff
-elif [ -f "$(command -v pacman)" ]; then
-  source $DOTFILES/bash/arch.sh  # Arch only stuff
+# check the window size after each command and, if necessary, update the values of LINES and COLUMNS.
+shopt -s checkwinsize
+
+[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
+
+# set variable identifying the chroot you work in (debian-based only)
+if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
+  debian_chroot=$(cat /etc/debian_chroot)
 fi
 
-# Export some variables
-export ANDROID_HOME=/opt/android-sdk
-export EDITOR=/bin/nano
+# Set prompt
+PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 
-# Extend path
-export PATH=${PATH}:${ANDROID_HOME}/tools
-export PATH=${PATH}:${ANDROID_HOME}/platform-tools
-export PATH=${PATH}:/opt/genymobile/genymotion
-export PATH=${HOME}/.dotfiles/bin:${PATH}
+# If this is an xterm set the title to user@host:dir
+case "$TERM" in
+xterm*|rxvt*)
+  PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
+  ;;
+*)
+  ;;
+esac
 
-# bash aliases
-alias src="source ~/.bashrc"
-alias refresh="cd $PWD > /dev/null"
-alias c="clear"
-alias cls="clear"
-alias e="exit"
-alias please="sudo"
-alias no="yes n"
+# enable programmable completion features (you don't need to enable this, if it's already enabled in /etc/bash.bashrc and /etc/profile sources /etc/bash.bashrc).
+if ! shopt -oq posix; then
+  if [ -f /usr/share/bash-completion/bash_completion ]; then
+    . /usr/share/bash-completion/bash_completion
+  elif [ -f /etc/bash_completion ]; then
+    . /etc/bash_completion
+  fi
+fi
+
+
+alias src="source $HOME/.bashrc"
+
+export DOTFILES="$HOME/.dotfiles"
+source $DOTFILES/bash/base.sh
