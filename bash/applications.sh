@@ -45,3 +45,4 @@ alias ym="yoga mode"
 alias serve="python2 -m SimpleHTTPServer"
 alias make-dotfiles="cd ~/.dotfiles/ && make && cd - > /dev/null"
 alias edit-dotfiles="atom ~/.dotfiles/"
+alias vi=vim

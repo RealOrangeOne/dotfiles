@@ -12,12 +12,13 @@ bash: yaourt
 	mkdir -p ~/.nvm/
 	ln -sfP /usr/share/nvm/init-nvm.sh ~/.nvm/nvm.sh
 
-config:
+config: yaourt
 	mkdir -p ~/.config/terminator
 	ln -sfP $(DOTFILES)/config/terminator.conf ~/.config/terminator/config
 	sudo ln -sfP $(DOTFILES)/config/libinput-gestures.conf /etc/libinput-gestures.conf
 	git config --global core.excludesfile ~/.dotfiles/config/gitignore_global
-
+	git clone https://github.com/amix/vimrc.git ~/.vim_runtime
+	sh ~/.vim_runtime/install_awesome_vimrc.sh
 
 gnome: yaourt
 	rm -rf ~/Templates/*
