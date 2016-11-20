@@ -2,7 +2,6 @@ DOTFILES=$(PWD)
 
 
 install: apt bash bin config gnome yaourt
-	chmod +x $(DOTFILES)/deploy.sh
 
 bin:
 	chmod +x $(DOTFILES)/bin/*
