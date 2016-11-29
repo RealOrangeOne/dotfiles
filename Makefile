@@ -14,11 +14,13 @@ bash: yaourt
 
 config: yaourt
 	mkdir -p ~/.config/terminator
+	mkdir -p ~/.config/uniemoji/
 	ln -sfP $(DOTFILES)/config/terminator.conf ~/.config/terminator/config
 	sudo ln -sfP $(DOTFILES)/config/libinput-gestures.conf /etc/libinput-gestures.conf
 	git config --global core.excludesfile ~/.dotfiles/config/gitignore_global
 	git clone https://github.com/amix/vimrc.git ~/.vim_runtime || cd ~/.vim_runtime && git pull
 	ln -sfP $(DOTFILES)/config/vimrc ~/.vimrc
+	ln -sfP $(DOTFILES)/config/uniemoji.json ~/.config/uniemoji/custom.json
 
 gnome: yaourt
 	rm -rf ~/Templates/*
