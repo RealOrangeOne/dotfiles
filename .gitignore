@@ -1,3 +1,4 @@
 .csync_*
 .owncloudsync.log
 config/jetbrains-settings.jar
+config/assh.yml

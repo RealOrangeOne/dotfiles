@@ -21,6 +21,7 @@ config: yaourt
 	git clone https://github.com/amix/vimrc.git ~/.vim_runtime || cd ~/.vim_runtime && git pull
 	ln -sfP $(DOTFILES)/config/vimrc ~/.vimrc
 	ln -sfP $(DOTFILES)/config/uniemoji.json ~/.config/uniemoji/custom.json
+	ln -sfP $(DOTFILES)/config/assh.yml ~/.ssh/assh.yml
 
 gnome: yaourt
 	rm -rf ~/Templates/*
