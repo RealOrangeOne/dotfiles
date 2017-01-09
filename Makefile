@@ -1,6 +1,5 @@
 DOTFILES=$(PWD)
 
-
 install: apt bash bin config gnome yaourt
 
 bin:
@@ -19,6 +18,7 @@ config: yaourt
 	sudo ln -sfP $(DOTFILES)/config/libinput-gestures.conf /etc/libinput-gestures.conf
 	git config --global core.excludesfile ~/.dotfiles/config/gitignore_global
 	git clone https://github.com/amix/vimrc.git ~/.vim_runtime || cd ~/.vim_runtime && git pull
+	vim +PluginInstall +qall
 	ln -sfP $(DOTFILES)/config/vimrc ~/.vimrc
 	ln -sfP $(DOTFILES)/config/uniemoji.json ~/.config/uniemoji/custom.json
 	ln -sfP $(DOTFILES)/config/assh.yml ~/.ssh/assh.yml
