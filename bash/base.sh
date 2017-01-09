@@ -2,12 +2,6 @@ source $DOTFILES/bash/catfish.sh
 source $DOTFILES/bash/javascript.sh
 source $DOTFILES/bash/applications.sh
 
-if [ -f "$(command -v lsb_release)" ]; then
-  source $DOTFILES/bash/ubuntu.sh  # Ubuntu only stuff
-elif [ -f "$(command -v pacman)" ]; then
-  source $DOTFILES/bash/arch.sh  # Arch only stuff
-fi
-
 # Export some variables
 export ANDROID_HOME=/opt/android-sdk
 export EDITOR=/bin/nano

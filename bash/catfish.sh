@@ -23,3 +23,5 @@ ctp() {
 }
 
 alias ctfs="cd ~/catfish && ./start && cd - > /dev/null"
+
+export CATFISH_HOSTNAME_OVERRIDE=localhost
