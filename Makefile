@@ -1,6 +1,6 @@
 DOTFILES=$(PWD)
 
-install: apt bash bin config gnome yaourt
+install: apt bash bin config gnome fonts yaourt
 
 bin:
 	chmod +x $(DOTFILES)/bin/*
