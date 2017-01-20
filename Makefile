@@ -40,4 +40,10 @@ pacman:
 	sudo pacman-key --lsign-key 962DDE58
 	gpg --keyserver pool.sks-keyservers.net --recv-keys 2E1AC68ED40814E0  # gotta be a way to add to pacman, not my GPG
 
-.PHONY: apt bash bin config gnome yaourt pacman
+fonts: yaourt
+	ln -s /etc/fonts/conf.avail/11-lcdfilter-default.conf /etc/fonts/conf.d
+	ln -s /etc/fonts/conf.avail/10-sub-pixel-rgb.conf /etc/fonts/conf.d
+	ln -s /etc/fonts/conf.avail/30-infinality-aliases.conf /etc/fonts/conf.d
+	gdk-pixbuf-query-loaders --update-cache
+
+.PHONY: apt bash bin config gnome yaourt pacman fonts
