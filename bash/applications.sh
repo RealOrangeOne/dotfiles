@@ -1,12 +1,14 @@
 # Load Programs
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # load
+[ -s "$NVM_DIR/nvm.sh" ] && source "$NVM_DIR/nvm.sh"  # load
 
 eval $(thefuck --alias)
 
 export PATH="$HOME/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
+
+[ -s "/usr/share/autoenv-git/activate.sh" ] && source /usr/share/autoenv-git/activate.sh
 
 
 # git aliases
