@@ -23,5 +23,6 @@ ctp() {
 }
 
 alias ctfs="cd ~/catfish && ./start && cd - > /dev/null"
+alias ctpt="NO_MIGRATIONS=true ctpr runtests $@ --keepdb"
 
 export CATFISH_HOSTNAME_OVERRIDE=localhost
