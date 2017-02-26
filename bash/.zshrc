@@ -18,4 +18,6 @@ export PROMPT="${ret_status} %{$fg_bold[green]%}%n@%m%{$reset_color%}:%{$fg_bold
 alias src="source $HOME/.zshrc"
 
 export DOTFILES="$HOME/.dotfiles"
+export TIMEFMT=$'\nreal\t%E\nuser\t%U\nsys\t%S'
+
 source $DOTFILES/bash/base.sh
