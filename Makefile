@@ -6,7 +6,6 @@ bin:
 	chmod +x $(DOTFILES)/bin/*
 
 bash: yaourt
-	ln -sfP $(DOTFILES)/bash/.bashrc ~/.bashrc
 	ln -sfP $(DOTFILES)/bash/.zshrc ~/.zshrc
 	mkdir -p ~/.nvm/
 	ln -sfP /usr/share/nvm/init-nvm.sh ~/.nvm/nvm.sh
