@@ -23,6 +23,6 @@ ctp() {
 }
 
 alias ctfs="cd ~/catfish && ./start && cd - > /dev/null"
-alias ctpt="NO_MIGRATIONS=true ctpr runtests $@ --keepdb"
+alias ctpt="NO_MIGRATIONS=true IN_TEST=true FILE_STORAGE='django.core.files.storage.FileSystemStorage' ctpr manage.py test $@ --keepdb"
 
 export CATFISH_HOSTNAME_OVERRIDE=localhost
