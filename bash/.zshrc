@@ -19,7 +19,10 @@ plugins=(
   nyan
   lol
   web-search
+  zsh-completions
 )
+
+autoload -U compinit && compinit
 
 # You may need to manually set your language environment
 export LANG=en_GB.UTF-8
