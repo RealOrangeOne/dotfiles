@@ -45,7 +45,7 @@ alias make-dotfiles="cd ~/.dotfiles/ && make && cd - > /dev/null"
 alias edit-dotfiles="atom ~/.dotfiles/"
 alias vi="vim"
 alias regen-ssh-conf="assh config build > ~/.ssh/config"
-alias yolo="yaourt -Syau --noconfirm"
+alias yolo="yaourt -Syyau --noconfirm"
 
 
 # colored GCC warnings and errors
