@@ -22,6 +22,9 @@ gh() {
   fi
 }
 
+alias t="tig"
+alias ts="tig status"
+
 
 # Gnome
 gd-lock() {
