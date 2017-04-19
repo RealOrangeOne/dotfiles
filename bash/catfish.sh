@@ -9,7 +9,7 @@ ctp() {
     ctpr runtests ${@:2}
   elif [[ $1 == "run" ]]; then
     ctpr ${@:2}
-  elif [[ $1 == "manage" ]]; then
+  elif [ $1 == "manage" ] || [ $1 == "manage.py" ]; then
     ctpr manage.py ${@:2}
   elif [[ $1 == "migrate" ]]; then
     ctpr manage.py migrate ${@:2}
