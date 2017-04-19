@@ -33,6 +33,7 @@ export ARCHFLAGS="-arch x86_64"
 autoload -Uz colors && colors
 local ret_status="%(?:%{$fg_bold[green]%}λ :%{$fg_bold[red]%}λ )"
 export PROMPT="${ret_status} %{$fg_bold[green]%}%n@%m%{$reset_color%}:%{$fg_bold[blue]%}%~%{$reset_color%}$ "
+COMPLETION_WAITING_DOTS="true"
 
 alias src="source $HOME/.zshrc"
 
