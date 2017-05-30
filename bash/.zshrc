@@ -4,21 +4,12 @@ source $ZSH/oh-my-zsh.sh
 
 # Plugins
 plugins=(
-  git-extras
-  catimg
   django
-  npm
   pip
   pyenv
   python
   common-aliases
-  dircycles
   gitfast
-  jsontools
-  systemd
-  nyan
-  lol
-  web-search
   zsh-completions
 )
 
