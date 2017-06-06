@@ -2,3 +2,4 @@
 .owncloudsync.log
 config/jetbrains-settings.jar
 config/assh.*
+bash/private.sh
