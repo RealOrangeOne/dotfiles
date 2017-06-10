@@ -28,6 +28,8 @@ alias cls="clear"
 alias e="exit"
 alias please="sudo"
 alias no="yes n"
+alias open="xdg-open"
+alias browse "xdg-open ."
 
 # colourify things!
 alias ls='ls --color=auto'
