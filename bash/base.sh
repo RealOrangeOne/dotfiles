@@ -28,6 +28,7 @@ alias cls="clear"
 alias e="exit"
 alias please="sudo"
 alias no="yes n"
+alias drugs="yes no"
 alias open="xdg-open"
 alias browse "xdg-open ."
 
