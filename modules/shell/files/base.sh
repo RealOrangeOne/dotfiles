@@ -15,7 +15,6 @@ export TIMEFMT=$'\nreal\t%E\nuser\t%U\nsys\t%S'
 export PATH=${PATH}:${ANDROID_HOME}/tools
 export PATH=${PATH}:${ANDROID_HOME}/platform-tools
 export PATH=${PATH}:/opt/genymobile/genymotion
-export PATH=${HOME}/.dotfiles/bin:${PATH}
 
 # bash aliases
 alias refresh="cd $PWD > /dev/null"
