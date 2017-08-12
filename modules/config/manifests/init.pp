@@ -1,6 +1,7 @@
 class config {
   include 'config::vim'
   include 'config::git'
+  include 'config::fonts'
 
   file { '/etc/libinput-gestures.conf':
     ensure => file,
