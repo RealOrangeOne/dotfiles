@@ -20,4 +20,10 @@ class config {
     mode => "0644",
     source => 'puppet:///modules/config/uniemoji.json'
   }
+
+  file { '/home/jake/.config/i3/config':
+    ensure => file,
+    mode => "0644",
+    source => 'puppet:///modules/config/i3.conf'
+  }
 }
