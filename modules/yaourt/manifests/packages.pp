@@ -23,7 +23,6 @@ class yaourt::packages () {
     'freac',
     'genymotion',
     'gimp',
-    'git',
     'gitkraken',
     'glogg',
     'gnome-shell-extension-activities-config',
