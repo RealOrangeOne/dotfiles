@@ -1,4 +1,0 @@
-- Firefox
-- Atom
-- Files
-- spotify

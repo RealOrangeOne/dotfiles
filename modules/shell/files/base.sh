@@ -4,10 +4,6 @@ case $- in
   *) return;;
 esac
 
-source $DOTFILES/bash/catfish.sh
-source $DOTFILES/bash/javascript.sh
-source $DOTFILES/bash/applications.sh
-[ -s "$DOTFILES/bash/private.sh" ] && source "$DOTFILES/bash/private.sh"  # load private stuff
 
 # Export some variables
 export ANDROID_HOME=/opt/android-sdk
@@ -19,7 +15,7 @@ export TIMEFMT=$'\nreal\t%E\nuser\t%U\nsys\t%S'
 export PATH=${PATH}:${ANDROID_HOME}/tools
 export PATH=${PATH}:${ANDROID_HOME}/platform-tools
 export PATH=${PATH}:/opt/genymobile/genymotion
-export PATH=${HOME}/.dotfiles/bin:${PATH}
+export PATH=${PATH}:${HOME}/.bin
 
 # bash aliases
 alias refresh="cd $PWD > /dev/null"

@@ -44,8 +44,6 @@ alias ym="yoga mode"
 
 # miscellaneous software aliases
 alias serve="python2 -m SimpleHTTPServer"
-alias make-dotfiles="cd ~/.dotfiles/ && make && cd - > /dev/null"
-alias edit-dotfiles="atom ~/.dotfiles/"
 alias vi="vim"
 alias regen-ssh-conf="assh config build > ~/.ssh/config"
 alias yolo="yaourt -Syyau --noconfirm"
