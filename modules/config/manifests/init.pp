@@ -20,6 +20,4 @@ class config {
     mode => "0644",
     source => 'puppet:///modules/config/uniemoji.json'
   }
-
-
 }

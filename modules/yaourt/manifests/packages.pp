@@ -1,6 +1,6 @@
 class yaourt::packages () {
   package {[
-    'firefox'
+    'vim'
   ]:
     ensure => latest
   }
