@@ -1,7 +1,5 @@
 class yaourt {
-  package {[
-    "firefox-beta"
-  ]:
-    ensure => latest
-  }
+  include 'yaourt::packages'
+
+  include 'yaourt::keys'
 }
