@@ -31,4 +31,13 @@ class shell {
     mode => "0755",
     source => "/usr/share/nvm/init-nvm.sh"
   }
+
+  file { '/home/jake/.bin':
+    ensure => directory,
+    source => 'puppet:///modules/shell/bin',
+    owner => "jake",
+    group => "users",
+    mode => "0755",
+    recurse => remote
+  }
 }
