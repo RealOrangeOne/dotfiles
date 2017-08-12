@@ -1,5 +1,6 @@
 class config {
   include 'config::vim'
+  include 'config::git'
 
   file { '/etc/libinput-gestures.conf':
     ensure => file,
@@ -19,15 +20,5 @@ class config {
     source => 'puppet:///modules/config/uniemoji.json'
   }
 
-  file { '/home/jake/.gitignore_global':
-    ensure => file,
-    mode => "0644",
-    source => 'puppet:///modules/config/gitignore_global'
-  }
 
-  git::config { "global ignore" :
-    key => 'core.excludesfile',
-    value => '/home/jake/.gitignore_global',
-    user => "jake"
-  }
 }
