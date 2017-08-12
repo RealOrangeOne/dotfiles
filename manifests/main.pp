@@ -6,4 +6,5 @@ node default {
   include yaourt
   include gnome
   include config
+  include shell
 }
