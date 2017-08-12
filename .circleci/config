@@ -1,0 +1,10 @@
+version: 2.0
+
+jobs:
+    build:
+        docker:
+            - image: base/archlinux
+        working_directory: ~/dotfiles
+        steps:
+            - checkout
+            - run: git submodule update --init
