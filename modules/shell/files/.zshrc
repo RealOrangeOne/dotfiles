@@ -28,6 +28,3 @@ COMPLETION_WAITING_DOTS="true"
 
 alias src="source $HOME/.zshrc"
 
-export DOTFILES="$HOME/.dotfiles"
-
-source $DOTFILES/bash/base.sh

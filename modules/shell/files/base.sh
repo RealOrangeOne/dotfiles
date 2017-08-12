@@ -4,10 +4,6 @@ case $- in
   *) return;;
 esac
 
-source $DOTFILES/bash/catfish.sh
-source $DOTFILES/bash/javascript.sh
-source $DOTFILES/bash/applications.sh
-[ -s "$DOTFILES/bash/private.sh" ] && source "$DOTFILES/bash/private.sh"  # load private stuff
 
 # Export some variables
 export ANDROID_HOME=/opt/android-sdk
