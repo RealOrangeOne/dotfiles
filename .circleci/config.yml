@@ -6,6 +6,7 @@ jobs:
             - image: base/archlinux
         working_directory: ~/dotfiles
         steps:
+            - run: pacman -Syu
             - run: pacman -S git
             - checkout
             - run: git submodule update --init
