@@ -3,10 +3,9 @@ version: 2.0
 jobs:
     build:
         docker:
-            - image: base/archlinux
+            - image: antergos/archlinux-base-devel
         working_directory: ~/dotfiles
         steps:
             - run: pacman -Syu
-            - run: pacman -S git openssh --noconfirm
             - checkout
             - run: git submodule update --init
