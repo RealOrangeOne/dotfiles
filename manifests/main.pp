@@ -5,6 +5,7 @@ node default {
 
   include stdlib
 
+  include common
   include yaourt
   include gnome
   include config
