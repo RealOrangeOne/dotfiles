@@ -9,5 +9,5 @@ jobs:
             - checkout
             - run: git submodule update --init
             - run: cat .circleci/pacman.conf >> /etc/pacman.conf
-            - run: pacman -Syu yaourt puppet --noconfirm
+            - run: pacman -Syu yaourt puppet patch --noconfirm
             - run: ./deploy.sh
