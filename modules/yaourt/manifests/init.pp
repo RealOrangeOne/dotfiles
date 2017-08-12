@@ -3,8 +3,5 @@ class yaourt {
 
   include 'yaourt::keys'
 
-  file { '/etc/pacman.conf':
-    ensure => file,
-    source => 'puppet:///modules/yaourt/pacman.conf'
-  }
+  include 'yaourt::files'
 }
