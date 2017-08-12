@@ -4,8 +4,10 @@ jobs:
     build:
         docker:
             - image: antergos/archlinux-base-devel
+            environment:
+                PATH: ${HOME}/dotfiles/stubs/:${PATH}
         working_directory: ~/dotfiles
         steps:
-            - run: pacman -Syu
             - checkout
             - run: git submodule update --init
+            - run: pacman -Sy yaourt puppet --noconfirm
