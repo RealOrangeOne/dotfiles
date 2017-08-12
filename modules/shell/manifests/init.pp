@@ -23,4 +23,12 @@ class shell {
       source => $file
     }
   }
+
+  file {'nvm':
+    path => "/home/jake/.nvm/nvm.sh",
+    owner => "jake",
+    group => "users",
+    mode => "0755",
+    source => "/usr/share/nvm/init-nvm.sh"
+  }
 }
