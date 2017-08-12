@@ -4,8 +4,6 @@ jobs:
     build:
         docker:
             - image: antergos/archlinux-base-devel
-            environment:
-                PATH: ${HOME}/dotfiles/stubs/:${PATH}
         working_directory: ~/dotfiles
         steps:
             - checkout
