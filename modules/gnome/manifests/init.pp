@@ -10,6 +10,6 @@ class gnome {
 
   exec { 'show battery percentage':
     user => "jake",
-    command => '/usr/bin/gsettings set org.gnome.desktop.interface show-battery-percentage true'
+    command => 'gsettings set org.gnome.desktop.interface show-battery-percentage true'
   }
 }
