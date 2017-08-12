@@ -7,6 +7,6 @@ jobs:
         working_directory: ~/dotfiles
         steps:
             - run: pacman -Syu
-            - run: pacman -S git
+            - run: pacman -S git --noconfirm
             - checkout
             - run: git submodule update --init
