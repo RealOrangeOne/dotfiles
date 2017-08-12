@@ -8,4 +8,5 @@ jobs:
         steps:
             - checkout
             - run: git submodule update --init
-            - run: pacman -Sy yaourt puppet --noconfirm
+            - run: cat .circleci/pacman.conf >> /etc/pacman.conf
+            - run: pacman -Syu yaourt puppet --noconfirm
