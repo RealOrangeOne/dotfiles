@@ -6,5 +6,11 @@ class common {
     comment => "Jake Howard",
     home => "/home/jake",
     uid => "1000",
+  } ->
+
+  file { "create home":
+    path => "/home/jake",
+    ensure => directory,
+    owner => "jake"
   }
 }
