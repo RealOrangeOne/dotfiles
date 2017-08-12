@@ -1,3 +1,6 @@
 [submodule "atom"]
 	path = atom
 	url = git@gist.github.com:9f9a4dd799ad01aa0502a09f06cbf454.git
+[submodule "modules/vcsrepo"]
+	path = modules/vcsrepo
+	url = https://github.com/puppetlabs/puppetlabs-vcsrepo
