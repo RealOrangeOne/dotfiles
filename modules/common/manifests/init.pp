@@ -5,7 +5,6 @@ class common {
     auth_membership => "inclusive",
     comment => "Jake Howard",
     home => "/home/jake",
-    shell => "/usr/bin/zsh",
     uid => "1000",
   }
 }
