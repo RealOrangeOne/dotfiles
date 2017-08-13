@@ -34,7 +34,7 @@ class yaourt::packages () {
     'htop',
     'i3blocks-gaps-git',
     'i3lock',
-    'i3status',
+    'i3status-rust',
     'i3lock-wrapper',
     'i3-gaps',
     'ibus',

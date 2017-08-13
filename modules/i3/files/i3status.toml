@@ -1,0 +1,40 @@
+theme = "plain"
+icons = "awesome"
+
+[[block]]
+block = "xrandr"
+interval = 2
+icons = true
+
+[[block]]
+block = "temperature"
+interval = 10
+
+[[block]]
+block = "music"
+player = "spotify"
+marquee = true
+buttons = ["play", "next"]
+
+[[block]]
+block = "memory"
+format_mem = "{Mup}%"
+clickable = false
+
+[[block]]
+block = "cpu"
+interval = 1
+
+[[block]]
+block = "sound"
+interval = 1
+step_width = 2
+
+[[block]]
+block = "battery"
+interval = 3
+
+[[block]]
+block = "time"
+interval = 1
+format = "%Y-%d-%m %T"

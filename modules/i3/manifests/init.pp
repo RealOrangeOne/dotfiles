@@ -14,4 +14,11 @@ class i3 {
     mode => "0644",
     source => 'puppet:///modules/i3/i3blocks.conf'
   }
+
+  file { "i3status config":
+    path => '/home/jake/.config/i3/status.toml',
+    ensure => file,
+    mode => "0644",
+    source => 'puppet:///modules/i3/i3status.toml'
+  }
 }
