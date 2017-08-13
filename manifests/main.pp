@@ -10,4 +10,5 @@ node default {
   include gnome
   include config
   include shell
+  include i3
 }
