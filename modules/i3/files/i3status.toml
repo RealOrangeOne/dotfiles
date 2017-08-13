@@ -7,14 +7,14 @@ interval = 2
 icons = true
 
 [[block]]
-block = "temperature"
-interval = 10
-
-[[block]]
 block = "music"
 player = "spotify"
 marquee = true
 buttons = ["play", "next"]
+
+[[block]]
+block = "temperature"
+interval = 10
 
 [[block]]
 block = "memory"

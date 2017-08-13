@@ -32,7 +32,6 @@ class yaourt::packages () {
     'hexchat',
     'hipchat',
     'htop',
-    'i3blocks-gaps-git',
     'i3lock',
     'i3status-rust',
     'i3lock-wrapper',
