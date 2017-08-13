@@ -1,5 +1,6 @@
 class yaourt::packages () {
   package {[
+    'acpi',
     'advanced-ssh-config',
     'android-sdk',
     'arduino',
@@ -31,7 +32,7 @@ class yaourt::packages () {
     'hexchat',
     'hipchat',
     'htop',
-    'i3blocks',
+    'i3blocks-gaps-git',
     'i3lock',
     'i3status',
     'i3lock-wrapper',
@@ -69,6 +70,7 @@ class yaourt::packages () {
     'spotify',
     'steam',
     'sublime-text-dev',
+    'sysstat',
     'terminator',
     'thefuck',
     'thunderbird',

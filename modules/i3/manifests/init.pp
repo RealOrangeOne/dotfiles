@@ -7,4 +7,11 @@ class i3 {
     mode => "0644",
     source => 'puppet:///modules/i3/i3.conf'
   }
+
+  file { "i3blocks config":
+    path => '/home/jake/.i3blocks.conf',
+    ensure => file,
+    mode => "0644",
+    source => 'puppet:///modules/i3/i3blocks.conf'
+  }
 }
