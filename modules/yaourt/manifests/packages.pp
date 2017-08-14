@@ -35,7 +35,6 @@ class yaourt::packages () {
     'i3lock',
     'i3status',
     'i3status-rust',
-    'i3lock-wrapper',
     'i3-gaps',
     'ibus',
     'ibus-uniemoji',
