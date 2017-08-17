@@ -37,4 +37,4 @@ interval = 3
 [[block]]
 block = "time"
 interval = 1
-format = "%Y-%d-%m %T"
+format = "%Y-%m-%d %T"
