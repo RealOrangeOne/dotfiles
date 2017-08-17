@@ -16,6 +16,7 @@ class yaourt::packages () {
     'deluge',
     'desmume',
     'dex',
+    'dunst',
     'filezilla',
     'fonts-meta-extended-lt',
     'freac',
