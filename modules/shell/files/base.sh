@@ -9,6 +9,7 @@ esac
 export ANDROID_HOME=/opt/android-sdk
 export EDITOR=/bin/nano
 export TIMEFMT=$'\nreal\t%E\nuser\t%U\nsys\t%S'
+export DOTFILES=~/.dotfiles
 
 
 # Extend path
