@@ -80,6 +80,7 @@ class yaourt::packages () {
     'ttf-google-fonts-git',
     'ttf-ms-fonts',
     'ttf-wps-fonts',
+    'tupload',
     'twmn-git',
     'variety',
     'vim',
