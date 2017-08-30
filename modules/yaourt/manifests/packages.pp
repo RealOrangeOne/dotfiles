@@ -54,6 +54,7 @@ class yaourt::packages () {
     'nvm',
     'obs-studio',
     'oh-my-zsh-git',
+    'pac',
     'postgresql',
     'postman-bin',
     'psensor',
