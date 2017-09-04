@@ -47,6 +47,7 @@ alias serve="python2 -m SimpleHTTPServer"
 alias vi="vim"
 alias regen-ssh-conf="assh config build > ~/.ssh/config"
 alias yolo="yaourt -Syyau --noconfirm"
+alias sc="screenshot --to img"
 
 recreatedb() {
     dropdb $1 && createdb $1
