@@ -3,10 +3,10 @@ version: 2.0
 jobs:
     build:
         docker:
-            - image: fr3nd/puppet
+            - image: circleci/ruby:latest
         working_directory: ~/dotfiles
         steps:
-            - run: apt update && apt install git -y
             - checkout
             - run: git submodule update --init
+            - run: wget https://apt.puppetlabs.com/puppet5-release-stretch.deb && dpkg -i puppet5-release-stretch.deb
             - run: puppet parser validate manifests/main.pp --modulepath=modules/ --verbose
