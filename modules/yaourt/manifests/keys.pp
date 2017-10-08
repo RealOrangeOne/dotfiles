@@ -16,7 +16,5 @@ class yaourt::keys () {
     exec { "pacman-key -r $key":
       unless => "pacman-key --list-keys $key"
     }
-    exec { "pacman-key --lsign-key $key":
-    }
   }
 }

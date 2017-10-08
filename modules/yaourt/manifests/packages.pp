@@ -66,6 +66,7 @@ class yaourt::packages () {
     'slack-desktop',
     'spotify',
     'steam',
+    'sublime-text',
     'sysstat',
     'terminator',
     'thefuck',
