@@ -1,4 +1,4 @@
-class yaourt::packages () {
+node default {
   package {[
     'acpi',
     'advanced-ssh-config',
@@ -22,10 +22,6 @@ class yaourt::packages () {
     'freac',
     'gimp',
     'glogg',
-    'gnome-shell-extension-drop-down-terminal-git',
-    'gnome-shell-extension-laine-git',
-    'gnome-shell-extension-put-window-git',
-    'gnome-shell-extension-topicons-plus',
     'gnome-shell-mousewheel-zoom',
     'google-earth',
     'gparted',
@@ -70,12 +66,12 @@ class yaourt::packages () {
     'slack-desktop',
     'spotify',
     'steam',
-    'sublime-text-dev',
     'sysstat',
     'terminator',
     'thefuck',
     'thunderbird',
     'tig',
+    'tor-browser-en',
     'ttf-emojione-color',
     'ttf-google-fonts-git',
     'ttf-ms-fonts',
@@ -86,8 +82,6 @@ class yaourt::packages () {
     'vim',
     'virtualbox',
     'vivaldi',
-    'vivaldi-ffmpeg-codecs',
-    'vivaldi-widevine',
     'vlc',
     'vundle',
     'wps-office',
@@ -100,6 +94,6 @@ class yaourt::packages () {
     'zsh-completions',
     'zsh-doc'
   ]:
-    ensure => latest
+    ensure => installed
   }
 }

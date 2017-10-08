@@ -17,7 +17,6 @@ class config::vim {
   exec { 'install vim plugins':
     command => "vim +PluginInstall +qall",
     user => "jake",
-    environment => "HOME=/home/jake",
-    require => Package['vim']
+    environment => "HOME=/home/jake"
   }
 }
