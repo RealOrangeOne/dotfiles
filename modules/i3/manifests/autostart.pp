@@ -6,17 +6,22 @@ class i3::autostart {
     'mousewheelzoom',
     'pulseaudio',
     'org.gnome.SettingsDaemon.XSettings',
-    'org.gnome.SettingsDaemon.XRANDR',
     'org.gnome.SettingsDaemon.DiskUtilityNotify',
     'org.gnome.SettingsDaemon.Keyboard',
-    'gsettings-data-convert'
+    'gsettings-data-convert',
+    'tracker-extract',
+    'tracker-miner-apps',
+    'tracker-miner-fs',
+    'tracker-miner-rss',
+    'tracker-store',
+    'nm-applet'
   ];
 
   $programs.each |String $program| {
     file { "autostart $program":
       ensure => link,
       path => "/home/jake/.config/autostart/$program.desktop",
-      mode => '0744',
+      mode => '0644',
       owner => 'jake',
       source => "/etc/xdg/autostart/$program.desktop"
     }
