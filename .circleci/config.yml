@@ -3,11 +3,9 @@ version: 2.0
 jobs:
     build:
         docker:
-            - image: antergos/archlinux-base-devel
+            - image: puppet/puppet-agent-ubuntu
         working_directory: ~/dotfiles
         steps:
             - checkout
             - run: git submodule update --init
-            - run: cat .circleci/pacman.conf >> /etc/pacman.conf
-            - run: pacman -Syu yaourt puppet patch pacman fakeroot --noconfirm
-            - run: ./deploy.sh
+            - run: puppet parser validate manifests/main.pp --modulepath=modules/ --verbose
