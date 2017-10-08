@@ -3,7 +3,7 @@ version: 2.0
 jobs:
     build:
         docker:
-            - image: puppet/puppet-agent-ubuntu
+            - image: fr3nd/puppet
         working_directory: ~/dotfiles
         steps:
             - checkout
