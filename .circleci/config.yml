@@ -7,6 +7,6 @@ jobs:
         working_directory: ~/dotfiles
         steps:
             - checkout
-            - run: git submodule update --init
-            - run: wget https://apt.puppetlabs.com/puppet5-release-stretch.deb && sudo dpkg -i puppet5-release-stretch.deb
-            - run: puppet parser validate manifests/main.pp --modulepath=modules/ --verbose
+            - run: gem install puppet-lint
+            - run: puppet-lint modules/
+            - run: puppet-lint manifests/
