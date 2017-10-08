@@ -6,7 +6,7 @@ jobs:
             - image: fr3nd/puppet
         working_directory: ~/dotfiles
         steps:
-            - run: apt install git -y
+            - run: apt update && apt install git -y
             - checkout
             - run: git submodule update --init
             - run: puppet parser validate manifests/main.pp --modulepath=modules/ --verbose
