@@ -8,9 +8,6 @@ export PATH="$HOME/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
-[ -s "/usr/share/autoenv-git/activate.sh" ] && source /usr/share/autoenv-git/activate.sh
-
-
 # git aliases
 alias gs="git status"
 alias gd="git diff"
@@ -38,12 +35,8 @@ gd-unlock() {
 alias gdl="gd-lock"
 alias gdu="gd-unlock"
 
-alias y="yoga"
-alias ym="yoga mode"
-
-
 # miscellaneous software aliases
-alias serve="python2 -m SimpleHTTPServer"
+alias serve="/usr/bin/python2 -m SimpleHTTPServer"
 alias vi="vim"
 alias regen-ssh-conf="assh config build > ~/.ssh/config"
 alias yolo="yaourt -Syyau --noconfirm"
