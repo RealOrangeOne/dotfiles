@@ -1,16 +1,15 @@
 class common {
-  user { "make me":
-    name => "jake",
+  user { 'make me':
+    name => 'jake',
     allowdupe => false,
-    auth_membership => "inclusive",
-    comment => "Jake Howard",
-    home => "/home/jake",
-    uid => "1000",
-  } ->
-
-  file { "create home":
-    path => "/home/jake",
+    auth_membership => 'inclusive',
+    comment => 'Jake Howard',
+    home => '/home/jake',
+    uid => '1000',
+  }
+  -> file { 'create home':
     ensure => directory,
-    owner => "jake"
+    path => '/home/jake',
+    owner => 'jake'
   }
 }

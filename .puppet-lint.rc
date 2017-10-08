@@ -1,0 +1,4 @@
+--fail-on-warnings
+--no-arrow-alignment-check
+--no-documentation-check
+--no-variables_not_enclosed-check

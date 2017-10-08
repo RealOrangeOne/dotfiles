@@ -1,7 +1,7 @@
 class yaourt::keys () {
   $keys = [
-    "8A8F901A",  # Sublime Text
-    "D1483FA6C3C07136"  # Tor Browser
+    '8A8F901A',  # Sublime Text
+    'D1483FA6C3C07136'  # Tor Browser
   ]
 
   $keys.each |$key| {

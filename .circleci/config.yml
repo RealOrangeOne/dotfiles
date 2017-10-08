@@ -8,5 +8,5 @@ jobs:
         steps:
             - checkout
             - run: gem install puppet-lint
-            - run: puppet-lint modules/ --fail-on-warnings
-            - run: puppet-lint manifests/ --fail-on-warnings
+            - run: puppet-lint modules/ -c .puppet-lint.rc
+            - run: puppet-lint manifests/ -c .puppet-lint.rc

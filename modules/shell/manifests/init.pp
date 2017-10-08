@@ -1,19 +1,19 @@
 class shell {
-  $zshrc = "/home/jake/.zshrc"
+  $zshrc = '/home/jake/.zshrc'
 
   $files = [
-    "puppet:///modules/shell/.zshrc",
-    "puppet:///modules/shell/base.sh",
-    "puppet:///modules/shell/applications.sh",
-    "puppet:///modules/shell/catfish.sh",
-    "puppet:///modules/shell/javascript.sh"
+    'puppet:///modules/shell/.zshrc',
+    'puppet:///modules/shell/base.sh',
+    'puppet:///modules/shell/applications.sh',
+    'puppet:///modules/shell/catfish.sh',
+    'puppet:///modules/shell/javascript.sh'
   ];
 
-  concat {"zshrc":
+  concat {'zshrc':
     path => $zshrc,
-    owner => "jake",
-    group => "users",
-    mode => "0644",
+    owner => 'jake',
+    group => 'users',
+    mode => '0644',
     ensure_newline => true
   }
 
@@ -25,19 +25,19 @@ class shell {
   }
 
   file {'nvm':
-    path => "/home/jake/.nvm/nvm.sh",
-    owner => "jake",
-    group => "users",
-    mode => "0755",
-    source => "/usr/share/nvm/init-nvm.sh"
+    path => '/home/jake/.nvm/nvm.sh',
+    owner => 'jake',
+    group => 'users',
+    mode => '0755',
+    source => '/usr/share/nvm/init-nvm.sh'
   }
 
   file { '/home/jake/.bin':
     ensure => directory,
     source => 'puppet:///modules/shell/bin',
-    owner => "jake",
-    group => "users",
-    mode => "0755",
+    owner => 'jake',
+    group => 'users',
+    mode => '0755',
     recurse => remote
   }
 }

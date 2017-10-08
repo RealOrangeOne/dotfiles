@@ -6,9 +6,9 @@ class yaourt::files () {
 
   file { '/home/jake/.yaourtrc':
     ensure => file,
-    mode => "0644",
-    owner => "jake",
-    group => "users",
+    mode => '0644',
+    owner => 'jake',
+    group => 'users',
     source => 'puppet:///modules/yaourt/.yaourtrc'
   }
 }
