@@ -1,7 +1,9 @@
 class yaourt::keys () {
   $keys = [
     '8A8F901A',  # Sublime Text
-    'D1483FA6C3C07136'  # Tor Browser
+    'D1483FA6C3C07136',  # Tor Browser
+    'C6DFFE6ED7166B97',  # Youtube-DL
+    '9D5F1C051D146843CDA4858BDE64825E7CBC0D51',  # ArchStrike
   ]
 
   $keys.each |$key| {
