@@ -7,14 +7,4 @@ class gnome {
     mode => '0755',
     recurse => remote
   }
-
-  exec { 'show battery percentage':
-    user => 'jake',
-    command => 'gsettings set org.gnome.desktop.interface show-battery-percentage true'
-  }
-
-  exec { 'Remove volume change sound':
-    user => 'jake',
-    command => 'gsettings set org.gnome.desktop.sound event-sounds false'
-  }
 }
