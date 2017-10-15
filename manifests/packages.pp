@@ -1,4 +1,4 @@
-class yaourt::packages () {
+node default {
   package {[
     'acpi',
     'advanced-ssh-config',
