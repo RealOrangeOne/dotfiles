@@ -1,13 +1,15 @@
 class config::git {
-  file { '/home/jake/.gitignore_global':
+  $global_gitignore = '/home/jake/.config/.gitignore'
+
+  file { $global_gitignore:
     ensure => file,
     mode => '0644',
     source => 'puppet:///modules/config/gitignore_global'
   }
 
-  git::config { 'global ignore' :
-    key => 'core.excludesfile',
-    value => '/home/jake/.gitignore_global',
-    user => 'jake'
+  -> exec { "install global git config":
+    command => "git config --global core.excludesfile '$global_gitignore'",
+    user => 'jake',
+    unless => 'git config --global core.excludesfile'
   }
 }
