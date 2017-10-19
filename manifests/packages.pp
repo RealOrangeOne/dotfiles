@@ -54,6 +54,7 @@ node default {
     'oh-my-zsh-git',
     'onlyoffice-desktopeditors-portable',
     'pac',
+    'pacaur',
     'postgresql',
     'postman-bin',
     'psensor',
