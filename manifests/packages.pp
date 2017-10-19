@@ -41,7 +41,6 @@ node default {
     'intellij-idea-ultimate-edition-jre',
     'intellij-jdk',
     'jdk',
-    'jre',
     'jshon',
     'kodi',
     'libinput',
