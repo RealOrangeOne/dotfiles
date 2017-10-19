@@ -6,7 +6,7 @@ class config::fonts {
   ];
 
   $fonts.each |String $font| {
-    file { "font config $font":
+    file { "Enable $font font":
       ensure => link,
       path => "/etc/fonts/conf.d/$font",
       mode => '0644',
@@ -15,7 +15,7 @@ class config::fonts {
     }
   }
 
-  exec { 'update font cache':
+  exec { 'Update font cache':
     command => 'gdk-pixbuf-query-loaders --update-cache'
   }
 }

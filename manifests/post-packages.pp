@@ -3,7 +3,7 @@ node default {
     path => ['/usr/bin', '/usr/sbin', '/usr/local/bin', '/usr/local/sbin']
   }
 
-  file {'autostart compton':
+  file {'Autostart Compton':
     ensure => link,
     path => '/home/jake/.config/autostart/compton.desktop',
     mode => '0644',
@@ -11,7 +11,7 @@ node default {
     source => '/usr/share/applications/compton.desktop'
   }
 
-  exec {'set java':
+  exec {'Set Java version':
     command => 'archlinux-java set intellij-jdk',
     unless => 'archlinux-java get | grep intellij-jdk'
   }

@@ -17,7 +17,7 @@ class i3::autostart {
   ];
 
   $programs.each |String $program| {
-    file { "autostart $program":
+    file { "Autostart $program":
       ensure => link,
       path => "/home/jake/.config/autostart/$program.desktop",
       mode => '0644',

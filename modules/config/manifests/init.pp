@@ -1,31 +1,41 @@
 class config {
   include 'config::vim'
-  include 'config::git'
   include 'config::fonts'
   include 'config::private'
 
-  file { '/etc/libinput-gestures.conf':
+  file { 'Touchpad gestures config':
     ensure => file,
     mode => '0644',
+    path => '/etc/libinput-gestures.conf',
     source => 'puppet:///modules/config/libinput-gestures.conf'
   }
 
-  file { '/home/jake/.config/terminator/config':
+  file { 'Terminator config':
     ensure => file,
     mode => '0644',
+    path => '/home/jake/.config/terminator/config',
     source => 'puppet:///modules/config/terminator.conf'
   }
 
-  file { '/home/jake/.config/uniemoji/custom.json':
+  file { 'Uniemoji config':
     ensure => file,
     mode => '0644',
+    path => '/home/jake/.config/uniemoji/custom.json',
     source => 'puppet:///modules/config/uniemoji.json'
   }
 
-  file { '/home/jake/.ssh/assh.yml':
+  file { 'Install SSH config':
     ensure => file,
     mode => '0644',
     owner => 'jake',
+    path => '/home/jake/.ssh/assh.yml',
     source => 'puppet:///modules/config/assh.yml'
+  }
+
+  file { 'Install global gitignore':
+    path => '/home/jake/.config/.gitignore',
+    ensure => file,
+    mode => '0644',
+    source => 'puppet:///modules/config/gitignore_global'
   }
 }

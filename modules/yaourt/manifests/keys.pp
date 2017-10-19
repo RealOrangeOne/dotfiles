@@ -6,19 +6,22 @@ class yaourt::keys () {
   ]
 
   $keys.each |$key| {
-    exec { "gpg --recv-keys $key":
+    exec {"Add $key key":
+      command => "gpg --recv-keys $key",
       user => 'jake',
       unless => "gpg --list-keys $key"
     }
-    exec { "add $key for root":  # So root can install things
+    exec { "Add $key for root":  # So root can install things
       command => "gpg --recv-keys $key",
       unless => "gpg --list-keys $key"
     }
-    exec { "pacman-key -r $key":
+    exec { "Add $key to pacman":
+      command => "pacman-key -r $key",
       unless => "pacman-key --list-keys $key"
     }
-    exec { "pacman-key --lsign-key $key":
-      unless => "pacman-key --list-keys $key | grep '\[  full  \]'"
+    exec { "Locally sign $key with pacman":
+      command => "pacman-key --lsign-key $key",
+      unless => "pacman-key --list-keys $key | grep full"
     }
   }
 }

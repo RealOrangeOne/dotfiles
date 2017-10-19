@@ -1,20 +1,22 @@
 class config::vim {
-  file { '/home/jake/.vimrc':
+  file { 'vimrc':
     ensure => file,
     mode   => '0644',
     owner  => 'jake',
     group  => 'users',
+    path => '/home/jake/.vimrc',
     source => 'puppet:///modules/config/vimrc'
   }
 
-  -> vcsrepo { '/home/jake/.vim_runtime':
+  -> vcsrepo { 'Vim runtime':
     ensure => latest,
     provider => git,
     user => 'jake',
+    path => '/home/jake/.vim_runtime',
     source => 'https://github.com/amix/vimrc.git',
   }
 
-  -> exec { 'install vim plugins':
+  -> exec { 'Install vim plugins':
     command => 'vim +PluginInstall +qall',
     user => 'jake',
     environment => 'HOME=/home/jake'

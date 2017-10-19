@@ -1,5 +1,5 @@
 class common {
-  user { 'make me':
+  user { 'Make me':
     name => 'jake',
     allowdupe => false,
     auth_membership => 'inclusive',
@@ -7,7 +7,7 @@ class common {
     home => '/home/jake',
     uid => '1000',
   }
-  -> file { 'create home':
+  -> file { 'Create home directory':
     ensure => directory,
     path => '/home/jake',
     owner => 'jake'

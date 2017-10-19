@@ -32,9 +32,10 @@ class shell {
     source => '/usr/share/nvm/init-nvm.sh'
   }
 
-  file { '/home/jake/.bin':
+  file { 'Custom binaries':
     ensure => directory,
     source => 'puppet:///modules/shell/bin',
+    path => '/home/jake/.bin',
     owner => 'jake',
     group => 'users',
     mode => '0755',

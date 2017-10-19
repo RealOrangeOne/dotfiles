@@ -1,7 +1,8 @@
 class gnome {
-  file { '/home/jake/Templates':
+  file { 'Nautilus Templates':
     ensure => directory,
     source => 'puppet:///modules/gnome/Templates',
+    path => '/home/jake/Templates',
     owner => 'jake',
     group => 'users',
     mode => '0755',
