@@ -33,8 +33,8 @@ class config {
   }
 
   file { 'Install global gitignore':
-    path => '/home/jake/.config/.gitignore',
     ensure => file,
+    path => '/home/jake/.config/.gitignore',
     mode => '0644',
     source => 'puppet:///modules/config/gitignore_global'
   }
