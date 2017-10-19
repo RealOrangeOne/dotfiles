@@ -3,7 +3,6 @@ class i3::autostart {
     'gnome-keyring-pkcs11',
     'gnome-keyring-secrets',
     'gnome-keyring-ssh',
-    'mousewheelzoom',
     'pulseaudio',
     'org.gnome.SettingsDaemon.XSettings',
     'org.gnome.SettingsDaemon.DiskUtilityNotify',

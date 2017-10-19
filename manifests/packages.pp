@@ -22,7 +22,6 @@ node default {
     'freac',
     'gimp',
     'glogg',
-    'gnome-shell-mousewheel-zoom',
     'google-earth',
     'gparted',
     'handbrake',
