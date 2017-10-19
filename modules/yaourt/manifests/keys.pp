@@ -19,6 +19,7 @@ class yaourt::keys () {
       unless => "pacman-key --list-keys $key"
     }
     exec { "pacman-key --lsign-key $key":
+      unless => "pacman-key --list-keys $key | grep '\[  full  \]'"
     }
   }
 }
