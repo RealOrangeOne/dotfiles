@@ -2,12 +2,10 @@
 
 set -e
 
-puppet apply manifests/main.pp --modulepath=modules/ --verbose
+puppet apply manifests/pre-packages.pp --modulepath=modules/ --verbose
 
 patch /usr/bin/makepkg -N < makepkg.patch
-
 puppet apply manifests/packages.pp --verbose
-
 patch /usr/bin/makepkg -NR < makepkg.patch
 
-puppet apply manifests/post-packages.pp --verbose
+puppet apply manifests/main.pp --modulepath=modules/ --verbose

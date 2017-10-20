@@ -12,4 +12,9 @@ class common {
     path => '/home/jake',
     owner => 'jake'
   }
+
+  exec {'Set Java version':
+    command => 'archlinux-java set intellij-jdk',
+    unless => 'archlinux-java get | grep intellij-jdk'
+  }
 }
