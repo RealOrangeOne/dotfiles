@@ -47,6 +47,7 @@ node default {
     'kodi',
     'libinput',
     'libinput-gestures',
+    'lxpolkit-git',
     'lxrandr',
     'minecraft',
     'nextcloud-client',
