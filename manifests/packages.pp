@@ -16,6 +16,8 @@ node default {
     'deluge',
     'dex',
     'dunst',
+    'etcher',
+    'etcher-cli',
     'feh',
     'filezilla',
     'fonts-meta-extended-lt',
