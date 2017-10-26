@@ -19,6 +19,11 @@ gh() {
   fi
 }
 
+git-cleanup() {
+    command git checkout master && git branch --merged | grep -v '*' | xargs -n 1 git branch -d
+    command git gc --aggressive
+}
+
 alias t="tig"
 alias ts="tig status"
 
