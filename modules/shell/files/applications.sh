@@ -44,7 +44,7 @@ alias gdu="gd-unlock"
 alias serve="/usr/bin/python2 -m SimpleHTTPServer"
 alias vi="vim"
 alias regen-ssh-conf="assh config build > ~/.ssh/config"
-alias yolo="pacaur -Syyu --noconfirm"
+alias yolo="yaourt -Syyu --noconfirm"
 alias sc="screenshot --to img"
 
 recreatedb() {
