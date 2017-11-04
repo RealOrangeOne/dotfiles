@@ -3,7 +3,7 @@ icons = "awesome"
 
 [[block]]
 block = "xrandr"
-interval = 2
+interval = 5
 icons = true
 
 [[block]]
@@ -14,16 +14,17 @@ buttons = ["play", "next"]
 
 [[block]]
 block = "temperature"
-interval = 10
+interval = 5
 
 [[block]]
 block = "memory"
 format_mem = "{Mup}%"
 clickable = false
+interval = 2
 
 [[block]]
 block = "cpu"
-interval = 1
+interval = 2
 
 [[block]]
 block = "sound"
@@ -32,7 +33,7 @@ step_width = 2
 
 [[block]]
 block = "battery"
-interval = 3
+interval = 5
 
 [[block]]
 block = "time"
