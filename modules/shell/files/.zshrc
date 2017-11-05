@@ -2,7 +2,18 @@
 export ZSH=/usr/share/oh-my-zsh/
 
 # Plugins
-plugins=(django pip pyenv python common-aliases gitfast zsh-completions extract)
+plugins=(
+    django
+    jsontools
+    nyan
+    pip
+    pyenv
+    python
+    common-aliases
+    gitfast
+    zsh-completions
+    extract
+)
 
 # Enable oh-my-zsh
 source $ZSH/oh-my-zsh.sh
