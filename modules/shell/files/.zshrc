@@ -1,17 +1,11 @@
-# Path to your oh-my-zsh installation.
+# Path to oh-my-zsh installation.
 export ZSH=/usr/share/oh-my-zsh/
-source $ZSH/oh-my-zsh.sh
 
 # Plugins
-plugins=(
-  django
-  pip
-  pyenv
-  python
-  common-aliases
-  gitfast
-  zsh-completions
-)
+plugins=(django pip pyenv python common-aliases gitfast zsh-completions extract)
+
+# Enable oh-my-zsh
+source $ZSH/oh-my-zsh.sh
 
 autoload -U compinit && compinit
 
