@@ -99,7 +99,6 @@ node default {
     'virtualbox',
     'vivaldi',
     'vlc',
-    'vundle',
     'whatsie',
     'wps-office',
     'wps-office-extension-english-uk-dictionary',

@@ -15,10 +15,4 @@ class config::vim {
     path => '/home/jake/.vim_runtime',
     source => 'https://github.com/amix/vimrc.git',
   }
-
-  -> exec { 'Install vim plugins':
-    command => 'vim +PluginInstall +qall',
-    user => 'jake',
-    environment => 'HOME=/home/jake'
-  }
 }
