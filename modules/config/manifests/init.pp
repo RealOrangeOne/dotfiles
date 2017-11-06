@@ -10,6 +10,11 @@ class config {
     source => 'puppet:///modules/config/libinput-gestures.conf'
   }
 
+  file { 'Terminator config directory':
+    ensure => directory,
+    mode => '0644',
+    path => '/home/jake/.config/terminator'
+  } ->
   file { 'Terminator config':
     ensure => file,
     mode => '0644',
@@ -17,6 +22,11 @@ class config {
     source => 'puppet:///modules/config/terminator.conf'
   }
 
+  file { 'Uniemoji config directory':
+    ensure => directory,
+    mode => '0644',
+    path => '/home/jake/.config/uniemoji'
+  } ->
   file { 'Uniemoji config':
     ensure => file,
     mode => '0644',
