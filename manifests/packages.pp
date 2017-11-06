@@ -30,7 +30,7 @@ node default {
     'freac',
     'gimp',
     'glogg',
-    'google-earth',
+    'google-earth-pro',
     'gparted',
     'handbrake',
     'hexchat',
