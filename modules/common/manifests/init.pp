@@ -6,6 +6,7 @@ class common {
     comment => 'Jake Howard',
     home => '/home/jake',
     uid => '1000',
+    shell => '/usr/bin/zsh'
   }
   -> file { 'Create home directory':
     ensure => directory,
