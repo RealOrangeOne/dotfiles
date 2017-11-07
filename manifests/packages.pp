@@ -32,6 +32,8 @@ node default {
     'glogg',
     'google-earth-pro',
     'gparted',
+    'grub-customizer',
+    'grub2-theme-archlinux',
     'handbrake',
     'hexchat',
     'hipchat',
