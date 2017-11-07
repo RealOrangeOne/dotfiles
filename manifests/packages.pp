@@ -62,7 +62,6 @@ node default {
     'obs-studio',
     'oh-my-zsh-git',
     'onlyoffice-desktopeditors-portable',
-    'pac',
     'pacaur',
     'postgresql',
     'postman-bin',
