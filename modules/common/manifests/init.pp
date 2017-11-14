@@ -18,4 +18,8 @@ class common {
     command => 'archlinux-java set intellij-jdk',
     unless => 'archlinux-java get | grep intellij-jdk'
   }
+  exec {'pyenv directory permissions':
+    command => 'chown -R jake:users /opt/pyenv',
+    unless => 'getfacl /opt/pyenv | grep "owner: jake"'
+  }
 }
