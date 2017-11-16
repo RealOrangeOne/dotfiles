@@ -79,6 +79,7 @@ node default {
     'python-virtualenv',
     'python2-pip',
     'python2-virtualenv',
+    'qt5-styleplugins',
     'redis',
     'screenfetch',
     'sl',
