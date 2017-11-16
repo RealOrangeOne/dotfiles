@@ -50,5 +50,3 @@ alias sc="screenshot --to img"
 recreatedb() {
     dropdb $1 && createdb $1
 }
-
-# colored GCC warnings and errors

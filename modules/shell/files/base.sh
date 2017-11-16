@@ -5,15 +5,6 @@ case $- in
 esac
 
 
-# Extend path
-export PATH=${PATH}:${ANDROID_HOME}/tools
-export PATH=${PATH}:${ANDROID_HOME}/platform-tools
-export PATH=${PATH}:/opt/genymobile/genymotion
-export PATH=${PATH}:${HOME}/.bin
-
-export DOTFILES=~/.dotfiles
-
-
 # bash aliases
 alias refresh="cd $PWD > /dev/null"
 alias c="clear"
@@ -31,4 +22,3 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
 # don't put duplicate lines or lines starting with space in the history.
-HISTCONTROL=ignoreboth

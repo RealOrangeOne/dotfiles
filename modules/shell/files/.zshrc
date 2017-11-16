@@ -20,11 +20,6 @@ source $ZSH/oh-my-zsh.sh
 
 autoload -U compinit && compinit
 
-# You may need to manually set your language environment
-export LANG=en_GB.UTF-8
-
-# Compilation flags
-export ARCHFLAGS="-arch x86_64"
 
 autoload -Uz colors && colors
 local ret_status="%(?:%{$fg_bold[green]%}λ :%{$fg_bold[red]%}λ )"

@@ -6,7 +6,8 @@ class shell {
     'puppet:///modules/shell/base.sh',
     'puppet:///modules/shell/applications.sh',
     'puppet:///modules/shell/catfish.sh',
-    'puppet:///modules/shell/javascript.sh'
+    'puppet:///modules/shell/javascript.sh',
+    'puppet:///modules/shell/environment.sh'
   ];
 
   concat {'zshrc':
@@ -52,7 +53,7 @@ class shell {
     mode => '0644',
     owner => 'root',
     group => 'root',
-    source => 'puppet:///modules/shell/environment.sh',
+    source => 'puppet:///modules/shell/global-environment',
     path => '/etc/environment'
   }
 }
