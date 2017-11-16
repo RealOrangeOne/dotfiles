@@ -4,18 +4,15 @@ case $- in
   *) return;;
 esac
 
-# Export some variables
-export ANDROID_HOME=/opt/android-sdk
-export EDITOR=/bin/nano
-export TIMEFMT=$'\nreal\t%E\nuser\t%U\nsys\t%S'
-export DOTFILES=~/.dotfiles
-export QT_QPA_PLATFORMTHEME=gtk2
 
 # Extend path
 export PATH=${PATH}:${ANDROID_HOME}/tools
 export PATH=${PATH}:${ANDROID_HOME}/platform-tools
 export PATH=${PATH}:/opt/genymobile/genymotion
 export PATH=${PATH}:${HOME}/.bin
+
+export DOTFILES=~/.dotfiles
+
 
 # bash aliases
 alias refresh="cd $PWD > /dev/null"

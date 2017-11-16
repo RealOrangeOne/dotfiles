@@ -46,4 +46,13 @@ class shell {
     mode => '0755',
     recurse => remote
   }
+
+  file { 'Global Environment':
+    ensure => file,
+    mode => '0644',
+    owner => 'root',
+    group => 'root',
+    source => 'puppet:///modules/shell/environment.sh',
+    path => '/etc/environment'
+  }
 }
