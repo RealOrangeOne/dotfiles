@@ -7,8 +7,5 @@ export PATH=${PATH}:${HOME}/.bin
 
 export DOTFILES=${HOME}/.dotfiles
 
-export EDITOR=$(which nano)
-export BROWSER=$(which firefox)
-
 export TIMEFMT=$'\nreal\t%E\nuser\t%U\nsys\t%S'
 export HISTCONTROL=ignoreboth

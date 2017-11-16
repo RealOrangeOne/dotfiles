@@ -1,9 +1,7 @@
 ANDROID_HOME=/opt/android-sdk
 QT_QPA_PLATFORMTHEME=gtk2
 GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
-
-# You may need to manually set your language environment
 LANG=en_GB.UTF-8
-
-# Compilation flags
 ARCHFLAGS="-arch x86_64"
+BROWSER=/usr/bin/firefox
+EDITOR=/usr/bin/nano
