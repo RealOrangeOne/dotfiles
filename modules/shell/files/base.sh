@@ -10,8 +10,8 @@ alias refresh="cd $PWD > /dev/null"
 alias c="clear"
 alias e="exit"
 alias no="yes n"
-alias open="xdg-open"
-alias browse "xdg-open ."
+alias open="mimeopen"
+alias browse "mimeopen ."
 
 # colourify things!
 alias ls='ls --color=auto'

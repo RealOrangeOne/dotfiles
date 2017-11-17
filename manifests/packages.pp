@@ -69,6 +69,7 @@ node default {
     'oh-my-zsh-git',
     'onlyoffice-desktopeditors-portable',
     'pacaur',
+    'perl-file-mimeinfo',
     'pigz',
     'playerctl',
     'postgresql',
