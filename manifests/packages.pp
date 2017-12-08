@@ -47,7 +47,6 @@ node default {
     'ibus',
     'ibus-uniemoji',
     'inkscape',
-    'insomnia',
     'intellij-idea-ultimate-edition',
     'intellij-idea-ultimate-edition-jre',
     'intellij-jdk',
