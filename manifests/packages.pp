@@ -40,7 +40,7 @@ node default {
     'hexchat',
     'hipchat',
     'htop',
-    'i3lock',
+    'i3lock-color-git',
     'i3status',
     'i3status-rust',
     'i3-gaps',
