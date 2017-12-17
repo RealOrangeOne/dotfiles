@@ -33,7 +33,7 @@ node default {
     'feh',
     'filezilla',
     'firefox',
-    'firefox-developer',
+    'firefox-developer-edition',
     'fonts-meta-extended-lt',
     'freac',
     'gimp',
