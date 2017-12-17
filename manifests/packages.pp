@@ -1,4 +1,11 @@
 node default {
+  package {[  # Packages that need to be installed first
+    'i3-gaps',
+    'ttf-google-fonts-git'
+  ]:
+    ensure => installed
+  } ->
+
   package {[
     'acpi',
     'advanced-ssh-config',
@@ -43,7 +50,6 @@ node default {
     'i3lock',
     'i3status',
     'i3status-rust',
-    'i3-gaps',
     'ibus',
     'ibus-uniemoji',
     'inkscape',
@@ -96,7 +102,6 @@ node default {
     'tig',
     'tor-browser-en',
     'ttf-emojione-color',
-    'ttf-google-fonts-git',
     'ttf-ms-fonts',
     'ttf-wps-fonts',
     'turtl',
