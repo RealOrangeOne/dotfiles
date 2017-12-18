@@ -88,6 +88,7 @@ node default {
     'python2-virtualenv',
     'qt5-styleplugins',
     'redis',
+    'rofi',
     'screenfetch',
     'sl',
     'slack-desktop',

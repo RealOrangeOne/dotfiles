@@ -48,4 +48,16 @@ class config {
     mode => '0644',
     source => 'puppet:///modules/config/gitignore_global'
   }
+
+  file { 'Rofi config directory':
+    ensure => directory,
+    mode => '0644',
+    path => '/home/jake/.config/rofi'
+  } ->
+  file { 'Rofi config':
+    ensure => file,
+    mode => '0644',
+    path => '/home/jake/.config/rofi/config',
+    source => 'puppet:///modules/config/rofi.conf'
+  }
 }
