@@ -4,9 +4,8 @@ node default {
     'ttf-google-fonts-git'
   ]:
     ensure => installed
-  } ->
-
-  package {[
+  }
+  -> package {[
     'acpi',
     'advanced-ssh-config',
     'archstrike-keyring',

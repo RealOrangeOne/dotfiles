@@ -14,8 +14,8 @@ class config {
     ensure => directory,
     mode => '0644',
     path => '/home/jake/.config/terminator'
-  } ->
-  file { 'Terminator config':
+  }
+  -> file { 'Terminator config':
     ensure => file,
     mode => '0644',
     path => '/home/jake/.config/terminator/config',
@@ -26,8 +26,8 @@ class config {
     ensure => directory,
     mode => '0644',
     path => '/home/jake/.config/uniemoji'
-  } ->
-  file { 'Uniemoji config':
+  }
+  -> file { 'Uniemoji config':
     ensure => file,
     mode => '0644',
     path => '/home/jake/.config/uniemoji/custom.json',
@@ -53,8 +53,8 @@ class config {
     ensure => directory,
     mode => '0644',
     path => '/home/jake/.config/rofi'
-  } ->
-  file { 'Rofi config':
+  }
+  -> file { 'Rofi config':
     ensure => file,
     mode => '0644',
     path => '/home/jake/.config/rofi/config',

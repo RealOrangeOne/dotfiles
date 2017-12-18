@@ -29,8 +29,8 @@ class shell {
     ensure => directory,
     mode => '0644',
     path => '/home/jake/.nvm'
-  } ->
-  file {'nvm':
+  }
+  -> file {'nvm':
     path => '/home/jake/.nvm/nvm.sh',
     owner => 'jake',
     group => 'users',
