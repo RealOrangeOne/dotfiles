@@ -16,6 +16,7 @@ node default {
     'blender',
     'bluez-firmware',
     'brave-bin',
+    'brightnessctl',
     'calibre',
     'caret-bin',
     'catimg',
