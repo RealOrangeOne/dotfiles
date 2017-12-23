@@ -90,6 +90,7 @@ node default {
     'redis',
     'rofi',
     'screenfetch',
+    'sct',
     'sl',
     'slack-desktop',
     'slack-term',
