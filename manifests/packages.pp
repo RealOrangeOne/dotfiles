@@ -20,6 +20,7 @@ node default {
     'calibre',
     'caret-bin',
     'catimg',
+    'climate',
     'clamtk',
     'corebird',
     'compton',
@@ -66,13 +67,14 @@ node default {
     'lxpolkit-git',
     'lxrandr',
     'minecraft',
+    'mkchromecast',
     'nextcloud-client',
     'nodejs',
     'numix-gtk-theme',
     'nvm',
     'obs-studio',
     'oh-my-zsh-git',
-    'onlyoffice-desktopeditors-portable',
+    'onlyoffice-bin',
     'pacaur',
     'perl-file-mimeinfo',
     'pigz',
@@ -123,7 +125,8 @@ node default {
     'zeal',
     'zsh',
     'zsh-completions',
-    'zsh-doc'
+    'zsh-doc',
+    'zsh-syntax-highlighting'
   ]:
     ensure => installed
   }

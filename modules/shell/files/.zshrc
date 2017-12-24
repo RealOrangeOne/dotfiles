@@ -15,6 +15,10 @@ plugins=(
     extract
 )
 
+
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+export fpath=(/usr/share/zsh/site-functions $fpath)
+
 # Enable oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 
