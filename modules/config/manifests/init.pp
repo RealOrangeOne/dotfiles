@@ -60,4 +60,12 @@ class config {
     path => '/home/jake/.config/rofi/config',
     source => 'puppet:///modules/config/rofi.conf'
   }
+
+  service { 'gdm':
+    enable => false
+  }
+
+  -> service { 'lightdm':
+    enable => true
+  }
 }

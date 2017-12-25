@@ -64,6 +64,8 @@ node default {
     'kodi',
     'libinput',
     'libinput-gestures',
+    'lightdm',
+    'web-greeter-next',
     'lxpolkit-git',
     'lxrandr',
     'minecraft',
