@@ -1,9 +1,9 @@
-set runtimepath+=~/.vim_runtime
+set runtimepath+=/usr/share/amix_vimrc
 
-source ~/.vim_runtime/vimrcs/basic.vim
-source ~/.vim_runtime/vimrcs/filetypes.vim
-source ~/.vim_runtime/vimrcs/plugins_config.vim
-source ~/.vim_runtime/vimrcs/extended.vim
+source /usr/share/amix_vimrc/vimrcs/basic.vim
+source /usr/share/amix_vimrc/vimrcs/filetypes.vim
+source /usr/share/amix_vimrc/vimrcs/plugins_config.vim
+source /usr/share/amix_vimrc/vimrcs/extended.vim
 
 cmap w!! w !sudo tee >/dev/null %
 :set mouse=a
