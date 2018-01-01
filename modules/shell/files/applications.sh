@@ -1,6 +1,8 @@
 # Load Programs
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && source "$NVM_DIR/nvm.sh"  # load
+[ -s "$NVM_DIR/nvm.sh" ] && source "$NVM_DIR/nvm.sh"
+
+[ -d "$HOME/.nix-profile" ] && source "$HOME/.nix-profile/etc/profile.d/nix.sh"
 
 eval $(thefuck --alias)
 
