@@ -64,7 +64,7 @@ node default {
     'libinput',
     'libinput-gestures',
     'lightdm',
-    'web-greeter-next',
+    'lightdm-webkit2-greeter',
     'lxpolkit-git',
     'lxrandr',
     'minecraft',
