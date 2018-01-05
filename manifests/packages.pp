@@ -5,6 +5,7 @@ node default {
   ]:
     ensure => installed
   }
+
   -> package {[
     'acpi',
     'advanced-ssh-config',
@@ -108,6 +109,7 @@ node default {
     'tig',
     'tor-browser-en',
     'ttf-emojione-color',
+    'ttf-font-awesome',
     'ttf-ms-fonts',
     'ttf-wps-fonts',
     'turtl',
