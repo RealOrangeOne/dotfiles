@@ -36,7 +36,6 @@ node default {
     'firefox',
     'firefox-developer-edition',
     'fonts-meta-extended-lt',
-    'freac',
     'gimp',
     'glogg',
     'google-earth-pro',
