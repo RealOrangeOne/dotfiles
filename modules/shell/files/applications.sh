@@ -15,9 +15,9 @@ alias gs="git status"
 alias gd="git diff"
 gh() {
   if [ $# -eq 1 ]; then
-    command git clone git@github.com:RealOrangeOne/${1} && cd ${1}
+    command git clone git@github.com:RealOrangeOne/${1} --recursive && cd ${1}
   else
-    command git clone git@github.com:${1}/${2} && cd ${2}
+    command git clone git@github.com:${1}/${2} --recursive && cd ${2}
   fi
 }
 
