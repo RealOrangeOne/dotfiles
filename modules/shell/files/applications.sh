@@ -24,6 +24,7 @@ gh() {
 git-cleanup() {
     command git checkout master && git branch --merged | grep -v '*' | xargs -n 1 git branch -d
     command git gc --aggressive
+    command git checkout -
 }
 
 alias t="tig"
