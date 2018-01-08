@@ -77,6 +77,7 @@ node default {
     'obs-studio',
     'oh-my-zsh-git',
     'onlyoffice-bin',
+    'otf-font-awesome',
     'pacaur',
     'perl-file-mimeinfo',
     'pigz',
