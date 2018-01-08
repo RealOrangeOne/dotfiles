@@ -61,11 +61,11 @@ class config {
     source => 'puppet:///modules/config/rofi.conf'
   }
 
-  service { 'gdm':
+  service { 'lightdm':
     enable => false
   }
 
-  -> service { 'lightdm':
+  -> service { 'gdm':
     enable => true
   }
 }
