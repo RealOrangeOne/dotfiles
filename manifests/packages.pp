@@ -116,7 +116,7 @@ node default {
     'turtl',
     'tupload',
     'twmn-git',
-    'visual-studio-code',
+    'visual-studio-code-bin',
     'virtualbox',
     'vivaldi',
     'vlc',
