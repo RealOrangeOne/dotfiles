@@ -16,7 +16,7 @@ class i3 {
     mode => '0644',
     owner => 'jake',
     group => 'users',
-    source => 'puppet:///modules/i3/i3status-rust.toml'
+    content => template('i3/i3status-rust.toml.erb')
   }
 
   file { 'i3status config':

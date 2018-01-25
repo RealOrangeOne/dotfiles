@@ -31,9 +31,11 @@ block = "sound"
 interval = 1
 step_width = 2
 
+<% if @trusted['hostname'] == 'too-laptop' -%>
 [[block]]
 block = "battery"
 interval = 5
+<% end -%>
 
 [[block]]
 block = "time"
