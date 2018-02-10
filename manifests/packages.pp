@@ -47,7 +47,6 @@ node default {
     'gvim',
     'handbrake',
     'hexchat',
-    'hipchat',
     'htop',
     'i3status',
     'i3status-rust',
