@@ -84,6 +84,7 @@ node default {
     'postgresql',
     'postman-bin',
     'psensor',
+    'pulseaudio-bluetooth-a2dp-gdm-fix',
     'pyenv',
     'pyenv-virtualenv',
     'python-pip',
