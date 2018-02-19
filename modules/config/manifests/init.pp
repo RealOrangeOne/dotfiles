@@ -2,6 +2,7 @@ class config {
   include 'config::vim'
   include 'config::fonts'
   include 'config::private'
+  include 'config::vscode'
 
   file { 'Touchpad gestures config':
     ensure => file,

@@ -1,0 +1,30 @@
+{
+    "workbench.statusBar.feedback.visible": false,
+    "sublimeTextKeymap.promptV3Features": true,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.snippetSuggestions": "top",
+    "editor.formatOnPaste": false,
+    "workbench.colorTheme": "Darcula",
+    "workbench.iconTheme": "material-icon-theme",
+    "telemetry.enableCrashReporter": true,
+    "telemetry.enableTelemetry": false,
+    "update.channel": "none",
+    "extensions.autoUpdate": false,
+    "window.zoomLevel": 0,
+    "gitlens.currentLine.enabled": false,
+    "gitlens.hovers.currentLine.over": "line",
+    "scss.scannerExclude": [
+        "**/.git",
+        "**/bower_components"
+    ],
+    "less.scannerExclude": [
+        "**/.git",
+        "**/bower_components"
+    ],
+    "python.workspaceSymbols.exclusionPatterns": [],
+    "gitlens.codeLens.enabled": false,
+    "npm.validate.enable": false,
+    "workbench.activityBar.visible": false,
+    "editor.fontSize": 14,
+    "files.trimTrailingWhitespace": true,
+}
