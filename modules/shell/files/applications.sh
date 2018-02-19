@@ -49,6 +49,7 @@ alias vi="vim"
 alias regen-ssh-conf="assh config build > ~/.ssh/config"
 alias yolo="yaourt -Syyau --noconfirm"
 alias sc="screenshot --to img"
+alias clip="xclip -selection clipboard"
 
 recreatedb() {
     dropdb $1 && createdb $1
