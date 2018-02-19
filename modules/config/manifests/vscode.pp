@@ -29,7 +29,8 @@ class config::vscode {
     'steoates.autoimport',
     'truman.autocomplate-shell',
     'wholroyd.jinja',
-    'zolocode.editorzoom'
+    'zolocode.editorzoom',
+    'formulahendry.auto-close-tag'
   ];
 
   $extensions.each |String $extension| {

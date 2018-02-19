@@ -27,4 +27,7 @@
     "workbench.activityBar.visible": false,
     "editor.fontSize": 14,
     "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "auto-close-tag.SublimeText3Mode": true
 }
