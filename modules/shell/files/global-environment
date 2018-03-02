@@ -5,3 +5,4 @@ LANG=en_GB.UTF-8
 ARCHFLAGS="-arch x86_64"
 BROWSER=/usr/bin/firefox
 EDITOR=/usr/bin/nano
+SSH_AUTH_SOCK=/tmp/ssh-agent-jake.sock
