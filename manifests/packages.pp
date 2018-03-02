@@ -65,6 +65,7 @@ node default {
     'jdk',
     'jshon',
     'kdenlive',
+    'keepassxc',
     'keybase-bin',
     'kodi',
     'libinput',
