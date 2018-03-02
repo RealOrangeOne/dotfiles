@@ -1,5 +1,11 @@
 node default {
-  package {[  # Packages that need to be installed first
+  package {[
+    'ttf-google-fonts-typewolf'
+  ]:
+    ensure => absent
+  }
+
+  -> package {[  # Packages that need to be installed first
     'i3-gaps',
     'ttf-google-fonts-git'
   ]:
