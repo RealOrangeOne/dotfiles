@@ -76,6 +76,18 @@ class config {
     source => 'puppet:///modules/config/mimeapps.list'
   }
 
+  file { 'Caret config directory':
+    ensure => directory,
+    mode => '0644',
+    path => '/home/jake/.config/Caret'
+  }
+  -> file { 'Caret configuration file':
+    ensure => file,
+    mode => '0644',
+    path => '/home/jake/.config/Caret/Preferences.md',
+    source => 'puppet:///modules/config/caret-preferences.md'
+  }
+
   service { 'lightdm':
     enable => false
   }
