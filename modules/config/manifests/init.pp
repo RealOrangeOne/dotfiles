@@ -69,6 +69,13 @@ class config {
     source => 'puppet:///modules/config/touchpad.conf'
   }
 
+  file { 'Default applications configuration':
+    ensure => file,
+    mode => '0644',
+    path => '/usr/share/applications/defaults.list',
+    source => 'puppet:///modules/config/mimeapps.list'
+  }
+
   service { 'lightdm':
     enable => false
   }
