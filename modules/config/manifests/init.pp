@@ -62,6 +62,13 @@ class config {
     source => 'puppet:///modules/config/rofi.conf'
   }
 
+  file { 'Touchpad configuration':
+    ensure => file,
+    mode => '0644',
+    path => '/usr/share/X11/xorg.conf.d/30-touchpad.conf',
+    source => 'puppet:///modules/config/touchpad.conf'
+  }
+
   service { 'lightdm':
     enable => false
   }
