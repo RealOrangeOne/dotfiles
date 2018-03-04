@@ -72,7 +72,7 @@ class config {
   file { 'Default applications configuration':
     ensure => file,
     mode => '0644',
-    path => '/usr/share/applications/defaults.list',
+    path => '/home/jake/.config/mimeapps.list',
     source => 'puppet:///modules/config/mimeapps.list'
   }
 
