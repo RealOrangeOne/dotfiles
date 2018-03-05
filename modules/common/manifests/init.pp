@@ -8,7 +8,6 @@ class common {
     uid => '1000',
     shell => '/usr/bin/zsh',
     groups => [
-      'bumblebee',
       'input',
       'users',
       'wheel'
