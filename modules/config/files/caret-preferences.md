@@ -8,7 +8,7 @@ useLargeFontInHeadings: "Roboto" # set to false to disable
 font: "Fira Mono"
 fontSize: 15
 lineHeight: 1.8
-lineWidth: 72
+lineWidth: 100
 ```
 
 More options coming soon.
