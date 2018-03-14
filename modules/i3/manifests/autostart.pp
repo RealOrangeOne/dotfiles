@@ -43,4 +43,12 @@ class i3::autostart {
     owner => 'jake',
     source => '/usr/share/applications/libinput-gestures.desktop'
   }
+
+  file {'Install powertop service':
+    ensure => link,
+    path => '/etc/systemd/system/powertop.service',
+    mode => '0644',
+    owner => 'root',
+    source => 'puppet:///modules/i3/powertop.service'
+  }
 }

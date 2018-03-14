@@ -89,6 +89,7 @@ node default {
     'playerctl',
     'postgresql',
     'postman-bin',
+    'powertop',
     'psensor',
     'pulseaudio-bluetooth-a2dp-gdm-fix',
     'pyenv',
