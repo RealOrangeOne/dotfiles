@@ -17,7 +17,6 @@ node default {
     'advanced-ssh-config',
     'archstrike-keyring',
     'arduino',
-    'atom-editor-bin',
     'bcm20702a1-firmware',
     'betterlockscreen',
     'bleachbit',
