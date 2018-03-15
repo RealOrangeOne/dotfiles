@@ -15,6 +15,7 @@ node default {
   -> package {[
     'acpi',
     'advanced-ssh-config',
+    'android-tools',
     'archstrike-keyring',
     'arduino',
     'bcm20702a1-firmware',
@@ -101,6 +102,7 @@ node default {
     'qt5-styleplugins',
     'redis',
     'rofi',
+    'scrcpy',
     'screenfetch',
     'sct',
     'sl',
