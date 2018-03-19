@@ -124,7 +124,6 @@ node default {
     'ttf-wps-fonts',
     'turtl',
     'tupload',
-    'twmn-git',
     'visual-studio-code-bin',
     'virtualbox',
     'vivaldi',

@@ -27,4 +27,18 @@ class i3 {
     group => 'users',
     source => 'puppet:///modules/i3/i3status.conf'
   }
+
+  file { 'dunst config directory':
+    ensure => directory,
+    path => '/home/jake/.config/dunst'
+  }
+
+  -> file { 'dunst config':
+    ensure => file,
+    path => '/home/jake/.config/dunst/dunstrc',
+    mode => '0644',
+    owner => 'jake',
+    group => 'users',
+    source => 'puppet:///modules/i3/dunst.conf'
+  }
 }
