@@ -14,8 +14,4 @@ class config::fonts {
 
     }
   }
-
-  exec { 'Update font cache':
-    command => 'gdk-pixbuf-query-loaders --update-cache'
-  }
 }
