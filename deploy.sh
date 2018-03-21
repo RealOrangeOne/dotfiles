@@ -9,3 +9,4 @@ puppet apply manifests/packages.pp --verbose
 patch /usr/bin/makepkg -NR < makepkg.patch
 
 puppet apply manifests/main.pp --modulepath=modules/ --verbose
+puppet apply manifests/devices.pp --modulepath=modules/ --verbose
