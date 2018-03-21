@@ -38,4 +38,8 @@
     "--ignore=E501"
   ],
   "python.linting.lintOnSave": true,
+  "rust.rustup": {
+    "toolchain": "stable-x86_64-unknown-linux-gnu"
+  },
+  "rust.mode": "rls"
 }
