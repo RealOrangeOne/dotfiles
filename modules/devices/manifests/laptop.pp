@@ -1,5 +1,9 @@
 class devices::laptop {
-  package {'tlp':
+  package {[
+    'ethtool',
+    'smartmontools',
+    'tlp'
+  ]:
     ensure => installed
   }
   -> service {'tlp':
