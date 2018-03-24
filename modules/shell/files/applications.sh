@@ -5,6 +5,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -d "$HOME/.nix-profile" ] && source "$HOME/.nix-profile/etc/profile.d/nix.sh"
 
 eval $(thefuck --alias)
+eval "$(fasd --init auto)"
 
 export PATH="$HOME/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
