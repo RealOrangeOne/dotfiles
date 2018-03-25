@@ -30,7 +30,8 @@ class config::vscode {
     'truman.autocomplate-shell',
     'wholroyd.jinja',
     'zolocode.editorzoom',
-    'formulahendry.auto-close-tag'
+    'formulahendry.auto-close-tag',
+    'James-Yu.latex-workshop'
   ];
 
   $extensions.each |String $extension| {
