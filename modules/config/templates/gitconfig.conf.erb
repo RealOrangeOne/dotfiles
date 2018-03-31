@@ -14,3 +14,6 @@
 <%  else -%>
     path = ~/.dotfiles/git/personal.conf
 <% end -%>
+
+[includeIf "gitdir:~/sourcebots/"]
+    path = ~/.dotfiles/git/sourcebots.conf
