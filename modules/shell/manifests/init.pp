@@ -27,6 +27,8 @@ class shell {
 
   file { 'nvm config directory':
     ensure => directory,
+    owner => 'jake',
+    group => 'users',
     mode => '0644',
     path => '/home/jake/.nvm'
   }
