@@ -87,12 +87,4 @@ class config {
     path => '/home/jake/.config/Caret/Preferences.md',
     source => 'puppet:///modules/config/caret-preferences.md'
   }
-
-  service { 'lightdm':
-    enable => false
-  }
-
-  -> service { 'gdm':
-    enable => true
-  }
 }
