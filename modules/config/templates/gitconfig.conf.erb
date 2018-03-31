@@ -1,0 +1,12 @@
+[core]
+	excludesfile = ~/.config/.gitignore
+
+[user]
+    name = Jake Howard
+
+[include]
+<% if @trusted['hostname'] == 'too-work' -%>
+    path = ~/.dotfiles/git/work.conf
+<%  else -%>
+    path = ~/.dotfiles/git/personal.conf
+<% end -%>

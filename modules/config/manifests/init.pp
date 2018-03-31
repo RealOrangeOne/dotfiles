@@ -50,6 +50,15 @@ class config {
     source => 'puppet:///modules/config/gitignore_global'
   }
 
+  file { 'Git config':
+    ensure => file,
+    path => '/home/jake/.gitconfig',
+    mode => '0644',
+    owner => 'jake',
+    group => 'users',
+    content => template('config/gitconfig.conf.erb')
+  }
+
   file { 'Rofi config directory':
     ensure => directory,
     mode => '0644',
