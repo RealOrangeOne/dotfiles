@@ -10,3 +10,6 @@ jobs:
             - run: gem install puppet-lint
             - run: puppet-lint modules/ -c .puppet-lint.rc
             - run: puppet-lint manifests/ -c .puppet-lint.rc
+            - run:
+                name: Checkout submodules
+                command: git submodule sync && git submodule update --init
