@@ -105,6 +105,7 @@ node default {
     'qt5-styleplugins',
     'redis',
     'redshift',
+    'reptyr',
     'rofi',
     'scrcpy',
     'screenfetch',
