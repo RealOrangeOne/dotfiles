@@ -10,6 +10,7 @@ class common {
     groups => [
       'input',
       'users',
+      'video',
       'wheel'
     ]
   }
