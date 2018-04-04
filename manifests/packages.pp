@@ -39,6 +39,7 @@ node default {
     'dunst',
     'etcher',
     'etcher-cli',
+    'exa',
     'fasd',
     'feedreader',
     'feh',
