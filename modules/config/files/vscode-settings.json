@@ -42,5 +42,6 @@
     "toolchain": "stable-x86_64-unknown-linux-gnu"
   },
   "rust.mode": "rls",
-  "latex-workshop.latex.autoBuild.onSave.enabled": false
+  "latex-workshop.latex.autoBuild.onSave.enabled": false,
+  "terminal.integrated.setLocaleVariables": true
 }
