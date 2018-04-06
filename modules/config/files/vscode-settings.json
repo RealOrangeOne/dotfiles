@@ -43,5 +43,15 @@
   },
   "rust.mode": "rls",
   "latex-workshop.latex.autoBuild.onSave.enabled": false,
-  "terminal.integrated.setLocaleVariables": true
+  "terminal.integrated.setLocaleVariables": true,
+  "gitlens.advanced.messages": {
+    "suppressCommitHasNoPreviousCommitWarning": false,
+    "suppressCommitNotFoundWarning": false,
+    "suppressFileNotUnderSourceControlWarning": false,
+    "suppressGitVersionWarning": false,
+    "suppressLineUncommittedWarning": false,
+    "suppressNoRepositoryWarning": false,
+    "suppressResultsExplorerNotice": false,
+    "suppressShowKeyBindingsNotice": true
+  }
 }
