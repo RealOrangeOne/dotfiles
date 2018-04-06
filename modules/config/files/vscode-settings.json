@@ -54,5 +54,14 @@
     "suppressResultsExplorerNotice": false,
     "suppressShowKeyBindingsNotice": true
   },
-  "gitlens.keymap": "alternate"
+  "gitlens.keymap": "alternate",
+  "editor.cursorBlinking": "smooth",
+  "editor.fontLigatures": true,
+  "editor.smoothScrolling": true,
+  "workbench.editor.enablePreview": false,
+  "terminal.integrated.enableBell": true,
+  "terminal.integrated.fontSize": 14,
+  "terminal.integrated.scrollback": 2000,
+  "git.enableCommitSigning": true,
+  "python.linting.mypyEnabled": true
 }

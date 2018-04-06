@@ -45,6 +45,7 @@ class config::vscode {
   file { 'VSCode config':
     ensure => file,
     mode => '0644',
+    owner => 'jake',
     path => '/home/jake/.config/Code/User/settings.json',
     source => 'puppet:///modules/config/vscode-settings.json'
   }
@@ -52,6 +53,7 @@ class config::vscode {
   file { 'VSCode keybindings':
     ensure => file,
     mode => '0644',
+    owner => 'jake',
     path => '/home/jake/.config/Code/User/keybindings.json',
     source => 'puppet:///modules/config/vscode-keybindings.json'
   }
