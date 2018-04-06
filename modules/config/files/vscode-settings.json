@@ -53,5 +53,6 @@
     "suppressNoRepositoryWarning": false,
     "suppressResultsExplorerNotice": false,
     "suppressShowKeyBindingsNotice": true
-  }
+  },
+  "gitlens.keymap": "alternate"
 }
