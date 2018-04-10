@@ -31,7 +31,8 @@ class config::vscode {
     'zolocode.editorzoom',
     'formulahendry.auto-close-tag',
     'James-Yu.latex-workshop',
-    'docsmsft.docs-authoring-pack'
+    'docsmsft.docs-authoring-pack',
+    'tomoki1207.pdf'
   ];
 
   $extensions.each |String $extension| {
