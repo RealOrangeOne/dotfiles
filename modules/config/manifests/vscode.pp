@@ -1,6 +1,5 @@
 class config::vscode {
   $extensions = [
-    'DavidAnson.vscode-markdownlint',
     'PKief.material-icon-theme',
     'PeterJausovec.vscode-docker',
     'Zignd.html-css-class-completion',
@@ -31,7 +30,8 @@ class config::vscode {
     'wholroyd.jinja',
     'zolocode.editorzoom',
     'formulahendry.auto-close-tag',
-    'James-Yu.latex-workshop'
+    'James-Yu.latex-workshop',
+    'docsmsft.docs-authoring-pack'
   ];
 
   $extensions.each |String $extension| {
