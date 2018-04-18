@@ -13,6 +13,9 @@ class devices::laptop {
   -> service {'tlp':
     enable => true
   }
+  -> service {'tlp-sleep':
+    enable => true
+  }
   -> user { 'Update user groups':
     name => 'jake',
     groups => [
