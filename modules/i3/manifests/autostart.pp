@@ -27,15 +27,6 @@ class i3::autostart {
     }
   }
 
-  file {'Autostart Compton':
-    ensure => link,
-    path => '/home/jake/.config/autostart/compton.desktop',
-    mode => '0644',
-    owner => 'jake',
-    source => '/usr/share/applications/compton.desktop'
-  }
-
-
   file {'Autostart libinput-gestures':
     ensure => link,
     path => '/home/jake/.config/autostart/libinput-gestures.desktop',
