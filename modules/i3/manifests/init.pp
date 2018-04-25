@@ -28,6 +28,15 @@ class i3 {
     source => 'puppet:///modules/i3/i3status.conf'
   }
 
+  file { 'compton config':
+    ensure => file,
+    path => '/home/jake/.config/compton.conf',
+    mode => '0644',
+    owner => 'jake',
+    group => 'users',
+    source => 'puppet:///modules/i3/compton.conf'
+  }
+
   file { 'dunst config directory':
     ensure => directory,
     path => '/home/jake/.config/dunst'
