@@ -14,7 +14,8 @@ class i3::autostart {
     'tracker-miner-rss',
     'tracker-store',
     'nm-applet',
-    'lxpolkit'
+    'lxpolkit',
+    'solaar'
   ];
 
   $programs.each |String $program| {

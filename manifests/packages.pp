@@ -112,6 +112,7 @@ node default {
     'sl',
     'slack-desktop',
     'slack-term',
+    'solaar',
     'spotify',
     'steam',
     'sublime-text',
