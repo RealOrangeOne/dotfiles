@@ -96,4 +96,14 @@ class config {
     path => '/home/jake/.config/Caret/Preferences.md',
     source => 'puppet:///modules/config/caret-preferences.md'
   }
+
+  file { 'Tilix file temporary location':
+    ensure => file,
+    path => '/tmp/tilix.conf',
+    source => 'puppet:///modules/config/tilix.conf'
+  }
+  -> exec { 'Load Tilix config':
+    command => 'dconf load /etc/gexperts/Tilix/ < /tmp/tilix.conf',
+    user => 'jake'
+  }
 }
