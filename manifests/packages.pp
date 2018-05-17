@@ -7,7 +7,8 @@ node default {
 
   -> package {[  # Packages that need to be installed first
     'i3-gaps',
-    'ttf-google-fonts-git'
+    'ttf-google-fonts-git',
+    'i3lock-color-git'
   ]:
     ensure => installed
   }
