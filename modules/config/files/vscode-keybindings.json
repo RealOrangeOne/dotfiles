@@ -19,5 +19,9 @@
         "key": "ctrl+shift+t",
         "command": "-DocFX.showTokenTreeToSide",
         "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+shift+l",
+        "command": "workbench.action.editor.changeLanguageMode"
     }
 ]
