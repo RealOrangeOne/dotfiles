@@ -78,13 +78,6 @@ class config {
     source => 'puppet:///modules/config/touchpad.conf'
   }
 
-  file { 'Default applications configuration':
-    ensure => file,
-    mode => '0644',
-    path => '/home/jake/.config/mimeapps.list',
-    source => 'puppet:///modules/config/mimeapps.list'
-  }
-
   file { 'Caret config directory':
     ensure => directory,
     mode => '0644',
