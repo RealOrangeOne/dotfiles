@@ -63,5 +63,6 @@
   "terminal.integrated.fontSize": 14,
   "terminal.integrated.scrollback": 2000,
   "git.enableCommitSigning": true,
-  "python.linting.mypyEnabled": true
+  "python.linting.mypyEnabled": true,
+  "editor.fontFamily": "Fira Code"
 }
