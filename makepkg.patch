@@ -1,11 +1,19 @@
---- /usr/bin/makepkg	2017-07-04 10:29:39.000000000 +0100
-+++ makepkg.bak	2017-08-10 09:30:02.882437815 +0100
-@@ -2127,7 +2127,7 @@ if (( ! INFAKEROOT )); then
- 	if (( EUID == 0 )); then
- 		error "$(gettext "Running %s as root is not allowed as it can cause permanent,\n\
- catastrophic damage to your system.")" "makepkg"
--		exit 1 # $E_USER_ABORT
-+		# exit 1 # $E_USER_ABORT
- 	fi
- else
- 	if [[ -z $FAKEROOTKEY ]]; then
+*** /usr/bin/makepkg	2018-05-29 09:10:22.097063834 +0100
+--- /usr/bin/makepkg.orig	2018-05-29 09:08:25.916705962 +0100
+***************
+*** 1403,1409 ****
+  	if (( EUID == 0 )); then
+  		error "$(gettext "Running %s as root is not allowed as it can cause permanent,\n\
+  catastrophic damage to your system.")" "makepkg"
+! 		# exit $E_ROOT
+  	fi
+  else
+  	if [[ -z $FAKEROOTKEY ]]; then
+--- 1403,1409 ----
+  	if (( EUID == 0 )); then
+  		error "$(gettext "Running %s as root is not allowed as it can cause permanent,\n\
+  catastrophic damage to your system.")" "makepkg"
+! 		exit $E_ROOT
+  	fi
+  else
+  	if [[ -z $FAKEROOTKEY ]]; then
