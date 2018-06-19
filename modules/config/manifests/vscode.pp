@@ -32,7 +32,6 @@ class config::vscode {
     'formulahendry.auto-close-tag',
     'James-Yu.latex-workshop',
     'docsmsft.docs-authoring-pack',
-    'tomoki1207.pdf',
     'ban.spellright'
   ];
 
