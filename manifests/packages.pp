@@ -125,7 +125,7 @@ node default {
     'thunderbird',
     'tig',
     'tor-browser-en',
-    'ttf-emojione-color',
+    'ttf-emojione',
     'ttf-fira-code',
     'ttf-font-awesome',
     'ttf-ms-fonts',
