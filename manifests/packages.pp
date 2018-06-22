@@ -16,6 +16,7 @@ node default {
   -> package {[
     'acpi',
     'advanced-ssh-config',
+    'alacritty-git',
     'android-tools',
     'archstrike-keyring',
     'arduino',

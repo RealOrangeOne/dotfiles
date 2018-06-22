@@ -99,4 +99,11 @@ class config {
     command => 'dconf load /etc/gexperts/Tilix/ < /tmp/tilix.conf',
     user => 'jake'
   }
+
+  file { 'Alacritty config':
+    ensure => file,
+    owner => 'jake',
+    path => '/home/jake/.config/alacritty/alacritty.yml',
+    source => 'puppet:///modules/config/alacritty.yml'
+  }
 }
