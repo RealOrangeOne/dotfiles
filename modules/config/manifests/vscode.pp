@@ -32,7 +32,8 @@ class config::vscode {
     'formulahendry.auto-close-tag',
     'James-Yu.latex-workshop',
     'docsmsft.docs-authoring-pack',
-    'ban.spellright'
+    'ban.spellright',
+    'editorconfig.editorconfig',
   ];
 
   $extensions.each |String $extension| {
