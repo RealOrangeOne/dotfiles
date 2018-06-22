@@ -81,6 +81,7 @@ node default {
     'minecraft',
     'mkchromecast',
     'nextcloud-client',
+    'nnn',
     'nodejs',
     'numix-gtk-theme',
     'nvm',

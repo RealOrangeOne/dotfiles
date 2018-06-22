@@ -7,3 +7,4 @@ BROWSER=/usr/bin/firefox
 EDITOR=/usr/bin/nano
 SSH_AUTH_SOCK=/tmp/ssh-agent-jake.sock
 TERMINATOR=/usr/bin/tilix
+NNN_DE_FILE_MANAGER=nautilus
