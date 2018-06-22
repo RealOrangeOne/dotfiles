@@ -1,10 +1,5 @@
 class devices::work {
-  file { 'Projects directory':
-    ensure => directory,
-    path => '/home/jake/Projects',
-    owner => 'jake'
-  }
-  -> vcsrepo { 'Vim runtime':
+  vcsrepo { 'Vim runtime':
     ensure => latest,
     provider => git,
     user => 'jake',

@@ -19,6 +19,11 @@ class common {
     path => '/home/jake',
     owner => 'jake'
   }
+  -> file { 'Projects directory':
+    ensure => directory,
+    path => '/home/jake/Projects',
+    owner => 'jake'
+  }
 
   exec {'Set Java version':
     command => 'archlinux-java set intellij-jdk',
