@@ -3,8 +3,6 @@ QT_QPA_PLATFORMTHEME=gtk2
 GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 LANG=en_GB.UTF-8
 ARCHFLAGS="-arch x86_64"
-BROWSER=/usr/bin/firefox
-EDITOR=/usr/bin/vim
 SSH_AUTH_SOCK=/tmp/ssh-agent-jake.sock
 TERMINATOR=/usr/bin/tilix
 NNN_DE_FILE_MANAGER=nautilus
