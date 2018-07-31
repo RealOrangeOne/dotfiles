@@ -8,11 +8,6 @@ class i3::autostart {
     'org.gnome.SettingsDaemon.DiskUtilityNotify',
     'org.gnome.SettingsDaemon.Keyboard',
     'gsettings-data-convert',
-    'tracker-extract',
-    'tracker-miner-apps',
-    'tracker-miner-fs',
-    'tracker-miner-rss',
-    'tracker-store',
     'nm-applet',
     'lxpolkit',
     'solaar'
