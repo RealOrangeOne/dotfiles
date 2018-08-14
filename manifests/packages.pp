@@ -126,6 +126,7 @@ node default {
     'thefuck',
     'thunderbird',
     'tig',
+    'tmux',
     'tor-browser-en',
     'ttf-emojione',
     'ttf-fira-code',

@@ -58,4 +58,13 @@ class shell {
     source => 'puppet:///modules/shell/global-environment',
     path => '/etc/environment'
   }
+
+  file { 'tmux config':
+    ensure => file,
+    owner => 'jake',
+    group => 'users',
+    mode => '0755',
+    source => 'puppet:///modules/shell/tmux.conf',
+    path => '/home/jake/.tmux.conf'
+  }
 }
