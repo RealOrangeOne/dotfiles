@@ -4,15 +4,13 @@ export ZSH=/usr/share/oh-my-zsh/
 # Plugins
 plugins=(
     django
-    jsontools
-    nyan
     pip
     pyenv
     python
     common-aliases
-    gitfast
     zsh-completions
     extract
+    heroku
 )
 
 
@@ -31,4 +29,3 @@ export PROMPT="${ret_status} %{$fg_bold[green]%}%n@%m%{$reset_color%}:%{$fg_bold
 COMPLETION_WAITING_DOTS="true"
 
 alias src="source $HOME/.zshrc"
-
