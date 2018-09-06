@@ -2,11 +2,7 @@ class devices::laptop {
   package {[
     'ethtool',
     'smartmontools',
-    'tlp',
-    'nvidia',
-    'nvidia-settings',
-    'bumblebee',
-    'bbswitch'
+    'tlp'
   ]:
     ensure => installed
   }
@@ -16,19 +12,6 @@ class devices::laptop {
   -> service {'tlp-sleep':
     enable => true
   }
-  -> user { 'Update user groups':
-    name => 'jake',
-    groups => [
-      'input',
-      'users',
-      'wheel',
-      'bumblebee'
-    ]
-  }
-  -> service { 'bumblebeed':
-    enable => true
-  }
-  -> kmod::load { 'nvidia': }
 
   file { 'TLP config':
     ensure => file,
