@@ -1,8 +1,5 @@
 class i3::autostart {
   $programs = [
-    'gnome-keyring-pkcs11',
-    'gnome-keyring-secrets',
-    'gnome-keyring-ssh',
     'pulseaudio',
     'org.gnome.SettingsDaemon.XSettings',
     'org.gnome.SettingsDaemon.DiskUtilityNotify',
