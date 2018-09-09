@@ -2,11 +2,4 @@
 
 set -e
 
-puppet apply manifests/pre-packages.pp --modulepath=modules/ --verbose
-
-patch /usr/bin/makepkg -N < makepkg.patch
-puppet apply manifests/packages.pp --verbose
-patch /usr/bin/makepkg -NR < makepkg.patch
-
-puppet apply manifests/main.pp --modulepath=modules/ --verbose
-puppet apply manifests/devices.pp --modulepath=modules/ --verbose
+ansible-playbook -i hosts dotfiles.yml

@@ -10,3 +10,6 @@ ansible = "*"
 
 [requires]
 python_version = "3.7"
+
+[scripts]
+deploy = "bash ./deploy.sh"
