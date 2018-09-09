@@ -10,3 +10,12 @@
       - users
       - video
       - wheel
+- file:
+    state: directory
+    path: '/home/jake/Projects'
+    owner: jake
+- file:
+    state: directory
+    path: '/opt/pyenv'
+    owner: jake
+    group: users
