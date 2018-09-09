@@ -1,0 +1,12 @@
+- user:
+    name: jake
+    home: '/home/jake'
+    comment: Jake Howard
+    shell: '/usr/bin/zsh'
+    uid: 1000
+    system: true
+    groups:
+      - input
+      - users
+      - video
+      - wheel
