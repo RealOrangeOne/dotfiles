@@ -1,0 +1,60 @@
+- copy:
+    src: ./files/libinput-gestures.conf
+    dest: /etc/libinput-gestures.conf
+    mode: 0644
+    owner: jake
+
+- copy:
+    src: ./files/terminator.conf
+    dest: /home/jake/.config/terminator/config
+    mode: 0644
+    owner: jake
+
+- copy:
+    src: ./files/uniemoji.json
+    dest: /home/jake/.config/uniemoji/custom.json
+    mode: 0644
+    owner: jake
+
+- copy:
+    src: ./files/assh.yml
+    dest: /home/jake/.ssh/assh.yml
+    mode: 0644
+    owner: jake
+
+- copy:
+    src: ./files/gitignore_global
+    dest: /home/jake/.config/.gitignore
+    mode: 0644
+    owner: jake
+
+- template:
+    src: ./files/gitconfig.conf
+    dest: /home/jake/.gitconfig
+    mode: 0644
+    owner: jake
+    group: users
+
+- copy:
+    src: ./files/rofi.conf
+    dest: /home/jake/.config/rofi/config
+    mode: 0644
+    owner: jake
+
+- copy:
+    src: ./files/touchpad.conf
+    dest: /usr/share/X11/xorg.conf.d/30-touchpad.conf
+    mode: 0644
+    owner: jake
+
+- copy:
+    src: ./files/caret-preferences.md
+    dest: /home/jake/.config/Caret/Preferences.md
+    mode: 0644
+    owner: jake
+
+- copy:
+    src: ./files/alacritty.yml
+    dest: /home/jake/.config/alacritty/alacritty.yml
+    mode: 0644
+    owner: jake

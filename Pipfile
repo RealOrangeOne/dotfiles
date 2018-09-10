@@ -13,5 +13,5 @@ yamllint = "*"
 python_version = "3.7"
 
 [scripts]
-deploy = "ansible-playbook -i hosts dotfiles.yml -C"
+deploy = "sudo ansible-playbook -i hosts dotfiles.yml -C"
 test = "yamllint -sc yamllint.yml yamllint.yml dotfiles.yml tasks/ vars.yml"

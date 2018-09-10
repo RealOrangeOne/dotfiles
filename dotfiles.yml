@@ -5,3 +5,4 @@
     - include_vars:
         file: vars.yml
     - import_tasks: tasks/common.yml
+    - import_tasks: tasks/config.yml
