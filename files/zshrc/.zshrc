@@ -29,3 +29,10 @@ export PROMPT="${ret_status} %{$fg_bold[green]%}%n@%m%{$reset_color%}:%{$fg_bold
 COMPLETION_WAITING_DOTS="true"
 
 alias src="source $HOME/.zshrc"
+
+
+{% include "base.sh" %}
+{% include "environment.sh" %}
+{% include "applications.sh" %}
+{% include "catfish.sh" %}
+{% include "javascript.sh" %}

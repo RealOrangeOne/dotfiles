@@ -12,3 +12,4 @@
     - import_tasks: tasks/gnome.yml
     - import_tasks: tasks/i3.yml
     - import_tasks: tasks/services.yml
+    - import_tasks: tasks/shell.yml
