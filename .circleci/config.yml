@@ -7,9 +7,6 @@ jobs:
         working_directory: ~/dotfiles
         steps:
             - checkout
-            - run:
-                command: |
-                    sudo pip install pipenv
-                    pipenv install
+            - run: pipenv install
             - run: pipenv run test
             - run: pipenv run deploy -C
