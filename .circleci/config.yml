@@ -9,4 +9,4 @@ jobs:
             - checkout
             - run: pipenv install
             - run: pipenv run test
-            - run: pipenv run deploy -C
+            - run: pipenv run check
