@@ -1,0 +1,11 @@
+- copy:
+    src: ./files/vscode-settings.json
+    dest: /home/jake/.config/Code/User/settings.json
+    mode: 0644
+    owner: jake
+
+- copy:
+    src: ./files/vscode-keybindings.json
+    dest: /home/jake/.config/Code/User/keybindings.json
+    mode: 0644
+    owner: jake

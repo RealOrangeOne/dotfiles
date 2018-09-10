@@ -8,3 +8,4 @@
     - import_tasks: tasks/config.yml
     - import_tasks: tasks/vim.yml
     - import_tasks: tasks/private.yml
+    - import_tasks: tasks/vscode.yml
