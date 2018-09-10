@@ -31,11 +31,11 @@ block = "sound"
 interval = 1
 step_width = 2
 
-<% if @trusted['hostname'] == 'too-laptop' -%>
+{% if ansible_fqdn == "TOO-Laptop" %}
 [[block]]
 block = "battery"
 interval = 5
-<% end -%>
+{% endif %}
 
 [[block]]
 block = "time"
