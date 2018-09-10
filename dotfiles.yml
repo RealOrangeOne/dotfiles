@@ -13,3 +13,4 @@
     - import_tasks: tasks/i3.yml
     - import_tasks: tasks/services.yml
     - import_tasks: tasks/shell.yml
+    - import_tasks: tasks/yaourt.yml
