@@ -16,3 +16,4 @@ jobs:
                     - "/home/circleci/.local/share/virtualenvs"
             - run: pipenv run test
             - run: pipenv run check
+            - run: pipenv run dryrun
