@@ -14,6 +14,12 @@
     name: yay
   become: aur_builder
 
+- name: "Upgrade system"
+  aur:
+    use: yay
+    upgrade: true
+  become: aur_builder
+
 - name: "Install initial packages"
   aur:
     use: yay
@@ -29,7 +35,6 @@
   aur:
     use: yay
     skip_installed: true
-    upgrade: true
     name: "{{ item }}"
   become: aur_builder
   with_items:
