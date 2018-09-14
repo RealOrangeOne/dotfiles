@@ -17,3 +17,5 @@
     - import_tasks: tasks/yaourt.yml
     - import_tasks: tasks/fonts.yml
     - import_tasks: tasks/autostart.yml
+    - import_tasks: tasks/dabapps.yml
+      when: ansible_fqdn == "TOO-Work"
