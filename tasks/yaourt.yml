@@ -20,10 +20,6 @@
   with_items: "{{ keys }}"
   become: jake
 
-- name: "Add keys for root"
-  shell: "gpg --recv-keys {{ item }}"
-  with_items: "{{ keys }}"
-
 - name: "Add keys to pacman"
   shell: "pacman-key -r {{ item }}"
   with_items: "{{ keys }}"
