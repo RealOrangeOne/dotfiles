@@ -59,7 +59,3 @@ alias yolo="yaourt -Syyau --noconfirm"
 alias sc="screenshot --to img"
 alias clip="xclip -selection clipboard"
 alias cl="climate"
-
-recreatedb() {
-    dropdb $1 && createdb $1
-}

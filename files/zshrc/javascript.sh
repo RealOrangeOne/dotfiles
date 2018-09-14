@@ -35,7 +35,3 @@ nr() {
 alias nrc="npm run coverage"
 alias nrm="npm run mocha"
 alias nvmu="nvm use"
-
-# React-native extras
-alias rnl="adb logcat | grep ReactNative"
-alias rn="react-native"

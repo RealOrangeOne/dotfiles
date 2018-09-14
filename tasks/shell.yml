@@ -3,6 +3,7 @@
     dest: /home/jake/.zshrc
     mode: 0644
     owner: jake
+    validate: "zsh -n %s"
 
 - copy:
     src: /usr/share/nvm/init-nvm.sh
