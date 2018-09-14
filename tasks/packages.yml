@@ -2,7 +2,8 @@
     name: aur_builder
     group: wheel
 
-- lineinfile:
+- name: sudoers file
+  lineinfile:
     path: /etc/sudoers.d/11-install-aur_builder
     line: 'aur_builder ALL=(ALL) NOPASSWD: /usr/bin/pacman'
     create: true
@@ -12,20 +13,23 @@
   aur:
     skip_installed: true
     name: yay
-  become: aur_builder
+  become: true
+  become_user: aur_builder
 
 - name: "Upgrade system"
   aur:
     use: yay
     upgrade: true
-  become: aur_builder
+  become: true
+  become_user: aur_builder
 
 - name: "Install initial packages"
   aur:
     use: yay
     skip_installed: true
     name: "{{ item }}"
-  become: aur_builder
+  become: true
+  become_user: aur_builder
   with_items:
     - 'i3-gaps'
     - 'ttf-google-fonts-git'
@@ -36,7 +40,8 @@
     use: yay
     skip_installed: true
     name: "{{ item }}"
-  become: aur_builder
+  become: true
+  become_user: aur_builder
   with_items:
     - 'acpi'
     - 'advanced-ssh-config'

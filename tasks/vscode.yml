@@ -10,13 +10,17 @@
     mode: 0644
     owner: jake
 
-- shell: "code --list-extensions"
+- name: "Get VSCode extensions"
+  shell: "code --list-extensions"
+  become: true
+  become_user: jake
   register: vscode_extensions
 
 - name: "Install VSCode extensions"
   shell: "code --install-extension {{ item }}"
-  become: jake
-  when: "item not in vscode_extensions"
+  become: true
+  become_user: jake
+  when: "item not in vscode_extensions.stdout_lines"
   with_items:
     - 'PKief.material-icon-theme'
     - 'PeterJausovec.vscode-docker'
