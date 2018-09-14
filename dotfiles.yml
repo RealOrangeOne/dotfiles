@@ -17,5 +17,8 @@
     - import_tasks: tasks/yaourt.yml
     - import_tasks: tasks/fonts.yml
     - import_tasks: tasks/autostart.yml
+
     - import_tasks: tasks/dabapps.yml
       when: ansible_fqdn == "TOO-Work"
+    - import_tasks: tasks/laptop.yml
+      when: ansible_fqdn == "TOO-Laptop"

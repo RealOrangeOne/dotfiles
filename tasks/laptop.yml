@@ -1,0 +1,24 @@
+- name: "Install power-saving stuff"
+  aur:
+    use: yay
+    skip_installed: true
+    name: "{{ item }}"
+  become: true
+  become_user: aur_builder
+  with_items:
+    - ethtool
+    - smartmontools
+    - tlp
+
+- name: Enable TLP services
+  service:
+    name: "{{ item }}"
+    enabled: true
+  with_items:
+    - tlp
+    - tlp-sleep
+
+- copy:
+    src: ./files/tlp.conf
+    dest: /etc/default/tlp
+    mode: 0644
