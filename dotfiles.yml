@@ -1,7 +1,5 @@
 - hosts: local
   connection: local
-  become: true
-  become_user: root
   tasks:
     - ping:
     - include_vars:
