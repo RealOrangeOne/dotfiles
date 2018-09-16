@@ -59,8 +59,9 @@
     mode: 0644
     owner: jake
 
-- name: Tilix config
-  shell: "dconf load /etc/gexperts/Tilix/"
-  args:
-    stdin: "{{ lookup('file', './files/tilix.conf') }}"
-  become: jake
+# - name: Tilix config
+#   shell: "dconf load /etc/gexperts/Tilix/"
+#   args:
+#     stdin: "{{ lookup('file', './files/tilix.conf') }}"
+#   become: true
+#   become_user: jake
