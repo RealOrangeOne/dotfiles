@@ -5,7 +5,7 @@
 
 - copy:
     src: ./files/.yaourtrc
-    dest: /home/jake/.yaourtrc
+    dest: "{{ home }}/.yaourtrc"
     mode: 0644
 
 - set_fact:
@@ -18,7 +18,7 @@
 - name: "Add keys"
   shell: "gpg --recv-keys {{ item }}"
   with_items: "{{ keys }}"
-  become: jake
+  become: "{{ user }}"
 
 - name: "Add keys to pacman"
   shell: "pacman-key -r {{ item }}"

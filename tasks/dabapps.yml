@@ -1,15 +1,15 @@
 - name: "DabApps Dotfiles"
   git:
     repo: git@github.com:dabapps/dotfiles
-    dest: /home/jake/Projects/dotfiles
+    dest: "{{ home }}/Projects/dotfiles"
     force: true
   become: true
-  become_user: jake
+  become_user: "{{ user }}"
 
 - file:
-    src: /home/jake/Projects/dotfiles/.editorconfig
-    dest: /home/jake/Projects/.editorconfig
+    src: "{{ home }}/Projects/dotfiles/.editorconfig"
+    dest: "[{ home }}/Projects/.editorconfig"
     mode: 0644
-    owner: jake
+    owner: "{{ user }}"
     state: link
     force: true

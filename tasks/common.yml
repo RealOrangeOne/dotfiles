@@ -1,6 +1,6 @@
 - user:
-    name: jake
-    home: '/home/jake'
+    name: "{{ user }}"
+    home: "{{ home }}"
     comment: Jake Howard
     shell: '/usr/bin/zsh'
     uid: 1000
@@ -12,10 +12,10 @@
       - wheel
 - file:
     state: directory
-    path: '/home/jake/Projects'
-    owner: jake
+    path: '{{ home }}/Projects'
+    owner: "{{ user }}"
 - file:
     state: directory
     path: '/opt/pyenv'
-    owner: jake
+    owner: "{{ user }}"
     group: users

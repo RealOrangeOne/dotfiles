@@ -1,25 +1,25 @@
 - copy:
     src: ./files/vscode-settings.json
-    dest: /home/jake/.config/Code/User/settings.json
+    dest: "{{ home }}/.config/Code/User/settings.json"
     mode: 0644
-    owner: jake
+    owner: "{{ user }}"
 
 - copy:
     src: ./files/vscode-keybindings.json
-    dest: /home/jake/.config/Code/User/keybindings.json
+    dest: "{{ home }}/.config/Code/User/keybindings.json"
     mode: 0644
-    owner: jake
+    owner: "{{ user }}"
 
 - name: "Get VSCode extensions"
   shell: "code --list-extensions"
   become: true
-  become_user: jake
+  become_user: "{{ user }}"
   register: vscode_extensions
 
 - name: "Install VSCode extensions"
   shell: "code --install-extension {{ item }}"
   become: true
-  become_user: jake
+  become_user: "{{ user }}"
   when: "item not in vscode_extensions.stdout_lines"
   with_items:
     - 'PKief.material-icon-theme'

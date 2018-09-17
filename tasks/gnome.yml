@@ -1,7 +1,7 @@
 - copy:
     src: ./files/Templates
-    dest: /home/jake/Templates
+    dest: "{{ home }}/Templates"
     mode: 0755
-    owner: jake
+    owner: "{{ user }}"
     group: users
     directory_mode: true

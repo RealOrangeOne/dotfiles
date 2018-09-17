@@ -1,13 +1,13 @@
 - file:
     state: directory
-    path: /home/jake/.dotfiles
-    owner: jake
+    path: "{{ home }}/.dotfiles"
+    owner: "{{ user }}"
     group: users
 
 - file:
     state: link
-    src: /home/jake/.dotfiles/.upload
-    dest: /home/jake/.upload
+    src: "{{ home }}/.dotfiles/.upload"
+    dest: "{{ home }}/.upload"
     mode: 0644
-    owner: jake
+    owner: "{{ user }}"
     group: users

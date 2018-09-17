@@ -1,22 +1,22 @@
 - template:
     src: ./files/zshrc/.zshrc
-    dest: /home/jake/.zshrc
+    dest: "{{ home }}/.zshrc"
     mode: 0644
-    owner: jake
+    owner: "{{ user }}"
     validate: "zsh -n %s"
 
 - copy:
     src: /usr/share/nvm/init-nvm.sh
-    dest: /home/jake/.nvm/nvm.sh
+    dest: "{{ home }}/.nvm/nvm.sh"
     mode: 0755
-    owner: jake
+    owner: "{{ user }}"
     group: users
 
 - copy:
     src: ./files/bin
-    dest: /home/jake/.bin
+    dest: "{{ home }}/.bin"
     mode: 0755
-    owner: jake
+    owner: "{{ user }}"
     group: users
     directory_mode: true
 
@@ -29,7 +29,7 @@
 
 - copy:
     src: ./files/tmux.conf
-    dest: /home/jake/.tmux.conf
+    dest: "{{ home }}/.tmux.conf"
     mode: 0755
-    owner: jake
+    owner: "{{ user }}"
     group: users

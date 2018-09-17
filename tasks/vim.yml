@@ -1,8 +1,8 @@
 - copy:
     src: ./files/vimrc
-    dest: /home/jake/.vimrc
+    dest: "{{ home }}/.vimrc"
     mode: 0644
-    owner: jake
+    owner: "{{ user }}"
     group: users
 
 - copy:

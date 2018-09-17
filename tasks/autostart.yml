@@ -1,8 +1,8 @@
 - file:
     src: "/etc/xdg/autostart/{{ item }}.desktop"
-    dest: "/home/jake/.config/autostart/{{ item }}.desktop"
+    dest: "{{ home }}/.config/autostart/{{ item }}.desktop"
     mode: 0644
-    owner: jake
+    owner: "{{ user }}"
     state: link
     force: true
   with_items:

@@ -1,34 +1,34 @@
 - copy:
     src: ./files/i3.conf
-    dest: /home/jake/.config/i3/config
+    dest: "{{ home }}/.config/i3/config"
     mode: 0644
-    owner: jake
+    owner: "{{ user }}"
     group: users
 
 - copy:
     src: ./files/i3status.conf
-    dest: /home/jake/.config/i3status/config
+    dest: "{{ home }}/.config/i3status/config"
     mode: 0644
-    owner: jake
+    owner: "{{ user }}"
     group: users
 
 - copy:
     src: ./files/compton.conf
-    dest: /home/jake/.config/compton.conf
+    dest: "{{ home }}/.config/compton.conf"
     mode: 0644
-    owner: jake
+    owner: "{{ user }}"
     group: users
 
 - copy:
     src: ./files/dunst.conf
-    dest: /home/jake/.config/dunst/dunstrc
+    dest: "{{ home }}/.config/dunst/dunstrc"
     mode: 0644
-    owner: jake
+    owner: "{{ user }}"
     group: users
 
 - template:
     src: ./files/i3status-rust.toml
-    dest: /home/jake/.config/i3/status.toml
+    dest: "{{ home }}/.config/i3/status.toml"
     mode: 0644
-    owner: jake
+    owner: "{{ user }}"
     group: users
