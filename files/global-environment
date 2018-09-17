@@ -6,3 +6,6 @@ ARCHFLAGS="-arch x86_64"
 SSH_AUTH_SOCK=/tmp/ssh-agent-jake.sock
 TERMINATOR=/usr/bin/tilix
 NNN_DE_FILE_MANAGER=nautilus
+GTK_IM_MODULE=ibus
+XMODIFIERS=@im=ibus
+QT_IM_MODULE=ibus
