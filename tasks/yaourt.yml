@@ -1,0 +1,29 @@
+- copy:
+    src: ./files/pacman.conf
+    dest: /etc/pacman.conf
+    mode: 0644
+
+- copy:
+    src: ./files/.yaourtrc
+    dest: /home/jake/.yaourtrc
+    mode: 0644
+
+- set_fact:
+    keys:
+      - '8A8F901A'  # Sublime Text
+      - 'D1483FA6C3C07136'  # Tor Browser
+      - '9D5F1C051D146843CDA4858BDE64825E7CBC0D51'  # ArchStrike
+      - '7448C890582975CD'
+
+- name: "Add keys"
+  shell: "gpg --recv-keys {{ item }}"
+  with_items: "{{ keys }}"
+  become: jake
+
+- name: "Add keys to pacman"
+  shell: "pacman-key -r {{ item }}"
+  with_items: "{{ keys }}"
+
+- name: "Sign keys in pacman"
+  shell: "pacman-key --lsign-key {{ item }}"
+  with_items: "{{ keys }}"

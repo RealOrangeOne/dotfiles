@@ -1,0 +1,13 @@
+- file:
+    state: directory
+    path: /home/jake/.dotfiles
+    owner: jake
+    group: users
+
+- file:
+    state: link
+    src: /home/jake/.dotfiles/.upload
+    dest: /home/jake/.upload
+    mode: 0644
+    owner: jake
+    group: users

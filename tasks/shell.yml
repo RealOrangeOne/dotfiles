@@ -1,0 +1,35 @@
+- template:
+    src: ./files/zshrc/.zshrc
+    dest: /home/jake/.zshrc
+    mode: 0644
+    owner: jake
+    validate: "zsh -n %s"
+
+- copy:
+    src: /usr/share/nvm/init-nvm.sh
+    dest: /home/jake/.nvm/nvm.sh
+    mode: 0755
+    owner: jake
+    group: users
+
+- copy:
+    src: ./files/bin
+    dest: /home/jake/.bin
+    mode: 0755
+    owner: jake
+    group: users
+    directory_mode: true
+
+- copy:
+    src: ./files/global-environment
+    dest: /etc/environment
+    mode: 0644
+    owner: root
+    group: root
+
+- copy:
+    src: ./files/tmux.conf
+    dest: /home/jake/.tmux.conf
+    mode: 0755
+    owner: jake
+    group: users

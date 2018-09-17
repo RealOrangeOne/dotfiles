@@ -1,0 +1,55 @@
+- copy:
+    src: ./files/vscode-settings.json
+    dest: /home/jake/.config/Code/User/settings.json
+    mode: 0644
+    owner: jake
+
+- copy:
+    src: ./files/vscode-keybindings.json
+    dest: /home/jake/.config/Code/User/keybindings.json
+    mode: 0644
+    owner: jake
+
+- name: "Get VSCode extensions"
+  shell: "code --list-extensions"
+  become: true
+  become_user: jake
+  register: vscode_extensions
+
+- name: "Install VSCode extensions"
+  shell: "code --install-extension {{ item }}"
+  become: true
+  become_user: jake
+  when: "item not in vscode_extensions.stdout_lines"
+  with_items:
+    - 'PKief.material-icon-theme'
+    - 'PeterJausovec.vscode-docker'
+    - 'Zignd.html-css-class-completion'
+    - 'bitzl.vscode-puppet'
+    - 'bogdan-sinitsa.theme-dark-monokai'
+    - 'christian-kohler.npm-intellisense'
+    - 'dbaeumer.vscode-eslint'
+    - 'eamodio.gitlens'
+    - 'eg2.tslint'
+    - 'eg2.vscode-npm-script'
+    - 'formulahendry.code-runner'
+    - 'ionutvmi.path-autocomplete'
+    - 'magicstack.MagicPython'
+    - 'mrmlnc.vscode-less'
+    - 'mrmlnc.vscode-scss'
+    - 'ms-python.python'
+    - 'ms-vscode.sublime-keybindings'
+    - 'rokoroku.vscode-theme-darcula'
+    - 'steoates.autoimport'
+    - 'truman.autocomplate-shell'
+    - 'wholroyd.jinja'
+    - 'zolocode.editorzoom'
+    - 'formulahendry.auto-close-tag'
+    - 'James-Yu.latex-workshop'
+    - 'ban.spellright'
+    - 'editorconfig.editorconfig'
+    - 'batisteo.vscode-django'
+    - 'davidanson.vscode-markdownlint'
+    - 'vsciot-vscode.vscode-arduino'
+    - 'vscoss.vscode-ansible'
+    - 'rust-lang.rust'

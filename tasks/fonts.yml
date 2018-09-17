@@ -1,0 +1,9 @@
+- file:
+    src: "/etc/fonts/conf.avail/{{ item }}"
+    dest: "/etc/fonts/conf.d/{{ item }}"
+    mode: 0644
+    state: link
+  with_items:
+    - '11-lcdfilter-default.conf'
+    - '10-sub-pixel-rgb.conf'
+    - '30-infinality-aliases.conf'

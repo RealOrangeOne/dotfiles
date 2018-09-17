@@ -1,0 +1,6 @@
+- copy:
+    src: ./files/powertop.service
+    dest: /etc/systemd/system/powertop.service
+    mode: 0644
+    owner: root
+    directory_mode: true

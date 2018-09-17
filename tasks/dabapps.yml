@@ -1,0 +1,15 @@
+- name: "DabApps Dotfiles"
+  git:
+    repo: git@github.com:dabapps/dotfiles
+    dest: /home/jake/Projects/dotfiles
+    force: true
+  become: true
+  become_user: jake
+
+- file:
+    src: /home/jake/Projects/dotfiles/.editorconfig
+    dest: /home/jake/Projects/.editorconfig
+    mode: 0644
+    owner: jake
+    state: link
+    force: true

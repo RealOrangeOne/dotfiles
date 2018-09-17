@@ -1,0 +1,21 @@
+- user:
+    name: jake
+    home: '/home/jake'
+    comment: Jake Howard
+    shell: '/usr/bin/zsh'
+    uid: 1000
+    system: true
+    groups:
+      - input
+      - users
+      - video
+      - wheel
+- file:
+    state: directory
+    path: '/home/jake/Projects'
+    owner: jake
+- file:
+    state: directory
+    path: '/opt/pyenv'
+    owner: jake
+    group: users
