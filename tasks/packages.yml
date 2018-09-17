@@ -99,6 +99,7 @@
     - 'libinput-gestures'
     - 'lightdm'
     - 'lightdm-webkit2-greeter'
+    - 'lxappearance'
     - 'lxpolkit-git'
     - 'lxrandr'
     - 'minecraft'
