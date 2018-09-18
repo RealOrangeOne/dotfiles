@@ -8,7 +8,7 @@
 
 - file:
     src: "{{ home }}/Projects/dotfiles/.editorconfig"
-    dest: "[{ home }}/Projects/.editorconfig"
+    dest: "{{ home }}/Projects/.editorconfig"
     mode: 0644
     owner: "{{ user }}"
     state: link
