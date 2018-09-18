@@ -3,11 +3,3 @@
     path: "{{ home }}/.dotfiles"
     owner: "{{ user }}"
     group: users
-
-- file:
-    state: link
-    src: "{{ home }}/.dotfiles/.upload"
-    dest: "{{ home }}/.upload"
-    mode: 0644
-    owner: "{{ user }}"
-    group: users
