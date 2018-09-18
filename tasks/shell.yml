@@ -4,6 +4,8 @@
     mode: 0644
     owner: "{{ user }}"
     validate: "zsh -n %s"
+    backup: true
+    trim_blocks: false
 
 - copy:
     src: /usr/share/nvm/init-nvm.sh
