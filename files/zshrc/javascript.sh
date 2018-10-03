@@ -35,3 +35,9 @@ nr() {
 alias nrc="npm run coverage"
 alias nrm="npm run mocha"
 alias nvmu="nvm use"
+
+
+nvm-init() {
+  export NVM_DIR="$HOME/.nvm"
+  source "$NVM_DIR/nvm.sh"
+}

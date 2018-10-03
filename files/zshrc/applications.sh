@@ -1,7 +1,3 @@
-# Load Programs
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && source "$NVM_DIR/nvm.sh"
-
 [ -d "$HOME/.nix-profile" ] && source "$HOME/.nix-profile/etc/profile.d/nix.sh"
 
 if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
@@ -11,9 +7,12 @@ fi
 eval $(thefuck --alias)
 eval "$(fasd --init auto)"
 
-export PATH="$HOME/.pyenv/bin:$PATH"
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
+pyenv-init() {
+  export PATH="$HOME/.pyenv/bin:$PATH"
+  eval "$(pyenv init -)"
+  eval "$(pyenv virtualenv-init -)"
+}
+
 
 # git aliases
 alias gs="git status"
