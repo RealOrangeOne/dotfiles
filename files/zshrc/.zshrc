@@ -3,13 +3,13 @@ export ZSH=/usr/share/oh-my-zsh/
 
 # Plugins
 plugins=(
-    django
-    pip
-    pyenv
-    python
-    common-aliases
-    extract
-    heroku
+  django
+  pip
+  pyenv
+  python
+  common-aliases
+  extract
+  heroku
 )
 
 export COMPLETION_WAITING_DOTS="true"
