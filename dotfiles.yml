@@ -4,8 +4,9 @@
     - ping:
     - include_vars:
         file: vars.yml
-    - import_tasks: tasks/packages.yml
+    - import_tasks: tasks/yaourt.yml
     - import_tasks: tasks/common.yml
+    - import_tasks: tasks/packages.yml
     - import_tasks: tasks/config.yml
     - import_tasks: tasks/vim.yml
     - import_tasks: tasks/private.yml
@@ -14,7 +15,6 @@
     - import_tasks: tasks/i3.yml
     - import_tasks: tasks/services.yml
     - import_tasks: tasks/shell.yml
-    - import_tasks: tasks/yaourt.yml
     - import_tasks: tasks/fonts.yml
     - import_tasks: tasks/autostart.yml
 
