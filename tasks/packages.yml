@@ -1,6 +1,9 @@
 - user:
     name: aur_builder
     group: wheel
+    create_home: false
+    password_lock: true
+    shell: /bin/false
 
 - name: sudoers file
   lineinfile:
