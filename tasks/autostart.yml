@@ -12,5 +12,5 @@
     - 'org.gnome.SettingsDaemon.Keyboard'
     - 'gsettings-data-convert'
     - 'nm-applet'
-    - 'lxpolkit'
+    - 'lxqt-policykit-agent'
     - 'solaar'
