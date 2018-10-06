@@ -1,0 +1,3 @@
+- user:
+    name: aur_builder
+    state: absent

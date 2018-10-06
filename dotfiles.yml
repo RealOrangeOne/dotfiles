@@ -22,3 +22,5 @@
       when: ansible_fqdn == "TOO-Work"
     - import_tasks: tasks/laptop.yml
       when: ansible_fqdn == "TOO-Laptop"
+
+    - import_tasks: tasks/cleanup.yml
