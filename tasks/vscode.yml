@@ -1,3 +1,9 @@
+- file:
+    path: '{{ home }}/.config/Code/User'
+    state: directory
+    owner: "{{ user }}"
+    mode: 0755
+
 - copy:
     src: ./files/vscode-settings.json
     dest: "{{ home }}/.config/Code/User/settings.json"
