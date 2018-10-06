@@ -4,15 +4,16 @@
     mode: 0644
     owner: "{{ user }}"
 
-- copy:
-    src: ./files/terminator.conf
-    dest: "{{ home }}/.config/terminator/config"
+- template:
+    src: ./files/gitconfig.conf
+    dest: "{{ home }}/.gitconfig"
     mode: 0644
     owner: "{{ user }}"
+    group: users
 
 - copy:
-    src: ./files/uniemoji.json
-    dest: "{{ home }}/.config/uniemoji/custom.json"
+    src: ./files/touchpad.conf
+    dest: /usr/share/X11/xorg.conf.d/30-touchpad.conf
     mode: 0644
     owner: "{{ user }}"
 
@@ -22,46 +23,28 @@
     mode: 0644
     owner: "{{ user }}"
 
-- copy:
-    src: ./files/gitignore_global
-    dest: "{{ home }}/.config/.gitignore"
+- set_fact:
+    user_config_files:
+      - { src: "terminator.conf", dest: "{{ home }}/.config/terminator/config" }
+      - { src: "uniemoji.json", dest: "{{ home }}/.config/uniemoji/custom.json" }
+      - { src: "gitignore_global", dest: "{{ home }}/.config/.gitignore" }
+      - { src: "rofi.conf", dest: "{{ home }}/.config/rofi/config" }
+      - { src: "caret-preferences.md", dest: "{{ home }}/.config/Caret/Preferences.md" }
+      - { src: "alacritty.yml", dest: "{{ home }}/.config/alacritty/alacritty.yml" }
+
+
+- name: "Create config file directories"
+  with_items: "{{ user_config_files }}"
+  file:
+    path: '{{ item.dest | dirname }}'
+    state: directory
+    owner: "{{ user }}"
+    mode: 0755
+
+- name: "Copy config files"
+  with_items: "{{ user_config_files }}"
+  copy:
+    src: './files/{{ item.src }}'
+    dest: '{{ item.dest }}'
     mode: 0644
     owner: "{{ user }}"
-
-- template:
-    src: ./files/gitconfig.conf
-    dest: "{{ home }}/.gitconfig"
-    mode: 0644
-    owner: "{{ user }}"
-    group: users
-
-- copy:
-    src: ./files/rofi.conf
-    dest: "{{ home }}/.config/rofi/config"
-    mode: 0644
-    owner: "{{ user }}"
-
-- copy:
-    src: ./files/touchpad.conf
-    dest: /usr/share/X11/xorg.conf.d/30-touchpad.conf
-    mode: 0644
-    owner: "{{ user }}"
-
-- copy:
-    src: ./files/caret-preferences.md
-    dest: "{{ home }}/.config/Caret/Preferences.md"
-    mode: 0644
-    owner: "{{ user }}"
-
-- copy:
-    src: ./files/alacritty.yml
-    dest: "{{ home }}/.config/alacritty/alacritty.yml"
-    mode: 0644
-    owner: "{{ user }}"
-
-# - name: Tilix config
-#   shell: "dconf load /etc/gexperts/Tilix/"
-#   args:
-#     stdin: "{{ lookup('file', './files/tilix.conf') }}"
-#   become: true
-#   become_user: jake
