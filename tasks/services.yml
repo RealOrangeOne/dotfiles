@@ -4,3 +4,8 @@
     mode: 0644
     owner: root
     directory_mode: true
+
+- service:
+    name: "powertop"
+    enabled: true
+    state: started
