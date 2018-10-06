@@ -13,7 +13,7 @@
       - {src: "dunst.conf", dest: "{{ home }}/.config/dunst/dunstrc"}
 
 - name: "Create i3 config file directories"
-  with_items: "{{ user_config_files }}"
+  with_items: "{{ i3_config_files }}"
   file:
     path: '{{ item.dest | dirname }}'
     state: directory
@@ -21,7 +21,7 @@
     mode: 0755
 
 - name: "Copy i3 config files"
-  with_items: "{{ user_config_files }}"
+  with_items: "{{ i3_config_files }}"
   copy:
     src: './files/{{ item.src }}'
     dest: '{{ item.dest }}'
