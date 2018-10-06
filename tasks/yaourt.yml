@@ -15,11 +15,6 @@
       - '9D5F1C051D146843CDA4858BDE64825E7CBC0D51'  # ArchStrike
       - '7448C890582975CD'
 
-- name: "Add keys"
-  shell: "gpg --recv-keys {{ item }}"
-  with_items: "{{ keys }}"
-  become: "{{ user }}"
-
 - name: "Add keys to pacman"
   shell: "pacman-key -r {{ item }}"
   with_items: "{{ keys }}"
