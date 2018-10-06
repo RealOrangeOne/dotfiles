@@ -167,3 +167,7 @@
     - 'zsh-completions'
     - 'zsh-doc'
     - 'zsh-syntax-highlighting'
+
+- user:
+    name: aur_builder
+    state: absent
