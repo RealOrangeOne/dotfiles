@@ -7,10 +7,10 @@
 
 - set_fact:
     i3_config_files:
-      - { src: "i3.conf", dest: "{{ home }}/.config/i3/config" }
-      - { src: "i3status.conf", dest: "{{ home }}/.config/i3status/config" }
-      - { src: "compton.conf", dest: "{{ home }}/.config/compton.conf" }
-      - { src: "dunst.conf", dest: "{{ home }}/.config/dunst/dunstrc" }
+      - {src: "i3.conf", dest: "{{ home }}/.config/i3/config"}
+      - {src: "i3status.conf", dest: "{{ home }}/.config/i3status/config"}
+      - {src: "compton.conf", dest: "{{ home }}/.config/compton.conf"}
+      - {src: "dunst.conf", dest: "{{ home }}/.config/dunst/dunstrc"}
 
 - name: "Create i3 config file directories"
   with_items: "{{ user_config_files }}"

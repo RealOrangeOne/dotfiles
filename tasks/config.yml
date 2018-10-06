@@ -25,12 +25,12 @@
 
 - set_fact:
     user_config_files:
-      - { src: "terminator.conf", dest: "{{ home }}/.config/terminator/config" }
-      - { src: "uniemoji.json", dest: "{{ home }}/.config/uniemoji/custom.json" }
-      - { src: "gitignore_global", dest: "{{ home }}/.config/.gitignore" }
-      - { src: "rofi.conf", dest: "{{ home }}/.config/rofi/config" }
-      - { src: "caret-preferences.md", dest: "{{ home }}/.config/Caret/Preferences.md" }
-      - { src: "alacritty.yml", dest: "{{ home }}/.config/alacritty/alacritty.yml" }
+      - {src: "terminator.conf", dest: "{{ home }}/.config/terminator/config"}
+      - {src: "uniemoji.json", dest: "{{ home }}/.config/uniemoji/custom.json"}
+      - {src: "gitignore_global", dest: "{{ home }}/.config/.gitignore"}
+      - {src: "rofi.conf", dest: "{{ home }}/.config/rofi/config"}
+      - {src: "caret-preferences.md", dest: "{{ home }}/.config/Caret/Preferences.md"}
+      - {src: "alacritty.yml", dest: "{{ home }}/.config/alacritty/alacritty.yml"}
 
 
 - name: "Create config file directories"
