@@ -8,13 +8,6 @@
     trim_blocks: false
 
 - copy:
-    src: /usr/share/nvm/init-nvm.sh
-    dest: "{{ home }}/.nvm/nvm.sh"
-    mode: 0755
-    owner: "{{ user }}"
-    group: users
-
-- copy:
     src: ./files/bin
     dest: "{{ home }}/.bin"
     mode: 0755
