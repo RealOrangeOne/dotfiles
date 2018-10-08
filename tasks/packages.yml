@@ -107,7 +107,7 @@
     - 'lxappearance'
     - 'lxrandr'
     - 'lxqt-policykit'
-    - 'ly'
+    - 'ly-git'
     - 'minecraft'
     - 'nextcloud-client'
     - 'nnn'
