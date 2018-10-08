@@ -9,4 +9,3 @@ NNN_DE_FILE_MANAGER=nautilus
 GTK_IM_MODULE=ibus
 XMODIFIERS=@im=ibus
 QT_IM_MODULE=ibus
-ASSH_CONFIG={{ home }}/.dotfiles/assh/assh.yml
