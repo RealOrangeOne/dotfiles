@@ -27,3 +27,15 @@
     dest: '{{ item.dest }}'
     mode: 0644
     owner: "{{ user }}"
+
+- service:
+    name: "lightdm"
+    enabled: false
+
+- service:
+    name: "ly"
+    enabled: true
+
+- service:
+    name: "getty@tty2"
+    enabled: false
