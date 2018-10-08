@@ -1,0 +1,31 @@
+- file:
+    state: directory
+    recurse: true
+    path: "{{ home }}/Private"
+    owner: "{{ user }}"
+    mode: 0700
+
+- set_fact:
+    keepassxc_config:
+      - {section: General, option: "SSHAgent", value: "true"}
+      - {section: General, option: "AutoSaveAfterEveryChange", value: "true"}
+      - {section: General, option: "LastOpenedDatabases", value: "{{ home }}/Private/KeePass/Password Safe.kdbx"}
+      - {section: General, option: "SingleInstance", value: "true"}
+      - {section: Http, option: "Enabled", value: "false"}
+      - {section: GUI, option: "ShowTrayIcon", value: "true"}
+      - {section: GUI, option: "MinimizeToTray", value: "true"}
+      - {section: GUI, option: "MinimizeOnStartup", value: "true"}
+      - {section: security, option: "lockdatabasescreenlock", value: "true"}
+      - {section: Browser, option: "Enabled", value: "true"}
+      - {section: Browser, option: "AlwaysAllowAccess", value: "true"}
+      - {section: Browser, option: "AlwaysAllowUpdate", value: "true"}
+
+- name: Set KeepassXC configuration
+  ini_file:
+    path: "{{ home }}/.config/keepassxc/keepassxc.ini"
+    mode: 0600
+    owner: "{{ user }}"
+    section: "{{ item.section }}"
+    option: "{{ item.option }}"
+    value: "{{ item.value }}"
+  with_items: "{{ keepassxc_config }}"
