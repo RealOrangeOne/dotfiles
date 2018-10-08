@@ -51,7 +51,7 @@ alias gdl="gd-lock"
 alias gdu="gd-unlock"
 
 # miscellaneous software aliases
-alias serve="/usr/bin/python2 -m SimpleHTTPServer"
+alias serve="/usr/bin/python3 -m http.server"
 alias vi="vim"
 alias regen-ssh-conf="assh config build > ~/.ssh/config"
 alias yolo="yaourt -Syyau --noconfirm"
