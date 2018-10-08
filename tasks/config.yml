@@ -17,12 +17,6 @@
     mode: 0644
     owner: "{{ user }}"
 
-- copy:
-    src: ./files/assh.yml
-    dest: "{{ home}}/.ssh/assh.yml"
-    mode: 0644
-    owner: "{{ user }}"
-
 - set_fact:
     user_config_files:
       - {src: "terminator.conf", dest: "{{ home }}/.config/terminator/config"}
