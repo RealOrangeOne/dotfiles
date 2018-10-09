@@ -33,6 +33,10 @@
     enabled: false
 
 - service:
+    name: "gdm"
+    enabled: false
+
+- service:
     name: "ly"
     enabled: true
 
