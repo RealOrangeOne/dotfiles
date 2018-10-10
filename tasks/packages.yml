@@ -1,8 +1,3 @@
-- copy:
-    src: ./files/pacman.conf
-    dest: /etc/pacman.conf
-    mode: 0644
-
 - set_fact:
     keys:
       - '8A8F901A'  # Sublime Text
@@ -18,6 +13,13 @@
   shell: "pacman-key --lsign-key {{ item }}"
   with_items: "{{ keys }}"
 
+- copy:
+    src: ./files/pacman.conf
+    dest: /etc/pacman.conf
+    mode: 0644
+
+- pacman:
+    update_cache: true
 
 - user:
     name: aur_builder
