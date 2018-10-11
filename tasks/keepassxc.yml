@@ -23,7 +23,7 @@
 - name: Set KeepassXC configuration
   ini_file:
     path: "{{ home }}/.config/keepassxc/keepassxc.ini"
-    mode: 0600
+    mode: 0700
     owner: "{{ user }}"
     section: "{{ item.section }}"
     option: "{{ item.option }}"
