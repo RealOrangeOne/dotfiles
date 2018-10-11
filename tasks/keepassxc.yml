@@ -5,6 +5,13 @@
     owner: "{{ user }}"
     mode: 0700
 
+- file:
+    state: directory
+    recurse: true
+    path: "{{ home }}/.config/keepassxc"
+    owner: "{{ user }}"
+    mode: 0700
+
 - set_fact:
     keepassxc_config:
       - {section: General, option: "SSHAgent", value: "true"}
