@@ -7,13 +7,6 @@ fi
 eval $(thefuck --alias)
 eval "$(fasd --init auto)"
 
-pyenv-init() {
-  export PATH="$HOME/.pyenv/bin:$PATH"
-  eval "$(pyenv init -)"
-  eval "$(pyenv virtualenv-init -)"
-}
-
-
 # git aliases
 alias gs="git status"
 alias gd="git diff"

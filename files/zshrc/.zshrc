@@ -33,7 +33,3 @@ alias src="source $HOME/.zshrc"
 {% include "applications.sh" %}
 {% include "catfish.sh" %}
 {% include "javascript.sh" %}
-
-{% if ansible_fqdn == "TOO-Work" %}
-    pyenv-init
-{% endif %}

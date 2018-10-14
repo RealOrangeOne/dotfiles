@@ -151,7 +151,6 @@
     - 'psensor'
     - 'pulseaudio-bluetooth-a2dp-gdm-fix'
     - 'pyenv'
-    - 'pyenv-virtualenv'
     - 'python-pip'
     - 'python-virtualenv'
     - 'python2-pip'
