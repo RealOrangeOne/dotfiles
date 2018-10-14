@@ -36,5 +36,4 @@ alias src="source $HOME/.zshrc"
 
 {% if ansible_fqdn == "TOO-Work" %}
     pyenv-init
-    nvm-init
 {% endif %}

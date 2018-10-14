@@ -34,9 +34,10 @@ nr() {
 
 alias nrc="npm run coverage"
 alias nrm="npm run mocha"
-alias nvmu="nvm use"
 
 
-nvm-init() {
+nvm() {   # This takes ~1sec, so we lazy-load it.
+  unset $0
   source "/usr/share/nvm/init-nvm.sh"
+  $0 $@
 }
