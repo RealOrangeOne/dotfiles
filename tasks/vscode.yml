@@ -23,7 +23,7 @@
   register: vscode_extensions
 
 - name: "Install VSCode extensions"
-  shell: "code --install-extension {{ item }}"
+  shell: "code --install-extension {{ item }} --force"
   become: true
   become_user: "{{ user }}"
   when: "item not in vscode_extensions.stdout_lines"
