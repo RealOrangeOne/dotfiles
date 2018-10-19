@@ -13,3 +13,7 @@
     owner: "{{ user }}"
     state: link
     force: true
+
+- modprobe:
+    name: pcspkr
+    state: absent

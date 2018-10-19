@@ -19,7 +19,3 @@
     path: '/opt/pyenv'
     owner: "{{ user }}"
     group: users
-
-- modprobe:
-    name: pcspkr
-    state: absent
