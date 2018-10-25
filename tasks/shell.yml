@@ -7,14 +7,6 @@
     backup: true
     trim_blocks: false
 
-- copy:
-    src: ./files/bin
-    dest: "{{ home }}/.bin"
-    mode: 0755
-    owner: "{{ user }}"
-    group: users
-    directory_mode: true
-
 - template:
     src: ./files/global-environment
     dest: /etc/environment
