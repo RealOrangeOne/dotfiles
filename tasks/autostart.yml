@@ -14,3 +14,13 @@
     - 'nm-applet'
     - 'lxqt-policykit-agent'
     - 'solaar'
+
+- file:
+    src: "/usr/share/applications/{{ item }}.desktop"
+    dest: "{{ home }}/.config/autostart/{{ item }}.desktop"
+    mode: 0644
+    owner: "{{ user }}"
+    state: link
+    force: true
+  with_items:
+    - 'flameshot'
