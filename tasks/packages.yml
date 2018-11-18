@@ -63,7 +63,7 @@
   with_items:
     - 'acpi'
     - 'advanced-ssh-config'
-    - 'alacritty-git'
+    - 'alacritty'
     - 'android-tools'
     - 'arandr'
     - 'archstrike-keyring'
@@ -96,7 +96,6 @@
     - 'feh'
     - 'filezilla'
     - 'firefox'
-    - 'firefox-developer-edition'
     - 'flameshot'
     - 'fonts-meta-extended-lt'
     - 'gimp'
