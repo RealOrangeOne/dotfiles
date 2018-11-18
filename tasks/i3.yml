@@ -1,16 +1,11 @@
-- template:
-    src: ./files/i3status-rust.toml
-    dest: "{{ home }}/.config/i3/status.toml"
-    mode: 0644
-    owner: "{{ user }}"
-    group: users
-
 - set_fact:
+    polybar_scripts: "{{ home }}/.config/polybar/polybar-scripts/polybar-scripts"
     i3_config_files:
       - {src: "i3.conf", dest: "{{ home }}/.config/i3/config"}
       - {src: "i3status.conf", dest: "{{ home }}/.config/i3status/config"}
       - {src: "compton.conf", dest: "{{ home }}/.config/compton.conf"}
       - {src: "dunst.conf", dest: "{{ home }}/.config/dunst/dunstrc"}
+      - {src: "polybar.ini", dest: "{{ home }}/.config/polybar/config"}
 
 - name: "Create i3 config file directories"
   with_items: "{{ i3_config_files }}"
@@ -20,13 +15,28 @@
     owner: "{{ user }}"
     mode: 0755
 
-- name: "Copy i3 config files"
+- name: "i3 config files"
   with_items: "{{ i3_config_files }}"
-  copy:
+  template:
     src: './files/{{ item.src }}'
     dest: '{{ item.dest }}'
     mode: 0644
     owner: "{{ user }}"
+
+- name: "Polybar scripts"
+  git:
+    repo: git@github.com:x70b1/polybar-scripts
+    dest: "{{ home }}/.config/polybar/polybar-scripts"
+    force: true
+  become: true
+  become_user: "{{ user }}"
+
+- copy:
+    src: ./files/launch-polybar.sh
+    dest: "{{ home }}/.config/polybar/launch.sh"
+    mode: 0755
+    owner: "{{ user }}"
+    group: users
 
 - service:
     name: "lightdm"
