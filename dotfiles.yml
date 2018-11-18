@@ -1,7 +1,6 @@
 - hosts: local
   connection: local
   tasks:
-    - ping:
     - include_vars:
         file: vars.yml
     - import_tasks: tasks/common.yml
