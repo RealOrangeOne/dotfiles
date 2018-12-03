@@ -14,9 +14,16 @@
     owner: root
     group: root
 
-- copy:
+- template:
     src: ./files/tmux.conf
     dest: "{{ home }}/.tmux.conf"
     mode: 0755
     owner: "{{ user }}"
     group: users
+
+- git:
+    repo: git@github.com:jimeh/tmux-themepack.git
+    dest: "{{ home }}/.tmux/plugins/tmux-themepack"
+    force: true
+  become: true
+  become_user: "{{ user }}"

@@ -26,7 +26,7 @@ autoload -Uz colors && colors
 local ret_status="%(?:%{$fg_bold[green]%}λ :%{$fg_bold[red]%}λ )"
 export PROMPT="${ret_status} %{$fg_bold[green]%}%n@%m%{$reset_color%}:%{$fg_bold[blue]%}%~%{$reset_color%}$ "
 
-alias src="source $HOME/.zshrc"
+alias src="source {{ home }}/.zshrc && tmux source {{ home }}/.tmux.conf"
 
 {% include "base.sh" %}
 {% include "environment.sh" %}
