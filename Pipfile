@@ -5,9 +5,9 @@ name = "pypi"
 
 [packages]
 ansible = "*"
-yamllint = "*"
 
 [dev-packages]
+yamllint = "*"
 
 [requires]
 python_version = "3.7"
