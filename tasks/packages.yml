@@ -130,6 +130,8 @@
     - 'lxqt-policykit'
     - 'ly-git'
     - 'minecraft'
+    - 'mullvad-vpn'
+    - 'networkmanager-wireguard-git'
     - 'nextcloud-client'
     - 'nnn'
     - 'nodejs'
@@ -186,9 +188,15 @@
     - 'vivaldi'
     - 'vlc'
     - 'whatsie'
+    - 'wireguard-dkms'
+    - 'wireguard-tools'
     - 'wps-office'
     - 'wps-office-extension-english-uk-dictionary'
     - 'zsh'
     - 'zsh-completions'
     - 'zsh-doc'
     - 'zsh-syntax-highlighting'
+
+- service:
+    name: "mullvad-daemon"
+    enabled: true
