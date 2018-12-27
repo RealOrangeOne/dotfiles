@@ -155,6 +155,7 @@
     - 'python-virtualenv'
     - 'python2-pip'
     - 'python2-virtualenv'
+    - 'qomui'
     - 'qt5-styleplugins'
     - 'redis'
     - 'redshift'
