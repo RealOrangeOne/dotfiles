@@ -11,3 +11,4 @@ export HISTCONTROL=ignoreboth
 
 export BROWSER=$(which firefox)
 export EDITOR=$(which vim)
+export TERM=xterm-256color
