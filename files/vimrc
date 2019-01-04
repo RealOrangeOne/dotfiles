@@ -1,11 +1,18 @@
-set runtimepath+=/usr/share/amix_vimrc
+execute pathogen#infect()
 
-source /usr/share/amix_vimrc/vimrcs/basic.vim
-source /usr/share/amix_vimrc/vimrcs/filetypes.vim
-source /usr/share/amix_vimrc/vimrcs/plugins_config.vim
-source /usr/share/amix_vimrc/vimrcs/extended.vim
+let g:lightline = {'colorscheme': 'wombat'}
 
 cmap w!! w !sudo tee >/dev/null %
 :set mouse=a
 
+syntax on
 filetype plugin indent on
+
+set laststatus=2
+
+if !has('gui_running')
+  set t_Co=256
+endif
+
+set background=dark
+colorscheme peaksea

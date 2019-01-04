@@ -183,6 +183,7 @@
     - 'ttf-ms-fonts'
     - 'ttf-wps-fonts'
     - 'universal-ctags-git'
+    - 'vim-pathogen'
     - 'visual-studio-code-bin'
     - 'virtualbox'
     - 'vivaldi'
