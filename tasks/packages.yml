@@ -1,16 +1,21 @@
 - set_fact:
     keys:
-      - '8A8F901A'  # Sublime Text
-      - 'D1483FA6C3C07136'  # Tor Browser
+      - '1EDDE2CDFC025D17F6DA9EC0ADAE6AD28A8F901A'  # Sublime Text
+      - 'EF6E286DDA85EA2A4BA7DE684E2C6E8793298290'  # Tor Browser
       - '9D5F1C051D146843CDA4858BDE64825E7CBC0D51'  # ArchStrike
-      - '7448C890582975CD'
+
+- name: "Get installed pacman keys"
+  shell: "pacman-key --list-keys"
+  register: pacman_keys
 
 - name: "Add keys to pacman"
   shell: "pacman-key -r {{ item }}"
+  when: "item not in pacman_keys.stdout"
   with_items: "{{ keys }}"
 
 - name: "Sign keys in pacman"
   shell: "pacman-key --lsign-key {{ item }}"
+  when: "item not in pacman_keys.stdout"
   with_items: "{{ keys }}"
 
 - copy:
@@ -184,7 +189,7 @@
     - 'thunderbird'
     - 'tig'
     - 'tmux'
-    - 'tor-browser-en'
+    - 'tor-browser'
     - 'ttf-emojione'
     - 'ttf-fira-code'
     - 'ttf-font-awesome'
