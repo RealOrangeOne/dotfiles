@@ -173,6 +173,7 @@
     - 'redis'
     - 'redshift'
     - 'reptyr'
+    - 'ripgrep'
     - 'rofi'
     - 'scrcpy'
     - 'screenfetch'
