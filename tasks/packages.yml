@@ -101,6 +101,7 @@
     - 'dex'
     - 'dmenu'
     - 'dunst'
+    - 'enpass-bin'
     - 'etcher'
     - 'exa'
     - 'fasd'
