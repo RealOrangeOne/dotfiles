@@ -15,7 +15,6 @@
     - import_tasks: tasks/shell.yml
     - import_tasks: tasks/fonts.yml
     - import_tasks: tasks/autostart.yml
-    - import_tasks: tasks/keepassxc.yml
 
     - import_tasks: tasks/dabapps.yml
       when: ansible_fqdn == "TOO-Work"
