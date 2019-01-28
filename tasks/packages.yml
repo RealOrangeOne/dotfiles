@@ -196,6 +196,7 @@
     - 'ttf-font-awesome'
     - 'ttf-ms-fonts'
     - 'ttf-wps-fonts'
+    - 'turtl'
     - 'universal-ctags-git'
     - 'vim-pathogen'
     - 'visual-studio-code-bin'
