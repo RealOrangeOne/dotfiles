@@ -1,7 +1,7 @@
 - file:
     src: "{{ home }}/.config/Code - OSS"
     dest: "{{ home }}/.config/Code"
-    mode: 0644
+    mode: 0755
     owner: "{{ user }}"
     state: link
     force: true
