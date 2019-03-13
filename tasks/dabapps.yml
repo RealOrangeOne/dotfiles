@@ -1,6 +1,6 @@
 - name: "DabApps Dotfiles"
   git:
-    repo: git@github.com:dabapps/dotfiles
+    repo: https://github.com/dabapps/dotfiles
     dest: "{{ home }}/Projects/dotfiles"
     force: true
   become: true

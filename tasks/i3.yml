@@ -25,7 +25,7 @@
 
 - name: "Polybar scripts"
   git:
-    repo: git@github.com:x70b1/polybar-scripts
+    repo: https://github.com/x70b1/polybar-scripts
     dest: "{{ home }}/.config/polybar/polybar-scripts"
     force: true
   become: true

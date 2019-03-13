@@ -22,7 +22,7 @@
     group: users
 
 - git:
-    repo: git@github.com:jimeh/tmux-themepack.git
+    repo: https://github.com/jimeh/tmux-themepack.git
     dest: "{{ home }}/.tmux/plugins/tmux-themepack"
     force: true
   become: true
