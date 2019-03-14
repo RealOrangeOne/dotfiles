@@ -23,6 +23,15 @@
     mode: 0644
     owner: "{{ user }}"
 
+
+- name: "Create polybar config directory"
+  file:
+    path: '{{ home }}/.config/polybar/'
+    state: directory
+    owner: "{{ user }}"
+    mode: 0755
+
+
 - name: "Polybar scripts"
   git:
     repo: https://github.com/x70b1/polybar-scripts
