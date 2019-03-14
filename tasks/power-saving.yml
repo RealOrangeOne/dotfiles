@@ -13,6 +13,7 @@
     - smartmontools
     - 'sysstat'
     - tlp
+    - xfce4-power-manager
 
 - name: Enable TLP services
   service:
@@ -26,15 +27,3 @@
     src: ./files/tlp.conf
     dest: /etc/default/tlp
     mode: 0644
-
-- copy:
-    src: ./files/powertop.service
-    dest: /etc/systemd/system/powertop.service
-    mode: 0644
-    owner: root
-    directory_mode: true
-
-- service:
-    name: "powertop"
-    enabled: true
-    state: started

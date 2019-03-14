@@ -82,7 +82,7 @@
 
 - name: "Create rofi config"
   copy:
-    src: './files/alacritty.yml'
+    src: './files/rofi.conf'
     dest: '{{ home }}/.config/rofi/config'
     mode: 0644
     owner: "{{ user }}"
