@@ -8,6 +8,7 @@
   with_items:
     - 'acpi'
     - ethtool
+    - nbfc
     - 'powertop'
     - 'psensor'
     - smartmontools
@@ -22,6 +23,11 @@
   with_items:
     - tlp
     - tlp-sleep
+
+- name: Enable NBFC
+  service:
+    name: nbfc
+    enabled: true
 
 - copy:
     src: ./files/tlp.conf
