@@ -1,3 +1,18 @@
+- name: "Install DabApps packages"
+  aur:
+    skip_installed: true
+    name: "{{ item }}"
+  become: true
+  become_user: aur_builder
+  when: "item not in installed_packages.stdout_lines"
+  with_items:
+    - 'redis'
+
+- service:
+    name: "redis"
+    enabled: true
+
+
 - name: "DabApps Dotfiles"
   git:
     repo: git@github.com:dabapps/dotfiles
@@ -13,7 +28,3 @@
     owner: "{{ user }}"
     state: link
     force: true
-
-- modprobe:
-    name: pcspkr
-    state: absent

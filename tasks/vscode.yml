@@ -1,3 +1,14 @@
+- name: "Install VSCode packages"
+  aur:
+    skip_installed: true
+    name: "{{ item }}"
+  become: true
+  become_user: aur_builder
+  when: "item not in installed_packages.stdout_lines"
+  with_items:
+    - 'community/code'
+    - 'universal-ctags-git'
+
 - file:
     src: "{{ home }}/.config/Code - OSS"
     dest: "{{ home }}/.config/Code"

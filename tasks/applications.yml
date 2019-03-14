@@ -1,0 +1,37 @@
+- name: "Install general applications"
+  aur:
+    skip_installed: true
+    name: "{{ item }}"
+  become: true
+  become_user: aur_builder
+  when: "item not in installed_packages.stdout_lines"
+  with_items:
+    - 'bleachbit'
+    - 'brave-bin'
+    - 'caprine'
+    - 'clamtk'
+    - 'corebird'
+    - 'etcher'
+    - 'filezilla'
+    - 'firefox'
+    - 'gimp'
+    - 'ghostwriter'
+    - 'glogg'
+    - 'google-earth-pro'
+    - 'gparted'
+    - 'inkscape'
+    - 'kdenlive'
+    - 'kodi'
+    - 'minecraft'
+    - 'obs-studio'
+    - 'onlyoffice-bin'
+    - 'slack-desktop'
+    - 'steam'
+    - 'thunderbird'
+    - 'tor-browser'
+    - 'virtualbox'
+    - 'vivaldi'
+    - 'vlc'
+    - 'whatsie'
+    - 'wps-office'
+    - 'wps-office-extension-english-uk-dictionary'

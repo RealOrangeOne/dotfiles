@@ -1,0 +1,39 @@
+- name: "Install input packages"
+  aur:
+    skip_installed: true
+    name: "{{ item }}"
+  become: true
+  become_user: aur_builder
+  when: "item not in installed_packages.stdout_lines"
+  with_items:
+    - 'ibus'
+    - 'ibus-uniemoji'
+    - 'libinput'
+    - 'libinput-gestures'
+    - 'solaar'
+
+- copy:
+    src: ./files/touchpad.conf
+    dest: /usr/share/X11/xorg.conf.d/30-touchpad.conf
+    mode: 0644
+    owner: "{{ user }}"
+
+- copy:
+    src: ./files/libinput-gestures.conf
+    dest: /etc/libinput-gestures.conf
+    mode: 0644
+    owner: "{{ user }}"
+
+- name: "Create uniemoji config directory"
+  file:
+    path: '{{ home }}/.config/uniemoji/'
+    state: directory
+    owner: "{{ user }}"
+    mode: 0755
+
+- name: "Create uniemoji config"
+  copy:
+    src: './files/uniemoji.json'
+    dest: '{{ home }}/.config/uniemoji/custom.json'
+    mode: 0644
+    owner: "{{ user }}"

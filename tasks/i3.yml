@@ -1,3 +1,28 @@
+- name: "Install i3 packages"
+  aur:
+    skip_installed: true
+    name: "{{ item }}"
+  become: true
+  become_user: aur_builder
+  when: "item not in installed_packages.stdout_lines"
+  with_items:
+    - 'betterlockscreen'
+    - 'brightnessctl'
+    - 'compton'
+    - 'dmenu'
+    - 'dunst'
+    - 'feh'
+    - 'flameshot'
+    - 'i3-gaps'
+    - 'i3lock-color-git'
+    - 'lxqt-policykit'
+    - 'numix-gtk-theme'
+    - 'aur/polybar'
+    - 'qt5-styleplugins'
+    - 'rofi'
+    - 'tbg'
+
+
 - set_fact:
     polybar_scripts: "{{ home }}/.config/polybar/polybar-scripts/polybar-scripts"
     i3_config_files:
@@ -47,18 +72,17 @@
     owner: "{{ user }}"
     group: users
 
-- service:
-    name: "lightdm"
-    enabled: false
 
-- service:
-    name: "gdm"
-    enabled: false
+- name: "Create rofi config directory"
+  file:
+    path: '{{ home }}/.config/rofi/'
+    state: directory
+    owner: "{{ user }}"
+    mode: 0755
 
-- service:
-    name: "ly"
-    enabled: true
-
-- service:
-    name: "getty@tty2"
-    enabled: false
+- name: "Create rofi config"
+  copy:
+    src: './files/alacritty.yml'
+    dest: '{{ home }}/.config/rofi/config'
+    mode: 0644
+    owner: "{{ user }}"

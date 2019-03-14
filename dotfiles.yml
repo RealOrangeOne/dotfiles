@@ -3,22 +3,28 @@
   tasks:
     - include_vars:
         file: vars.yml
-    - import_tasks: tasks/common.yml
+    - import_tasks: tasks/user.yml
     - import_tasks: tasks/packages.yml
-    - import_tasks: tasks/config.yml
+    - import_tasks: tasks/python.yml
     - import_tasks: tasks/vim.yml
-    - import_tasks: tasks/private.yml
+    - import_tasks: tasks/intersect.yml
     - import_tasks: tasks/vscode.yml
     - import_tasks: tasks/gnome.yml
     - import_tasks: tasks/i3.yml
-    - import_tasks: tasks/services.yml
     - import_tasks: tasks/shell.yml
     - import_tasks: tasks/fonts.yml
     - import_tasks: tasks/autostart.yml
+    - import_tasks: tasks/power-saving.yml
+    - import_tasks: tasks/display.yml
+    - import_tasks: tasks/javascript.yml
+    - import_tasks: tasks/applications.yml
+    - import_tasks: tasks/boot.yml
+    - import_tasks: tasks/dev.yml
+    - import_tasks: tasks/input.yml
+    - import_tasks: tasks/media.yml
+    - import_tasks: tasks/security.yml
 
     - import_tasks: tasks/dabapps.yml
       when: ansible_fqdn == "TOO-Work"
-    - import_tasks: tasks/laptop.yml
-      when: ansible_fqdn == "TOO-Laptop"
 
     - import_tasks: tasks/cleanup.yml

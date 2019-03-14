@@ -1,3 +1,21 @@
+- name: "Install font packages"
+  aur:
+    skip_installed: true
+    name: "{{ item }}"
+  become: true
+  become_user: aur_builder
+  when: "item not in installed_packages.stdout_lines"
+  with_items:
+    # - 'all-repository-fonts'
+    - 'fonts-meta-extended-lt'
+    - 'otf-fira-code'
+    - 'otf-font-awesome'
+    - 'ttf-emojione'
+    - 'ttf-fira-code'
+    - 'ttf-font-awesome'
+    - 'ttf-ms-fonts'
+    - 'ttf-wps-fonts'
+
 - file:
     src: "/etc/fonts/conf.avail/{{ item }}"
     dest: "/etc/fonts/conf.d/{{ item }}"

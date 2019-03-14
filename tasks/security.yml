@@ -1,0 +1,24 @@
+- name: "Install security-related packages"
+  aur:
+    skip_installed: true
+    name: "{{ item }}"
+  become: true
+  become_user: aur_builder
+  when: "item not in installed_packages.stdout_lines"
+  with_items:
+    - 'keybase-bin'
+    - 'mullvad-vpn'
+    - 'networkmanager-wireguard-git'
+    - 'qomui'
+    - 'wireguard-arch'
+    - 'wireguard-tools'
+
+- service:
+    name: "mullvad-daemon"
+    enabled: true
+
+- copy:
+    src: ./files/assh.yml
+    dest: "{{ home}}/.ssh/assh.yml"
+    mode: 0644
+    owner: "{{ user }}"

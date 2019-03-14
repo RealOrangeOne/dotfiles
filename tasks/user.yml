@@ -10,12 +10,8 @@
       - users
       - video
       - wheel
+
 - file:
     state: directory
     path: '{{ home }}/Projects'
     owner: "{{ user }}"
-- file:
-    state: directory
-    path: '/opt/pyenv'
-    owner: "{{ user }}"
-    group: users

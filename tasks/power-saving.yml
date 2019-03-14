@@ -1,13 +1,17 @@
 - name: "Install power-saving stuff"
   aur:
-    use: yay
     skip_installed: true
     name: "{{ item }}"
   become: true
   become_user: aur_builder
+  when: "item not in installed_packages.stdout_lines"
   with_items:
+    - 'acpi'
     - ethtool
+    - 'powertop'
+    - 'psensor'
     - smartmontools
+    - 'sysstat'
     - tlp
 
 - name: Enable TLP services
@@ -22,3 +26,15 @@
     src: ./files/tlp.conf
     dest: /etc/default/tlp
     mode: 0644
+
+- copy:
+    src: ./files/powertop.service
+    dest: /etc/systemd/system/powertop.service
+    mode: 0644
+    owner: root
+    directory_mode: true
+
+- service:
+    name: "powertop"
+    enabled: true
+    state: started

@@ -23,9 +23,6 @@
     dest: /etc/pacman.conf
     mode: 0644
 
-- pacman:
-    update_cache: true
-
 - user:
     name: aur_builder
     group: wheel
@@ -45,6 +42,7 @@
   become_user: aur_builder
   register: installed_packages
 
+
 - name: "Install yay"
   aur:
     skip_installed: true
@@ -52,166 +50,12 @@
   become: true
   become_user: aur_builder
 
-- name: "Install initial packages"
+- name: "Install additional repo keyrings"
   aur:
-    use: yay
     skip_installed: true
     name: "{{ item }}"
   become: true
   become_user: aur_builder
   when: "item not in installed_packages.stdout_lines"
   with_items:
-    - 'i3-gaps'
-    - 'all-repository-fonts'
-    - 'i3lock-color-git'
-
-- name: "Install packages"
-  aur:
-    use: yay
-    skip_installed: true
-    name: "{{ item }}"
-  become: true
-  become_user: aur_builder
-  when: "item not in installed_packages.stdout_lines"
-  with_items:
-    - 'acpi'
-    - 'advanced-ssh-config'
-    - 'alacritty'
-    - 'android-tools'
-    - 'arandr'
     - 'archstrike-keyring'
-    - 'arduino'
-    - 'arduino-cli'
-    - 'arduino-builder'
-    - 'bat'
-    - 'bcm20702a1-firmware'
-    - 'betterlockscreen'
-    - 'bleachbit'
-    - 'bluez-firmware'
-    - 'brave-bin'
-    - 'brightnessctl'
-    - 'calibre'
-    - 'caprine'
-    - 'catimg'
-    - 'climate'
-    - 'clamtk'
-    - 'community/code'
-    - 'corebird'
-    - 'compton'
-    - 'deluge'
-    - 'dex'
-    - 'dmenu'
-    - 'dunst'
-    - 'enpass-bin'
-    - 'etcher'
-    - 'exa'
-    - 'fasd'
-    - 'fd'
-    - 'feedreader'
-    - 'feh'
-    - 'ffmpeg-compat-57'
-    - 'filezilla'
-    - 'firefox'
-    - 'flameshot'
-    - 'fonts-meta-extended-lt'
-    - 'gimp'
-    - 'ghostwriter'
-    - 'glogg'
-    - 'google-earth-pro'
-    - 'gparted'
-    - 'grub-customizer'
-    - 'grub2-theme-archlinux'
-    - 'gvim'
-    - 'handbrake'
-    - 'hexchat'
-    - 'htop'
-    - 'hugo'
-    - 'ibus'
-    - 'ibus-uniemoji'
-    - 'inkscape'
-    - 'jdk'
-    - 'jshon'
-    - 'kdenlive'
-    - 'keybase-bin'
-    - 'kodi'
-    - 'libinput'
-    - 'libinput-gestures'
-    - 'lxappearance'
-    - 'lxrandr'
-    - 'lxqt-policykit'
-    - 'ly-git'
-    - 'minecraft'
-    - 'mullvad-vpn'
-    - 'networkmanager-wireguard-git'
-    - 'nextcloud-client'
-    - 'nnn'
-    - 'nodejs'
-    - 'numix-gtk-theme'
-    - 'nvm'
-    - 'obs-studio'
-    - 'oh-my-zsh-git'
-    - 'onlyoffice-bin'
-    - 'otf-fira-code'
-    - 'otf-font-awesome'
-    - 'perl-file-mimeinfo'
-    - 'pigz'
-    - 'playerctl'
-    - 'aur/polybar'
-    - 'postgresql'
-    - 'postman-bin'
-    - 'powertop'
-    - 'psensor'
-    - 'pulseaudio-bluetooth-a2dp-gdm-fix'
-    - 'pyenv'
-    - 'python-pip'
-    - 'python-virtualenv'
-    - 'python2-pip'
-    - 'python2-virtualenv'
-    - 'qomui'
-    - 'qt5-styleplugins'
-    - 'redis'
-    - 'redshift'
-    - 'reptyr'
-    - 'ripgrep'
-    - 'rofi'
-    - 'scrcpy'
-    - 'screenfetch'
-    - 'sl'
-    - 'slack-desktop'
-    - 'solaar'
-    - 'spotify'
-    - 'steam'
-    - 'sublime-text'
-    - 'sysstat'
-    - 'tbg'
-    - 'terminator'
-    - 'thefuck'
-    - 'thunderbird'
-    - 'tig'
-    - 'tmux'
-    - 'tor-browser'
-    - 'ttf-emojione'
-    - 'ttf-fira-code'
-    - 'ttf-font-awesome'
-    - 'ttf-ms-fonts'
-    - 'ttf-wps-fonts'
-    - 'turtl'
-    - 'universal-ctags-git'
-    - 'vim-pathogen'
-    - 'virtualbox'
-    - 'vivaldi'
-    - 'vlc'
-    - 'whatsie'
-    - 'wireguard-arch'
-    - 'wireguard-tools'
-    - 'wps-office'
-    - 'wps-office-extension-english-uk-dictionary'
-    - 'zola-bin'
-    - 'zsh'
-    - 'zsh-completions'
-    - 'zsh-doc'
-    - 'zsh-syntax-highlighting'
-
-- service:
-    name: "mullvad-daemon"
-    enabled: true

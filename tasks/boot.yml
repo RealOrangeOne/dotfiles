@@ -1,0 +1,31 @@
+- name: "Install Grub"
+  aur:
+    skip_installed: true
+    name: "{{ item }}"
+  become: true
+  become_user: aur_builder
+  when: "item not in installed_packages.stdout_lines"
+  with_items:
+    - 'grub-customizer'
+    - 'grub2-theme-archlinux'
+    - 'ly-git'
+
+- service:
+    name: "lightdm"
+    enabled: false
+
+- service:
+    name: "gdm"
+    enabled: false
+
+- service:
+    name: "ly"
+    enabled: true
+
+- service:
+    name: "getty@tty2"
+    enabled: false
+
+- modprobe:
+    name: pcspkr
+    state: absent

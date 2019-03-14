@@ -1,5 +1,0 @@
-- file:
-    state: directory
-    path: "{{ home }}/.dotfiles"
-    owner: "{{ user }}"
-    group: users

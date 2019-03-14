@@ -1,3 +1,40 @@
+- name: "Install input packages"
+  aur:
+    skip_installed: true
+    name: "{{ item }}"
+  become: true
+  become_user: aur_builder
+  when: "item not in installed_packages.stdout_lines"
+  with_items:
+    - 'advanced-ssh-config'
+    - 'alacritty'
+    - 'bat'
+    - 'catimg'
+    - 'climate'
+    - 'exa'
+    - 'fasd'
+    - 'fd'
+    - 'htop'
+    - 'jshon'
+    - 'nnn'
+    - 'oh-my-zsh-git'
+    - 'perl-file-mimeinfo'
+    - 'pigz'
+    - 'playerctl'
+    - 'reptyr'
+    - 'ripgrep'
+    - 'scrcpy'
+    - 'screenfetch'
+    - 'sl'
+    - 'terminator'
+    - 'thefuck'
+    - 'tmux'
+    - 'zsh'
+    - 'zsh-completions'
+    - 'zsh-doc'
+    - 'zsh-syntax-highlighting'
+
+
 - template:
     src: ./files/zshrc/.zshrc
     dest: "{{ home }}/.zshrc"
@@ -27,3 +64,33 @@
     force: true
   become: true
   become_user: "{{ user }}"
+
+
+- name: "Create alacritty config directory"
+  file:
+    path: '{{ home }}/.config/alacritty/'
+    state: directory
+    owner: "{{ user }}"
+    mode: 0755
+
+- name: "Create alacritty config"
+  copy:
+    src: './files/alacritty.yml'
+    dest: '{{ home }}/.config/alacritty/alacritty.yml'
+    mode: 0644
+    owner: "{{ user }}"
+
+
+- name: "Create terminator directory"
+  file:
+    path: '{{ home }}/.config/terminator/'
+    state: directory
+    owner: "{{ user }}"
+    mode: 0755
+
+- name: "Create alacritty config"
+  copy:
+    src: './files/terminator.conf'
+    dest: '{{ home }}/.config/terminator/config'
+    mode: 0644
+    owner: "{{ user }}"
