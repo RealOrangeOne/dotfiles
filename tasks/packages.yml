@@ -62,7 +62,7 @@
   when: "item not in installed_packages.stdout_lines"
   with_items:
     - 'i3-gaps'
-    - 'ttf-google-fonts-git'
+    - 'all-repository-fonts'
     - 'i3lock-color-git'
 
 - name: "Install packages"
