@@ -6,7 +6,7 @@
   become_user: aur_builder
   when: "item not in installed_packages.stdout_lines"
   with_items:
-    # - 'all-repository-fonts'
+    - 'all-repository-fonts'
     - 'fonts-meta-extended-lt'
     - 'otf-fira-code'
     - 'otf-font-awesome'
