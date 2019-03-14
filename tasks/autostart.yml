@@ -24,3 +24,4 @@
     force: true
   with_items:
     - 'flameshot'
+    - 'libinput-gestures'
