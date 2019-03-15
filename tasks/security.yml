@@ -8,7 +8,6 @@
   with_items:
     - 'keybase-bin'
     - 'mullvad-vpn'
-    - 'networkmanager-wireguard-git'
     - 'qomui'
     - 'wireguard-arch'
     - 'wireguard-tools'
