@@ -35,4 +35,4 @@
   with_items:
     - 'flameshot'
     - 'libinput-gestures'
-    - 'xfce4-power-manager-settings.'
+    - 'xfce4-power-manager-settings'
