@@ -6,14 +6,9 @@
   become_user: aur_builder
   when: "item not in installed_packages.stdout_lines"
   with_items:
-    - 'mullvad-vpn'
     - 'qomui'
     - 'wireguard-arch'
     - 'wireguard-tools'
-
-- service:
-    name: "mullvad-daemon"
-    enabled: true
 
 - copy:
     src: ./files/assh.yml
