@@ -7,6 +7,8 @@
   when: "item not in installed_packages.stdout_lines"
   with_items:
     - 'redis'
+    - 'ngrok'
+
 
 - service:
     name: "redis"
