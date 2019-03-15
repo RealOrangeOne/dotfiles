@@ -13,7 +13,6 @@
     - import_tasks: tasks/i3.yml
     - import_tasks: tasks/shell.yml
     - import_tasks: tasks/fonts.yml
-    - import_tasks: tasks/autostart.yml
     - import_tasks: tasks/power-saving.yml
     - import_tasks: tasks/display.yml
     - import_tasks: tasks/javascript.yml
@@ -23,6 +22,7 @@
     - import_tasks: tasks/input.yml
     - import_tasks: tasks/media.yml
     - import_tasks: tasks/security.yml
+    - import_tasks: tasks/autostart.yml
 
     - import_tasks: tasks/dabapps.yml
       when: ansible_fqdn == "TOO-Work"
