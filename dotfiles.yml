@@ -23,6 +23,7 @@
     - import_tasks: tasks/media.yml
     - import_tasks: tasks/security.yml
     - import_tasks: tasks/autostart.yml
+    - import_tasks: tasks/ntp.yml
 
     - import_tasks: tasks/dabapps.yml
       when: ansible_fqdn == "TOO-Work"
