@@ -30,6 +30,8 @@
     - 'thunderbird'
     - 'tor-browser'
     - 'virtualbox'
+    - 'virtualbox-host-modules-arch'
+    - 'virtualbox-guest-modules-arch'
     - 'vivaldi'
     - 'vlc'
     - 'whatsie'
