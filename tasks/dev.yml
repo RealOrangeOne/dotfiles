@@ -10,7 +10,6 @@
     - 'arduino-cli'
     - 'arduino-builder'
     - 'hugo'
-    - 'jdk'
     - 'postgresql'
     - 'postman-bin'
     - 'sublime-text'
