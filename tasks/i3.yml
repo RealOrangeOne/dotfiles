@@ -86,3 +86,9 @@
     dest: '{{ home }}/.config/rofi/config'
     mode: 0644
     owner: "{{ user }}"
+
+- name: Install pranklock
+  get_url:
+    url: https://raw.githubusercontent.com/RealOrangeOne/pranklock/master/pranklock
+    dest: /usr/bin/pranklock
+    mode: 0755
