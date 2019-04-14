@@ -21,6 +21,7 @@
     - 'qt5-styleplugins'
     - 'rofi'
     - 'tbg'
+    - 'xdotool'
 
 
 - set_fact:
