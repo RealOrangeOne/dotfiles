@@ -67,5 +67,14 @@
   "editor.fontFamily": "Fira Code",
   "editor.minimap.renderCharacters": false,
   "editor.cursorSmoothCaretAnimation": true,
-  "workbench.settings.enableNaturalLanguageSearch": true
+  "workbench.settings.enableNaturalLanguageSearch": true,
+  "cSpell.language": "en-GB",
+  "update.enableWindowsBackgroundUpdates": false,
+  "editor.mouseWheelZoom": true,
+  "files.autoGuessEncoding": true,
+  "files.useExperimentalFileWatcher": true,
+  "workbench.startupEditor": "none",
+  "extensions.ignoreRecommendations": true,
+  "extensions.showRecommendationsOnlyOnDemand": true,
+  "latex-workshop.intellisense.package.enabled": true
 }
