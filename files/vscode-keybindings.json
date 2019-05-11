@@ -23,5 +23,115 @@
     {
         "key": "ctrl+shift+l",
         "command": "workbench.action.editor.changeLanguageMode"
+    },
+    {
+        "key": "ctrl+l ctrl+alt+8",
+        "command": "-latex-workshop.decrement-sectioning",
+        "when": "editorTextFocus && latex-workshop:altkeymap && !editorReadonly && editorLangId == 'latex'"
+    },
+    {
+        "key": "ctrl+l [",
+        "command": "-latex-workshop.decrement-sectioning",
+        "when": "editorTextFocus && latex-workshop:altkeymap && !editorReadonly && editorLangId == 'latex'"
+    },
+    {
+        "key": "ctrl+l ]",
+        "command": "-latex-workshop.increment-sectioning",
+        "when": "editorTextFocus && latex-workshop:altkeymap && !editorReadonly && editorLangId == 'latex'"
+    },
+    {
+        "key": "ctrl+l ctrl+e",
+        "command": "-latex-workshop.shortcut.emph",
+        "when": "editorTextFocus && !editorReadonly && editorLangId == 'latex'"
+    },
+    {
+        "key": "ctrl+l ctrl+enter",
+        "command": "-latex-workshop.shortcut.item",
+        "when": "editorTextFocus && !editorReadonly && editorLangId == 'latex'"
+    },
+    {
+        "key": "ctrl+l ctrl+b",
+        "command": "-latex-workshop.shortcut.textbf",
+        "when": "editorTextFocus && !editorReadonly && editorLangId == 'latex'"
+    },
+    {
+        "key": "ctrl+l ctrl+i",
+        "command": "-latex-workshop.shortcut.textit",
+        "when": "editorTextFocus && !editorReadonly && editorLangId == 'latex'"
+    },
+    {
+        "key": "ctrl+l ctrl+n",
+        "command": "-latex-workshop.shortcut.textnormal",
+        "when": "editorTextFocus && !editorReadonly && editorLangId == 'latex'"
+    },
+    {
+        "key": "ctrl+l ctrl+r",
+        "command": "-latex-workshop.shortcut.textrm",
+        "when": "editorTextFocus && !editorReadonly && editorLangId == 'latex'"
+    },
+    {
+        "key": "ctrl+l ctrl+c",
+        "command": "-latex-workshop.shortcut.textsc",
+        "when": "editorTextFocus && !editorReadonly && editorLangId == 'latex'"
+    },
+    {
+        "key": "ctrl+l ctrl+s",
+        "command": "-latex-workshop.shortcut.textsl",
+        "when": "editorTextFocus && !editorReadonly && editorLangId == 'latex'"
+    },
+    {
+        "key": "ctrl+l ctrl+-",
+        "command": "-latex-workshop.shortcut.textsubscript",
+        "when": "editorTextFocus && !editorReadonly && editorLangId == 'latex'"
+    },
+    {
+        "key": "ctrl+l ctrl+6",
+        "command": "-latex-workshop.shortcut.textsuperscript",
+        "when": "editorTextFocus && !editorReadonly && editorLangId == 'latex'"
+    },
+    {
+        "key": "ctrl+l ctrl+t",
+        "command": "-latex-workshop.shortcut.texttt",
+        "when": "editorTextFocus && !editorReadonly && editorLangId == 'latex'"
+    },
+    {
+        "key": "ctrl+l ctrl+u",
+        "command": "-latex-workshop.shortcut.underline",
+        "when": "editorTextFocus && !editorReadonly && editorLangId == 'latex'"
+    },
+    {
+        "key": "ctrl+l ctrl+w",
+        "command": "-latex-workshop.surround",
+        "when": "editorHasSelection && editorTextFocus && !editorReadonly && editorLangId == 'latex'"
+    },
+    {
+        "key": "ctrl+l alt+x",
+        "command": "-workbench.view.extension.latex",
+        "when": "editorTextFocus && latex-workshop:altkeymap"
+    },
+    {
+        "key": "ctrl+l ctrl+m",
+        "command": "-editor.action.toggleTabFocusMode",
+        "when": "textInputFocus && editorLangId == 'latex'"
+    },
+    {
+        "key": "ctrl+l alt+v",
+        "command": "-latex-workshop.view",
+        "when": "editorTextFocus && latex-workshop:altkeymap"
+    },
+    {
+        "key": "ctrl+l alt+j",
+        "command": "-latex-workshop.synctex",
+        "when": "editorTextFocus && latex-workshop:altkeymap"
+    },
+    {
+        "key": "ctrl+l alt+c",
+        "command": "-latex-workshop.clean",
+        "when": "editorTextFocus && latex-workshop:altkeymap"
+    },
+    {
+        "key": "ctrl+l alt+b",
+        "command": "-latex-workshop.build",
+        "when": "editorTextFocus && latex-workshop:altkeymap"
     }
 ]
