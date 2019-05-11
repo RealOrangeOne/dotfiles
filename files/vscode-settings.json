@@ -24,7 +24,7 @@
   "python.workspaceSymbols.exclusionPatterns": [],
   "gitlens.codeLens.enabled": false,
   "npm.validate.enable": false,
-  "workbench.activityBar.visible": false,
+  "workbench.activityBar.visible": true,
   "editor.fontSize": 14,
   "files.trimTrailingWhitespace": true,
   "files.insertFinalNewline": true,
@@ -64,5 +64,8 @@
   "terminal.integrated.scrollback": 2000,
   "git.enableCommitSigning": true,
   "python.linting.mypyEnabled": true,
-  "editor.fontFamily": "Fira Code"
+  "editor.fontFamily": "Fira Code",
+  "editor.minimap.renderCharacters": false,
+  "editor.cursorSmoothCaretAnimation": true,
+  "workbench.settings.enableNaturalLanguageSearch": true
 }
