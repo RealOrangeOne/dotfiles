@@ -17,7 +17,6 @@ git-cleanup() {
   command git branch --merged | grep -v '*' | xargs -n 1 git branch -D
   command git branch -vv | awk '/: gone]/{print $1}' | xargs git branch -D
   command git remote prune origin
-  command git gc --aggressive
   command git checkout -
 }
 
