@@ -29,6 +29,7 @@
     - 'terminator'
     - 'thefuck'
     - 'tmux'
+    - 'ruby-tmuxinator'
     - 'zsh'
     - 'zsh-completions'
     - 'zsh-doc'
@@ -94,3 +95,11 @@
     dest: '{{ home }}/.config/terminator/config'
     mode: 0644
     owner: "{{ user }}"
+
+- copy:
+    src: ./files/tmuxinator
+    dest: "{{ home }}/.config/tmuxinator"
+    mode: 0755
+    owner: "{{ user }}"
+    group: users
+    directory_mode: true
