@@ -14,27 +14,12 @@ nb() {
   fi
 }
 
-nw() {
-  if [ $# -eq 0 ]; then
-    command npm run watch
-  else
-    for arg in "$@"
-    do
-      command npm run watch-${arg}
-    done
-  fi
-}
-
 nr() {
   for arg in "$@"
   do
     command npm run $arg
   done
 }
-
-alias nrc="npm run coverage"
-alias nrm="npm run mocha"
-
 
 nvm() {   # This takes ~1sec, so we lazy-load it.
   unset $0

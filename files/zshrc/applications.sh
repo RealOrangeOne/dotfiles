@@ -33,15 +33,10 @@ gd-unlock() {
   sessionid=`loginctl list-sessions | grep $USER | awk '{print $1}'`
   loginctl unlock-session $sessionid
 }
-alias gdl="gd-lock"
-alias gdu="gd-unlock"
 
 # miscellaneous software aliases
 alias serve="/usr/bin/python3 -m http.server"
-alias vi="vim"
 alias regen-ssh-conf="assh config build > ~/.ssh/config"
-alias yolo="yaourt -Syyau --noconfirm"
-alias sc="screenshot --to img"
 alias clip="xclip -selection clipboard"
 alias cl="climate"
 alias tmux-cleanup="tmux list-sessions | grep -v attached | cut -d: -f1 |  xargs -t -n1 tmux kill-session -t"
