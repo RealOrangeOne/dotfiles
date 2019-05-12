@@ -8,23 +8,10 @@
   with_items:
     - 'grub-customizer'
     - 'grub2-theme-archlinux'
-    - 'ly-git'
 
 - service:
     name: "lightdm"
-    enabled: false
-
-- service:
-    name: "gdm"
-    enabled: false
-
-- service:
-    name: "ly"
     enabled: true
-
-- service:
-    name: "getty@tty2"
-    enabled: false
 
 - modprobe:
     name: pcspkr
