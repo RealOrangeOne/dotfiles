@@ -1,9 +1,3 @@
-[ -d "$HOME/.nix-profile" ] && source "$HOME/.nix-profile/etc/profile.d/nix.sh"
-
-if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
-  source /etc/profile.d/vte.sh
-fi
-
 eval $(thefuck --alias)
 eval "$(fasd --init auto)"
 
