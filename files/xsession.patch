@@ -1,13 +1,14 @@
---- /etc/lightdm/Xsession	2019-03-13 18:14:42.569300975 +0000
-+++ /etc/lightdm/Xsession	2019-05-13 08:52:58.876091847 +0100
-@@ -67,8 +67,8 @@
- 
+--- /etc/lightdm/Xsession	2019-05-13 20:23:49.478590270 +0100
++++ /etc/lightdm/Xsession	2019-05-13 20:33:17.897352389 +0100
+@@ -67,8 +67,9 @@
+
  if ! [[ "${@}" =~ plasma|lxqt ]]; then
      # Fix ugly styles for Qt applications when running under GTK-based desktops and Qt 5.7+
 -    export QT_QPA_PLATFORMTHEME='qt5ct'
 -    unset QT_STYLE_OVERRIDE
 +    # export QT_QPA_PLATFORMTHEME='qt5ct'
 +    # unset QT_STYLE_OVERRIDE
++    echo 'Not this time!'
  fi
- 
+
  echo "X session wrapper complete, running session $*"
