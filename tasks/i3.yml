@@ -94,3 +94,8 @@
     dest: /usr/bin/pranklock
     mode: 0755
     force: true
+
+- name: Patch out terrible looking QT
+  patch:
+    src: './files/xsession.patch'
+    dest: '/etc/lightdm/Xsession'
