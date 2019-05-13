@@ -8,6 +8,8 @@
   with_items:
     - 'grub-customizer'
     - 'grub2-theme-archlinux'
+    - 'lightdm'
+    - 'lightdm-slick-greeter'
 
 - service:
     name: "lightdm"
@@ -16,3 +18,11 @@
 - modprobe:
     name: pcspkr
     state: absent
+
+- name: Enable Slick greeter for lightdm
+  ini_file:
+    path: /etc/lightdm/lightdm.conf
+    section: "Seat:*"
+    option: greeter-session
+    value: lightdm-slick-greeter
+    mode: 0644
