@@ -10,6 +10,7 @@
     - 'grub2-theme-archlinux'
     - 'lightdm'
     - 'lightdm-slick-greeter'
+    - 'os-prober'
 
 - service:
     name: "lightdm"
