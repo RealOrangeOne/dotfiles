@@ -9,9 +9,16 @@
     - 'qomui'
     - 'wireguard-arch'
     - 'wireguard-tools'
+    - 'opensnitch-git'
 
 - copy:
     src: ./files/assh.yml
-    dest: "{{ home}}/.ssh/assh.yml"
+    dest: "{{ home }}/.ssh/assh.yml"
+    mode: 0644
+    owner: "{{ user }}"
+
+- copy:
+    src: ./files/opensnitch.json
+    dest: "{{ home }}/.opensnitch/ui-config.json"
     mode: 0644
     owner: "{{ user }}"

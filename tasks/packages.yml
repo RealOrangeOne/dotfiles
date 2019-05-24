@@ -3,6 +3,7 @@
       - '1EDDE2CDFC025D17F6DA9EC0ADAE6AD28A8F901A'  # Sublime Text
       - 'EF6E286DDA85EA2A4BA7DE684E2C6E8793298290'  # Tor Browser
       - '9D5F1C051D146843CDA4858BDE64825E7CBC0D51'  # ArchStrike
+      - '748231EBCBD808A14F5E85D28C004C2F93481F6B'  # Opensnitch
 
 - name: "Get installed pacman keys"
   shell: "pacman-key --list-keys"
