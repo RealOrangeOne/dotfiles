@@ -59,3 +59,10 @@
   when: "item not in installed_packages.stdout_lines"
   with_items:
     - 'archstrike-keyring'
+
+- name: Use ccache in makepkg
+  lineinfile:
+    path: /etc/makepkg.conf
+    state: present
+    regexp: '^BUILDENV='
+    line: 'BUILDENV=(!distcc color ccache check !sign)'
