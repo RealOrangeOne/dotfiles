@@ -103,3 +103,10 @@
     owner: "{{ user }}"
     group: users
     directory_mode: true
+
+- name: Set vconsole keyboard
+  lineinfile:
+    path: /etc/vconsole.conf
+    state: present
+    regexp: '^KEYMAP='
+    line: 'KEYMAP=uk'
