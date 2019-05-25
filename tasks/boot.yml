@@ -12,11 +12,13 @@
     - 'lightdm-slick-greeter'
     - 'os-prober'
 
-- service:
+- name: "Enable lightdm"
+  service:
     name: "lightdm"
     enabled: true
 
-- modprobe:
+- name: "Disable PC Speaker"
+  modprobe:
     name: pcspkr
     state: absent
 

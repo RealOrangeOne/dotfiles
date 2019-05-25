@@ -1,4 +1,5 @@
-- copy:
+- name: "Add nautilus file templates"
+  copy:
     src: ./files/Templates
     dest: "{{ home }}/Templates"
     mode: 0755

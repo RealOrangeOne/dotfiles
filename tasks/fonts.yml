@@ -16,7 +16,8 @@
     - 'ttf-ms-fonts'
     - 'ttf-wps-fonts'
 
-- file:
+- name: Install font configurations
+  file:
     src: "/etc/fonts/conf.avail/{{ item }}"
     dest: "/etc/fonts/conf.d/{{ item }}"
     mode: 0644

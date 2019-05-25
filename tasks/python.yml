@@ -12,7 +12,8 @@
     - 'python2-pip'
     - 'python2-virtualenv'
 
-- file:
+- name: Create pyenv directory
+  file:
     state: directory
     path: '/opt/pyenv'
     owner: "{{ user }}"

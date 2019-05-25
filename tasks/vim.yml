@@ -9,22 +9,24 @@
     - 'gvim'
     - 'vim-pathogen'
 
-
-- copy:
+- name: Install vimrc
+  copy:
     src: ./files/vimrc
     dest: "{{ home }}/.vimrc"
     mode: 0644
     owner: "{{ user }}"
     group: users
 
-- copy:
+- name: Install vimrc for root user
+  copy:
     src: ./files/vimrc
     dest: /root/.vimrc
     mode: 0644
     owner: root
     group: users
 
-- file:
+- name: Create vim packages directory
+  file:
     path: '{{ home }}/.vim/bundle'
     state: directory
     owner: "{{ user }}"

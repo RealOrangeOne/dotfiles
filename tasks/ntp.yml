@@ -8,6 +8,7 @@
   with_items:
     - ntp
 
-- service:
+- name: Enable NTP service
+  service:
     name: "ntpd"
     enabled: true

@@ -6,6 +6,7 @@
   become_user: aur_builder
   when: "item not in installed_packages.stdout_lines"
   with_items:
+    - 'arandr'
     - 'betterlockscreen'
     - 'brightnessctl'
     - 'compton'
@@ -15,10 +16,13 @@
     - 'flameshot'
     - 'i3-gaps'
     - 'i3lock-color-git'
+    - 'lxappearance'
+    - 'lxrandr'
     - 'lxqt-policykit'
     - 'numix-gtk-theme'
     - 'aur/polybar'
     - 'qt5-styleplugins'
+    - 'redshift'
     - 'rofi'
     - 'tbg'
     - 'xdotool'

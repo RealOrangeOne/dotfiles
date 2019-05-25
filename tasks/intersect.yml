@@ -15,7 +15,8 @@
     - 'turtl'
 
 
-- file:
+- name: Create dotfiles directory
+  file:
     state: directory
     path: "{{ home }}/.dotfiles"
     owner: "{{ user }}"

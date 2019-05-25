@@ -12,13 +12,15 @@
     - 'libinput-gestures'
     - 'solaar'
 
-- copy:
+- name: Install mouse config
+  copy:
     src: ./files/touchpad.conf
     dest: /usr/share/X11/xorg.conf.d/30-touchpad.conf
     mode: 0644
     owner: "{{ user }}"
 
-- copy:
+- name: Install libinput-gestures config
+  copy:
     src: ./files/libinput-gestures.conf
     dest: /etc/libinput-gestures.conf
     mode: 0644

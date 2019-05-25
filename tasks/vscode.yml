@@ -9,19 +9,22 @@
     - 'community/code'
     - 'universal-ctags-git'
 
-- file:
+- name: Create VSCode user directory
+  file:
     path: '{{ home }}/.config/Code - OSS/User'
     state: directory
     owner: "{{ user }}"
     mode: 0755
 
-- copy:
+- name: Install VSCode settings
+  copy:
     src: ./files/vscode-settings.json
     dest: "{{ home }}/.config/Code - OSS/User/settings.json"
     mode: 0644
     owner: "{{ user }}"
 
-- copy:
+- name: Install VSCode keybindings
+  copy:
     src: ./files/vscode-keybindings.json
     dest: "{{ home }}/.config/Code - OSS/User/keybindings.json"
     mode: 0644
@@ -70,7 +73,7 @@
   when: "item not in vscode_extensions.stdout_lines"
   with_items: "{{ requested_vscode_extensions }}"
 
-- name: "Remove unversioned VSCode extensions"
+- name: "Remove unwanted VSCode extensions"
   shell: "code --uninstall-extension {{ item }}"
   become: true
   become_user: "{{ user }}"

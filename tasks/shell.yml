@@ -36,7 +36,8 @@
     - 'zsh-syntax-highlighting'
 
 
-- template:
+- name: Install ZSH config
+  template:
     src: ./files/zshrc/.zshrc
     dest: "{{ home }}/.zshrc"
     mode: 0644
@@ -45,21 +46,24 @@
     backup: true
     trim_blocks: false
 
-- template:
+- name: Install global environmetn variables
+  template:
     src: ./files/global-environment
     dest: /etc/environment
     mode: 0644
     owner: root
     group: root
 
-- template:
+- name: Install tmux config
+  template:
     src: ./files/tmux.conf
     dest: "{{ home }}/.tmux.conf"
     mode: 0755
     owner: "{{ user }}"
     group: users
 
-- git:
+- name: Install tmux themepack
+  git:
     repo: https://github.com/jimeh/tmux-themepack.git
     dest: "{{ home }}/.tmux/plugins/tmux-themepack"
     force: true
@@ -96,7 +100,8 @@
     mode: 0644
     owner: "{{ user }}"
 
-- copy:
+- name: Install tmuxinator config
+  copy:
     src: ./files/tmuxinator
     dest: "{{ home }}/.config/tmuxinator"
     mode: 0755

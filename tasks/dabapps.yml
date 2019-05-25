@@ -10,12 +10,13 @@
     - 'ngrok'
 
 
-- service:
+- name: "Enable redis"
+  service:
     name: "redis"
     enabled: true
 
 
-- name: "DabApps Dotfiles"
+- name: "Clone DabApps Dotfiles"
   git:
     repo: git@github.com:dabapps/dotfiles
     dest: "{{ home }}/Projects/dotfiles"
@@ -23,7 +24,8 @@
   become: true
   become_user: "{{ user }}"
 
-- file:
+- name: "Install DabApps EditorConfig"
+  file:
     src: "{{ home }}/Projects/dotfiles/.editorconfig"
     dest: "{{ home }}/Projects/.editorconfig"
     mode: 0644

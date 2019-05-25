@@ -19,18 +19,20 @@
   when: "item not in pacman_keys.stdout"
   with_items: "{{ keys }}"
 
-- copy:
+- name: Install pacman config
+  copy:
     src: ./files/pacman.conf
     dest: /etc/pacman.conf
     mode: 0644
 
-- user:
+- name: Create aur_builder user
+  user:
     name: aur_builder
     group: wheel
     password_lock: true
     shell: /bin/false
 
-- name: sudoers file
+- name: Allow aur_builder user to run pacman as root
   lineinfile:
     path: /etc/sudoers.d/11-install-aur_builder
     line: 'aur_builder ALL=(ALL) NOPASSWD: /usr/bin/pacman'

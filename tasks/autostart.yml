@@ -8,7 +8,8 @@
   with_items:
     - 'dex'
 
-- file:
+- name: "Autostart services"
+  file:
     src: "/etc/xdg/autostart/{{ item }}.desktop"
     dest: "{{ home }}/.config/autostart/{{ item }}.desktop"
     mode: 0644
@@ -25,7 +26,8 @@
     - 'lxqt-policykit-agent'
     - 'solaar'
 
-- file:
+- name: "Autostart applications"
+  file:
     src: "/usr/share/applications/{{ item }}.desktop"
     dest: "{{ home }}/.config/autostart/{{ item }}.desktop"
     mode: 0644

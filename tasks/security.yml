@@ -11,18 +11,21 @@
     - 'wireguard-tools'
     - 'opensnitch-git'
 
-- copy:
+- name: Install assh config
+  copy:
     src: ./files/assh.yml
     dest: "{{ home }}/.ssh/assh.yml"
     mode: 0644
     owner: "{{ user }}"
 
-- copy:
+- name: Install opensnitch config
+  copy:
     src: ./files/opensnitch.json
     dest: "{{ home }}/.opensnitch/ui-config.json"
     mode: 0644
     owner: "{{ user }}"
 
-- service:
+- name: Enable opensnitch
+  service:
     name: "opensnitchd"
     enabled: true

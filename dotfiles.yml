@@ -14,7 +14,6 @@
     - import_tasks: tasks/shell.yml
     - import_tasks: tasks/fonts.yml
     - import_tasks: tasks/power-saving.yml
-    - import_tasks: tasks/display.yml
     - import_tasks: tasks/javascript.yml
     - import_tasks: tasks/applications.yml
     - import_tasks: tasks/boot.yml

@@ -29,7 +29,8 @@
     name: nbfc
     enabled: true
 
-- copy:
+- name: Install TLP config
+  copy:
     src: ./files/tlp.conf
     dest: /etc/default/tlp
     mode: 0644

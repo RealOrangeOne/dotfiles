@@ -1,4 +1,5 @@
-- user:
+- name: Make me
+  user:
     name: "{{ user }}"
     home: "{{ home }}"
     comment: Jake Howard
@@ -10,8 +11,3 @@
       - users
       - video
       - wheel
-
-- file:
-    state: directory
-    path: '{{ home }}/Projects'
-    owner: "{{ user }}"
