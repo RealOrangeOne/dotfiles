@@ -22,3 +22,7 @@
     dest: "{{ home }}/.opensnitch/ui-config.json"
     mode: 0644
     owner: "{{ user }}"
+
+- service:
+    name: "opensnitchd"
+    enabled: true
