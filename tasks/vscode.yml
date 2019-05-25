@@ -10,28 +10,20 @@
     - 'universal-ctags-git'
 
 - file:
-    src: "{{ home }}/.config/Code - OSS"
-    dest: "{{ home }}/.config/Code"
-    mode: 0755
-    owner: "{{ user }}"
-    state: link
-    force: true
-
-- file:
-    path: '{{ home }}/.config/Code/User'
+    path: '{{ home }}/.config/Code - OSS/User'
     state: directory
     owner: "{{ user }}"
     mode: 0755
 
 - copy:
     src: ./files/vscode-settings.json
-    dest: "{{ home }}/.config/Code/User/settings.json"
+    dest: "{{ home }}/.config/Code - OSS/User/settings.json"
     mode: 0644
     owner: "{{ user }}"
 
 - copy:
     src: ./files/vscode-keybindings.json
-    dest: "{{ home }}/.config/Code/User/keybindings.json"
+    dest: "{{ home }}/.config/Code - OSS/User/keybindings.json"
     mode: 0644
     owner: "{{ user }}"
 
