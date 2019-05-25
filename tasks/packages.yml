@@ -77,3 +77,15 @@
   when: "item not in installed_packages.stdout_lines"
   with_items:
     - 'archstrike-mirrorlist'
+
+- name: Download UK mirrorlist
+  get_url:
+    url: 'https://www.archlinux.org/mirrorlist/?country=GB&protocol=http&protocol=https&ip_version=4&ip_version=6&use_mirror_status=on'
+    dest: /etc/pacman.d/mirrorlist
+    force: true
+
+- name: Un-comment mirrorlist servers
+  replace:
+    path: /etc/pacman.d/mirrorlist
+    regexp: '^#Server = (.+)$'
+    replace: 'Server = \1'
