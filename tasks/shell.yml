@@ -16,6 +16,7 @@
     - 'fd'
     - 'htop'
     - 'jshon'
+    - 'jq'
     - 'nnn'
     - 'oh-my-zsh-git'
     - 'perl-file-mimeinfo'
