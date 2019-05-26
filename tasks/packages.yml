@@ -9,6 +9,12 @@
   shell: "pacman-key --list-keys"
   register: pacman_keys
 
+- name: "Get known GPG keys"
+  shell: "gpg --list-keys"
+  become: true
+  become_user: "{{ user }}"
+  register: known_gpg_keys
+
 - name: "Add keys to pacman"
   shell: "pacman-key -r {{ item }}"
   when: "item not in pacman_keys.stdout"
@@ -17,6 +23,13 @@
 - name: "Sign keys in pacman"
   shell: "pacman-key --lsign-key {{ item }}"
   when: "item not in pacman_keys.stdout"
+  with_items: "{{ keys }}"
+
+- name: "Add keys to local keyring"
+  shell: "gpg --recv-keys {{ item }}"
+  become: true
+  become_user: "{{ user }}"
+  when: "item not in known_gpg_keys.stdout"
   with_items: "{{ keys }}"
 
 - name: Install pacman config
