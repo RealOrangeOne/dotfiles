@@ -63,6 +63,13 @@
   with_items:
     - 'archstrike-keyring'
 
+- name: "Install ccache"
+  aur:
+    skip_installed: true
+    name: ccache
+  become: true
+  become_user: aur_builder
+
 - name: Use ccache in makepkg
   lineinfile:
     path: /etc/makepkg.conf

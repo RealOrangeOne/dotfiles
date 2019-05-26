@@ -9,7 +9,6 @@
     - 'arduino'
     - 'arduino-cli'
     - 'arduino-builder'
-    - 'ccache'
     - 'hugo'
     - 'postgresql'
     - 'postman-bin'
