@@ -36,3 +36,10 @@
     src: ./files/tlp.conf
     dest: /etc/default/tlp
     mode: 0644
+
+- name: Install XFCE4 power manager config
+  copy:
+    src: ./files/xfce4-power-manager.xml
+    dest: "{{ home }}/.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-power-manager.xml"
+    owner: "{{ user }}"
+    mode: 0644
