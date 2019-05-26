@@ -17,17 +17,19 @@
     - xfce4-power-manager
 
 - name: Enable TLP services
-  service:
+  systemd:
     name: "{{ item }}"
     enabled: true
+    state: started
   with_items:
     - tlp
     - tlp-sleep
 
 - name: Enable NBFC
-  service:
+  systemd:
     name: nbfc
     enabled: true
+    state: started
 
 - name: Install TLP config
   copy:

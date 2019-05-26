@@ -13,9 +13,10 @@
     - 'os-prober'
 
 - name: "Enable lightdm"
-  service:
+  systemd:
     name: "lightdm"
     enabled: true
+    state: started
 
 - name: "Disable PC Speaker"
   modprobe:

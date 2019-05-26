@@ -9,6 +9,7 @@
     - ntp
 
 - name: Enable NTP service
-  service:
+  systemd:
     name: "ntpd"
     enabled: true
+    state: started

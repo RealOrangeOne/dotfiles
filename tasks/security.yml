@@ -26,6 +26,7 @@
     owner: "{{ user }}"
 
 - name: Enable opensnitch
-  service:
+  systemd:
     name: "opensnitchd"
     enabled: true
+    state: started

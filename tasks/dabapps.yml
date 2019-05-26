@@ -11,9 +11,10 @@
 
 
 - name: "Enable redis"
-  service:
+  systemd:
     name: "redis"
     enabled: true
+    state: started
 
 
 - name: "Clone DabApps Dotfiles"
