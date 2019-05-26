@@ -6,10 +6,10 @@
   become_user: aur_builder
   when: "item not in installed_packages.stdout_lines"
   with_items:
+    - 'opensnitch-git'
     - 'qomui'
     - 'wireguard-arch'
     - 'wireguard-tools'
-    - 'opensnitch-git'
 
 - name: Install assh config
   copy:
@@ -17,6 +17,14 @@
     dest: "{{ home }}/.ssh/assh.yml"
     mode: 0644
     owner: "{{ user }}"
+
+- name: "Create opensnitch config directory"
+  file:
+    path: '{{ home }}/.opensnitch/'
+    state: directory
+    owner: "{{ user }}"
+    mode: 0755
+
 
 - name: Install opensnitch config
   copy:
