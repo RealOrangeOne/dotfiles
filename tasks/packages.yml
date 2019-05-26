@@ -70,16 +70,6 @@
     regexp: '^BUILDENV='
     line: 'BUILDENV=(!distcc color ccache check !sign)'
 
-- name: "Install additional mirrorlists"
-  aur:
-    skip_installed: true
-    name: "{{ item }}"
-  become: true
-  become_user: aur_builder
-  when: "item not in installed_packages.stdout_lines"
-  with_items:
-    - 'archstrike-mirrorlist'
-
 - name: Download UK mirrorlist
   get_url:
     url: 'https://www.archlinux.org/mirrorlist/?country=GB&protocol=http&protocol=https&ip_version=4&ip_version=6&use_mirror_status=on'
