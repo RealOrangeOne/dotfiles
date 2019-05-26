@@ -103,3 +103,10 @@
   patch:
     src: './files/xsession.patch'
     dest: '/etc/lightdm/Xsession'
+
+- name: Set GTK theme
+  dconf:
+    key: "/org/gnome/desktop/interface/gtk-theme"
+    value: '"Numix"'
+  become: true
+  become_user: "{{ user }}"
