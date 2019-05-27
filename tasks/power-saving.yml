@@ -37,6 +37,13 @@
     dest: /etc/default/tlp
     mode: 0644
 
+- name: "Create XFCE4 power manager config directory"
+  file:
+    path: '{{ home }}/.config/xfce4/xfconf/xfce-perchannel-xml'
+    state: directory
+    owner: "{{ user }}"
+    mode: 0755
+
 - name: Install XFCE4 power manager config
   copy:
     src: ./files/xfce4-power-manager.xml
