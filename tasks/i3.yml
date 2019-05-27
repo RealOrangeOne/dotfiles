@@ -16,12 +16,9 @@
     - 'flameshot'
     - 'i3-gaps'
     - 'i3lock-color'
-    - 'lxappearance'
     - 'lxrandr'
     - 'lxqt-policykit'
-    - 'numix-gtk-theme'
     - 'aur/polybar'
-    - 'qt5-styleplugins'
     - 'redshift'
     - 'rofi'
     - 'tbg'
@@ -98,16 +95,3 @@
     dest: /usr/bin/pranklock
     mode: 0755
     force: true
-
-- name: Patch out terrible looking QT
-  patch:
-    src: './files/xsession.patch'
-    dest: '/etc/lightdm/Xsession'
-  when: antergos
-
-- name: Set GTK theme
-  dconf:
-    key: "/org/gnome/desktop/interface/gtk-theme"
-    value: '"Numix"'
-  become: true
-  become_user: "{{ user }}"

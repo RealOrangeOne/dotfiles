@@ -6,3 +6,49 @@
     owner: "{{ user }}"
     group: users
     directory_mode: true
+
+- name: "Install Gnome packages"
+  aur:
+    skip_installed: true
+    name: "{{ item }}"
+  become: true
+  become_user: aur_builder
+  when: "item not in installed_packages.stdout_lines"
+  with_items:
+    - cheese
+    - evince
+    - nautilus
+
+- name: "Install GTK tools"
+  aur:
+    skip_installed: true
+    name: "{{ item }}"
+  become: true
+  become_user: aur_builder
+  when: "item not in installed_packages.stdout_lines"
+  with_items:
+    - 'lxappearance'
+    - 'numix-gtk-theme'
+    - 'numix-square-icon-theme'
+    - 'qt5-styleplugins'
+
+
+- name: Patch out terrible looking QT
+  patch:
+    src: './files/xsession.patch'
+    dest: '/etc/lightdm/Xsession'
+  when: antergos
+
+- name: Set GTK theme
+  dconf:
+    key: "/org/gnome/desktop/interface/gtk-theme"
+    value: '"Numix"'
+  become: true
+  become_user: "{{ user }}"
+
+- name: Set GTK icon theme
+  dconf:
+    key: "/org/gnome/desktop/interface/icon-theme"
+    value: '"Numix-Square"'
+  become: true
+  become_user: "{{ user }}"
