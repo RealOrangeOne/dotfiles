@@ -29,3 +29,16 @@
     option: greeter-session
     value: lightdm-slick-greeter
     mode: 0644
+
+- name: "Install file system helpers"
+  aur:
+    skip_installed: true
+    name: "{{ item }}"
+  become: true
+  become_user: aur_builder
+  when: "item not in installed_packages.stdout_lines"
+  with_items:
+    - dosfstools
+    - exfat-utils
+    - hfsprogs
+    - ntfs-3g
