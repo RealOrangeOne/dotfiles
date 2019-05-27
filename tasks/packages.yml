@@ -6,7 +6,7 @@
       - '748231EBCBD808A14F5E85D28C004C2F93481F6B'  # Opensnitch
 
 - name: Install pacman config
-  copy:
+  template:
     src: ./files/pacman.conf
     dest: /etc/pacman.conf
     mode: 0644
