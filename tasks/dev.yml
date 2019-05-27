@@ -8,7 +8,6 @@
   with_items:
     - 'biber'
     - 'pandoc'
-    - 'texcount'
     - 'texlive-most'
 
 - name: "Install dev packages"
