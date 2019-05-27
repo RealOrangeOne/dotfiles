@@ -8,6 +8,13 @@
   with_items:
     - 'dex'
 
+- name: "Create autostart directory"
+  file:
+    path: '{{ home }}/.config/autostart'
+    state: directory
+    owner: "{{ user }}"
+    mode: 0755
+
 - name: "Autostart services"
   file:
     src: "/etc/xdg/autostart/{{ item }}.desktop"
