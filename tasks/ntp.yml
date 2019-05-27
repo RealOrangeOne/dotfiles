@@ -8,6 +8,10 @@
   with_items:
     - ntp
 
+- name: Set timezone
+  timezone:
+    name: Europe/London
+
 - name: Enable NTP service
   systemd:
     name: "ntpd"
