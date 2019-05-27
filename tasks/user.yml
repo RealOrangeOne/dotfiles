@@ -11,3 +11,8 @@
       - users
       - video
       - wheel
+
+- name: Give user sudo access
+  lineinfile:
+    path: /etc/sudoers
+    line: "{{ user }} ALL=(ALL) ALL"
