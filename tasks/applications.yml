@@ -19,9 +19,7 @@
   with_items:
     - 'bleachbit'
     - 'brave-bin'
-    - 'caprine'
     - 'clamtk'
-    - 'corebird'
     - 'etcher'
     - 'filezilla'
     - 'firefox'
