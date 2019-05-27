@@ -15,8 +15,17 @@
   become_user: aur_builder
   when: "item not in installed_packages.stdout_lines"
   with_items:
+    - baobab
     - cheese
+    - eog
     - evince
+    - file-roller
+    - fractal
+    - gnome-calculator
+    - gnome-disk-utility
+    - gnome-latex
+    - gnome-system-monitor
+    - gnome-usage
     - nautilus
 
 - name: "Install GTK tools"
