@@ -5,6 +5,12 @@
       - '9D5F1C051D146843CDA4858BDE64825E7CBC0D51'  # ArchStrike
       - '748231EBCBD808A14F5E85D28C004C2F93481F6B'  # Opensnitch
 
+- name: Install pacman config
+  copy:
+    src: ./files/pacman.conf
+    dest: /etc/pacman.conf
+    mode: 0644
+
 - name: "Get installed pacman keys"
   shell: "pacman-key --list-keys"
   register: pacman_keys
@@ -31,12 +37,6 @@
   become_user: "{{ user }}"
   when: "item not in known_gpg_keys.stdout"
   with_items: "{{ keys }}"
-
-- name: Install pacman config
-  copy:
-    src: ./files/pacman.conf
-    dest: /etc/pacman.conf
-    mode: 0644
 
 - name: Create aur_builder user
   user:
