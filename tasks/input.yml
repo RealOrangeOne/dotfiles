@@ -19,6 +19,13 @@
     mode: 0644
     owner: "{{ user }}"
 
+- name: Install keyboard config
+  copy:
+    src: ./files/keyboard.conf
+    dest: /usr/share/X11/xorg.conf.d/00-keyboard.conf
+    mode: 0644
+    owner: "{{ user }}"
+
 - name: Install libinput-gestures config
   copy:
     src: ./files/libinput-gestures.conf
