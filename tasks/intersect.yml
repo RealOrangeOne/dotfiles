@@ -8,7 +8,6 @@
   with_items:
     - 'calibre'
     - 'deluge'
-    - 'enpass-bin'
     - 'feedreader'
     - 'hexchat'
     - 'nextcloud-client'
