@@ -114,5 +114,5 @@
   lineinfile:
     path: /etc/vconsole.conf
     state: present
-    regexp: '^KEYMAP='
     line: 'KEYMAP=uk'
+    create: true
