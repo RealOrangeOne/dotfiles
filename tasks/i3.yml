@@ -103,6 +103,7 @@
   patch:
     src: './files/xsession.patch'
     dest: '/etc/lightdm/Xsession'
+  when: antergos
 
 - name: Set GTK theme
   dconf:
