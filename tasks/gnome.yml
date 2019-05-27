@@ -52,3 +52,17 @@
     value: '"Numix-Square"'
   become: true
   become_user: "{{ user }}"
+
+- name: "Install GTK2 config"
+  copy:
+    src: './files/gtkrc-2.0'
+    dest: '{{ home }}/.gtkrc-2.0'
+    mode: 0644
+    owner: "{{ user }}"
+
+- name: "Install GTK3 config"
+  copy:
+    src: './files/gtk3-settings.ini'
+    dest: '{{ home }}/.config/gtk-3.0/settings.ini'
+    mode: 0644
+    owner: "{{ user }}"
