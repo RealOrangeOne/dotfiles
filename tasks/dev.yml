@@ -7,7 +7,8 @@
   when: "item not in installed_packages.stdout_lines"
   with_items:
     - 'biber'
-    - 'pandoc'
+    - 'pandoc-bin'
+    - 'pandoc-citeproc-bin'
     - 'texlive-most'
 
 - name: "Install dev packages"
