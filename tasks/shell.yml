@@ -1,4 +1,4 @@
-- name: "Install input packages"
+- name: "Install shell packages"
   aur:
     skip_installed: true
     name: "{{ item }}"
@@ -8,6 +8,7 @@
   with_items:
     - 'advanced-ssh-config'
     - 'alacritty'
+    - arch-install-scripts
     - 'bat'
     - 'catimg'
     - 'climate'
