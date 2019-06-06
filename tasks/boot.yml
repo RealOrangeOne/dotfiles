@@ -21,6 +21,7 @@
   modprobe:
     name: pcspkr
     state: absent
+  ignore_errors: true
 
 - name: Enable Slick greeter for lightdm
   ini_file:
