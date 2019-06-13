@@ -7,7 +7,6 @@
   when: "item not in installed_packages.stdout_lines"
   with_items:
     - 'enpass-bin'
-    - 'opensnitch-git'
     - 'qomui'
     - 'wireguard-arch'
     - 'wireguard-tools'
@@ -18,24 +17,3 @@
     dest: "{{ home }}/.ssh/assh.yml"
     mode: 0644
     owner: "{{ user }}"
-
-- name: "Create opensnitch config directory"
-  file:
-    path: '{{ home }}/.opensnitch/'
-    state: directory
-    owner: "{{ user }}"
-    mode: 0755
-
-
-- name: Install opensnitch config
-  copy:
-    src: ./files/opensnitch.json
-    dest: "{{ home }}/.opensnitch/ui-config.json"
-    mode: 0644
-    owner: "{{ user }}"
-
-- name: Enable opensnitch
-  systemd:
-    name: "opensnitchd"
-    enabled: true
-    state: started

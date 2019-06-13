@@ -1,5 +1,0 @@
-{
-	"default_timeout": 60,
-	"default_action": "allow",
-	"default_duration": "until restart"
-}

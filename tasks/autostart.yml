@@ -40,4 +40,3 @@
   with_items:
     - 'flameshot'
     - 'libinput-gestures'
-    - 'opensnitch_ui'
