@@ -23,6 +23,7 @@
     - 'arduino-cli'
     - 'arduino-builder'
     - 'hugo'
+    - 'poetry'
     - 'postgresql'
     - 'postman-bin'
     - 'sublime-text'
