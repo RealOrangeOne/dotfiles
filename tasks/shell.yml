@@ -105,11 +105,11 @@
 - name: Install tmuxinator config
   copy:
     src: ./files/tmuxinator
-    dest: "{{ home }}/.config/tmuxinator"
-    mode: 0755
+    dest: "{{ home }}/.config"
+    mode: 0644
     owner: "{{ user }}"
     group: users
-    directory_mode: true
+    directory_mode: 0755
 
 - name: Set vconsole keyboard
   lineinfile:
