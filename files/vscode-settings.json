@@ -48,6 +48,7 @@
   "terminal.integrated.scrollback": 2000,
   "git.enableCommitSigning": true,
   "python.linting.mypyEnabled": true,
+  "python.linting.flake8Enabled": true,
   "editor.fontFamily": "Fira Code",
   "editor.minimap.renderCharacters": false,
   "editor.cursorSmoothCaretAnimation": true,
