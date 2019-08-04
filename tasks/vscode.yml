@@ -65,6 +65,7 @@
       - 'esbenp.prettier-vscode'
       - 'jspolancor.presentationmode'
       - 'ms-vscode.cpptools'
+      - 'yamajyn.commandlist'
 
 - name: "Install VSCode extensions"
   shell: "code --install-extension {{ item }} --force"
