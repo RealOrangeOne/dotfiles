@@ -1,6 +1,4 @@
 {
-  "workbench.statusBar.feedback.visible": false,
-  "sublimeTextKeymap.promptV3Features": true,
   "editor.multiCursorModifier": "ctrlCmd",
   "editor.snippetSuggestions": "top",
   "editor.formatOnPaste": false,
@@ -8,7 +6,6 @@
   "workbench.iconTheme": "material-icon-theme",
   "telemetry.enableCrashReporter": true,
   "telemetry.enableTelemetry": false,
-  "update.channel": "none",
   "extensions.autoUpdate": false,
   "window.zoomLevel": 0,
   "gitlens.currentLine.enabled": false,
@@ -23,7 +20,6 @@
   ],
   "python.workspaceSymbols.exclusionPatterns": [],
   "gitlens.codeLens.enabled": false,
-  "npm.validate.enable": false,
   "workbench.activityBar.visible": true,
   "editor.fontSize": 14,
   "files.trimTrailingWhitespace": true,
@@ -38,11 +34,6 @@
     "--ignore=E501"
   ],
   "python.linting.lintOnSave": true,
-  "rust.rustup": {
-    "toolchain": "stable-x86_64-unknown-linux-gnu"
-  },
-  "rust.mode": "rls",
-  "latex-workshop.latex.autoBuild.onSave.enabled": false,
   "terminal.integrated.setLocaleVariables": true,
   "gitlens.advanced.messages": {
     "suppressCommitHasNoPreviousCommitWarning": false,
@@ -69,12 +60,11 @@
   "editor.cursorSmoothCaretAnimation": true,
   "workbench.settings.enableNaturalLanguageSearch": true,
   "cSpell.language": "en-GB",
-  "update.enableWindowsBackgroundUpdates": false,
   "editor.mouseWheelZoom": true,
   "files.autoGuessEncoding": true,
-  "files.useExperimentalFileWatcher": true,
   "workbench.startupEditor": "none",
   "extensions.ignoreRecommendations": true,
   "extensions.showRecommendationsOnlyOnDemand": true,
-  "latex-workshop.intellisense.package.enabled": true
+  "latex-workshop.intellisense.package.enabled": true,
+  "latex-workshop.latex.autoBuild.run": "never"
 }
