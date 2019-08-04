@@ -26,13 +26,6 @@
   "files.insertFinalNewline": true,
   "files.trimFinalNewlines": true,
   "auto-close-tag.SublimeText3Mode": true,
-  "python.pythonPath": "${workspaceRoot}/env/bin/python",
-  "python.linting.flake8Enabled": true,
-  "python.linting.flake8Path": "${workspaceRoot}/env/bin/flake8",
-  "python.linting.pylintEnabled": false,
-  "python.linting.flake8Args": [
-    "--ignore=E501"
-  ],
   "python.linting.lintOnSave": true,
   "terminal.integrated.setLocaleVariables": true,
   "gitlens.advanced.messages": {
