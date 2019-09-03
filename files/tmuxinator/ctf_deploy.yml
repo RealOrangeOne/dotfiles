@@ -1,0 +1,10 @@
+name: ctf_deploy
+root: ~/
+
+windows:
+  - deploy:
+      layout: even-vertical
+      panes:
+        - ssh ctf6
+        - ssh ctf7
+        - ssh ctf8
