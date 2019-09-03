@@ -6,7 +6,7 @@
   become_user: aur_builder
   when: "item not in installed_packages.stdout_lines"
   with_items:
-    - 'community/code'
+    - 'visual-studio-code-bin'
     - 'universal-ctags-git'
 
 - name: Create VSCode user directory
@@ -66,6 +66,7 @@
       - 'jspolancor.presentationmode'
       - 'ms-vscode.cpptools'
       - 'yamajyn.commandlist'
+      - 'ms-vscode-remote.remote-containers'
 
 - name: "Install VSCode extensions"
   shell: "code --install-extension {{ item }} --force"
