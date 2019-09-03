@@ -67,6 +67,7 @@
       - 'ms-vscode.cpptools'
       - 'yamajyn.commandlist'
       - 'ms-vscode-remote.remote-containers'
+      - 'ms-azuretools.vscode-docker'
 
 - name: "Install VSCode extensions"
   shell: "code --install-extension {{ item }} --force"
