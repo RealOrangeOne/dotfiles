@@ -9,7 +9,7 @@ jobs:
             - checkout
             - restore_cache:
                 key: cache-{{ .Branch }}-{{ checksum "Pipfile.lock" }}
-            - run: pipenv install --dev
+            - run: pipenv install --dev --deploy
             - run: git clone https://github.com/kewlfft/ansible-aur.git ~/.ansible/plugins/modules/aur --depth=1
             - save_cache:
                 key: cache-{{ .Branch }}-{{ checksum "Pipfile.lock" }}

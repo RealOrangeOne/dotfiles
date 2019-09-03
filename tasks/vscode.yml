@@ -11,7 +11,7 @@
 
 - name: Create VSCode user directory
   file:
-    path: '{{ home }}/.config/Code - OSS/User'
+    path: '{{ home }}/.config/Code/User'
     state: directory
     owner: "{{ user }}"
     mode: 0755
@@ -19,14 +19,14 @@
 - name: Install VSCode settings
   copy:
     src: ./files/vscode-settings.json
-    dest: "{{ home }}/.config/Code - OSS/User/settings.json"
+    dest: "{{ home }}/.config/Code/User/settings.json"
     mode: 0644
     owner: "{{ user }}"
 
 - name: Install VSCode keybindings
   copy:
     src: ./files/vscode-keybindings.json
-    dest: "{{ home }}/.config/Code - OSS/User/keybindings.json"
+    dest: "{{ home }}/.config/Code/User/keybindings.json"
     mode: 0644
     owner: "{{ user }}"
 
