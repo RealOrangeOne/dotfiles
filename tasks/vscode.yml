@@ -68,6 +68,7 @@
       - 'yamajyn.commandlist'
       - 'ms-vscode-remote.remote-containers'
       - 'ms-azuretools.vscode-docker'
+      - 'mrcrowl.hg'
 
 - name: "Install VSCode extensions"
   shell: "code --install-extension {{ item }} --force"
