@@ -114,10 +114,8 @@
 - name: Install custom scripts
   copy:
     src: ./files/bin
-    dest: "{{ home }}/.bin"
+    dest: "/usr/local"
     mode: 0755
-    owner: "{{ user }}"
-    group: users
     directory_mode: 0755
 
 - name: Set vconsole keyboard

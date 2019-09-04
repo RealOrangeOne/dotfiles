@@ -5,5 +5,3 @@ export HISTCONTROL=ignoreboth
 
 export BROWSER=$(which firefox)
 export EDITOR=$(which vim)
-
-export PATH=${HOME}/.bin:${PATH}
