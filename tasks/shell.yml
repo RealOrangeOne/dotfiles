@@ -111,6 +111,15 @@
     group: users
     directory_mode: 0755
 
+- name: Install custom scripts
+  copy:
+    src: ./files/bin
+    dest: "{{ home }}/.bin"
+    mode: 0755
+    owner: "{{ user }}"
+    group: users
+    directory_mode: 0755
+
 - name: Set vconsole keyboard
   lineinfile:
     path: /etc/vconsole.conf
