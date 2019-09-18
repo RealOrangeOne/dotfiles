@@ -133,5 +133,10 @@
         "key": "ctrl+l alt+b",
         "command": "-latex-workshop.build",
         "when": "editorTextFocus && latex-workshop:altkeymap"
+    },
+    {
+        "key": "ctrl+b",
+        "command": "-markdown.extension.editing.toggleBold",
+        "when": "editorTextFocus && !editorReadonly && editorLangId == 'markdown'"
     }
 ]

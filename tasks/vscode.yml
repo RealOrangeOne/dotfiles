@@ -69,6 +69,8 @@
       - 'ms-vscode-remote.remote-containers'
       - 'ms-azuretools.vscode-docker'
       - 'mrcrowl.hg'
+      - 'davidanson.vscode-markdownlint'
+      - 'yzhang.markdown-all-in-one'
 
 - name: "Install VSCode extensions"
   shell: "code --install-extension {{ item }} --force"
