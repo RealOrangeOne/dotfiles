@@ -70,6 +70,14 @@
     mode: 0644
     owner: "{{ user }}"
 
+- name: "Create GTK3 config directory"
+  file:
+    path: '{{ home }}/.config/gtk-3.0/'
+    state: directory
+    owner: "{{ user }}"
+    mode: 0755
+
+
 - name: "Install GTK3 config"
   copy:
     src: './files/gtk3-settings.ini'
