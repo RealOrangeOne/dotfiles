@@ -42,7 +42,7 @@
     name: aur_builder
     group: wheel
     password_lock: true
-    shell: /bin/false
+    shell: /usr/bin/nologin
 
 - name: Allow aur_builder user to run pacman as root
   lineinfile:
