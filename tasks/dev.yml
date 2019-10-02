@@ -27,7 +27,6 @@
     - 'postman-bin'
     - 'sublime-text'
     - 'tig'
-    - 'zola-bin'
 
 - name: "Create global .gitignore"
   copy:
