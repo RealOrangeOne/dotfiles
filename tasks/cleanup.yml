@@ -2,3 +2,5 @@
   user:
     name: aur_builder
     state: absent
+    remove: true
+    force: true
