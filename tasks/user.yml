@@ -4,7 +4,6 @@
     home: "{{ home }}"
     comment: Jake Howard
     shell: '/usr/bin/zsh'
-    uid: 1000
     system: true
     groups:
       - input
