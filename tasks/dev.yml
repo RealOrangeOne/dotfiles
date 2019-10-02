@@ -8,7 +8,6 @@
   with_items:
     - 'biber'
     - 'pandoc-bin'
-    - 'pandoc-citeproc-bin'
     - 'texlive-most'
 
 - name: "Install dev packages"
