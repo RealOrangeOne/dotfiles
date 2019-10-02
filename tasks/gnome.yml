@@ -38,7 +38,7 @@
   when: "item not in installed_packages.stdout_lines"
   with_items:
     - 'lxappearance'
-    - 'numix-gtk-theme'
+    - 'numix-gtk-theme-git'
     - 'numix-square-icon-theme'
     - 'qt5-styleplugins'
 
