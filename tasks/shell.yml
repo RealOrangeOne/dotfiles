@@ -27,6 +27,7 @@
     - 'ripgrep'
     - 'scrcpy'
     - 'screenfetch'
+    - 'speedtest-cli'
     - 'sl'
     - 'terminator'
     - 'thefuck'
