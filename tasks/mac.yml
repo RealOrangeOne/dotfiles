@@ -1,0 +1,22 @@
+- name: "Install macOS packages"
+  aur:
+    skip_installed: true
+    name: "{{ item }}"
+  become: true
+  become_user: aur_builder
+  when: "item not in installed_packages.stdout_lines"
+  with_items:
+    - mbpfan-git
+    - bcwc-pcie-git
+
+- name: Enable mbpfan service
+  systemd:
+    name: mbpfan
+    enabled: true
+    state: started
+
+- name: Make the FN key work the correct way`
+  lineinfile:
+    path: /etc/modprobe.d/hid_apple.conf
+    line: options hid_apple fnmode=2
+    create: true
