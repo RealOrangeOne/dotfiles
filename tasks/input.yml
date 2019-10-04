@@ -12,6 +12,7 @@
     - 'libinput'
     - 'libinput-gestures'
     - 'solaar'
+    - 'xorg-xev'
 
 - name: Install mouse config
   copy:
