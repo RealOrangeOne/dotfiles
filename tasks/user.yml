@@ -10,6 +10,8 @@
       - users
       - video
       - wheel
+      - tty
+      - uucp
 
 - name: Give user sudo access
   lineinfile:
