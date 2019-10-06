@@ -1,0 +1,35 @@
+#!/usr/bin/env python
+
+import argparse
+
+
+def parse_args():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--increment", "-i", default=1, type=int)
+    return parser.parse_args()
+
+
+def main():
+    args = parse_args()
+    total = 0
+
+    while True:
+        message = "({}) > ".format(total)
+        try:
+            data = input(message)
+
+            padding = (len(message) + len(data)) * " "
+            print("\033[F" + padding, end="\r")
+
+            if data.isnumeric():
+                total += int(data)
+            else:
+                total += args.increment
+        except KeyboardInterrupt:
+            break
+
+    print("\r" + str(total), padding)
+
+
+if __name__ == "__main__":
+    main()
