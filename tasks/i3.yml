@@ -21,6 +21,7 @@
     - 'aur/polybar'
     - 'redshift'
     - 'rofi'
+    - 'rofi-calc'
     - 'tbg'
     - 'xdotool'
 
