@@ -89,14 +89,23 @@
     regexp: '^BUILDENV='
     line: 'BUILDENV=(!distcc color ccache check !sign)'
 
-- name: Download UK mirrorlist
-  get_url:
-    url: 'https://www.archlinux.org/mirrorlist/?country=GB&protocol=http&protocol=https&ip_version=4&ip_version=6&use_mirror_status=on'
-    dest: /etc/pacman.d/mirrorlist
-    force: true
+- name: "Install Reflector"
+  aur:
+    skip_installed: true
+    name: reflector
+  become: true
+  become_user: aur_builder
 
-- name: Un-comment mirrorlist servers
-  replace:
-    path: /etc/pacman.d/mirrorlist
-    regexp: '^#Server = (.+)$'
-    replace: 'Server = \1'
+- name: Install Reflector service
+  template:
+    src: ./files/reflector.service
+    dest: /etc/systemd/system/reflector.service
+    mode: 0644
+    owner: root
+    group: root
+
+- name: Enable Reflector services
+  systemd:
+    name: "reflector"
+    enabled: true
+    state: started
