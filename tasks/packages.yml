@@ -108,4 +108,3 @@
   systemd:
     name: "reflector"
     enabled: true
-    state: started
