@@ -16,7 +16,7 @@ chosen="$(echo -e "$options" | rofi -dmenu -p Shutdown? -no-custom -lines 5)"
 
 case $chosen in
     $power_off)
-        systemctl poweroff
+        systemctl poweroff -i
         ;;
     $reboot)
         systemctl reboot
@@ -25,6 +25,7 @@ case $chosen in
         xdotool key "Super_L+l"
         ;;
     $suspend)
+        xdotool key "Super_L+l"
         systemctl suspend
         ;;
     $log_out)
