@@ -15,8 +15,15 @@
     enabled: true
     state: started
 
-- name: Make the FN key work the correct way`
+- name: Make the FN key work the correct way
   lineinfile:
     path: /etc/modprobe.d/hid_apple.conf
     line: options hid_apple fnmode=2
     create: true
+
+- name: Disable power key
+  lineinfile:
+    path: /etc/systemd/logind.conf
+    state: present
+    regexp: '^HandlePowerKey='
+    line: 'HandlePowerKey=ignore'
