@@ -37,6 +37,7 @@
   become_user: aur_builder
   when: "item not in installed_packages.stdout_lines"
   with_items:
+    - 'gtk-engine-murrine'
     - 'lxappearance'
     - 'numix-gtk-theme-git'
     - 'numix-square-icon-theme'
