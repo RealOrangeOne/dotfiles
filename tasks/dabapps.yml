@@ -6,8 +6,11 @@
   become_user: aur_builder
   when: "item not in installed_packages.stdout_lines"
   with_items:
-    - 'redis'
+    - 'aws-cli'
+    - 'heroku-cli'
     - 'ngrok'
+    - 'python-aws-mfa'
+    - 'redis'
 
 
 - name: "Enable redis"
