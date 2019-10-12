@@ -8,6 +8,7 @@
   with_items:
     - 'advanced-ssh-config'
     - 'alacritty'
+    - 'alacritty-terminfo'
     - arch-install-scripts
     - 'bat'
     - 'catimg'
