@@ -96,3 +96,11 @@
     dest: /usr/bin/pranklock
     mode: 0755
     force: true
+
+- name: Install Screen Layouts
+  copy:
+    src: ./files/screen-layouts
+    dest: "{{ home }}/.config"
+    mode: 0755
+    directory_mode: 0755
+    owner: "{{ user }}"

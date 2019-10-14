@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+set -e
+
+LAYOUTS_DIR=$HOME/.config/screen-layouts
+IFS=
+layouts=$(find $LAYOUTS_DIR -name "*.sh" | xargs realpath --relative-to $LAYOUTS_DIR)
+
+chosen_layout=$(echo -e $layouts | rofi -dmenu -p "Select Layout" -no-custom -lines 5)
+chosen_layout_file="${LAYOUTS_DIR}/${chosen_layout}"
+
+echo "Setting layout to ${chosen_layout}"
+bash $chosen_layout_file
+
+i3-msg restart
