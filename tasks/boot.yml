@@ -9,7 +9,7 @@
     - 'grub-customizer'
     - 'grub2-theme-archlinux'
     - 'lightdm'
-    - 'lightdm-slick-greeter'
+    - 'lightdm-gtk-greeter'
     - 'os-prober'
 
 - name: "Enable lightdm"
@@ -28,7 +28,7 @@
     path: /etc/lightdm/lightdm.conf
     section: "Seat:*"
     option: greeter-session
-    value: lightdm-slick-greeter
+    value: lightdm-gtk-greeter
     mode: 0644
 
 - name: "Install file system helpers"
