@@ -1,5 +1,5 @@
 include "/home/jake/.gtkrc-2.0.mine"
-gtk-theme-name="Numix"
+gtk-theme-name="Matcha-dark-aliz"
 gtk-icon-theme-name="Numix-Square"
 gtk-font-name="Cantarell 11"
 gtk-cursor-theme-name="Adwaita"

@@ -41,6 +41,7 @@
     - 'gtk-engine-murrine'
     - 'lxappearance'
     - 'numix-gtk-theme-git'
+    - 'matcha-gtk-theme'
     - 'numix-square-icon-theme'
     - 'qt5-styleplugins'
 
@@ -54,7 +55,7 @@
 - name: Set GTK theme
   dconf:
     key: "/org/gnome/desktop/interface/gtk-theme"
-    value: '"Numix"'
+    value: '"Matcha-dark-aliz"'
   become: true
   become_user: "{{ user }}"
 

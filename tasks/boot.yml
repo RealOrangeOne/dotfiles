@@ -26,7 +26,7 @@
 - set_fact:
     lightdm_gtk_preferences:
       - {key: "background", value: "/usr/share/backgrounds/gnome/adwaita-night.jpg"}
-      - {key: "theme-name", value: "Numix"}
+      - {key: "theme-name", value: "Matcha-dark-aliz"}
       - {key: "icon-theme-name", value: "Numix-Square"}
       - {key: "hide-user-image", value: "true"}
       - {key: "clock-format", value: "%H:%M:%S"}
