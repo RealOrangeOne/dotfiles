@@ -66,5 +66,6 @@
   "latex-workshop.latex.autoBuild.run": "never",
   "workbench.enableExperiments": false,
   "update.mode": "none",
-  "latex-workshop.bind.enter.key": false
+  "latex-workshop.bind.enter.key": false,
+  "color-highlight.markerType": "underline",
 }
