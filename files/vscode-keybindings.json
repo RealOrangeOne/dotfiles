@@ -138,5 +138,65 @@
         "key": "ctrl+b",
         "command": "-markdown.extension.editing.toggleBold",
         "when": "editorTextFocus && !editorReadonly && editorLangId == 'markdown'"
+    },
+    {
+        "key": "ctrl+l alt+b",
+        "command": "-latex-workshop.build",
+        "when": "config.latex-workshop.bind.altKeymap.enabled && editorLangId == 'latex'"
+    },
+    {
+        "key": "ctrl+l alt+c",
+        "command": "-latex-workshop.clean",
+        "when": "config.latex-workshop.bind.altKeymap.enabled && editorLangId == 'latex'"
+    },
+    {
+        "key": "ctrl+l alt+j",
+        "command": "-latex-workshop.synctex",
+        "when": "config.latex-workshop.bind.altKeymap.enabled && editorTextFocus && editorLangId == 'latex'"
+    },
+    {
+        "key": "ctrl+l alt+v",
+        "command": "-latex-workshop.view",
+        "when": "config.latex-workshop.bind.altKeymap.enabled && editorLangId == 'latex'"
+    },
+    {
+        "key": "ctrl+l alt+x",
+        "command": "-workbench.view.extension.latex",
+        "when": "config.latex-workshop.bind.altKeymap.enabled"
+    },
+    {
+        "key": "ctrl+l",
+        "command": "-expandLineSelection",
+        "when": "editorFocus"
+    },
+    {
+        "key": "ctrl+l",
+        "command": "-expandLineSelection",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "ctrl+l ctrl+l",
+        "command": "-expandLineSelection",
+        "when": "textInputFocus && editorLangId == 'latex'"
+    },
+    {
+        "key": "ctrl+l ctrl+alt+8",
+        "command": "-latex-workshop.decrement-sectioning",
+        "when": "config.latex-workshop.bind.altKeymap.enabled && editorTextFocus && !editorReadonly && editorLangId == 'latex'"
+    },
+    {
+        "key": "ctrl+l [",
+        "command": "-latex-workshop.decrement-sectioning",
+        "when": "config.latex-workshop.bind.altKeymap.enabled && editorTextFocus && !editorReadonly && editorLangId == 'latex'"
+    },
+    {
+        "key": "ctrl+l ctrl+alt+9",
+        "command": "-latex-workshop.increment-sectioning",
+        "when": "config.latex-workshop.bind.altKeymap.enabled && editorTextFocus && !editorReadonly && editorLangId == 'latex'"
+    },
+    {
+        "key": "ctrl+l ]",
+        "command": "-latex-workshop.increment-sectioning",
+        "when": "config.latex-workshop.bind.altKeymap.enabled && editorTextFocus && !editorReadonly && editorLangId == 'latex'"
     }
 ]
