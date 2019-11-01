@@ -26,3 +26,7 @@ nvm() {   # This takes ~1sec, so we lazy-load it.
   source "/usr/share/nvm/init-nvm.sh"
   $0 $@
 }
+
+npx () {
+  command $(npm bin)/$@
+}
