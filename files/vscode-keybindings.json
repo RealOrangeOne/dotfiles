@@ -165,16 +165,6 @@
         "when": "config.latex-workshop.bind.altKeymap.enabled"
     },
     {
-        "key": "ctrl+l",
-        "command": "-expandLineSelection",
-        "when": "editorFocus"
-    },
-    {
-        "key": "ctrl+l",
-        "command": "-expandLineSelection",
-        "when": "textInputFocus"
-    },
-    {
         "key": "ctrl+l ctrl+l",
         "command": "-expandLineSelection",
         "when": "textInputFocus && editorLangId == 'latex'"
