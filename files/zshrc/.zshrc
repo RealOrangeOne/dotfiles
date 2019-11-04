@@ -5,7 +5,6 @@ export ZSH=/usr/share/oh-my-zsh/
 plugins=(
   django
   pip
-  pyenv
   python
   common-aliases
   extract
