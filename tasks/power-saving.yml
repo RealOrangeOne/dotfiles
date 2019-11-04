@@ -20,7 +20,6 @@
   systemd:
     name: "{{ item }}"
     enabled: true
-    state: started
   with_items:
     - tlp
     - tlp-sleep
