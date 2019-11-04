@@ -1,5 +1,5 @@
 eval $(thefuck --alias)
-eval "$(fasd --init auto)"
+eval "$(pazi init zsh)"
 
 # git aliases
 alias gs="git status"
