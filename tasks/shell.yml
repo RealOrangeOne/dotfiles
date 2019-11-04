@@ -16,6 +16,7 @@
     - 'exa'
     - 'fasd'
     - 'fd'
+    - 'fpp'
     - 'htop'
     - 'jshon'
     - 'jq'
@@ -34,6 +35,7 @@
     - 'thefuck'
     - 'tmux'
     - 'ruby-tmuxinator'
+    - 'xsel'
     - 'zsh'
     - 'zsh-completions'
     - 'zsh-doc'
@@ -66,14 +68,18 @@
     owner: "{{ user }}"
     group: users
 
-- name: Install tmux themepack
+- name: Install tmux packages
   git:
-    repo: https://github.com/jimeh/tmux-themepack.git
-    dest: "{{ home }}/.tmux/plugins/tmux-themepack"
+    repo: "{{ item }}"
+    dest: "{{ home }}/.tmux/plugins/{{ item.split('/')[-1] }}"
     force: true
   become: true
   become_user: "{{ user }}"
-
+  with_items:
+    - https://github.com/jimeh/tmux-themepack
+    - https://github.com/tmux-plugins/tmux-yank
+    - https://github.com/tmux-plugins/tmux-sensible
+    - https://github.com/tmux-plugins/tmux-fpp
 
 - name: "Create alacritty config directory"
   file:
