@@ -1,3 +1,2 @@
 user: jake
 home: "/home/{{ user }}"
-antergos: true

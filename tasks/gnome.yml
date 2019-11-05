@@ -50,7 +50,7 @@
   patch:
     src: './files/xsession.patch'
     dest: '/etc/lightdm/Xsession'
-  when: antergos
+  when: ansible_facts.lsb.id == "Antergos"
 
 - name: Set GTK theme
   dconf:
