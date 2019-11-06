@@ -188,5 +188,25 @@
         "key": "ctrl+l ]",
         "command": "-latex-workshop.increment-sectioning",
         "when": "config.latex-workshop.bind.altKeymap.enabled && editorTextFocus && !editorReadonly && editorLangId == 'latex'"
-    }
+    },
+    {
+        "key": "ctrl+9",
+        "command": "-workbench.action.lastEditorInGroup"
+    },
+    {
+        "key": "ctrl+9",
+        "command": "editor.action.fontZoomIn"
+    },
+    {
+        "key": "ctrl+8",
+        "command": "editor.action.fontZoomOut"
+    },
+    {
+        "key": "ctrl+0",
+        "command": "editor.action.fontZoomReset"
+    },
+    {
+        "key": "ctrl+shift+0",
+        "command": "workbench.action.zoomReset"
+    },
 ]
