@@ -22,6 +22,8 @@
     - 'arduino-cli'
     - 'arduino-builder'
     - 'aws-cli'
+    - 'docker'
+    - 'docker-compose'
     - 'hugo'
     - 'poetry'
     - 'postgresql'

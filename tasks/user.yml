@@ -12,6 +12,7 @@
       - wheel
       - tty
       - uucp
+      - docker
 
 - name: Give user sudo access
   lineinfile:
