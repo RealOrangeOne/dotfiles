@@ -23,14 +23,6 @@
     state: absent
   ignore_errors: true
 
-- set_fact:
-    lightdm_gtk_preferences:
-      - {key: "background", value: "/usr/share/backgrounds/gnome/adwaita-night.jpg"}
-      - {key: "theme-name", value: "Matcha-dark-aliz"}
-      - {key: "icon-theme-name", value: "Numix-Square"}
-      - {key: "hide-user-image", value: "true"}
-      - {key: "clock-format", value: "%H:%M:%S"}
-
 - name: Enable Slick greeter for lightdm
   ini_file:
     path: /etc/lightdm/lightdm.conf
@@ -46,7 +38,12 @@
     option: "{{ item.key }}"
     value: "{{ item.value }}"
     mode: 0644
-  with_items: "{{ lightdm_gtk_preferences }}"
+  with_items:
+    - {key: "background", value: "/usr/share/backgrounds/gnome/adwaita-night.jpg"}
+    - {key: "theme-name", value: "Matcha-dark-aliz"}
+    - {key: "icon-theme-name", value: "Numix-Square"}
+    - {key: "hide-user-image", value: "true"}
+    - {key: "clock-format", value: "%H:%M:%S"}
 
 - name: "Install file system helpers"
   aur:

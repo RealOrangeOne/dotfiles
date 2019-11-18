@@ -1,7 +1,8 @@
 - hosts: local
   connection: local
   tasks:
-    - include_vars:
+    - name: Include extra metadata
+      include_vars:
         file: vars.yml
 
     - import_tasks: tasks/user.yml

@@ -36,7 +36,8 @@
   become_user: "{{ user }}"
   register: vscode_extensions
 
-- set_fact:
+- name: Define VSCode extensions
+  set_fact:
     requested_vscode_extensions:
       - 'PKief.material-icon-theme'
       - 'Zignd.html-css-class-completion'

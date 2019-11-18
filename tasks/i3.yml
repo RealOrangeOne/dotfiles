@@ -26,7 +26,8 @@
     - 'xdotool'
 
 
-- set_fact:
+- name: Set i3 variables
+  set_fact:
     polybar_scripts: "{{ home }}/.config/polybar/polybar-scripts/polybar-scripts"
     i3_config_files:
       - {src: "i3.conf", dest: "{{ home }}/.config/i3/config"}
@@ -68,7 +69,8 @@
   become: true
   become_user: "{{ user }}"
 
-- copy:
+- name: Install Polybar launcher
+  copy:
     src: ./files/launch-polybar.sh
     dest: "{{ home }}/.config/polybar/launch.sh"
     mode: 0755

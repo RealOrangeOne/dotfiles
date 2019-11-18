@@ -1,4 +1,5 @@
-- set_fact:
+- name: Define keys for pacman
+  set_fact:
     keys:
       - '1EDDE2CDFC025D17F6DA9EC0ADAE6AD28A8F901A'  # Sublime Text
       - 'EF6E286DDA85EA2A4BA7DE684E2C6E8793298290'  # Tor Browser

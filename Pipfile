@@ -8,6 +8,7 @@ ansible = "*"
 
 [dev-packages]
 yamllint = "*"
+ansible-lint = "*"
 
 [requires]
 python_version = "3.7"
@@ -15,4 +16,5 @@ python_version = "3.7"
 [scripts]
 deploy = "sudo ansible-playbook -i hosts dotfiles.yml"
 check = "ansible-playbook -i hosts dotfiles.yml --syntax-check"
-lint = "yamllint -sc yamllint.yml yamllint.yml dotfiles.yml tasks/ vars.yml"
+lint-yml = "yamllint -sc yamllint.yml yamllint.yml dotfiles.yml tasks/ vars.yml"
+lint = "ansible-lint dotfiles.yml -p"

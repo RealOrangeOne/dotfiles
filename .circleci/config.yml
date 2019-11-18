@@ -15,5 +15,6 @@ jobs:
                 key: cache-{{ .Branch }}-{{ checksum "Pipfile.lock" }}
                 paths:
                     - "/home/circleci/.local/share/virtualenvs"
+            - run: pipenv run lint-yml
             - run: pipenv run lint
             - run: pipenv run check
