@@ -38,6 +38,7 @@
     - 'thefuck'
     - 'tmux'
     - 'ruby-tmuxinator'
+    - 'xclip'
     - 'xsel'
     - 'zsh'
     - 'zsh-completions'
