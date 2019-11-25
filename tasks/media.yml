@@ -19,6 +19,7 @@
   with_items:
     - 'bcm20702a1-firmware'
     - 'bluez-firmware'
+    - 'bluez-utils-compat'
     - 'blueberry'
     - 'handbrake'
 
