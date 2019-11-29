@@ -68,4 +68,5 @@
   "update.mode": "none",
   "latex-workshop.bind.enter.key": false,
   "color-highlight.markerType": "underline",
+  "git-graph.showStatusBarItem": false
 }
