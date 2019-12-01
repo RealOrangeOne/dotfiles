@@ -349,11 +349,11 @@
         },
         "yamllint": {
             "hashes": [
-                "sha256:24f05b7ff1a604120eeb5ff7afb7ed8792253bfa96ee83db9cec6d5c20feaf64",
-                "sha256:d42dbb35b3d28722a8c5c25de4593add0a6215b2732eb6932d89f38482c3d01c"
+                "sha256:0260121ed6a428b98bbadb7b6b66e9cd00114382e3d7ad06fa80e0754414cf15",
+                "sha256:c65f6df10e2752054ac89fbe7b32abc00864aecb747cf40c73fe445aea1da5f1"
             ],
             "index": "pypi",
-            "version": "==1.18.0"
+            "version": "==1.19.0"
         }
     }
 }
