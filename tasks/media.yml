@@ -5,7 +5,7 @@
   become: true
   become_user: aur_builder
   when: "item not in installed_packages.stdout_lines"
-  with_items:
+  loop:
     - 'ffmpeg-compat-57'
     - 'spotify'
 
@@ -16,7 +16,7 @@
   become: true
   become_user: aur_builder
   when: "item not in installed_packages.stdout_lines"
-  with_items:
+  loop:
     - 'bcm20702a1-firmware'
     - 'bluez-firmware'
     - 'bluez-utils-compat'
@@ -30,7 +30,7 @@
   become: true
   become_user: aur_builder
   when: "item not in installed_packages.stdout_lines"
-  with_items:
+  loop:
     - alsa-utils
     - pavucontrol
     - pulseaudio

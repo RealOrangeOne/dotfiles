@@ -24,19 +24,19 @@
 - name: "Add keys to pacman"
   shell: "pacman-key -r {{ item }}"
   when: "item not in pacman_keys.stdout"
-  with_items: "{{ keys }}"
+  loop: "{{ keys }}"
 
 - name: "Sign keys in pacman"
   shell: "pacman-key --lsign-key {{ item }}"
   when: "item not in pacman_keys.stdout"
-  with_items: "{{ keys }}"
+  loop: "{{ keys }}"
 
 - name: "Add keys to local keyring"
   shell: "gpg --recv-keys {{ item }}"
   become: true
   become_user: "{{ user }}"
   when: "item not in known_gpg_keys.stdout"
-  with_items: "{{ keys }}"
+  loop: "{{ keys }}"
 
 - name: Create aur_builder user
   user:
@@ -73,7 +73,7 @@
   become: true
   become_user: aur_builder
   when: "item not in installed_packages.stdout_lines"
-  with_items:
+  loop:
     - 'archstrike-keyring'
 
 - name: "Install ccache"

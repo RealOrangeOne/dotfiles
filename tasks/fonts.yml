@@ -5,7 +5,7 @@
   become: true
   become_user: aur_builder
   when: "item not in installed_packages.stdout_lines"
-  with_items:
+  loop:
     - 'all-repository-fonts'
     - 'fonts-meta-extended-lt'
     - 'otf-fira-code'
@@ -22,7 +22,7 @@
     dest: "/etc/fonts/conf.d/{{ item }}"
     mode: 0644
     state: link
-  with_items:
+  loop:
     - '11-lcdfilter-default.conf'
     - '10-sub-pixel-rgb.conf'
     - '30-infinality-aliases.conf'

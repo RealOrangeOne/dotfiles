@@ -5,7 +5,7 @@
   become: true
   become_user: aur_builder
   when: "item not in installed_packages.stdout_lines"
-  with_items:
+  loop:
     - 'visual-studio-code-bin'
     - 'universal-ctags-git'
 
@@ -83,11 +83,11 @@
   become: true
   become_user: "{{ user }}"
   when: "item not in vscode_extensions.stdout_lines"
-  with_items: "{{ requested_vscode_extensions }}"
+  loop: "{{ requested_vscode_extensions }}"
 
 - name: "Remove unwanted VSCode extensions"
   shell: "code --uninstall-extension {{ item }}"
   become: true
   become_user: "{{ user }}"
   when: "item not in requested_vscode_extensions"
-  with_items: "{{ vscode_extensions.stdout_lines }}"
+  loop: "{{ vscode_extensions.stdout_lines }}"

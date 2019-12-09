@@ -5,7 +5,7 @@
   become: true
   become_user: aur_builder
   when: "item not in installed_packages.stdout_lines"
-  with_items:
+  loop:
     - 'arandr'
     - 'betterlockscreen'
     - 'brightnessctl'
@@ -37,7 +37,9 @@
       - {src: "polybar.ini", dest: "{{ home }}/.config/polybar/config"}
 
 - name: "Create i3 config file directories"
-  with_items: "{{ i3_config_files }}"
+  loop: "{{ i3_config_files }}"
+  loop_control:
+    label: "{{ item.src }}"
   file:
     path: '{{ item.dest | dirname }}'
     state: directory
@@ -45,7 +47,9 @@
     mode: 0755
 
 - name: "i3 config files"
-  with_items: "{{ i3_config_files }}"
+  loop: "{{ i3_config_files }}"
+  loop_control:
+    label: "{{ item.src }}"
   template:
     src: './files/{{ item.src }}'
     dest: '{{ item.dest }}'

@@ -5,7 +5,7 @@
   become: true
   become_user: aur_builder
   when: "item not in installed_packages.stdout_lines"
-  with_items:
+  loop:
     - 'dex'
 
 - name: "Create autostart directory"
@@ -23,7 +23,7 @@
     owner: "{{ user }}"
     state: link
     force: true
-  with_items:
+  loop:
     - 'pulseaudio'
     - 'nm-applet'
     - 'lxqt-policykit-agent'
@@ -37,6 +37,6 @@
     owner: "{{ user }}"
     state: link
     force: true
-  with_items:
+  loop:
     - 'flameshot'
     - 'libinput-gestures'

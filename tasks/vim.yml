@@ -5,7 +5,7 @@
   become: true
   become_user: aur_builder
   when: "item not in installed_packages.stdout_lines"
-  with_items:
+  loop:
     - 'gvim'
     - 'vim-pathogen'
 
@@ -39,7 +39,7 @@
     force: true
   become: true
   become_user: "{{ user }}"
-  with_items:
+  loop:
     - 'https://github.com/junegunn/goyo.vim'
     - 'https://github.com/itchyny/lightline.vim'
     - 'https://github.com/scrooloose/nerdtree'

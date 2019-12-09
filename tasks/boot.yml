@@ -5,7 +5,7 @@
   become: true
   become_user: aur_builder
   when: "item not in installed_packages.stdout_lines"
-  with_items:
+  loop:
     - 'grub-customizer'
     - 'grub2-theme-archlinux'
     - 'lightdm'
@@ -38,7 +38,9 @@
     option: "{{ item.key }}"
     value: "{{ item.value }}"
     mode: 0644
-  with_items:
+  loop_control:
+    label: "{{ item.key }}"
+  loop:
     - {key: "background", value: "/usr/share/backgrounds/gnome/adwaita-night.jpg"}
     - {key: "theme-name", value: "Matcha-dark-aliz"}
     - {key: "icon-theme-name", value: "Numix-Square"}
@@ -52,7 +54,7 @@
   become: true
   become_user: aur_builder
   when: "item not in installed_packages.stdout_lines"
-  with_items:
+  loop:
     - dosfstools
     - exfat-utils
     - hfsprogs
@@ -65,6 +67,6 @@
   become: true
   become_user: aur_builder
   when: "item not in installed_packages.stdout_lines"
-  with_items:
+  loop:
     - 'amd-ucode'
     - 'intel-ucode'
