@@ -9,8 +9,8 @@
     - 'calibre'
     - 'deluge'
     - 'feedreader'
-    - 'hexchat'
     - 'nextcloud-client'
+    - "quassel-client"
     - 'turtl'
 
 
