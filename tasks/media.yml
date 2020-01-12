@@ -20,7 +20,7 @@
     - 'bcm20702a1-firmware'
     - 'bluez-firmware'
     - 'bluez-utils-compat'
-    - 'blueberry'
+    - 'blueman'
     - 'handbrake'
 
 - name: "Install pulseaudio"
