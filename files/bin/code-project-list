@@ -1,0 +1,48 @@
+#!/usr/bin/env python
+
+from pathlib import Path
+import json
+import itertools
+import subprocess
+from io import StringIO
+
+VSCODE_CONFIG_FILE = Path.home().joinpath(".config/Code/storage.json")
+
+SEARCH_DIRS = [
+    Path.home().joinpath("Projects"),
+    Path.home().joinpath("Repositories"),
+]
+
+
+def get_search_project_dirs():
+    for path in SEARCH_DIRS:
+        if not path.exists():
+            continue
+        for subdir in path.iterdir():
+            if subdir.is_dir():
+                yield subdir
+
+
+def get_vscode_project_dirs():
+    vscode_config = json.loads(VSCODE_CONFIG_FILE.read_text())
+
+    for recent_path in itertools.chain(*vscode_config['openedPathsList'].values()):
+        recent_path_path = Path(recent_path.replace('file://', ''))
+        if recent_path_path.exists():
+            yield recent_path_path
+
+
+def main():
+    project_paths = sorted(set(itertools.chain(get_search_project_dirs(), get_vscode_project_dirs())), key=lambda p: p.name.lower())
+    project_paths.remove(Path.home())
+    project_paths_display = [str(project.relative_to(Path.home())) for project in project_paths]
+
+    selected_project = subprocess.run(["rofi", "-dmenu", "-no-case-sensitive", "-format", "i"], input="\n".join(project_paths_display).encode(), stdout=subprocess.PIPE)
+    selected_project.check_returncode()
+
+    selected_index = int(selected_project.stdout.strip())
+    subprocess.run(['code', project_paths[selected_index]])
+
+
+if __name__ == '__main__':
+    main()
