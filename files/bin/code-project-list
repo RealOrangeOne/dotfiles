@@ -34,7 +34,10 @@ def get_vscode_project_dirs():
 
 def main():
     project_paths = sorted(set(itertools.chain(get_search_project_dirs(), get_vscode_project_dirs())), key=lambda p: p.name.lower())
-    project_paths.remove(Path.home())
+    try:
+        project_paths.remove(Path.home())  # Don't try and edit home dir
+    except ValueError:
+        pass
     project_paths_display = [str(project.relative_to(Path.home())) for project in project_paths]
 
     selected_project = subprocess.run(["rofi", "-dmenu", "-no-case-sensitive", "-format", "i"], input="\n".join(project_paths_display).encode(), stdout=subprocess.PIPE)
