@@ -18,11 +18,8 @@
 
 - name: Enable TLP services
   systemd:
-    name: "{{ item }}"
+    name: "tlp"
     enabled: true
-  loop:
-    - tlp
-    - tlp-sleep
 
 - name: Enable NBFC
   systemd:
