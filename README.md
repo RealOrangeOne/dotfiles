@@ -1,6 +1,6 @@
 # Dotfiles
 
-[![CircleCI](https://circleci.com/gh/RealOrangeOne/dotfiles.svg?style=svg)](https://circleci.com/gh/RealOrangeOne/dotfiles)
+![](https://github.com/RealOrangeOne/dotfiles/workflows/Lint/badge.svg)
 
 Settings and Preferences for transfer between machines
 
