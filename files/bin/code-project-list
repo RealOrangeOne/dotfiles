@@ -44,6 +44,8 @@ def main():
     selected_project.check_returncode()
 
     selected_index = int(selected_project.stdout.strip())
+    if selected_index == -1:
+        return  # This is hit when enter is hit on no results
     subprocess.run(['code', project_paths[selected_index]])
 
 
