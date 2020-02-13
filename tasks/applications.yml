@@ -18,15 +18,12 @@
   when: "item not in installed_packages.stdout_lines"
   loop:
     - 'bleachbit'
-    - 'brave-bin'
     - 'clamtk'
-    - 'etcher'
     - 'filezilla'
     - 'firefox'
     - 'gimp'
     - 'ghostwriter'
     - 'glogg'
-    - 'google-earth-pro'
     - 'gparted'
     - 'hplip'
     - 'inkscape'
