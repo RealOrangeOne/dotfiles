@@ -10,15 +10,6 @@
     - 'mercurial'
     - 'ngrok'
     - 'python-aws-mfa'
-    - 'redis'
-
-
-- name: "Enable redis"
-  systemd:
-    name: "redis"
-    enabled: true
-    state: started
-
 
 - name: "Clone DabApps Dotfiles"
   git:
@@ -37,7 +28,6 @@
     state: link
     force: true
 
-
 - name: Enable strip mercurial extension
   ini_file:
     path: "{{ home }}/.hgrc"
@@ -45,7 +35,6 @@
     option: strip
     value: ""
     mode: 0644
-
 
 - name: Enable strip mercurial extension
   ini_file:
