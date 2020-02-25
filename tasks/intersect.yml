@@ -11,6 +11,8 @@
     - 'feedreader'
     - 'nextcloud-client'
     - "quassel-client"
+    - terraform
+    - terraform-lsp-bin
     - 'turtl'
 
 

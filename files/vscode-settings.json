@@ -68,5 +68,19 @@
   "update.mode": "none",
   "latex-workshop.bind.enter.key": false,
   "color-highlight.markerType": "underline",
-  "git-graph.showStatusBarItem": false
+  "git-graph.showStatusBarItem": false,
+  "terraform.indexing": {
+    "enabled": false,
+    "liveIndexing": false,
+    "delay": 500,
+    "exclude": [
+      ".terraform/**/*",
+      "**/.terraform/**/*"
+    ]
+  },
+  "terraform.languageServer": {
+    "enabled": true,
+    "args": [],
+    "pathToBinary": "/usr/bin/terraform-lsp"
+  }
 }
