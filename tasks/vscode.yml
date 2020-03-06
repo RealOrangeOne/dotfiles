@@ -75,6 +75,7 @@
       - pranaygp.vscode-css-peek
       - mauve.terraform
       - mhutchie.git-graph
+      - ms-vscode.wordcount
 
 
 - name: "Install VSCode extensions"
