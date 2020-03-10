@@ -77,6 +77,9 @@
       - mhutchie.git-graph
       - ms-vscode.wordcount
       - ms-vscode-remote.remote-ssh
+      - wmaurer.change-case
+      - bibhasdn.django-html
+      - github.vscode-pull-request-github
 
 
 - name: "Install VSCode extensions"
