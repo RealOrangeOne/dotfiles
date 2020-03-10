@@ -80,6 +80,7 @@
       - wmaurer.change-case
       - bibhasdn.django-html
       - github.vscode-pull-request-github
+      - randomfractalsinc.vscode-data-preview
 
 
 - name: "Install VSCode extensions"
