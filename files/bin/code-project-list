@@ -27,6 +27,8 @@ def get_vscode_project_dirs():
     vscode_config = json.loads(VSCODE_CONFIG_FILE.read_text())
 
     for recent_path in itertools.chain(*vscode_config['openedPathsList'].values()):
+        if not recent_path:
+            continue
         recent_path_path = Path(recent_path.replace('file://', ''))
         if recent_path_path.exists():
             yield recent_path_path
