@@ -76,6 +76,7 @@
       - mauve.terraform
       - mhutchie.git-graph
       - ms-vscode.wordcount
+      - ms-vscode-remote.remote-ssh
 
 
 - name: "Install VSCode extensions"
