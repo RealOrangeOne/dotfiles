@@ -1,4 +1,4 @@
-- name: "Remove aur_builder user"
+- name: Remove aur_builder user
   user:
     name: aur_builder
     state: absent

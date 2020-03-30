@@ -1,28 +1,28 @@
-- name: "Install networking tools"
+- name: Install networking tools
   aur:
     skip_installed: true
     name: "{{ item }}"
   become: true
   become_user: aur_builder
-  when: "item not in installed_packages.stdout_lines"
+  when: item not in installed_packages.stdout_lines
   loop:
     - 'bind-tools'
     - 'gnu-netcat'
     - 'nmap'
 
-- name: "Install NetworkManager and associated tools"
+- name: Install NetworkManager and associated tools
   aur:
     skip_installed: true
     name: "{{ item }}"
   become: true
   become_user: aur_builder
-  when: "item not in installed_packages.stdout_lines"
+  when: item not in installed_packages.stdout_lines
   loop:
     - 'networkmanager'
     - 'network-manager-applet'
 
-- name: "Enable NetworkManger"
+- name: Enable NetworkManger
   systemd:
-    name: "NetworkManager"
+    name: NetworkManager
     enabled: true
     state: started

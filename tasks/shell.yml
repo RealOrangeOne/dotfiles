@@ -1,10 +1,10 @@
-- name: "Install shell packages"
+- name: Install shell packages
   aur:
     skip_installed: true
     name: "{{ item }}"
   become: true
   become_user: aur_builder
-  when: "item not in installed_packages.stdout_lines"
+  when: item not in installed_packages.stdout_lines
   loop:
     - 'advanced-ssh-config'
     - 'alacritty'
@@ -51,7 +51,7 @@
     dest: "{{ home }}/.zshrc"
     mode: 0644
     owner: "{{ user }}"
-    validate: "zsh -n %s"
+    validate: zsh -n %s
     backup: true
     trim_blocks: false
 
@@ -84,32 +84,32 @@
     - https://github.com/tmux-plugins/tmux-sensible
     - https://github.com/tmux-plugins/tmux-fpp
 
-- name: "Create alacritty config directory"
+- name: Create alacritty config directory
   file:
-    path: '{{ home }}/.config/alacritty/'
+    path: "{{ home }}/.config/alacritty/"
     state: directory
     owner: "{{ user }}"
     mode: 0755
 
-- name: "Create alacritty config"
+- name: Create alacritty config
   copy:
-    src: './files/alacritty.yml'
-    dest: '{{ home }}/.config/alacritty/alacritty.yml'
+    src: ./files/alacritty.yml
+    dest: "{{ home }}/.config/alacritty/alacritty.yml"
     mode: 0644
     owner: "{{ user }}"
 
 
-- name: "Create terminator directory"
+- name: Create terminator directory
   file:
-    path: '{{ home }}/.config/terminator/'
+    path: "{{ home }}/.config/terminator/"
     state: directory
     owner: "{{ user }}"
     mode: 0755
 
-- name: "Create alacritty config"
+- name: Create alacritty config
   copy:
-    src: './files/terminator.conf'
-    dest: '{{ home }}/.config/terminator/config'
+    src: ./files/terminator.conf
+    dest: "{{ home }}/.config/terminator/config"
     mode: 0644
     owner: "{{ user }}"
 
@@ -125,7 +125,7 @@
 - name: Install custom scripts
   copy:
     src: ./files/bin
-    dest: "/usr/local"
+    dest: /usr/local
     mode: 0755
     directory_mode: 0755
 
@@ -133,5 +133,5 @@
   lineinfile:
     path: /etc/vconsole.conf
     state: present
-    line: 'KEYMAP=uk'
+    line: KEYMAP=uk
     create: true

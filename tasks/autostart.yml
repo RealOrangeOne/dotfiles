@@ -1,23 +1,23 @@
-- name: "Install autostart-related packages"
+- name: Install autostart-related packages
   aur:
     skip_installed: true
     name: "{{ item }}"
   become: true
   become_user: aur_builder
-  when: "item not in installed_packages.stdout_lines"
+  when: item not in installed_packages.stdout_lines
   loop:
     - 'dex'
 
-- name: "Create autostart directory"
+- name: Create autostart directory
   file:
-    path: '{{ home }}/.config/autostart'
+    path: "{{ home }}/.config/autostart"
     state: directory
     owner: "{{ user }}"
     mode: 0755
 
-- name: "Autostart services"
+- name: Autostart services
   file:
-    src: "/etc/xdg/autostart/{{ item }}.desktop"
+    src: /etc/xdg/autostart/{{ item }}.desktop
     dest: "{{ home }}/.config/autostart/{{ item }}.desktop"
     mode: 0644
     owner: "{{ user }}"
@@ -30,9 +30,9 @@
     - 'lxqt-policykit-agent'
     - 'solaar'
 
-- name: "Autostart applications"
+- name: Autostart applications
   file:
-    src: "/usr/share/applications/{{ item }}.desktop"
+    src: /usr/share/applications/{{ item }}.desktop
     dest: "{{ home }}/.config/autostart/{{ item }}.desktop"
     mode: 0644
     owner: "{{ user }}"

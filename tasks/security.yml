@@ -1,10 +1,10 @@
-- name: "Install security-related packages"
+- name: Install security-related packages
   aur:
     skip_installed: true
     name: "{{ item }}"
   become: true
   become_user: aur_builder
-  when: "item not in installed_packages.stdout_lines"
+  when: item not in installed_packages.stdout_lines
   loop:
     - 'enpass-bin'
     - 'qomui'

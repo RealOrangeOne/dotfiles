@@ -1,10 +1,10 @@
-- name: "Install NTP"
+- name: Install NTP
   aur:
     skip_installed: true
     name: "{{ item }}"
   become: true
   become_user: aur_builder
-  when: "item not in installed_packages.stdout_lines"
+  when: item not in installed_packages.stdout_lines
   loop:
     - ntp
 
@@ -14,6 +14,6 @@
 
 - name: Enable NTP service
   systemd:
-    name: "ntpd"
+    name: ntpd
     enabled: true
     state: started

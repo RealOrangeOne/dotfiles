@@ -1,22 +1,22 @@
-- name: "Install LaTex tooling"
+- name: Install LaTex tooling
   aur:
     skip_installed: true
     name: "{{ item }}"
   become: true
   become_user: aur_builder
-  when: "item not in installed_packages.stdout_lines"
+  when: item not in installed_packages.stdout_lines
   loop:
     - 'biber'
     - 'pandoc-bin'
     - 'texlive-most'
 
-- name: "Install dev packages"
+- name: Install dev packages
   aur:
     skip_installed: true
     name: "{{ item }}"
   become: true
   become_user: aur_builder
-  when: "item not in installed_packages.stdout_lines"
+  when: item not in installed_packages.stdout_lines
   loop:
     - 'arduino'
     - 'arduino-cli'
@@ -31,14 +31,14 @@
     - 'sublime-text'
     - 'tig'
 
-- name: "Create global .gitignore"
+- name: Create global .gitignore
   copy:
-    src: './files/gitignore_global'
-    dest: '{{ home }}/.config/.gitignore'
+    src: ./files/gitignore_global
+    dest: "{{ home }}/.config/.gitignore"
     mode: 0644
     owner: "{{ user }}"
 
-- name: "Install git config"
+- name: Install git config
   template:
     src: ./files/gitconfig.conf
     dest: "{{ home }}/.gitconfig"

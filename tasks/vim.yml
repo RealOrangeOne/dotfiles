@@ -1,10 +1,10 @@
-- name: "Install dev packages"
+- name: Install dev packages
   aur:
     skip_installed: true
     name: "{{ item }}"
   become: true
   become_user: aur_builder
-  when: "item not in installed_packages.stdout_lines"
+  when: item not in installed_packages.stdout_lines
   loop:
     - 'gvim'
     - 'vim-pathogen'
@@ -27,7 +27,7 @@
 
 - name: Create vim packages directory
   file:
-    path: '{{ home }}/.vim/bundle'
+    path: "{{ home }}/.vim/bundle"
     state: directory
     owner: "{{ user }}"
     mode: 0755

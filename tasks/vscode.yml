@@ -1,17 +1,17 @@
-- name: "Install VSCode packages"
+- name: Install VSCode packages
   aur:
     skip_installed: true
     name: "{{ item }}"
   become: true
   become_user: aur_builder
-  when: "item not in installed_packages.stdout_lines"
+  when: item not in installed_packages.stdout_lines
   loop:
     - 'visual-studio-code-bin'
     - 'universal-ctags-git'
 
 - name: Create VSCode user directory
   file:
-    path: '{{ home }}/.config/Code/User'
+    path: "{{ home }}/.config/Code/User"
     state: directory
     owner: "{{ user }}"
     mode: 0755
@@ -30,8 +30,8 @@
     mode: 0644
     owner: "{{ user }}"
 
-- name: "Get VSCode extensions"
-  shell: "code --list-extensions"
+- name: Get VSCode extensions
+  shell: code --list-extensions
   become: true
   become_user: "{{ user }}"
   register: vscode_extensions
@@ -83,16 +83,16 @@
       - randomfractalsinc.vscode-data-preview
 
 
-- name: "Install VSCode extensions"
-  shell: "code --install-extension {{ item }} --force"
+- name: Install VSCode extensions
+  shell: code --install-extension {{ item }} --force
   become: true
   become_user: "{{ user }}"
-  when: "item not in vscode_extensions.stdout_lines"
+  when: item not in vscode_extensions.stdout_lines
   loop: "{{ requested_vscode_extensions }}"
 
-- name: "Remove unwanted VSCode extensions"
-  shell: "code --uninstall-extension {{ item }}"
+- name: Remove unwanted VSCode extensions
+  shell: code --uninstall-extension {{ item }}
   become: true
   become_user: "{{ user }}"
-  when: "item not in requested_vscode_extensions"
+  when: item not in requested_vscode_extensions
   loop: "{{ vscode_extensions.stdout_lines }}"

@@ -3,7 +3,7 @@
     name: "{{ user }}"
     home: "{{ home }}"
     comment: Jake Howard
-    shell: '/usr/bin/zsh'
+    shell: /usr/bin/zsh
     system: true
     groups:
       - input

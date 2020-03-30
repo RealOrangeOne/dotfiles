@@ -1,10 +1,10 @@
-- name: "Install i3 packages"
+- name: Install i3 packages
   aur:
     skip_installed: true
     name: "{{ item }}"
   become: true
   become_user: aur_builder
-  when: "item not in installed_packages.stdout_lines"
+  when: item not in installed_packages.stdout_lines
   loop:
     - 'arandr'
     - 'betterlockscreen'
@@ -30,42 +30,42 @@
   set_fact:
     polybar_scripts: "{{ home }}/.config/polybar/polybar-scripts/polybar-scripts"
     i3_config_files:
-      - {src: "i3.conf", dest: "{{ home }}/.config/i3/config"}
-      - {src: "i3status.conf", dest: "{{ home }}/.config/i3status/config"}
-      - {src: "picom.conf", dest: "{{ home }}/.config/picom.conf"}
-      - {src: "dunst.conf", dest: "{{ home }}/.config/dunst/dunstrc"}
-      - {src: "polybar.ini", dest: "{{ home }}/.config/polybar/config"}
+      - {src: i3.conf, dest: "{{ home }}/.config/i3/config"}
+      - {src: i3status.conf, dest: "{{ home }}/.config/i3status/config"}
+      - {src: picom.conf, dest: "{{ home }}/.config/picom.conf"}
+      - {src: dunst.conf, dest: "{{ home }}/.config/dunst/dunstrc"}
+      - {src: polybar.ini, dest: "{{ home }}/.config/polybar/config"}
 
-- name: "Create i3 config file directories"
+- name: Create i3 config file directories
   loop: "{{ i3_config_files }}"
   loop_control:
     label: "{{ item.src }}"
   file:
-    path: '{{ item.dest | dirname }}'
+    path: "{{ item.dest | dirname }}"
     state: directory
     owner: "{{ user }}"
     mode: 0755
 
-- name: "i3 config files"
+- name: i3 config files
   loop: "{{ i3_config_files }}"
   loop_control:
     label: "{{ item.src }}"
   template:
-    src: './files/{{ item.src }}'
-    dest: '{{ item.dest }}'
+    src: ./files/{{ item.src }}
+    dest: "{{ item.dest }}"
     mode: 0644
     owner: "{{ user }}"
 
 
-- name: "Create polybar config directory"
+- name: Create polybar config directory
   file:
-    path: '{{ home }}/.config/polybar/'
+    path: "{{ home }}/.config/polybar/"
     state: directory
     owner: "{{ user }}"
     mode: 0755
 
 
-- name: "Polybar scripts"
+- name: Polybar scripts
   git:
     repo: https://github.com/x70b1/polybar-scripts
     dest: "{{ home }}/.config/polybar/polybar-scripts"
@@ -82,17 +82,17 @@
     group: users
 
 
-- name: "Create rofi config directory"
+- name: Create rofi config directory
   file:
-    path: '{{ home }}/.config/rofi/'
+    path: "{{ home }}/.config/rofi/"
     state: directory
     owner: "{{ user }}"
     mode: 0755
 
-- name: "Create rofi config"
+- name: Create rofi config
   copy:
-    src: './files/rofi.conf'
-    dest: '{{ home }}/.config/rofi/config'
+    src: ./files/rofi.conf
+    dest: "{{ home }}/.config/rofi/config"
     mode: 0644
     owner: "{{ user }}"
 

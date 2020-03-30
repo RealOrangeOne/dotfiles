@@ -11,31 +11,31 @@
     dest: /etc/pacman.conf
     mode: 0644
 
-- name: "Get installed pacman keys"
-  shell: "pacman-key --list-keys"
+- name: Get installed pacman keys
+  shell: pacman-key --list-keys
   register: pacman_keys
 
-- name: "Get known GPG keys"
-  shell: "gpg --list-keys"
+- name: Get known GPG keys
+  shell: gpg --list-keys
   become: true
   become_user: "{{ user }}"
   register: known_gpg_keys
 
-- name: "Add keys to pacman"
-  shell: "pacman-key -r {{ item }}"
-  when: "item not in pacman_keys.stdout"
+- name: Add keys to pacman
+  shell: pacman-key -r {{ item }}
+  when: item not in pacman_keys.stdout
   loop: "{{ keys }}"
 
-- name: "Sign keys in pacman"
-  shell: "pacman-key --lsign-key {{ item }}"
-  when: "item not in pacman_keys.stdout"
+- name: Sign keys in pacman
+  shell: pacman-key --lsign-key {{ item }}
+  when: item not in pacman_keys.stdout
   loop: "{{ keys }}"
 
-- name: "Add keys to local keyring"
-  shell: "gpg --recv-keys {{ item }}"
+- name: Add keys to local keyring
+  shell: gpg --recv-keys {{ item }}
   become: true
   become_user: "{{ user }}"
-  when: "item not in known_gpg_keys.stdout"
+  when: item not in known_gpg_keys.stdout
   loop: "{{ keys }}"
 
 - name: Create aur_builder user
@@ -48,59 +48,59 @@
 - name: Allow aur_builder user to run pacman as root
   lineinfile:
     path: /etc/sudoers.d/11-install-aur_builder
-    line: 'aur_builder ALL=(ALL) NOPASSWD: /usr/bin/pacman'
+    line: "aur_builder ALL=(ALL) NOPASSWD: /usr/bin/pacman"
     create: true
-    validate: 'visudo -cf %s'
+    validate: visudo -cf %s
 
-- name: "Get installed packages"
-  shell: "pacman -Qq"
+- name: Get installed packages
+  shell: pacman -Qq
   become: true
   become_user: aur_builder
   register: installed_packages
 
 
-- name: "Install yay"
+- name: Install yay
   aur:
     skip_installed: true
     name: yay
   become: true
   become_user: aur_builder
 
-- name: "Install additional repo keyrings"
+- name: Install additional repo keyrings
   aur:
     skip_installed: true
     name: "{{ item }}"
   become: true
   become_user: aur_builder
-  when: "item not in installed_packages.stdout_lines"
+  when: item not in installed_packages.stdout_lines
   loop:
     - 'archstrike-keyring'
 
-- name: "Install ccache"
+- name: Install ccache
   aur:
     skip_installed: true
     name: ccache
   become: true
   become_user: aur_builder
 
-- name: "Install makepkg tools"
+- name: Install makepkg tools
   aur:
     skip_installed: true
     name: "{{ items }}"
   become: true
   become_user: aur_builder
-  when: "item not in installed_packages.stdout_lines"
+  when: item not in installed_packages.stdout_lines
   loop:
     - pbzip2
     - zstd
 
-- name: "Install makepkg config"
+- name: Install makepkg config
   template:
     src: ./files/makepkg.conf
-    dest: "/etc/makepkg.conf"
+    dest: /etc/makepkg.conf
     mode: 0644
 
-- name: "Install Reflector"
+- name: Install Reflector
   aur:
     skip_installed: true
     name: reflector
@@ -117,5 +117,5 @@
 
 - name: Enable Reflector services
   systemd:
-    name: "reflector"
+    name: reflector
     enabled: true

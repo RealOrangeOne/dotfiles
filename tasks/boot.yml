@@ -1,10 +1,10 @@
-- name: "Install Grub"
+- name: Install Grub
   aur:
     skip_installed: true
     name: "{{ item }}"
   become: true
   become_user: aur_builder
-  when: "item not in installed_packages.stdout_lines"
+  when: item not in installed_packages.stdout_lines
   loop:
     - 'grub-customizer'
     - 'grub2-theme-archlinux'
@@ -12,12 +12,12 @@
     - 'lightdm-gtk-greeter'
     - 'os-prober'
 
-- name: "Enable lightdm"
+- name: Enable lightdm
   systemd:
-    name: "lightdm"
+    name: lightdm
     enabled: true
 
-- name: "Disable PC Speaker"
+- name: Disable PC Speaker
   modprobe:
     name: pcspkr
     state: absent
@@ -26,7 +26,7 @@
 - name: Enable Slick greeter for lightdm
   ini_file:
     path: /etc/lightdm/lightdm.conf
-    section: "Seat:*"
+    section: Seat:*
     option: greeter-session
     value: lightdm-gtk-greeter
     mode: 0644
@@ -34,39 +34,39 @@
 - name: Set LightDM settings
   ini_file:
     path: /etc/lightdm/lightdm-gtk-greeter.conf
-    section: "greeter"
+    section: greeter
     option: "{{ item.key }}"
     value: "{{ item.value }}"
     mode: 0644
   loop_control:
     label: "{{ item.key }}"
   loop:
-    - {key: "background", value: "/usr/share/backgrounds/gnome/adwaita-night.jpg"}
-    - {key: "theme-name", value: "Matcha-dark-aliz"}
-    - {key: "icon-theme-name", value: "Numix-Square"}
-    - {key: "hide-user-image", value: "true"}
-    - {key: "clock-format", value: "%H:%M:%S"}
+    - {key: background, value: /usr/share/backgrounds/gnome/adwaita-night.jpg}
+    - {key: theme-name, value: Matcha-dark-aliz}
+    - {key: icon-theme-name, value: Numix-Square}
+    - {key: hide-user-image, value: "true"}
+    - {key: clock-format, value: "%H:%M:%S"}
 
-- name: "Install file system helpers"
+- name: Install file system helpers
   aur:
     skip_installed: true
     name: "{{ item }}"
   become: true
   become_user: aur_builder
-  when: "item not in installed_packages.stdout_lines"
+  when: item not in installed_packages.stdout_lines
   loop:
     - dosfstools
     - exfat-utils
     - hfsprogs
     - ntfs-3g
 
-- name: "Install Microcode"
+- name: Install Microcode
   aur:
     skip_installed: true
     name: "{{ item }}"
   become: true
   become_user: aur_builder
-  when: "item not in installed_packages.stdout_lines"
+  when: item not in installed_packages.stdout_lines
   loop:
     - 'amd-ucode'
     - 'intel-ucode'

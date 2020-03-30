@@ -1,21 +1,21 @@
-- name: "Install Virtualbox dependencies"
+- name: Install Virtualbox dependencies
   aur:
     skip_installed: true
     name: "{{ item }}"
   become: true
   become_user: aur_builder
-  when: "item not in installed_packages.stdout_lines"
+  when: item not in installed_packages.stdout_lines
   loop:
     - 'virtualbox-host-modules-arch'
     - 'virtualbox-guest-modules-arch'
 
-- name: "Install general applications"
+- name: Install general applications
   aur:
     skip_installed: true
     name: "{{ item }}"
   become: true
   become_user: aur_builder
-  when: "item not in installed_packages.stdout_lines"
+  when: item not in installed_packages.stdout_lines
   loop:
     - 'bleachbit'
     - 'clamtk'
