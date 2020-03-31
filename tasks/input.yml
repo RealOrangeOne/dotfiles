@@ -56,3 +56,9 @@
 - name: Enable US locale
   locale_gen:
     name: en_US.UTF-8
+
+- name: Make the FN key work the correct way on Apple keyboards
+  lineinfile:
+    path: /etc/modprobe.d/hid_apple.conf
+    line: options hid_apple fnmode=2
+    create: true
