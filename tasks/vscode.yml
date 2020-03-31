@@ -81,6 +81,7 @@
       - bibhasdn.django-html
       - github.vscode-pull-request-github
       - randomfractalsinc.vscode-data-preview
+      - vstirbu.vscode-mermaid-preview
 
 
 - name: "Install VSCode extensions"
