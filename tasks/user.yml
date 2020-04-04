@@ -6,13 +6,19 @@
     shell: '/usr/bin/zsh'
     system: true
     groups:
+      - audio
+      - docker
+      - games
       - input
+      - lp
+      - power
+      - scanner
+      - storage
+      - tty
       - users
+      - uucp
       - video
       - wheel
-      - tty
-      - uucp
-      - docker
 
 - name: Give user sudo access
   lineinfile:
