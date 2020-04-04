@@ -11,6 +11,14 @@
     - 'wireguard-arch'
     - 'wireguard-tools'
 
+- name: Create .ssh directory
+  file:
+    state: directory
+    path: "{{ home }}/.ssh"
+    owner: "{{ user }}"
+    mode: 0700
+    directory_mode: 0700
+
 - name: Install assh config
   copy:
     src: ./files/assh.yml
