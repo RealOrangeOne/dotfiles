@@ -24,6 +24,7 @@
     - 'rofi-calc'
     - 'tbg'
     - 'xdotool'
+    - xorg
 
 
 - name: Set i3 variables
