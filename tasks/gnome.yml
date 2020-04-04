@@ -45,13 +45,6 @@
     - 'numix-square-icon-theme'
     - 'qt5-styleplugins'
 
-
-- name: Patch out terrible looking QT
-  patch:
-    src: './files/xsession.patch'
-    dest: '/etc/lightdm/Xsession'
-  when: ansible_facts.lsb.id == "Antergos"
-
 - name: Set GTK theme
   dconf:
     key: "/org/gnome/desktop/interface/gtk-theme"
