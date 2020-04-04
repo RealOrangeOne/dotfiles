@@ -2,7 +2,6 @@
   set_fact:
     keys:
       - '1EDDE2CDFC025D17F6DA9EC0ADAE6AD28A8F901A'  # Sublime Text
-      - 'EF6E286DDA85EA2A4BA7DE684E2C6E8793298290'  # Tor Browser
       - '9D5F1C051D146843CDA4858BDE64825E7CBC0D51'  # ArchStrike
 
 - name: Install pacman config
@@ -11,32 +10,24 @@
     dest: /etc/pacman.conf
     mode: 0644
 
-- name: "Get installed pacman keys"
-  shell: "pacman-key --list-keys"
-  register: pacman_keys
-
-- name: "Get known GPG keys"
-  shell: "gpg --list-keys"
-  become: true
-  become_user: "{{ user }}"
-  register: known_gpg_keys
-
 - name: "Add keys to pacman"
   shell: "pacman-key -r {{ item }}"
-  when: "item not in pacman_keys.stdout"
   loop: "{{ keys }}"
 
 - name: "Sign keys in pacman"
   shell: "pacman-key --lsign-key {{ item }}"
-  when: "item not in pacman_keys.stdout"
   loop: "{{ keys }}"
 
 - name: "Add keys to local keyring"
   shell: "gpg --recv-keys {{ item }}"
   become: true
   become_user: "{{ user }}"
-  when: "item not in known_gpg_keys.stdout"
   loop: "{{ keys }}"
+
+- name: "Add tor browser key"
+  shell: "gpg --auto-key-locate nodefault,wkd --locate-keys torbrowser@torproject.org"
+  become: true
+  become_user: "{{ user }}"
 
 - name: Create aur_builder user
   user:
