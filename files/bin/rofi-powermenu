@@ -10,7 +10,7 @@ lock="Lock"
 suspend="Suspend"
 log_out="Log Out"
 
-options="$power_off\n$reboot\n$lock\n$suspend\n$log_out"
+options="\n$power_off\n$reboot\n$lock\n$suspend\n$log_out"
 
 chosen="$(echo -e "$options" | rofi -dmenu -p Shutdown? -no-custom -lines 5)"
 
