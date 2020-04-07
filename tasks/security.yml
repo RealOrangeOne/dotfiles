@@ -8,7 +8,6 @@
   loop:
     - 'enpass-bin'
     - 'qomui'
-    - 'wireguard-arch'
     - 'wireguard-tools'
 
 - name: Create .ssh directory

@@ -7,7 +7,6 @@
   when: "item not in installed_packages.stdout_lines"
   loop:
     - 'virtualbox-host-modules-arch'
-    - 'virtualbox-guest-modules-arch'
 
 - name: "Install general applications"
   aur:
