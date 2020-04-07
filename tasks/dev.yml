@@ -24,6 +24,7 @@
     - 'aws-cli'
     - 'docker'
     - 'docker-compose'
+    - 'firefox-developer-edition'
     - 'hugo'
     - 'poetry'
     - 'postgresql'
