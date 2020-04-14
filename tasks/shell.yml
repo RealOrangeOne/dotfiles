@@ -1,3 +1,4 @@
+
 - name: "Install shell packages"
   aur:
     skip_installed: true
@@ -36,6 +37,7 @@
     - 'terminator'
     - 'thefuck'
     - 'tmux'
+    - 'tmux-xpanes'
     - 'ruby-tmuxinator'
     - 'xclip'
     - 'xsel'
