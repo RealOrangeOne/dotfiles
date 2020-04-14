@@ -1,4 +1,3 @@
-
 - name: "Install shell packages"
   aur:
     skip_installed: true
