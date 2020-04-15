@@ -1,6 +1,10 @@
 extends: default
 
 rules:
-  document-start: "disable"
+  document-start: disable
+  truthy: disable
+  quoted-strings:
+    quote-type: double
+    required: only-when-needed
   line-length:
     max: 150

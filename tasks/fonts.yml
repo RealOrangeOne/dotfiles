@@ -1,27 +1,27 @@
-- name: "Install font packages"
+- name: Install font packages
   aur:
     skip_installed: true
     name: "{{ item }}"
   become: true
   become_user: aur_builder
-  when: "item not in installed_packages.stdout_lines"
+  when: item not in installed_packages.stdout_lines
   loop:
-    - 'all-repository-fonts'
-    - 'fonts-meta-extended-lt'
-    - 'otf-fira-code'
-    - 'otf-font-awesome'
-    - 'ttf-fira-code'
-    - 'ttf-font-awesome'
-    - 'ttf-ms-fonts'
-    - 'ttf-wps-fonts'
+    - all-repository-fonts
+    - fonts-meta-extended-lt
+    - otf-fira-code
+    - otf-font-awesome
+    - ttf-fira-code
+    - ttf-font-awesome
+    - ttf-ms-fonts
+    - ttf-wps-fonts
 
 - name: Install font configurations
   file:
-    src: "/etc/fonts/conf.avail/{{ item }}"
-    dest: "/etc/fonts/conf.d/{{ item }}"
+    src: /etc/fonts/conf.avail/{{ item }}
+    dest: /etc/fonts/conf.d/{{ item }}
     mode: 0644
     state: link
   loop:
-    - '11-lcdfilter-default.conf'
-    - '10-sub-pixel-rgb.conf'
-    - '30-infinality-aliases.conf'
+    - 11-lcdfilter-default.conf
+    - 10-sub-pixel-rgb.conf
+    - 30-infinality-aliases.conf

@@ -1,10 +1,10 @@
-- name: "Install macOS packages"
+- name: Install macOS packages
   aur:
     skip_installed: true
     name: "{{ item }}"
   become: true
   become_user: aur_builder
-  when: "item not in installed_packages.stdout_lines"
+  when: item not in installed_packages.stdout_lines
   loop:
     - mbpfan-git
     - bcwc-pcie-git
@@ -19,5 +19,5 @@
   lineinfile:
     path: /etc/systemd/logind.conf
     state: present
-    regexp: '^HandlePowerKey='
-    line: 'HandlePowerKey=ignore'
+    regexp: ^HandlePowerKey=
+    line: HandlePowerKey=ignore

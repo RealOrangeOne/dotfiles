@@ -1,17 +1,17 @@
-- name: "Install VSCode packages"
+- name: Install VSCode packages
   aur:
     skip_installed: true
     name: "{{ item }}"
   become: true
   become_user: aur_builder
-  when: "item not in installed_packages.stdout_lines"
+  when: item not in installed_packages.stdout_lines
   loop:
-    - 'visual-studio-code-bin'
-    - 'universal-ctags-git'
+    - visual-studio-code-bin
+    - universal-ctags-git
 
 - name: Create VSCode user directory
   file:
-    path: '{{ home }}/.config/Code/User'
+    path: "{{ home }}/.config/Code/User"
     state: directory
     owner: "{{ user }}"
     mode: 0755
@@ -30,8 +30,8 @@
     mode: 0644
     owner: "{{ user }}"
 
-- name: "Get VSCode extensions"
-  shell: "code --list-extensions"
+- name: Get VSCode extensions
+  shell: code --list-extensions
   become: true
   become_user: "{{ user }}"
   register: vscode_extensions
@@ -39,37 +39,37 @@
 - name: Define VSCode extensions
   set_fact:
     requested_vscode_extensions:
-      - 'PKief.material-icon-theme'
-      - 'Zignd.html-css-class-completion'
-      - 'christian-kohler.npm-intellisense'
-      - 'dbaeumer.vscode-eslint'
-      - 'eamodio.gitlens'
-      - 'ms-vscode.vscode-typescript-tslint-plugin'
-      - 'ionutvmi.path-autocomplete'
-      - 'mrmlnc.vscode-less'
-      - 'mrmlnc.vscode-scss'
-      - 'ms-python.python'
-      - 'ms-vscode.sublime-keybindings'
-      - 'rokoroku.vscode-theme-darcula'
-      - 'truman.autocomplate-shell'
-      - 'wholroyd.jinja'
-      - 'formulahendry.auto-close-tag'
-      - 'James-Yu.latex-workshop'
-      - 'streetsidesoftware.code-spell-checker'
-      - 'EditorConfig.EditorConfig'
-      - 'vsciot-vscode.vscode-arduino'
-      - 'vscoss.vscode-ansible'
-      - 'rust-lang.rust'
-      - 'pnp.polacode'
-      - 'mrmlnc.vscode-duplicate'
-      - 'Tyriar.sort-lines'
-      - 'esbenp.prettier-vscode'
-      - 'jspolancor.presentationmode'
-      - 'ms-vscode.cpptools'
-      - 'ms-vscode-remote.remote-containers'
-      - 'ms-azuretools.vscode-docker'
-      - 'mrcrowl.hg'
-      - 'yzhang.markdown-all-in-one'
+      - PKief.material-icon-theme
+      - Zignd.html-css-class-completion
+      - christian-kohler.npm-intellisense
+      - dbaeumer.vscode-eslint
+      - eamodio.gitlens
+      - ms-vscode.vscode-typescript-tslint-plugin
+      - ionutvmi.path-autocomplete
+      - mrmlnc.vscode-less
+      - mrmlnc.vscode-scss
+      - ms-python.python
+      - ms-vscode.sublime-keybindings
+      - rokoroku.vscode-theme-darcula
+      - truman.autocomplate-shell
+      - wholroyd.jinja
+      - formulahendry.auto-close-tag
+      - James-Yu.latex-workshop
+      - streetsidesoftware.code-spell-checker
+      - EditorConfig.EditorConfig
+      - vsciot-vscode.vscode-arduino
+      - vscoss.vscode-ansible
+      - rust-lang.rust
+      - pnp.polacode
+      - mrmlnc.vscode-duplicate
+      - Tyriar.sort-lines
+      - esbenp.prettier-vscode
+      - jspolancor.presentationmode
+      - ms-vscode.cpptools
+      - ms-vscode-remote.remote-containers
+      - ms-azuretools.vscode-docker
+      - mrcrowl.hg
+      - yzhang.markdown-all-in-one
       - jock.svg
       - naumovs.color-highlight
       - pranaygp.vscode-css-peek
@@ -84,16 +84,16 @@
       - vstirbu.vscode-mermaid-preview
 
 
-- name: "Install VSCode extensions"
-  shell: "code --install-extension {{ item }} --force"
+- name: Install VSCode extensions
+  shell: code --install-extension {{ item }} --force
   become: true
   become_user: "{{ user }}"
-  when: "item not in vscode_extensions.stdout_lines"
+  when: item not in vscode_extensions.stdout_lines
   loop: "{{ requested_vscode_extensions }}"
 
-- name: "Remove unwanted VSCode extensions"
-  shell: "code --uninstall-extension {{ item }}"
+- name: Remove unwanted VSCode extensions
+  shell: code --uninstall-extension {{ item }}
   become: true
   become_user: "{{ user }}"
-  when: "item not in requested_vscode_extensions"
+  when: item not in requested_vscode_extensions
   loop: "{{ vscode_extensions.stdout_lines }}"

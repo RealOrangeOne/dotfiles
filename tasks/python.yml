@@ -1,20 +1,20 @@
-- name: "Install python packages"
+- name: Install python packages
   aur:
     skip_installed: true
     name: "{{ item }}"
   become: true
   become_user: aur_builder
-  when: "item not in installed_packages.stdout_lines"
+  when: item not in installed_packages.stdout_lines
   loop:
-    - 'pyenv'
-    - 'python-pip'
-    - 'python-virtualenv'
-    - 'python2-pip'
-    - 'python2-virtualenv'
+    - pyenv
+    - python-pip
+    - python-virtualenv
+    - python2-pip
+    - python2-virtualenv
 
 - name: Create pyenv directory
   file:
     state: directory
-    path: '/opt/pyenv'
+    path: /opt/pyenv
     owner: "{{ user }}"
     group: users

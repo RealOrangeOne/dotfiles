@@ -1,35 +1,35 @@
-- name: "Install Spotify"
+- name: Install Spotify
   aur:
     skip_installed: true
     name: "{{ item }}"
   become: true
   become_user: aur_builder
-  when: "item not in installed_packages.stdout_lines"
+  when: item not in installed_packages.stdout_lines
   loop:
-    - 'ffmpeg-compat-57'
-    - 'spotify'
+    - ffmpeg-compat-57
+    - spotify
 
-- name: "Install media-related packages"
+- name: Install media-related packages
   aur:
     skip_installed: true
     name: "{{ item }}"
   become: true
   become_user: aur_builder
-  when: "item not in installed_packages.stdout_lines"
+  when: item not in installed_packages.stdout_lines
   loop:
-    - 'bcm20702a1-firmware'
-    - 'bluez-firmware'
-    - 'bluez-utils-compat'
-    - 'blueman'
-    - 'handbrake'
+    - bcm20702a1-firmware
+    - bluez-firmware
+    - bluez-utils-compat
+    - blueman
+    - handbrake
 
-- name: "Install pulseaudio"
+- name: Install pulseaudio
   aur:
     skip_installed: true
     name: "{{ item }}"
   become: true
   become_user: aur_builder
-  when: "item not in installed_packages.stdout_lines"
+  when: item not in installed_packages.stdout_lines
   loop:
     - alsa-utils
     - pavucontrol

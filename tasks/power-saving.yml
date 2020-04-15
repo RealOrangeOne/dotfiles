@@ -1,24 +1,24 @@
-- name: "Install power-saving stuff"
+- name: Install power-saving stuff
   aur:
     skip_installed: true
     name: "{{ item }}"
   become: true
   become_user: aur_builder
-  when: "item not in installed_packages.stdout_lines"
+  when: item not in installed_packages.stdout_lines
   loop:
-    - 'acpi'
+    - acpi
     - ethtool
     - nbfc
-    - 'powertop'
-    - 'psensor'
+    - powertop
+    - psensor
     - smartmontools
-    - 'sysstat'
+    - sysstat
     - tlp
     - xfce4-power-manager
 
 - name: Enable TLP services
   systemd:
-    name: "tlp"
+    name: tlp
     enabled: true
 
 - name: Enable NBFC
@@ -33,9 +33,9 @@
     dest: /etc/default/tlp
     mode: 0644
 
-- name: "Create XFCE4 power manager config directory"
+- name: Create XFCE4 power manager config directory
   file:
-    path: '{{ home }}/.config/xfce4/xfconf/xfce-perchannel-xml'
+    path: "{{ home }}/.config/xfce4/xfconf/xfce-perchannel-xml"
     state: directory
     owner: "{{ user }}"
     mode: 0755

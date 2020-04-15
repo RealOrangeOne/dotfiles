@@ -1,17 +1,17 @@
-- name: "Install DabApps packages"
+- name: Install DabApps packages
   aur:
     skip_installed: true
     name: "{{ item }}"
   become: true
   become_user: aur_builder
-  when: "item not in installed_packages.stdout_lines"
+  when: item not in installed_packages.stdout_lines
   loop:
-    - 'heroku-cli'
-    - 'mercurial'
-    - 'ngrok'
-    - 'python-aws-mfa'
+    - heroku-cli
+    - mercurial
+    - ngrok
+    - python-aws-mfa
 
-- name: "Clone DabApps Dotfiles"
+- name: Clone DabApps Dotfiles
   git:
     repo: git@github.com:dabapps/dotfiles
     dest: "{{ home }}/Projects/dotfiles"
@@ -19,7 +19,7 @@
   become: true
   become_user: "{{ user }}"
 
-- name: "Install DabApps EditorConfig"
+- name: Install DabApps EditorConfig
   file:
     src: "{{ home }}/Projects/dotfiles/.editorconfig"
     dest: "{{ home }}/Projects/.editorconfig"
@@ -31,7 +31,7 @@
 - name: Enable strip mercurial extension
   ini_file:
     path: "{{ home }}/.hgrc"
-    section: "extensions"
+    section: extensions
     option: strip
     value: ""
     mode: 0644
@@ -39,7 +39,7 @@
 - name: Enable strip mercurial extension
   ini_file:
     path: "{{ home }}/.hgrc"
-    section: "ui"
+    section: ui
     option: ignore
-    value: '{{ home }}/.config/.gitignore'
+    value: "{{ home }}/.config/.gitignore"
     mode: 0644

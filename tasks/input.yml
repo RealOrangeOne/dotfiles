@@ -1,18 +1,18 @@
-- name: "Install input packages"
+- name: Install input packages
   aur:
     skip_installed: true
     name: "{{ item }}"
   become: true
   become_user: aur_builder
-  when: "item not in installed_packages.stdout_lines"
+  when: item not in installed_packages.stdout_lines
   loop:
-    - 'gpointing-device-settings'
-    - 'ibus'
-    - 'ibus-uniemoji'
-    - 'libinput'
-    - 'libinput-gestures'
-    - 'solaar'
-    - 'xorg-xev'
+    - gpointing-device-settings
+    - ibus
+    - ibus-uniemoji
+    - libinput
+    - libinput-gestures
+    - solaar
+    - xorg-xev
 
 - name: Install mouse config
   copy:
@@ -35,17 +35,17 @@
     mode: 0644
     owner: "{{ user }}"
 
-- name: "Create uniemoji config directory"
+- name: Create uniemoji config directory
   file:
-    path: '{{ home }}/.config/uniemoji/'
+    path: "{{ home }}/.config/uniemoji/"
     state: directory
     owner: "{{ user }}"
     mode: 0755
 
-- name: "Create uniemoji config"
+- name: Create uniemoji config
   copy:
-    src: './files/uniemoji.json'
-    dest: '{{ home }}/.config/uniemoji/custom.json'
+    src: ./files/uniemoji.json
+    dest: "{{ home }}/.config/uniemoji/custom.json"
     mode: 0644
     owner: "{{ user }}"
 
