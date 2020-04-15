@@ -6,10 +6,10 @@
   become_user: aur_builder
   when: item not in installed_packages.stdout_lines
   loop:
-    - 'heroku-cli'
-    - 'mercurial'
-    - 'ngrok'
-    - 'python-aws-mfa'
+    - heroku-cli
+    - mercurial
+    - ngrok
+    - python-aws-mfa
 
 - name: Clone DabApps Dotfiles
   git:

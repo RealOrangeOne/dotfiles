@@ -38,12 +38,12 @@
   become_user: aur_builder
   when: item not in installed_packages.stdout_lines
   loop:
-    - 'gtk-engine-murrine'
-    - 'lxappearance'
-    - 'numix-gtk-theme-git'
-    - 'matcha-gtk-theme'
-    - 'numix-square-icon-theme'
-    - 'qt5-styleplugins'
+    - gtk-engine-murrine
+    - lxappearance
+    - numix-gtk-theme-git
+    - matcha-gtk-theme
+    - numix-square-icon-theme
+    - qt5-styleplugins
 
 
 - name: Patch out terrible looking QT
@@ -97,7 +97,7 @@
     state: link
     force: true
   loop:
-    - 'org.gnome.SettingsDaemon.XSettings'
-    - 'org.gnome.SettingsDaemon.DiskUtilityNotify'
-    - 'org.gnome.SettingsDaemon.Keyboard'
-    - 'gsettings-data-convert'
+    - org.gnome.SettingsDaemon.XSettings
+    - org.gnome.SettingsDaemon.DiskUtilityNotify
+    - org.gnome.SettingsDaemon.Keyboard
+    - gsettings-data-convert

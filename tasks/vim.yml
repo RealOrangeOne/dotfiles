@@ -6,8 +6,8 @@
   become_user: aur_builder
   when: item not in installed_packages.stdout_lines
   loop:
-    - 'gvim'
-    - 'vim-pathogen'
+    - gvim
+    - vim-pathogen
 
 - name: Install vimrc
   copy:
@@ -40,10 +40,10 @@
   become: true
   become_user: "{{ user }}"
   loop:
-    - 'https://github.com/junegunn/goyo.vim'
-    - 'https://github.com/itchyny/lightline.vim'
-    - 'https://github.com/scrooloose/nerdtree'
-    - 'https://github.com/vim-scripts/peaksea'
-    - 'https://github.com/terryma/vim-multiple-cursors'
-    - 'https://github.com/jremmen/vim-ripgrep'
-    - 'https://github.com/amix/vim-zenroom2'
+    - https://github.com/junegunn/goyo.vim
+    - https://github.com/itchyny/lightline.vim
+    - https://github.com/scrooloose/nerdtree
+    - https://github.com/vim-scripts/peaksea
+    - https://github.com/terryma/vim-multiple-cursors
+    - https://github.com/jremmen/vim-ripgrep
+    - https://github.com/amix/vim-zenroom2

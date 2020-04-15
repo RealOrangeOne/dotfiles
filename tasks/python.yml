@@ -6,11 +6,11 @@
   become_user: aur_builder
   when: item not in installed_packages.stdout_lines
   loop:
-    - 'pyenv'
-    - 'python-pip'
-    - 'python-virtualenv'
-    - 'python2-pip'
-    - 'python2-virtualenv'
+    - pyenv
+    - python-pip
+    - python-virtualenv
+    - python2-pip
+    - python2-virtualenv
 
 - name: Create pyenv directory
   file:

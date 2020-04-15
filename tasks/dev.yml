@@ -6,9 +6,9 @@
   become_user: aur_builder
   when: item not in installed_packages.stdout_lines
   loop:
-    - 'biber'
-    - 'pandoc-bin'
-    - 'texlive-most'
+    - biber
+    - pandoc-bin
+    - texlive-most
 
 - name: Install dev packages
   aur:
@@ -18,18 +18,18 @@
   become_user: aur_builder
   when: item not in installed_packages.stdout_lines
   loop:
-    - 'arduino'
-    - 'arduino-cli'
-    - 'arduino-builder'
-    - 'aws-cli'
-    - 'docker'
-    - 'docker-compose'
-    - 'hugo'
-    - 'poetry'
-    - 'postgresql'
-    - 'postman-bin'
-    - 'sublime-text'
-    - 'tig'
+    - arduino
+    - arduino-cli
+    - arduino-builder
+    - aws-cli
+    - docker
+    - docker-compose
+    - hugo
+    - poetry
+    - postgresql
+    - postman-bin
+    - sublime-text
+    - tig
 
 - name: Create global .gitignore
   copy:

@@ -6,43 +6,43 @@
   become_user: aur_builder
   when: item not in installed_packages.stdout_lines
   loop:
-    - 'advanced-ssh-config'
-    - 'alacritty'
+    - advanced-ssh-config
+    - alacritty
     - arch-install-scripts
-    - 'bat'
-    - 'catimg'
-    - 'climate'
-    - 'cmatrix'
-    - 'exa'
-    - 'fd'
-    - 'fpp'
-    - 'htop'
-    - 'jshon'
-    - 'jq'
-    - 'nnn'
-    - 'oh-my-zsh-git'
-    - 'pazi'
-    - 'perl-file-mimeinfo'
-    - 'pigz'
-    - 'pipes.sh'
-    - 'playerctl'
-    - 'progress'
-    - 'reptyr'
-    - 'ripgrep'
-    - 'scrcpy'
-    - 'screenfetch'
-    - 'speedtest-cli'
-    - 'sl'
-    - 'terminator'
-    - 'thefuck'
-    - 'tmux'
-    - 'ruby-tmuxinator'
-    - 'xclip'
-    - 'xsel'
-    - 'zsh'
-    - 'zsh-completions'
-    - 'zsh-doc'
-    - 'zsh-syntax-highlighting'
+    - bat
+    - catimg
+    - climate
+    - cmatrix
+    - exa
+    - fd
+    - fpp
+    - htop
+    - jshon
+    - jq
+    - nnn
+    - oh-my-zsh-git
+    - pazi
+    - perl-file-mimeinfo
+    - pigz
+    - pipes.sh
+    - playerctl
+    - progress
+    - reptyr
+    - ripgrep
+    - scrcpy
+    - screenfetch
+    - speedtest-cli
+    - sl
+    - terminator
+    - thefuck
+    - tmux
+    - ruby-tmuxinator
+    - xclip
+    - xsel
+    - zsh
+    - zsh-completions
+    - zsh-doc
+    - zsh-syntax-highlighting
 
 
 - name: Install ZSH config

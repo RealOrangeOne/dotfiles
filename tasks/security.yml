@@ -6,10 +6,10 @@
   become_user: aur_builder
   when: item not in installed_packages.stdout_lines
   loop:
-    - 'enpass-bin'
-    - 'qomui'
-    - 'wireguard-arch'
-    - 'wireguard-tools'
+    - enpass-bin
+    - qomui
+    - wireguard-arch
+    - wireguard-tools
 
 - name: Install assh config
   copy:

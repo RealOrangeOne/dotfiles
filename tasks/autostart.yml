@@ -6,7 +6,7 @@
   become_user: aur_builder
   when: item not in installed_packages.stdout_lines
   loop:
-    - 'dex'
+    - dex
 
 - name: Create autostart directory
   file:
@@ -24,11 +24,11 @@
     state: link
     force: true
   loop:
-    - 'blueman'
-    - 'pulseaudio'
-    - 'nm-applet'
-    - 'lxqt-policykit-agent'
-    - 'solaar'
+    - blueman
+    - pulseaudio
+    - nm-applet
+    - lxqt-policykit-agent
+    - solaar
 
 - name: Autostart applications
   file:
@@ -39,5 +39,5 @@
     state: link
     force: true
   loop:
-    - 'flameshot'
-    - 'libinput-gestures'
+    - flameshot
+    - libinput-gestures

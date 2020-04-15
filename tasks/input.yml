@@ -6,13 +6,13 @@
   become_user: aur_builder
   when: item not in installed_packages.stdout_lines
   loop:
-    - 'gpointing-device-settings'
-    - 'ibus'
-    - 'ibus-uniemoji'
-    - 'libinput'
-    - 'libinput-gestures'
-    - 'solaar'
-    - 'xorg-xev'
+    - gpointing-device-settings
+    - ibus
+    - ibus-uniemoji
+    - libinput
+    - libinput-gestures
+    - solaar
+    - xorg-xev
 
 - name: Install mouse config
   copy:

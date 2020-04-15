@@ -6,13 +6,13 @@
   become_user: aur_builder
   when: item not in installed_packages.stdout_lines
   loop:
-    - 'acpi'
+    - acpi
     - ethtool
     - nbfc
-    - 'powertop'
-    - 'psensor'
+    - powertop
+    - psensor
     - smartmontools
-    - 'sysstat'
+    - sysstat
     - tlp
     - xfce4-power-manager
 

@@ -6,8 +6,8 @@
   become_user: aur_builder
   when: item not in installed_packages.stdout_lines
   loop:
-    - 'virtualbox-host-modules-arch'
-    - 'virtualbox-guest-modules-arch'
+    - virtualbox-host-modules-arch
+    - virtualbox-guest-modules-arch
 
 - name: Install general applications
   aur:
@@ -17,26 +17,26 @@
   become_user: aur_builder
   when: item not in installed_packages.stdout_lines
   loop:
-    - 'bleachbit'
-    - 'clamtk'
-    - 'filezilla'
-    - 'firefox'
-    - 'gimp'
-    - 'ghostwriter'
-    - 'glogg'
-    - 'gparted'
-    - 'hplip'
-    - 'inkscape'
-    - 'kdenlive'
-    - 'kodi'
+    - bleachbit
+    - clamtk
+    - filezilla
+    - firefox
+    - gimp
+    - ghostwriter
+    - glogg
+    - gparted
+    - hplip
+    - inkscape
+    - kdenlive
+    - kodi
     - libreoffice-fresh
     - libreoffice-fresh-en-gb
-    - 'minecraft'
-    - 'obs-studio'
-    - 'slack-desktop'
-    - 'steam'
-    - 'thunderbird'
-    - 'tor-browser'
-    - 'virtualbox'
-    - 'vlc'
-    - 'xsane'
+    - minecraft
+    - obs-studio
+    - slack-desktop
+    - steam
+    - thunderbird
+    - tor-browser
+    - virtualbox
+    - vlc
+    - xsane

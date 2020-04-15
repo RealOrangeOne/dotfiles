@@ -6,9 +6,9 @@
   become_user: aur_builder
   when: item not in installed_packages.stdout_lines
   loop:
-    - 'bind-tools'
-    - 'gnu-netcat'
-    - 'nmap'
+    - bind-tools
+    - gnu-netcat
+    - nmap
 
 - name: Install NetworkManager and associated tools
   aur:
@@ -18,8 +18,8 @@
   become_user: aur_builder
   when: item not in installed_packages.stdout_lines
   loop:
-    - 'networkmanager'
-    - 'network-manager-applet'
+    - networkmanager
+    - network-manager-applet
 
 - name: Enable NetworkManger
   systemd:

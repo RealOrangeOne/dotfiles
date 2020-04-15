@@ -6,24 +6,24 @@
   become_user: aur_builder
   when: item not in installed_packages.stdout_lines
   loop:
-    - 'arandr'
-    - 'betterlockscreen'
-    - 'brightnessctl'
-    - 'picom'
-    - 'dmenu'
-    - 'dunst'
-    - 'feh'
-    - 'flameshot'
-    - 'i3-gaps'
-    - 'i3lock-color'
-    - 'lxrandr'
-    - 'lxqt-policykit'
-    - 'aur/polybar'
-    - 'redshift'
-    - 'rofi'
-    - 'rofi-calc'
-    - 'tbg'
-    - 'xdotool'
+    - arandr
+    - betterlockscreen
+    - brightnessctl
+    - picom
+    - dmenu
+    - dunst
+    - feh
+    - flameshot
+    - i3-gaps
+    - i3lock-color
+    - lxrandr
+    - lxqt-policykit
+    - aur/polybar
+    - redshift
+    - rofi
+    - rofi-calc
+    - tbg
+    - xdotool
 
 
 - name: Set i3 variables

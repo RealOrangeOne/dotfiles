@@ -6,14 +6,14 @@
   become_user: aur_builder
   when: item not in installed_packages.stdout_lines
   loop:
-    - 'calibre'
-    - 'deluge'
-    - 'feedreader'
-    - 'nextcloud-client'
-    - "quassel-client"
+    - calibre
+    - deluge
+    - feedreader
+    - nextcloud-client
+    - quassel-client
     - terraform
     - terraform-lsp-bin
-    - 'turtl'
+    - turtl
 
 
 - name: Create dotfiles directory
