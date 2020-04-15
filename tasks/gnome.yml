@@ -48,14 +48,14 @@
 - name: Set GTK theme
   dconf:
     key: /org/gnome/desktop/interface/gtk-theme
-    value: Matcha-dark-aliz
+    value: "\"Matcha-dark-aliz\""
   become: true
   become_user: "{{ user }}"
 
 - name: Set GTK icon theme
   dconf:
     key: /org/gnome/desktop/interface/icon-theme
-    value: Numix-Square
+    value: "\"Numix-Square\""
   become: true
   become_user: "{{ user }}"
 
