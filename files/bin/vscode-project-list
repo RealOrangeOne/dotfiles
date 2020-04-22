@@ -11,6 +11,7 @@ VSCODE_CONFIG_FILE = Path.home().joinpath(".config/Code/storage.json")
 SEARCH_DIRS = [
     Path.home().joinpath("Projects"),
     Path.home().joinpath("Repositories"),
+    Path.home().joinpath("SR"),
 ]
 
 
