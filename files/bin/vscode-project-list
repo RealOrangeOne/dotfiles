@@ -6,12 +6,14 @@ import itertools
 import subprocess
 from io import StringIO
 
-VSCODE_CONFIG_FILE = Path.home().joinpath(".config/Code/storage.json")
+HOME = Path.home()
+
+VSCODE_CONFIG_FILE = HOME.joinpath(".config/Code/storage.json")
 
 SEARCH_DIRS = [
-    Path.home().joinpath("Projects"),
-    Path.home().joinpath("Repositories"),
-    Path.home().joinpath("SR"),
+    HOME.joinpath("Projects"),
+    HOME.joinpath("Repositories"),
+    HOME.joinpath("SR"),
 ]
 
 
@@ -41,7 +43,8 @@ def main():
         project_paths.remove(Path.home())  # Don't try and edit home dir
     except ValueError:
         pass
-    project_paths_display = [str(project.relative_to(Path.home())) for project in project_paths]
+    home_dir = str(HOME) + "/"
+    project_paths_display = [str(project).replace(home_dir, "") for project in project_paths]
 
     selected_project = subprocess.run(["rofi", "-dmenu", "-no-case-sensitive", "-format", "i"], input="\n".join(project_paths_display).encode(), stdout=subprocess.PIPE)
     selected_project.check_returncode()
