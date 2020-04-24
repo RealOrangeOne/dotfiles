@@ -43,3 +43,11 @@
     option: ignore
     value: "{{ home }}/.config/.gitignore"
     mode: 0644
+
+- name: Install Crab service
+  template:
+    src: ./files/crab.service
+    dest: /etc/systemd/system/crab.service
+    mode: 0644
+    owner: root
+    group: root
