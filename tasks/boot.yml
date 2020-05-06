@@ -74,7 +74,7 @@
 - name: Install nohang
   aur:
     skip_installed: true
-    name: "nohang-git"
+    name: nohang-git
   become: true
   become_user: aur_builder
 
