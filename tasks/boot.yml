@@ -70,3 +70,15 @@
   loop:
     - amd-ucode
     - intel-ucode
+
+- name: Install nohang
+  aur:
+    skip_installed: true
+    name: "nohang-git"
+  become: true
+  become_user: aur_builder
+
+- name: Enable nohang
+  systemd:
+    name: nohang-desktop
+    enabled: true
