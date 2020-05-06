@@ -1,33 +1,8 @@
-- name: Define keys for pacman
-  set_fact:
-    keys:
-      - 1EDDE2CDFC025D17F6DA9EC0ADAE6AD28A8F901A  # Sublime Text
-      - 9D5F1C051D146843CDA4858BDE64825E7CBC0D51  # ArchStrike
-
 - name: Install pacman config
   template:
     src: ./files/pacman.conf
     dest: /etc/pacman.conf
     mode: 0644
-
-- name: Add keys to pacman
-  shell: pacman-key -r {{ item }}
-  loop: "{{ keys }}"
-
-- name: Sign keys in pacman
-  shell: pacman-key --lsign-key {{ item }}
-  loop: "{{ keys }}"
-
-- name: Add keys to local keyring
-  shell: gpg --recv-keys {{ item }}
-  become: true
-  become_user: "{{ user }}"
-  loop: "{{ keys }}"
-
-- name: Add tor browser key
-  shell: gpg --auto-key-locate nodefault,wkd --locate-keys torbrowser@torproject.org
-  become: true
-  become_user: "{{ user }}"
 
 - name: Create aur_builder user
   user:
