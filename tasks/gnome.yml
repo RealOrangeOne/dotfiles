@@ -24,6 +24,7 @@
     - gnome-backgrounds
     - gnome-calculator
     - gnome-disk-utility
+    - gnome-firmware
     - gnome-latex
     - gnome-settings-daemon
     - gnome-system-monitor
