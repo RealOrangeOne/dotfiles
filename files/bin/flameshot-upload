@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+filename=$(date '+%s').png
+save_path=$HOME/Upload/img/$filename
+temp_file=$(mktemp)
+
+flameshot gui -r > "$temp_file"
+
+if grep -Fq "screenshot aborted" "$temp_file"; then
+    rm "$temp_file"
+    exit 1
+fi
+
+mv "$temp_file" "$save_path"
+echo "Saved to $save_path."
+
+echo "https://img.theorangeone.net/$filename" | xclip -i -selection c
