@@ -18,6 +18,7 @@
     - import_tasks: tasks/ntp.yml
     - import_tasks: tasks/fonts.yml
     - import_tasks: tasks/security.yml
+    - import_tasks: tasks/keepassxc.yml
 
     - import_tasks: tasks/python.yml
     - import_tasks: tasks/vim.yml
