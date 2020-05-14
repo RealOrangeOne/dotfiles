@@ -9,6 +9,7 @@
     - keepassxc
     - qomui
     - wireguard-tools
+    - yubikey-personalization-gui
 
 - name: Create .ssh directory
   file:
