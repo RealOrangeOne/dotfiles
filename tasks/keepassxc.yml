@@ -25,14 +25,15 @@
   loop_control:
     label: "{{ item.section }}.{{ item.option }}={{ item.value }}"
   loop:
-    - {section: General, option: SSHAgent, value: "true"}
     - {section: General, option: AutoSaveAfterEveryChange, value: "true"}
     - {section: General, option: LastOpenedDatabases, value: "{{ home }}/Private/KeePass/Password Safe.kdbx"}
     - {section: General, option: SingleInstance, value: "true"}
     - {section: Http, option: Enabled, value: "false"}
+    - {section: GUI, option: AdvancedSettings, value: "true"}
     - {section: GUI, option: ShowTrayIcon, value: "true"}
     - {section: GUI, option: MinimizeToTray, value: "true"}
     - {section: GUI, option: MinimizeOnStartup, value: "true"}
+    - {section: GUI, option: MinimizeOnClose, value: "true"}
     - {section: security, option: lockdatabasescreenlock, value: "true"}
     - {section: Browser, option: Enabled, value: "true"}
     - {section: Browser, option: AlwaysAllowAccess, value: "true"}
