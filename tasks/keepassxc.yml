@@ -35,4 +35,6 @@
     section: "{{ item.section }}"
     option: "{{ item.option }}"
     value: "{{ item.value }}"
-  with_items: "{{ keepassxc_config }}"
+  loop: "{{ keepassxc_config }}"
+  loop_control:
+    label: "{{ item.section }}.{{ item.option }}={{ item.value }}"
