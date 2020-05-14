@@ -6,7 +6,6 @@
   become_user: aur_builder
   when: item not in installed_packages.stdout_lines
   loop:
-    - enpass-bin
     - keepassxc
     - qomui
     - wireguard-tools
