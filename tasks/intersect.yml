@@ -13,7 +13,7 @@
     - quassel-client
     - terraform
     - terraform-lsp-bin
-    - turtl
+    - qownnotes
 
 
 - name: Create dotfiles directory
