@@ -8,9 +8,18 @@
   loop:
     - grub-customizer
     - grub2-theme-archlinux
+    - os-prober
+
+- name: Install LightDM
+  aur:
+    skip_installed: true
+    name: "{{ item }}"
+  become: true
+  become_user: aur_builder
+  when: item not in installed_packages.stdout_lines
+  loop:
     - lightdm
     - lightdm-gtk-greeter
-    - os-prober
 
 - name: Enable lightdm
   systemd:
@@ -23,7 +32,7 @@
     state: absent
   ignore_errors: true
 
-- name: Enable Slick greeter for lightdm
+- name: Set lightdm greeter
   ini_file:
     path: /etc/lightdm/lightdm.conf
     section: Seat:*
