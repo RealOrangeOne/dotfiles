@@ -21,11 +21,6 @@
     - lightdm
     - lightdm-gtk-greeter
 
-- name: Enable lightdm
-  systemd:
-    name: lightdm
-    enabled: true
-
 - name: Disable PC Speaker
   modprobe:
     name: pcspkr
@@ -90,4 +85,49 @@
 - name: Enable nohang
   systemd:
     name: nohang-desktop
+    enabled: true
+
+- name: Install plymouth
+  aur:
+    skip_installed: true
+    name: "{{ item }}"
+  become: true
+  become_user: aur_builder
+  when: item not in installed_packages.stdout_lines
+  loop:
+    - plymouth
+    - plymouth-theme-ibm-git
+
+- name: Set kernel parameters
+  lineinfile:
+    path: /etc/default/grub
+    regexp: ^GRUB_CMDLINE_LINUX_DEFAULT=
+    line: GRUB_CMDLINE_LINUX_DEFAULT="quiet splash loglevel=3 rd.udev.log_priority=3 vt.global_cursor_default=0"
+  register: kernel_parameters
+
+- name: Install plymouth config
+  copy:
+    src: ./files/plymouth.conf
+    dest: /etc/plymouth/plymouthd.conf
+    mode: 0644
+  register: plymouth_config
+
+- name: Set hooks
+  lineinfile:
+    path: /etc/mkinitcpio.conf
+    regexp: ^HOOKS=
+    line: HOOKS=(base udev plymouth autodetect keyboard keymap modconf block plymouth-encrypt filesystems fsck)
+  register: initrd_hooks
+
+- name: Rebuild initrd
+  command: mkinitcpio -P
+  when: plymouth_config.changed or initrd_hooks.changed
+
+- name: Rebuild GRUB config
+  command: grub-mkconfig -o /boot/grub/grub.cfg
+  when: kernel_parameters.changed
+
+- name: Enable lightdm
+  systemd:
+    name: lightdm-plymouth
     enabled: true
