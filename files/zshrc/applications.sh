@@ -6,7 +6,7 @@ alias gs="git status"
 alias gd="git diff"
 alias git-root='cd $(git root)'
 
-gh() {
+hub() {
   if [ $# -eq 1 ]; then
     command git clone git@github.com:RealOrangeOne/${1} --recursive && cd ${1}
   else

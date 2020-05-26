@@ -9,11 +9,12 @@
     - calibre
     - deluge
     - feedreader
+    - gitea-tea
     - nextcloud-client
+    - qownnotes
     - quassel-client
     - terraform
     - terraform-lsp-bin
-    - qownnotes
 
 
 - name: Create dotfiles directory
