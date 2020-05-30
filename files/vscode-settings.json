@@ -82,5 +82,10 @@
     "enabled": true,
     "args": [],
     "pathToBinary": "/usr/bin/terraform-lsp"
-  }
+  },
+  "languageToolLinter.serviceType": "managed",
+  "languageToolLinter.managed.classPath": "/usr/share/languagetool:/usr/share/java/languagetool/*.jar",
+  "languageToolLinter.lintOnOpen": true,
+  "languageToolLinter.languageTool.language": "en-GB",
+  "languageToolLinter.languageTool.motherTongue": "en-GB",
 }

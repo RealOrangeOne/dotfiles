@@ -8,6 +8,7 @@
   loop:
     - visual-studio-code-bin
     - universal-ctags-git
+    - languagetool
 
 - name: Create VSCode user directory
   file:
@@ -82,7 +83,7 @@
       - github.vscode-pull-request-github
       - randomfractalsinc.vscode-data-preview
       - vstirbu.vscode-mermaid-preview
-
+      - davidlday.languagetool-linter
 
 - name: Install VSCode extensions
   shell: code --install-extension {{ item }} --force
