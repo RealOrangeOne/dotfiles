@@ -1,6 +1,5 @@
 - name: Install Grub
   aur:
-    skip_installed: true
     name: "{{ item }}"
   become: true
   become_user: aur_builder
@@ -12,7 +11,6 @@
 
 - name: Install LightDM
   aur:
-    skip_installed: true
     name: "{{ item }}"
   become: true
   become_user: aur_builder
@@ -53,7 +51,6 @@
 
 - name: Install file system helpers
   aur:
-    skip_installed: true
     name: "{{ item }}"
   become: true
   become_user: aur_builder
@@ -66,7 +63,6 @@
 
 - name: Install Microcode
   aur:
-    skip_installed: true
     name: "{{ item }}"
   become: true
   become_user: aur_builder
@@ -77,7 +73,6 @@
 
 - name: Install nohang
   aur:
-    skip_installed: true
     name: nohang-git
   become: true
   become_user: aur_builder
@@ -89,7 +84,6 @@
 
 - name: Install plymouth
   aur:
-    skip_installed: true
     name: "{{ item }}"
   become: true
   become_user: aur_builder

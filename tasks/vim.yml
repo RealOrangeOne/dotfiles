@@ -1,6 +1,5 @@
 - name: Install dev packages
   aur:
-    skip_installed: true
     name: "{{ item }}"
   become: true
   become_user: aur_builder

@@ -9,7 +9,6 @@
 
 - name: Install Gnome packages
   aur:
-    skip_installed: true
     name: "{{ item }}"
   become: true
   become_user: aur_builder
@@ -33,7 +32,6 @@
 
 - name: Install GTK tools
   aur:
-    skip_installed: true
     name: "{{ item }}"
   become: true
   become_user: aur_builder

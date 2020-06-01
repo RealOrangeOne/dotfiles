@@ -1,6 +1,5 @@
 - name: Install Virtualbox dependencies
   aur:
-    skip_installed: true
     name: "{{ item }}"
   become: true
   become_user: aur_builder
@@ -10,7 +9,6 @@
 
 - name: Install general applications
   aur:
-    skip_installed: true
     name: "{{ item }}"
   become: true
   become_user: aur_builder

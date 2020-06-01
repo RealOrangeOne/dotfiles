@@ -27,14 +27,12 @@
 
 - name: Install yay
   aur:
-    skip_installed: true
     name: yay
   become: true
   become_user: aur_builder
 
 - name: Install additional repo keyrings
   aur:
-    skip_installed: true
     name: "{{ item }}"
   become: true
   become_user: aur_builder
@@ -44,14 +42,12 @@
 
 - name: Install ccache
   aur:
-    skip_installed: true
     name: ccache
   become: true
   become_user: aur_builder
 
 - name: Install makepkg tools
   aur:
-    skip_installed: true
     name: "{{ item }}"
   become: true
   become_user: aur_builder
@@ -68,7 +64,6 @@
 
 - name: Install Reflector
   aur:
-    skip_installed: true
     name: reflector
   become: true
   become_user: aur_builder

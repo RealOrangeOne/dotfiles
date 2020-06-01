@@ -1,6 +1,5 @@
 - name: Install networking tools
   aur:
-    skip_installed: true
     name: "{{ item }}"
   become: true
   become_user: aur_builder
@@ -12,7 +11,6 @@
 
 - name: Install NetworkManager and associated tools
   aur:
-    skip_installed: true
     name: "{{ item }}"
   become: true
   become_user: aur_builder

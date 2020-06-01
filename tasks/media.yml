@@ -1,6 +1,5 @@
 - name: Install Spotify
   aur:
-    skip_installed: true
     name: "{{ item }}"
   become: true
   become_user: aur_builder
@@ -11,7 +10,6 @@
 
 - name: Install media-related packages
   aur:
-    skip_installed: true
     name: "{{ item }}"
   become: true
   become_user: aur_builder
@@ -25,7 +23,6 @@
 
 - name: Install pulseaudio
   aur:
-    skip_installed: true
     name: "{{ item }}"
   become: true
   become_user: aur_builder
