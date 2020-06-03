@@ -24,3 +24,45 @@
     dest: "{{ home }}/.ssh/assh.yml"
     mode: 0644
     owner: "{{ user }}"
+
+- name: Install Firewall
+  aur:
+    name: "{{ item }}"
+  become: true
+  become_user: aur_builder
+  when: item not in installed_packages.stdout_lines
+  loop:
+    - firewalld
+
+- name: Enable firewalld
+  systemd:
+    name: firewalld
+    enabled: true
+
+- name: Define firewall ports
+  set_fact:
+    requested_firewall_ports:
+      - 22/tcp  # SSH
+      - 80/tcp  # Web (crab)
+
+- name: Get firewall ports
+  shell: firewall-cmd --list-ports
+  become: true
+  register: firewall_ports
+
+- name: Open firewall ports
+  firewalld:
+    port: "{{ item }}"
+    permanent: true
+    immediate: true
+    state: enabled
+  loop: "{{ requested_firewall_ports }}"
+
+- name: Close firewall ports
+  firewalld:
+    port: "{{ item }}"
+    permanent: true
+    immediate: true
+    state: disabled
+  when: item not in requested_firewall_ports
+  loop: "{{ firewall_ports.stdout.split(' ') }}"

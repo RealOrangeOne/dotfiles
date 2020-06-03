@@ -44,3 +44,7 @@ alias cl="climate"
 alias tmux-cleanup="tmux list-sessions | grep -v attached | cut -d: -f1 |  xargs -t -n1 tmux kill-session -t"
 alias lock-screen="xdotool key 'Super_L+l'"
 alias mux="tmuxinator start"
+
+alias open-port="firewall-cmd --zone=public --add-port"
+alias close-port="firewall-cmd --zone=public --remove-port"
+alias reset-ports="firewall-cmd --complete-reload"
