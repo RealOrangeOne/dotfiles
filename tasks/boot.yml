@@ -81,6 +81,7 @@
   systemd:
     name: nohang-desktop
     enabled: true
+    state: started
 
 - name: Install plymouth
   aur:

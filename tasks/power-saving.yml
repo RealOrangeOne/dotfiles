@@ -19,6 +19,7 @@
   systemd:
     name: tlp
     enabled: true
+    state: started
 
 - name: Enable NBFC
   systemd:
