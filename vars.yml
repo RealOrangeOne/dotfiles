@@ -1,2 +1,5 @@
 user: jake
 home: /home/{{ user }}
+dabapps_hostnames:
+  - TOO-Work
+  - big-mike
