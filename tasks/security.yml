@@ -38,6 +38,7 @@
   systemd:
     name: firewalld
     enabled: true
+    state: started
 
 - name: Define firewall ports
   set_fact:
@@ -64,5 +65,5 @@
     permanent: true
     immediate: true
     state: disabled
-  when: item not in requested_firewall_ports
+  when: item and item not in requested_firewall_ports
   loop: "{{ firewall_ports.stdout.split(' ') }}"
