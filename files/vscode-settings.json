@@ -18,7 +18,9 @@
     "**/.git",
     "**/bower_components"
   ],
-  "python.workspaceSymbols.exclusionPatterns": [],
+  "python.workspaceSymbols.exclusionPatterns": [
+    "${workspaceFolder}/env/*"
+  ],
   "gitlens.codeLens.enabled": false,
   "workbench.activityBar.visible": true,
   "editor.fontSize": 14,
@@ -88,4 +90,7 @@
   "languageToolLinter.lintOnOpen": true,
   "languageToolLinter.languageTool.language": "en-GB",
   "languageToolLinter.languageTool.motherTongue": "en-GB",
+  "python.languageServer": "Jedi",
+  "python.workspaceSymbols.enabled": true,
+  "python.experiments.enabled": false
 }

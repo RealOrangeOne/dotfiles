@@ -6,7 +6,7 @@
   when: item not in installed_packages.stdout_lines
   loop:
     - visual-studio-code-bin
-    - universal-ctags-git
+    - ctags
     - languagetool
 
 - name: Create VSCode user directory
