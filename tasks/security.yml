@@ -5,6 +5,7 @@
   become_user: aur_builder
   when: item not in installed_packages.stdout_lines
   loop:
+    - firejail
     - keepassxc
     - qomui
     - wireguard-tools
