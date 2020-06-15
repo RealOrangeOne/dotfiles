@@ -8,6 +8,9 @@
     - import_tasks: tasks/user.yml
     - import_tasks: tasks/packages.yml
 
+    - include_role:
+        name: geerlingguy.ntp
+
     - import_tasks: tasks/boot.yml
     - import_tasks: tasks/i3.yml
     - import_tasks: tasks/network.yml
@@ -15,7 +18,6 @@
     - import_tasks: tasks/input.yml
     - import_tasks: tasks/power-saving.yml
     - import_tasks: tasks/autostart.yml
-    - import_tasks: tasks/ntp.yml
     - import_tasks: tasks/fonts.yml
     - import_tasks: tasks/security.yml
     - import_tasks: tasks/keepassxc.yml
