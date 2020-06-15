@@ -72,7 +72,7 @@
       - jock.svg
       - naumovs.color-highlight
       - pranaygp.vscode-css-peek
-      - mauve.terraform
+      - hashicorp.terraform
       - mhutchie.git-graph
       - ms-vscode.wordcount
       - ms-vscode-remote.remote-ssh
