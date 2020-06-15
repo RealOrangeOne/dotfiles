@@ -16,7 +16,7 @@
     - i3lock-color
     - lxrandr
     - lxqt-policykit
-    - aur/polybar
+    - polybar
     - redshift
     - rofi
     - rofi-calc
