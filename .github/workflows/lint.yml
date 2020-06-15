@@ -13,7 +13,5 @@ jobs:
           python-version: 3.7
       - name: Install dependencies
         run: ./scripts/setup.sh
-      - name: Install ansible aur module
-        run: git clone https://github.com/kewlfft/ansible-aur.git ~/.ansible/plugins/modules/aur --depth=1
       - name: Run linters
         run: ./scripts/lint.sh

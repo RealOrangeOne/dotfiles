@@ -5,7 +5,6 @@
 Settings and Preferences for transfer between machines
 
 ## Requirements
-- [`ansible-aur`](https://github.com/kewlfft/ansible-aur/)
 - SSH / GPG keys installed
 - Correctly setup `~/.dotfiles` directory
 
