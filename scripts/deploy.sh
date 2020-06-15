@@ -2,4 +2,4 @@
 
 set -ex
 
-sudo env/bin/ansible-playbook -i hosts dotfiles.yml
+sudo env/bin/ansible-playbook dotfiles.yml
