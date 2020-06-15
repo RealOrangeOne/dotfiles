@@ -1,2 +1,3 @@
 *.retry
 env/
+galaxy_roles/
