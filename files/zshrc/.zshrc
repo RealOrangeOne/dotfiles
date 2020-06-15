@@ -30,5 +30,5 @@ alias src="source {{ home }}/.zshrc && tmux source {{ home }}/.tmux.conf"
 {% include "base.sh" %}
 {% include "environment.sh" %}
 {% include "applications.sh" %}
-{% include "catfish.sh" %}
+{% include "crab.sh" %}
 {% include "javascript.sh" %}
