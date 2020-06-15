@@ -3,7 +3,6 @@
     name: "{{ item }}"
   become: true
   become_user: aur_builder
-  when: item not in installed_packages.stdout_lines
   loop:
     - grub-customizer
     - grub2-theme-archlinux
@@ -14,7 +13,6 @@
     name: "{{ item }}"
   become: true
   become_user: aur_builder
-  when: item not in installed_packages.stdout_lines
   loop:
     - lightdm
     - lightdm-gtk-greeter
@@ -54,7 +52,6 @@
     name: "{{ item }}"
   become: true
   become_user: aur_builder
-  when: item not in installed_packages.stdout_lines
   loop:
     - dosfstools
     - exfat-utils
@@ -66,7 +63,6 @@
     name: "{{ item }}"
   become: true
   become_user: aur_builder
-  when: item not in installed_packages.stdout_lines
   loop:
     - amd-ucode
     - intel-ucode
@@ -88,7 +84,6 @@
     name: "{{ item }}"
   become: true
   become_user: aur_builder
-  when: item not in installed_packages.stdout_lines
   loop:
     - plymouth
     - plymouth-theme-ibm-git

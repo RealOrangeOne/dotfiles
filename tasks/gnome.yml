@@ -12,7 +12,6 @@
     name: "{{ item }}"
   become: true
   become_user: aur_builder
-  when: item not in installed_packages.stdout_lines
   loop:
     - baobab
     - cheese
@@ -35,7 +34,6 @@
     name: "{{ item }}"
   become: true
   become_user: aur_builder
-  when: item not in installed_packages.stdout_lines
   loop:
     - gtk-engine-murrine
     - lxappearance

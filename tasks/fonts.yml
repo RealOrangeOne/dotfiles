@@ -3,7 +3,6 @@
     name: "{{ item }}"
   become: true
   become_user: aur_builder
-  when: item not in installed_packages.stdout_lines
   loop:
     - all-repository-fonts
     - fonts-meta-extended-lt

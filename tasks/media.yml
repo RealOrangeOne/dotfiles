@@ -3,7 +3,6 @@
     name: "{{ item }}"
   become: true
   become_user: aur_builder
-  when: item not in installed_packages.stdout_lines
   loop:
     - ffmpeg-compat-57
     - spotify
@@ -13,7 +12,6 @@
     name: "{{ item }}"
   become: true
   become_user: aur_builder
-  when: item not in installed_packages.stdout_lines
   loop:
     - bcm20702a1-firmware
     - bluez-firmware
@@ -26,7 +24,6 @@
     name: "{{ item }}"
   become: true
   become_user: aur_builder
-  when: item not in installed_packages.stdout_lines
   loop:
     - alsa-utils
     - pavucontrol
