@@ -1,5 +1,7 @@
 - hosts: local
   connection: local
+  roles:
+    - kewlfft.aur
   tasks:
     - name: Include extra metadata
       include_vars:
