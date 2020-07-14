@@ -20,7 +20,7 @@
 
 - name: Install yay
   aur:
-    name: yay
+    name: yay-bin
   become: true
   become_user: aur_builder
 
