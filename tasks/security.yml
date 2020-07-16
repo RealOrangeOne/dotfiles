@@ -4,9 +4,11 @@
   become: true
   become_user: aur_builder
   loop:
+    - gnome-keyring
     - firejail
     - keepassxc
     - qomui
+    - seahorse
     - wireguard-tools
     - yubikey-personalization-gui
 
