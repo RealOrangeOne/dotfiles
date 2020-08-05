@@ -52,22 +52,3 @@
     src: ./files/makepkg.conf
     dest: /etc/makepkg.conf
     mode: 0644
-
-- name: Install Reflector
-  aur:
-    name: reflector
-  become: true
-  become_user: aur_builder
-
-- name: Install Reflector service
-  template:
-    src: ./files/reflector.service
-    dest: /etc/systemd/system/reflector.service
-    mode: 0644
-    owner: root
-    group: root
-
-- name: Enable Reflector services
-  systemd:
-    name: reflector
-    enabled: true

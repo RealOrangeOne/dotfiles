@@ -13,6 +13,9 @@
     - include_role:
         name: geerlingguy.ntp
 
+    - include_role:
+        name: realorangeone.reflector
+
     - import_tasks: tasks/boot.yml
     - import_tasks: tasks/i3.yml
     - import_tasks: tasks/network.yml
