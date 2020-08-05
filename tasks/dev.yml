@@ -29,7 +29,6 @@
     - postman-bin
     - sublime-text
     - tig
-    - vgrep
 
 - name: Create global .gitignore
   copy:
