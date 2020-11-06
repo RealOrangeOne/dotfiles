@@ -22,7 +22,7 @@
     - docker
     - docker-compose
     - firefox-developer-edition
-    - github-cli-bin
+    - github-cli
     - hugo
     - poetry
     - postgresql
