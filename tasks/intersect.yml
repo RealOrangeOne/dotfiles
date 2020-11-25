@@ -20,3 +20,4 @@
     path: "{{ home }}/.dotfiles"
     owner: "{{ user }}"
     group: users
+    mode: 0700

@@ -16,3 +16,4 @@
     path: /opt/pyenv
     owner: "{{ user }}"
     group: users
+    mode: 0644

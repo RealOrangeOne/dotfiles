@@ -133,3 +133,4 @@
     state: present
     line: KEYMAP=uk
     create: true
+    mode: 0644

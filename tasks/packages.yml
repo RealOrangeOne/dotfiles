@@ -17,6 +17,7 @@
     line: "aur_builder ALL=(ALL) NOPASSWD: /usr/bin/pacman"
     create: true
     validate: visudo -cf %s
+    mode: 0644
 
 - name: Install yay
   aur:
