@@ -78,10 +78,11 @@
       - ms-vscode-remote.remote-ssh
       - wmaurer.change-case
       - bibhasdn.django-html
-      - github.vscode-pull-request-github
-      - randomfractalsinc.vscode-data-preview
+      - GitHub.vscode-pull-request-github
+      - RandomFractalsInc.vscode-data-preview
       - vstirbu.vscode-mermaid-preview
       - davidlday.languagetool-linter
+      - ms-toolsai.jupyter
 
 - name: Install VSCode extensions
   shell: code --install-extension {{ item }} --force
