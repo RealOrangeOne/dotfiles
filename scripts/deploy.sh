@@ -2,4 +2,4 @@
 
 set -ex
 
-sudo env/bin/ansible-playbook dotfiles.yml
+time sudo ansible-playbook dotfiles.yml

@@ -18,7 +18,6 @@
     path: "{{ home }}/.ssh"
     owner: "{{ user }}"
     mode: 0700
-    directory_mode: 0700
 
 - name: Install assh config
   copy:
@@ -53,7 +52,7 @@
   register: firewall_ports
 
 - name: Open firewall ports
-  firewalld:
+  ansible.posix.firewalld:
     port: "{{ item }}"
     permanent: true
     immediate: true
@@ -61,7 +60,7 @@
   loop: "{{ requested_firewall_ports }}"
 
 - name: Close firewall ports
-  firewalld:
+  ansible.posix.firewalld:
     port: "{{ item }}"
     permanent: true
     immediate: true

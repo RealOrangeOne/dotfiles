@@ -8,3 +8,7 @@ rules:
     required: only-when-needed
   line-length:
     max: 150
+
+ignore: |
+  galaxy_roles
+  galaxy_collections

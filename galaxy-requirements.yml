@@ -1,3 +1,8 @@
-- src: kewlfft.aur
-- src: geerlingguy.ntp
-- src: realorangeone.reflector
+collections:
+  - ansible.posix
+  - community.general
+
+roles:
+  - src: kewlfft.aur
+  - src: geerlingguy.ntp
+  - src: realorangeone.reflector
