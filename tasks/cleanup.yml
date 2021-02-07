@@ -4,3 +4,4 @@
     state: absent
     remove: true
     force: true
+  changed_when: false

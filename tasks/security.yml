@@ -50,6 +50,7 @@
   shell: firewall-cmd --list-ports
   become: true
   register: firewall_ports
+  changed_when: false
 
 - name: Open firewall ports
   ansible.posix.firewalld:
