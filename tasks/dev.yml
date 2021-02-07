@@ -14,7 +14,7 @@
   become: true
   become_user: aur_builder
   loop:
-    - ansible
+    - ansible-base
     - arduino
     - arduino-cli
     - arduino-builder
