@@ -67,7 +67,6 @@
       - ms-vscode.cpptools
       - ms-vscode-remote.remote-containers
       - ms-azuretools.vscode-docker
-      - mrcrowl.hg
       - yzhang.markdown-all-in-one
       - jock.svg
       - naumovs.color-highlight

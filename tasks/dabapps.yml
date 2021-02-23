@@ -5,7 +5,6 @@
   become_user: aur_builder
   loop:
     - heroku-cli
-    - mercurial
     - ngrok
     - python-aws-mfa
 
@@ -25,22 +24,6 @@
     owner: "{{ user }}"
     state: link
     force: true
-
-- name: Enable strip mercurial extension
-  ini_file:
-    path: "{{ home }}/.hgrc"
-    section: extensions
-    option: strip
-    value: ""
-    mode: 0644
-
-- name: Enable strip mercurial extension
-  ini_file:
-    path: "{{ home }}/.hgrc"
-    section: ui
-    option: ignore
-    value: "{{ home }}/.config/.gitignore"
-    mode: 0644
 
 - name: Install Crab service
   template:
