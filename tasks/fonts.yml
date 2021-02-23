@@ -6,7 +6,6 @@
   loop:
     - all-repository-fonts
     - fonts-meta-extended-lt
-    - otf-fira-code
     - otf-font-awesome
     - ttf-fira-code
     - ttf-font-awesome
