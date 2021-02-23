@@ -7,7 +7,6 @@
     - gnome-keyring
     - firejail
     - keepassxc
-    - qomui
     - seahorse
     - wireguard-tools
     - yubikey-personalization-gui
