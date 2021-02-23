@@ -79,3 +79,9 @@
     src: ./files/makepkg.conf
     dest: /etc/makepkg.conf
     mode: 0644
+
+- name: Install pacman tools
+  aur:
+    name: pacman-contrib
+  become: true
+  become_user: aur_builder
