@@ -12,6 +12,7 @@
   loop:
     - 8A8F901A  # Sublime Text
     - 9D5F1C051D146843CDA4858BDE64825E7CBC0D51  # ArchStrike
+    - DDF7DB817396A49B2A2723F7403BD972F75D9D76  # archzfs
   when: item not in repo_keys.stdout
 
 - name: Install pacman config
