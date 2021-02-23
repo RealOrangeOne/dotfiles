@@ -6,7 +6,6 @@
   loop:
     - calibre
     - deluge
-    - feedreader
     - nextcloud-client
     - qownnotes
     - quassel-client
