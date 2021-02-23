@@ -7,8 +7,6 @@
     - pyenv
     - python-pip
     - python-virtualenv
-    - python2-pip
-    - python2-virtualenv
 
 - name: Create pyenv directory
   file:
