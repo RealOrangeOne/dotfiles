@@ -6,7 +6,6 @@
   loop:
     - gnome-keyring
     - firejail
-    - keepassxc
     - seahorse
     - wireguard-tools
     - yubikey-personalization-gui
@@ -24,3 +23,11 @@
     dest: "{{ home }}/.ssh/assh.yml"
     mode: 0644
     owner: "{{ user }}"
+
+- name: Create private directory
+  file:
+    state: directory
+    recurse: true
+    path: "{{ home }}/Private"
+    owner: "{{ user }}"
+    mode: 0700

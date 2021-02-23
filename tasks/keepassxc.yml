@@ -1,10 +1,8 @@
-- name: Create private directory
-  file:
-    state: directory
-    recurse: true
-    path: "{{ home }}/Private"
-    owner: "{{ user }}"
-    mode: 0700
+- name: Install keepassxc
+  aur:
+    name: keepassxc
+  become: true
+  become_user: aur_builder
 
 - name: Create KeepassXC config directory
   file:
