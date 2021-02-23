@@ -1,3 +1,13 @@
+- name: Install qownnotes
+  aur:
+    name: "{{ item }}"
+  become: true
+  become_user: aur_builder
+  loop:
+    - aspell
+    - aspell-en
+    - qownnotes
+
 - name: Install intersect packages
   aur:
     name: "{{ item }}"
@@ -7,7 +17,6 @@
     - calibre
     - deluge
     - nextcloud-client
-    - qownnotes
     - quassel-client
     - terraform
     - terraform-lsp-bin
