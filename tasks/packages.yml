@@ -1,8 +1,25 @@
+- name: Get repository keys
+  shell: pacman-key --list-sigs
+  become: true
+  register: repo_keys
+  changed_when: false
+
+- name: Install custom repo keys
+  shell:
+    cmd: pacman-key -r {{ item }} && pacman-key --lsign-key {{ item }}
+  become: true
+  register: added_repo_keys
+  loop:
+    - 8A8F901A  # Sublime Text
+    - 9D5F1C051D146843CDA4858BDE64825E7CBC0D51  # ArchStrike
+  when: item not in repo_keys.stdout
+
 - name: Install pacman config
   template:
     src: ./files/pacman.conf
     dest: /etc/pacman.conf
     mode: 0644
+  register: pacman_conf
 
 - name: Create aur_builder user
   user:
@@ -26,6 +43,12 @@
     name: yay-bin
   become: true
   become_user: aur_builder
+
+- name: Update package repositories
+  pacman:
+    update_cache: yes
+  become: true
+  when: added_repo_keys.changed or pacman_conf.changed
 
 - name: Install additional repo keyrings
   aur:
