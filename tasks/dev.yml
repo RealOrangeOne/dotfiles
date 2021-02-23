@@ -30,6 +30,13 @@
     - sublime-text
     - tig
 
+- name: Add user to docker group
+  user:
+    name: "{{ user }}"
+    groups: docker
+    append: true
+  become: true
+
 - name: Create global .gitignore
   copy:
     src: ./files/gitignore_global
