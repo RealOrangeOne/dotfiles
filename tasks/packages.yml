@@ -73,6 +73,7 @@
   loop:
     - pbzip2
     - zstd
+    - pigz
 
 - name: Install makepkg config
   template:
