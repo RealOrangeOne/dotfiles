@@ -6,31 +6,11 @@
   loop:
     - acpi
     - ethtool
-    - nbfc
     - powertop
     - psensor
     - smartmontools
     - sysstat
-    - tlp
     - xfce4-power-manager
-
-- name: Enable TLP services
-  systemd:
-    name: tlp
-    enabled: true
-    state: started
-
-- name: Enable NBFC
-  systemd:
-    name: nbfc
-    enabled: true
-    state: started
-
-- name: Install TLP config
-  copy:
-    src: ./files/tlp.conf
-    dest: /etc/default/tlp
-    mode: 0644
 
 - name: Create XFCE4 power manager config directory
   file:
