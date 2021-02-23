@@ -4,7 +4,7 @@
   become: true
   become_user: aur_builder
   loop:
-    - virtualbox-host-modules-arch
+    - virtualbox-host-dkms
 
 - name: Install general applications
   aur:
