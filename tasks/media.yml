@@ -13,11 +13,12 @@
   become: true
   become_user: aur_builder
   loop:
-    - bcm20702a1-firmware
+    - alsa-firmware
     - bluez-firmware
     - bluez-utils-compat
     - blueman
     - handbrake
+    - sof-firmware
 
 - name: Install pulseaudio
   aur:
