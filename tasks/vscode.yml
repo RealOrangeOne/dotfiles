@@ -41,11 +41,9 @@
     requested_vscode_extensions:
       - PKief.material-icon-theme
       - Zignd.html-css-class-completion
-      - christian-kohler.npm-intellisense
       - dbaeumer.vscode-eslint
       - eamodio.gitlens
       - ionutvmi.path-autocomplete
-      - mrmlnc.vscode-less
       - mrmlnc.vscode-scss
       - ms-python.python
       - ms-vscode.sublime-keybindings
@@ -62,7 +60,6 @@
       - pnp.polacode
       - mrmlnc.vscode-duplicate
       - Tyriar.sort-lines
-      - esbenp.prettier-vscode
       - jspolancor.presentationmode
       - ms-vscode.cpptools
       - ms-vscode-remote.remote-containers
@@ -82,6 +79,8 @@
       - vstirbu.vscode-mermaid-preview
       - davidlday.languagetool-linter
       - ms-toolsai.jupyter
+      - bbenoist.vagrant
+      - GitLab.gitlab-workflow
 
 - name: Install VSCode extensions
   shell: code --install-extension {{ item }} --force
