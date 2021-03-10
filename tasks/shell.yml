@@ -52,7 +52,7 @@
     backup: true
     trim_blocks: false
 
-- name: Install global environmetn variables
+- name: Install global environment variables
   template:
     src: ./files/global-environment
     dest: /etc/environment
