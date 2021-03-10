@@ -37,8 +37,8 @@
     - import_tasks: tasks/dev.yml
     - import_tasks: tasks/media.yml
 
-    - import_tasks: tasks/dabapps.yml
-      when: ansible_fqdn in dabapps_hostnames
+    - import_tasks: tasks/torchbox.yml
+      when: is_torchbox
 
     - import_tasks: tasks/mac.yml
       when: "'Mac' in ansible_facts.product_name"

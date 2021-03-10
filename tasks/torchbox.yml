@@ -1,0 +1,20 @@
+- name: Install Torchbox packages
+  aur:
+    name: "{{ item }}"
+  become: true
+  become_user: aur_builder
+  loop:
+    - aws-cli
+    - fabric
+    - heroku-cli
+    - python-aws-mfa
+    - vagrant
+
+- name: Install Zoom
+  aur:
+    name: "{{ item }}"
+  become: true
+  become_user: aur_builder
+  loop:
+    - zoom
+    - zoom-firejail

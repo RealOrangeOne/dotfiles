@@ -1,6 +1,3 @@
 user: jake
 home: /home/{{ user }}
-dabapps_hostnames:
-  - TOO-Work
-  - big-mike
 ntp_timezone: Europe/London

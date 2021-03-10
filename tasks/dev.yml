@@ -18,7 +18,6 @@
     - arduino
     - arduino-cli
     - arduino-builder
-    - aws-cli
     - docker
     - docker-compose
     - firefox-developer-edition
