@@ -4,7 +4,6 @@ from pathlib import Path
 import json
 import itertools
 import subprocess
-from io import StringIO
 
 HOME = Path.home()
 
@@ -29,7 +28,8 @@ def get_search_project_dirs():
 def get_vscode_project_dirs():
     vscode_config = json.loads(VSCODE_CONFIG_FILE.read_text())
 
-    for recent_path in itertools.chain(*vscode_config['openedPathsList'].values()):
+    for entry in vscode_config['openedPathsList']['entries']:
+        recent_path =  entry.get('folderUri')
         if not recent_path:
             continue
         recent_path_path = Path(recent_path.replace('file://', ''))
