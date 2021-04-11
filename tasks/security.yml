@@ -4,6 +4,7 @@
   become: true
   become_user: aur_builder
   loop:
+    - bitwarden-bin
     - gnome-keyring
     - firejail
     - seahorse
