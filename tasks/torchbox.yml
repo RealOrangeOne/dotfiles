@@ -8,6 +8,7 @@
     - fabric
     - heroku-cli
     - python-aws-mfa
+    - redis
     - vagrant
 
 - name: Install Zoom
