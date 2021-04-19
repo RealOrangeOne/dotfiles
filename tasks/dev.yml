@@ -24,6 +24,7 @@
     - github-cli
     - hugo
     - insomnia-bin
+    - lazygit
     - postgresql
     - sublime-text
     - tig
