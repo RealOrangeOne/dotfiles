@@ -19,6 +19,4 @@
     mode: 0644
     state: link
   loop:
-    - 11-lcdfilter-default.conf
-    - 10-sub-pixel-rgb.conf
     - 30-infinality-aliases.conf
