@@ -1,3 +1,4 @@
 user: jake
 home: /home/{{ user }}
 ntp_timezone: Europe/London
+is_torchbox: false
