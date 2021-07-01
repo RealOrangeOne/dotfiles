@@ -14,6 +14,14 @@
     owner: "{{ user }}"
     group: users
 
+- name: Install gvimrc
+  template:
+    src: ./files/gvimrc
+    dest: "{{ home }}/.gvimrc"
+    mode: 0644
+    owner: "{{ user }}"
+    group: users
+
 - name: Install vimrc for root user
   copy:
     src: ./files/vimrc

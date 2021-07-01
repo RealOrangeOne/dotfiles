@@ -1,0 +1,4 @@
+{% include "vimrc" %}
+
+" Override the color scheme. gvim has a light background by default
+colo slate
