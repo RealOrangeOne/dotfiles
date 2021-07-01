@@ -1,11 +1,10 @@
-- name: Install dev packages
+- name: Install vim
   aur:
     name: "{{ item }}"
   become: true
   become_user: aur_builder
   loop:
     - gvim
-    - vim-pathogen
 
 - name: Install vimrc
   copy:
@@ -22,26 +21,3 @@
     mode: 0644
     owner: root
     group: users
-
-- name: Create vim packages directory
-  file:
-    path: "{{ home }}/.vim/bundle"
-    state: directory
-    owner: "{{ user }}"
-    mode: 0755
-
-- name: Install vim packages
-  git:
-    repo: "{{ item }}"
-    dest: "{{ home }}/.vim/bundle/{{ item.split('/')[-1] }}"
-    force: true
-  become: true
-  become_user: "{{ user }}"
-  loop:
-    - https://github.com/junegunn/goyo.vim
-    - https://github.com/itchyny/lightline.vim
-    - https://github.com/scrooloose/nerdtree
-    - https://github.com/vim-scripts/peaksea
-    - https://github.com/terryma/vim-multiple-cursors
-    - https://github.com/jremmen/vim-ripgrep
-    - https://github.com/amix/vim-zenroom2
