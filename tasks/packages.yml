@@ -40,12 +40,6 @@
     mode: 0644
   changed_when: false
 
-- name: Install yay
-  aur:
-    name: yay-bin
-  become: true
-  become_user: aur_builder
-
 - name: Install chaotic AUR
   pacman:
     name: "{{ item }}"
@@ -59,6 +53,12 @@
     update_cache: yes
   become: true
   when: added_repo_keys.changed or pacman_conf.changed
+
+- name: Install yay
+  aur:
+    name: yay
+  become: true
+  become_user: aur_builder
 
 - name: Install additional repo keyrings
   aur:
