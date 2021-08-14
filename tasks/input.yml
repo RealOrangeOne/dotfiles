@@ -5,6 +5,7 @@
   become_user: aur_builder
   loop:
     - gpointing-device-settings
+    - gromit-mpx
     - ibus
     - ibus-uniemoji
     - libinput
@@ -61,3 +62,10 @@
     line: options hid_apple fnmode=2
     create: true
     mode: 0644
+
+- name: Create gromit-mpx config
+  copy:
+    src: ./files/gromit-mpx.cfg
+    dest: "{{ home }}/.config/gromit-mpx.cfg"
+    mode: 0644
+    owner: "{{ user }}"
