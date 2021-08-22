@@ -76,12 +76,12 @@
       - wmaurer.change-case
       - bibhasdn.django-html
       - GitHub.vscode-pull-request-github
-      - RandomFractalsInc.vscode-data-preview
       - vstirbu.vscode-mermaid-preview
       - davidlday.languagetool-linter
       - ms-toolsai.jupyter
       - bbenoist.vagrant
       - GitLab.gitlab-workflow
+      - formulahendry.auto-rename-tag
 
 - name: Install VSCode extensions
   shell: code --install-extension {{ item }} --force
