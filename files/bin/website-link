@@ -1,0 +1,24 @@
+#!/usr/bin/env python
+
+import json
+import subprocess
+import urllib.request
+
+URL = "https://theorangeone.net/index.json"
+
+def main():
+    with urllib.request.urlopen(URL) as response:
+        data = json.load(response)
+
+    url_mapping = {
+        d['title']: d['url']
+        for d in data
+    }
+
+    selected_page = subprocess.check_output(["rofi", "-dmenu", "-i", "-format", "s"], input="\n".join(url_mapping.keys()), universal_newlines=True)
+    selected_page = selected_page.strip()
+
+    subprocess.check_output(['xsel', '-bi'], input=url_mapping[selected_page], universal_newlines=True)
+
+if __name__ == '__main__':
+    main()
