@@ -55,7 +55,8 @@
       - streetsidesoftware.code-spell-checker
       - EditorConfig.EditorConfig
       - vsciot-vscode.vscode-arduino
-      - vscoss.vscode-ansible
+      - zbr.vscode-ansible
+      - redhat.vscode-yaml
       - rust-lang.rust
       - pnp.polacode
       - mrmlnc.vscode-duplicate
