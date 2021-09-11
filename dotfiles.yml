@@ -33,7 +33,7 @@
     - import_tasks: tasks/security.yml
 
     - import_tasks: tasks/python.yml
-    - import_tasks: tasks/vim.yml
+    - import_tasks: tasks/neovim.yml
     - import_tasks: tasks/intersect.yml
     - import_tasks: tasks/vscode.yml
     - import_tasks: tasks/gnome.yml

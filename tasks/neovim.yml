@@ -1,0 +1,29 @@
+- name: Install neovim
+  aur:
+    name: "{{ item }}"
+  become: true
+  become_user: aur_builder
+  loop:
+    - neovim
+    - neovim-qt
+
+- name: Neovim config
+  git:
+    repo: https://git.theorangeone.net/sys/vim-config.git
+    dest: "{{ home }}/.config/nvim"
+    force: true
+  become: true
+  become_user: "{{ user }}"
+
+- name: Install config for root user
+  file:
+    src: "{{ home }}/.config/nvim"
+    dest: /root/.config/nvim
+    state: link
+
+# Aliases are too boring
+- name: Install vim alias
+  file:
+    src: /usr/bin/nvim
+    dest: /usr/bin/vim
+    state: link
