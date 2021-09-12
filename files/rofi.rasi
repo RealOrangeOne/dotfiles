@@ -58,7 +58,7 @@ textbox {
 
 listview {
    fixed-height: false;
-   dynamic: true;
+   dynamic: false;
    scrollbar: true;
    spacing: 0px;
    padding: 1px 0px 0px 0px;
