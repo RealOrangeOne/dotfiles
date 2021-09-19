@@ -46,7 +46,7 @@ def main():
     home_dir = str(HOME) + "/"
     project_paths_display = [str(project).replace(home_dir, "") for project in project_paths]
 
-    selected_project = subprocess.run(["rofi", "-dmenu", "-no-case-sensitive", "-format", "i"], input="\n".join(project_paths_display).encode(), stdout=subprocess.PIPE)
+    selected_project = subprocess.run(["rofi", "-dmenu", "-no-case-sensitive", "-format", "i", "-p", "Project"], input="\n".join(project_paths_display).encode(), stdout=subprocess.PIPE)
     selected_project.check_returncode()
 
     selected_index = int(selected_project.stdout.strip())

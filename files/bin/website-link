@@ -15,7 +15,7 @@ def main():
         for d in data
     }
 
-    selected_page = subprocess.check_output(["rofi", "-dmenu", "-i", "-format", "s"], input="\n".join(url_mapping.keys()), universal_newlines=True)
+    selected_page = subprocess.check_output(["rofi", "-dmenu", "-i", "-format", "s", "-p", "Post"], input="\n".join(url_mapping.keys()), universal_newlines=True)
     selected_page = selected_page.strip()
 
     subprocess.check_output(['xsel', '-bi'], input=url_mapping[selected_page], universal_newlines=True)
