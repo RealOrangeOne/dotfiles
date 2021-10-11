@@ -5,7 +5,6 @@
   become_user: aur_builder
   loop:
     - arandr
-    - betterlockscreen
     - brightnessctl
     - picom
     - dmenu
@@ -21,7 +20,6 @@
     - rofi
     - rofi-calc
     - rofimoji
-    - tbg
     - xdotool
     - xorg
 
@@ -109,4 +107,11 @@
     dest: "{{ home }}/.config"
     mode: 0755
     directory_mode: 0755
+    owner: "{{ user }}"
+
+- name: Install screen lock script
+  copy:
+    src: ./files/lock-screen.sh
+    dest: "{{ home }}/.config/i3/lock.sh"
+    mode: 0755
     owner: "{{ user }}"
