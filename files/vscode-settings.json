@@ -66,5 +66,8 @@
   "languageToolLinter.languageTool.motherTongue": "en-GB",
   "python.languageServer": "Jedi",
   "python.experiments.enabled": false,
-  "terminal.integrated.enablePersistentSessions": false
+  "terminal.integrated.enablePersistentSessions": false,
+  "languageToolLinter.plainText.languageIds": [
+    "markdown"
+  ]
 }
