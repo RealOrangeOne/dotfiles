@@ -44,4 +44,36 @@
         "key": "ctrl+shift+0",
         "command": "workbench.action.zoomReset"
     },
+    {
+        "key": "alt+c u",
+        "command": "extension.changeCase.upper"
+    },
+    {
+        "key": "alt+c l",
+        "command": "extension.changeCase.lower"
+    },
+    {
+        "key": "alt+c alt+up",
+        "command": "editor.emmet.action.incrementNumberByOne"
+    },
+    {
+        "key": "alt+c alt+down",
+        "command": "editor.emmet.action.decrementNumberByOne"
+    },
+    {
+        "key": "alt+c alt+pagedown",
+        "command": "editor.emmet.action.decrementNumberByTen"
+    },
+    {
+        "key": "alt+c alt+pageup",
+        "command": "editor.emmet.action.incrementNumberByTen"
+    },
+    {
+        "key": "alt+c down",
+        "command": "editor.emmet.action.decrementNumberByOneTenth"
+    },
+    {
+        "key": "alt+c up",
+        "command": "editor.emmet.action.incrementNumberByOneTenth"
+    }
 ]
