@@ -1,5 +1,5 @@
 - name: Install Spotify
-  aur:
+  kewlfft.aur.aur:
     name: "{{ item }}"
   become: true
   become_user: aur_builder
@@ -8,7 +8,7 @@
     - spotify
 
 - name: Install media-related packages
-  aur:
+  kewlfft.aur.aur:
     name: "{{ item }}"
   become: true
   become_user: aur_builder
@@ -21,7 +21,7 @@
     - sof-firmware
 
 - name: Install pulseaudio
-  aur:
+  kewlfft.aur.aur:
     name: "{{ item }}"
   become: true
   become_user: aur_builder

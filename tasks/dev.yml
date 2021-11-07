@@ -1,5 +1,5 @@
 - name: Install LaTex tooling
-  aur:
+  kewlfft.aur.aur:
     name: "{{ item }}"
   become: true
   become_user: aur_builder
@@ -9,7 +9,7 @@
     - texlive-most
 
 - name: Install dev packages
-  aur:
+  kewlfft.aur.aur:
     name: "{{ item }}"
   become: true
   become_user: aur_builder

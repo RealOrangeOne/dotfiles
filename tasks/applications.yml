@@ -1,5 +1,5 @@
 - name: Install Virtualbox dependencies
-  aur:
+  kewlfft.aur.aur:
     name: "{{ item }}"
   become: true
   become_user: aur_builder
@@ -7,7 +7,7 @@
     - virtualbox-host-dkms
 
 - name: Install general applications
-  aur:
+  kewlfft.aur.aur:
     name: "{{ item }}"
   become: true
   become_user: aur_builder

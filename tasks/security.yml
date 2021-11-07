@@ -1,5 +1,5 @@
 - name: Install security-related packages
-  aur:
+  kewlfft.aur.aur:
     name: "{{ item }}"
   become: true
   become_user: aur_builder

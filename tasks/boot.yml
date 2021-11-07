@@ -1,5 +1,5 @@
 - name: Install Grub
-  aur:
+  kewlfft.aur.aur:
     name: "{{ item }}"
   become: true
   become_user: aur_builder
@@ -9,7 +9,7 @@
     - os-prober
 
 - name: Install LightDM
-  aur:
+  kewlfft.aur.aur:
     name: "{{ item }}"
   become: true
   become_user: aur_builder
@@ -48,7 +48,7 @@
     - {key: clock-format, value: "%H:%M:%S"}
 
 - name: Install file system helpers
-  aur:
+  kewlfft.aur.aur:
     name: "{{ item }}"
   become: true
   become_user: aur_builder
@@ -60,7 +60,7 @@
     - btrfs-progs
 
 - name: Install Microcode
-  aur:
+  kewlfft.aur.aur:
     name: "{{ item }}"
   become: true
   become_user: aur_builder
@@ -69,7 +69,7 @@
     - intel-ucode
 
 - name: Install nohang
-  aur:
+  kewlfft.aur.aur:
     name: nohang-git
   become: true
   become_user: aur_builder
@@ -81,7 +81,7 @@
     state: started
 
 - name: Install plymouth
-  aur:
+  kewlfft.aur.aur:
     name: "{{ item }}"
   become: true
   become_user: aur_builder

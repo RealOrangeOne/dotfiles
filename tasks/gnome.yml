@@ -8,7 +8,7 @@
     directory_mode: 0755
 
 - name: Install Gnome packages
-  aur:
+  kewlfft.aur.aur:
     name: "{{ item }}"
   become: true
   become_user: aur_builder
@@ -30,7 +30,7 @@
     - nautilus
 
 - name: Install GTK tools
-  aur:
+  kewlfft.aur.aur:
     name: "{{ item }}"
   become: true
   become_user: aur_builder

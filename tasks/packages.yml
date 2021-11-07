@@ -55,13 +55,13 @@
   when: added_repo_keys.changed or pacman_conf.changed
 
 - name: Install yay
-  aur:
+  kewlfft.aur.aur:
     name: yay
   become: true
   become_user: aur_builder
 
 - name: Install additional repo keyrings
-  aur:
+  kewlfft.aur.aur:
     name: "{{ item }}"
   become: true
   become_user: aur_builder
@@ -69,13 +69,13 @@
     - archstrike-keyring
 
 - name: Install ccache
-  aur:
+  kewlfft.aur.aur:
     name: ccache
   become: true
   become_user: aur_builder
 
 - name: Install makepkg tools
-  aur:
+  kewlfft.aur.aur:
     name: "{{ item }}"
   become: true
   become_user: aur_builder
@@ -91,7 +91,7 @@
     mode: 0644
 
 - name: Install pacman tools
-  aur:
+  kewlfft.aur.aur:
     name: pacman-contrib
   become: true
   become_user: aur_builder

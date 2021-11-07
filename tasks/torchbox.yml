@@ -1,5 +1,5 @@
 - name: Install Torchbox packages
-  aur:
+  kewlfft.aur.aur:
     name: "{{ item }}"
   become: true
   become_user: aur_builder
@@ -12,7 +12,7 @@
     - vagrant
 
 - name: Install Zoom
-  aur:
+  kewlfft.aur.aur:
     name: "{{ item }}"
   become: true
   become_user: aur_builder
