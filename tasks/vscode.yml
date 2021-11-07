@@ -51,7 +51,7 @@
       - truman.autocomplate-shell
       - wholroyd.jinja
       - formulahendry.auto-close-tag
-      - James-Yu.latex-workshop
+      - mathematic.vscode-latex
       - streetsidesoftware.code-spell-checker
       - EditorConfig.EditorConfig
       - vsciot-vscode.vscode-arduino
