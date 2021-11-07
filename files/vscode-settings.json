@@ -4,23 +4,10 @@
   "editor.formatOnPaste": false,
   "workbench.colorTheme": "Darcula",
   "workbench.iconTheme": "material-icon-theme",
-  "telemetry.enableCrashReporter": true,
-  "telemetry.enableTelemetry": false,
+  "telemetry.telemetryLevel": "off",
   "extensions.autoUpdate": false,
-  "window.zoomLevel": 0,
   "gitlens.currentLine.enabled": false,
   "gitlens.hovers.currentLine.over": "line",
-  "scss.scannerExclude": [
-    "**/.git",
-    "**/bower_components"
-  ],
-  "less.scannerExclude": [
-    "**/.git",
-    "**/bower_components"
-  ],
-  "python.workspaceSymbols.exclusionPatterns": [
-    "${workspaceFolder}/env/*"
-  ],
   "gitlens.codeLens.enabled": false,
   "workbench.activityBar.visible": true,
   "editor.fontSize": 14,
@@ -29,7 +16,6 @@
   "files.trimFinalNewlines": true,
   "auto-close-tag.SublimeText3Mode": true,
   "python.linting.lintOnSave": true,
-  "terminal.integrated.setLocaleVariables": true,
   "gitlens.advanced.messages": {
     "suppressCommitHasNoPreviousCommitWarning": false,
     "suppressCommitNotFoundWarning": false,
@@ -37,8 +23,6 @@
     "suppressGitVersionWarning": false,
     "suppressLineUncommittedWarning": false,
     "suppressNoRepositoryWarning": false,
-    "suppressResultsExplorerNotice": false,
-    "suppressShowKeyBindingsNotice": true
   },
   "gitlens.keymap": "alternate",
   "editor.cursorBlinking": "smooth",
@@ -63,7 +47,6 @@
   "files.autoGuessEncoding": true,
   "workbench.startupEditor": "none",
   "extensions.ignoreRecommendations": true,
-  "extensions.showRecommendationsOnlyOnDemand": true,
   "latex-workshop.intellisense.package.enabled": true,
   "latex-workshop.latex.autoBuild.run": "never",
   "workbench.enableExperiments": false,
@@ -71,15 +54,6 @@
   "latex-workshop.bind.enter.key": false,
   "color-highlight.markerType": "underline",
   "git-graph.showStatusBarItem": false,
-  "terraform.indexing": {
-    "enabled": false,
-    "liveIndexing": false,
-    "delay": 500,
-    "exclude": [
-      ".terraform/**/*",
-      "**/.terraform/**/*"
-    ]
-  },
   "terraform.languageServer": {
     "enabled": true,
     "args": [],
@@ -91,6 +65,6 @@
   "languageToolLinter.languageTool.language": "en-GB",
   "languageToolLinter.languageTool.motherTongue": "en-GB",
   "python.languageServer": "Jedi",
-  "python.workspaceSymbols.enabled": true,
-  "python.experiments.enabled": false
+  "python.experiments.enabled": false,
+  "terminal.integrated.enablePersistentSessions": false
 }
