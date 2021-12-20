@@ -4,7 +4,8 @@
   become: true
   become_user: aur_builder
   loop:
-    - bitwarden-bin
+    - bitwarden
+    - bitwarden-cli
     - gnome-keyring
     - firejail
     - mullvad-vpn-bin
