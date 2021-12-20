@@ -44,7 +44,7 @@
 
 - name: Install ZSH config
   template:
-    src: ./files/zshrc/.zshrc
+    src: ./files/zshrc
     dest: "{{ home }}/.zshrc"
     mode: 0644
     owner: "{{ user }}"

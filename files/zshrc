@@ -1,0 +1,145 @@
+# Path to oh-my-zsh installation.
+export ZSH=/usr/share/oh-my-zsh/
+
+# Plugins
+plugins=(
+  django
+  pip
+  python
+  common-aliases
+  extract
+  heroku
+)
+
+export COMPLETION_WAITING_DOTS="true"
+
+# Enable oh-my-zsh
+source $ZSH/oh-my-zsh.sh
+
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+export fpath=(/usr/share/zsh/site-functions $fpath)
+
+autoload -U compinit && rm -f ~/.zcompdump && compinit
+autoload -Uz colors && colors
+
+local ret_status="%(?:%{$fg_bold[green]%}λ :%{$fg_bold[red]%}λ )"
+export PROMPT="${ret_status} %{$fg_bold[green]%}%n@%m%{$reset_color%}:%{$fg_bold[blue]%}%~%{$reset_color%}$ "
+
+alias src="source {{ home }}/.zshrc && tmux source {{ home }}/.tmux.conf"
+
+# If not running interactively, don't do anything
+case $- in
+  *i*) ;;
+  *) return;;
+esac
+
+# Set environment variables
+export DOTFILES=${HOME}/.dotfiles
+
+export TIMEFMT=$'\nreal\t%E\nuser\t%U\nsys\t%S'
+export HISTCONTROL=ignoreboth
+
+export BROWSER=$(which firefox)
+export EDITOR=$(which nvim)
+
+
+# bash aliases
+alias refresh="cd $PWD > /dev/null"
+alias c="clear"
+alias e="exit"
+alias no="yes n"
+alias open="mimeopen"
+alias browse "mimeopen ."
+
+# colourify things!
+alias ls='ls --color=auto'
+alias grep='grep --color=auto'
+
+alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+
+[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
+
+
+# Node stuff
+alias ni="npm install"
+alias ns="npm start"
+alias nt="npm test"
+
+nb() {
+  if [ $# -eq 0 ]; then
+    command npm run build
+  else
+    for arg in "$@"
+    do
+      command npm run build-${arg}
+    done
+  fi
+}
+
+nr() {
+  for arg in "$@"
+  do
+    command npm run $arg
+  done
+}
+
+nvm() {   # This takes ~1sec, so we lazy-load it.
+  unset $0
+  source "/usr/share/nvm/init-nvm.sh"
+  $0 $@
+}
+
+npx () {
+  command $(npm bin)/$@
+}
+
+eval $(thefuck --alias)
+eval "$(pazi init zsh)"
+
+# git aliases
+alias gs="git status"
+alias gd="git diff"
+alias git-root='cd $(git root)'
+
+hub() {
+  if [ $# -eq 1 ]; then
+    command git clone git@github.com:RealOrangeOne/${1} --recursive && cd ${1}
+  else
+    command git clone git@github.com:${1}/${2} --recursive && cd ${2}
+  fi
+}
+
+git-cleanup() {
+  command git checkout master
+  command git branch --merged | grep -v '*' | xargs -n 1 git branch -D
+  command git branch -vv | awk '/: gone]/{print $1}' | xargs git branch -D
+  command git remote prune origin
+  command git checkout -
+}
+
+alias t="tig"
+alias ts="tig status"
+
+
+# Gnome
+gd-lock() {
+  sessionid=`loginctl list-sessions | grep $USER | awk '{print $1}'`
+  loginctl lock-session $sessionid
+}
+gd-unlock() {
+  sessionid=`loginctl list-sessions | grep $USER | awk '{print $1}'`
+  loginctl unlock-session $sessionid
+}
+
+# miscellaneous software aliases
+alias serve="/usr/bin/python3 -m http.server"
+alias regen-ssh-conf="assh config build > ~/.ssh/config"
+alias clip="xclip -selection clipboard"
+alias cl="climate"
+alias tmux-cleanup="tmux list-sessions | grep -v attached | cut -d: -f1 |  xargs -t -n1 tmux kill-session -t"
+alias lock-screen="xdotool key 'Super_L+l'"
+alias mux="tmuxinator start"
+
+alias open-port="firewall-cmd --zone=public --add-port"
+alias close-port="firewall-cmd --zone=public --remove-port"
+alias reset-ports="firewall-cmd --complete-reload"
