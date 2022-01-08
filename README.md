@@ -1,6 +1,6 @@
 # Dotfiles
 
-![](https://github.com/RealOrangeOne/dotfiles/workflows/Lint/badge.svg)
+![CI](https://git.theorangeone.net/sys/dotfiles/badges/master/pipeline.svg)
 
 Settings and Preferences for transfer between machines
 

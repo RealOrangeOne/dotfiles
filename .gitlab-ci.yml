@@ -1,0 +1,12 @@
+ansible:
+  image: python:3.9-slim
+  variables:
+    PIP_CACHE_DIR: "$CI_PROJECT_DIR/.cache/pip"
+  cache:
+    paths:
+      - .cache/pip
+  before_script:
+    - apt-get update && apt-get install -y bash git
+    - ./scripts/setup.sh
+  script:
+    - ./scripts/lint.sh
