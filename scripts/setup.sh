@@ -1,9 +1,13 @@
 #!/usr/bin/env bash
 
-set -ex
+set -e
+
+PATH=${PWD}/env/bin:${PATH}
+
+set -x
 
 python -m venv env
 
-env/bin/pip install -r dev-requirements.txt
+pip install -r dev-requirements.txt
 
 ansible-galaxy install -r galaxy-requirements.yml
