@@ -1,13 +1,9 @@
 #!/usr/bin/env python
 
 from pathlib import Path
-import json
-import itertools
 import subprocess
 
 HOME = Path.home()
-
-VSCODE_CONFIG_FILE = HOME.joinpath(".config/Code/storage.json")
 
 SEARCH_DIRS = [
     HOME.joinpath("Projects"),
@@ -25,20 +21,8 @@ def get_search_project_dirs():
                 yield subdir
 
 
-def get_vscode_project_dirs():
-    vscode_config = json.loads(VSCODE_CONFIG_FILE.read_text())
-
-    for entry in vscode_config['openedPathsList']['entries']:
-        recent_path =  entry.get('folderUri')
-        if not recent_path:
-            continue
-        recent_path_path = Path(recent_path.replace('file://', ''))
-        if recent_path_path.exists():
-            yield recent_path_path
-
-
 def main():
-    project_paths = sorted(set(itertools.chain(get_search_project_dirs(), get_vscode_project_dirs())), key=lambda p: p.name.lower())
+    project_paths = sorted(get_search_project_dirs(), key=lambda p: p.name.lower())
     try:
         project_paths.remove(Path.home())  # Don't try and edit home dir
     except ValueError:
