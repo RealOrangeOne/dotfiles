@@ -4,28 +4,11 @@
   become: true
   become_user: aur_builder
   loop:
-    - gpointing-device-settings
     - gromit-mpx
-    - ibus
-    - ibus-uniemoji
     - libinput
     - libinput-gestures
     - solaar
     - xorg-xev
-
-- name: Install mouse config
-  copy:
-    src: ./files/touchpad.conf
-    dest: /usr/share/X11/xorg.conf.d/30-touchpad.conf
-    mode: 0644
-    owner: "{{ user }}"
-
-- name: Install keyboard config
-  copy:
-    src: ./files/keyboard.conf
-    dest: /usr/share/X11/xorg.conf.d/00-keyboard.conf
-    mode: 0644
-    owner: "{{ user }}"
 
 - name: Install libinput-gestures config
   copy:

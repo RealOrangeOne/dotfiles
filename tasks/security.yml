@@ -6,10 +6,8 @@
   loop:
     - bitwarden
     - bitwarden-cli
-    - gnome-keyring
     - firejail
     - mullvad-vpn-bin
-    - seahorse
     - wireguard-tools
     - yubikey-personalization-gui
 

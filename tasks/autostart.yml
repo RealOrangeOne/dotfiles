@@ -1,11 +1,3 @@
-- name: Install autostart-related packages
-  kewlfft.aur.aur:
-    name: "{{ item }}"
-  become: true
-  become_user: aur_builder
-  loop:
-    - dex
-
 - name: Create autostart directory
   file:
     path: "{{ home }}/.config/autostart"
@@ -22,10 +14,7 @@
     state: link
     force: true
   loop:
-    - blueman
-    - pulseaudio
-    - nm-applet
-    - lxqt-policykit-agent
+    - solaar
 
 - name: Autostart applications
   file:
