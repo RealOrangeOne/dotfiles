@@ -4,7 +4,7 @@
   become: true
   become_user: aur_builder
   loop:
-    - virtualbox-host-dkms
+    - virtualbox-host-modules-arch
 
 - name: Install general applications
   kewlfft.aur.aur:
@@ -25,7 +25,7 @@
     - kodi
     - libreoffice-fresh
     - libreoffice-fresh-en-gb
-    - minecraft
+    - minecraft-launcher
     - obs-studio
     - slack-desktop
     - steam
