@@ -26,7 +26,6 @@
     - pulseaudio
     - nm-applet
     - lxqt-policykit-agent
-    - solaar
 
 - name: Autostart applications
   file:
@@ -37,5 +36,13 @@
     state: link
     force: true
   loop:
-    - flameshot
     - libinput-gestures
+    - org.flameshot.Flameshot
+
+- name: Autostart solaar
+  get_url:
+    url: https://raw.githubusercontent.com/pwr-Solaar/Solaar/master/share/autostart/solaar.desktop
+    dest: "{{ home }}/.config/autostart/solaar.desktop"
+    mode: 0755
+    force: true
+    owner: "{{ user }}"
