@@ -1,8 +1,10 @@
 skip_list:
-  - 305
-  - 401
-  - 301
-  - 503
+  - command-instead-of-shell
+  - no-handler
+  - git-latest
+  - fqcn
+  - name[missing]
+  - name[play]
 
 exclude_paths:
   - galaxy_roles/

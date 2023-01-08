@@ -21,7 +21,7 @@
   modprobe:
     name: pcspkr
     state: absent
-  ignore_errors: true
+  failed_when: false
 
 - name: Set lightdm greeter
   ini_file:

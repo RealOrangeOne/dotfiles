@@ -44,7 +44,7 @@
     owner: "{{ user }}"
     mode: 0755
 
-- name: i3 config files
+- name: Install i3 config files
   loop: "{{ i3_config_files }}"
   loop_control:
     label: "{{ item.src }}"

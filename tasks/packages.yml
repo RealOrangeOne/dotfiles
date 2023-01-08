@@ -50,7 +50,7 @@
 
 - name: Update package repositories
   pacman:
-    update_cache: yes
+    update_cache: true
   become: true
   when: added_repo_keys.changed or pacman_conf.changed
 
