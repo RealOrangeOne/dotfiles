@@ -16,6 +16,14 @@
     - 3056513887B78AEB  # chaotic-AUR
   when: item not in repo_keys.stdout
 
+- name: Install chaotic AUR
+  pacman:
+    name: "{{ item }}"
+  become: true
+  loop:
+    - https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst
+    - https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst
+
 - name: Install pacman config
   template:
     src: ./files/pacman.conf
@@ -39,14 +47,6 @@
     validate: visudo -cf %s
     mode: 0640
   changed_when: false
-
-- name: Install chaotic AUR
-  pacman:
-    name: "{{ item }}"
-  become: true
-  loop:
-    - https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-keyring.pkg.tar.zst
-    - https://cdn-mirror.chaotic.cx/chaotic-aur/chaotic-mirrorlist.pkg.tar.zst
 
 - name: Update package repositories
   pacman:
