@@ -22,7 +22,6 @@
     - import_tasks: tasks/network.yml
     - import_tasks: tasks/shell.yml
     - import_tasks: tasks/input.yml
-    - import_tasks: tasks/power-saving.yml
     - import_tasks: tasks/autostart.yml
     - import_tasks: tasks/fonts.yml
     - import_tasks: tasks/security.yml

@@ -1,4 +1,4 @@
-- name: Add nautilus file templates
+- name: Add file templates
   copy:
     src: ./files/Templates
     dest: "{{ home }}"
@@ -13,31 +13,6 @@
   become: true
   become_user: aur_builder
   loop:
-    - baobab
-    - cheese
-    - eog
-    - evince
-    - file-roller
     - fractal
-    - gnome-backgrounds
-    - gnome-calculator
     - gnome-disk-utility
     - gnome-firmware
-    - gnome-latex
-    - gnome-settings-daemon
-    - gnome-system-monitor
-    - gnome-usage
-    - nautilus
-
-- name: Install GTK tools
-  kewlfft.aur.aur:
-    name: "{{ item }}"
-  become: true
-  become_user: aur_builder
-  loop:
-    - gtk-engine-murrine
-    - lxappearance
-    - numix-gtk-theme-git
-    - matcha-gtk-theme
-    - numix-square-icon-theme
-    - qt5-styleplugins

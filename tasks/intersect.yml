@@ -1,13 +1,3 @@
-- name: Install qownnotes
-  kewlfft.aur.aur:
-    name: "{{ item }}"
-  become: true
-  become_user: aur_builder
-  loop:
-    - aspell
-    - aspell-en
-    - qownnotes
-
 - name: Install intersect packages
   kewlfft.aur.aur:
     name: "{{ item }}"
@@ -15,13 +5,11 @@
   become_user: aur_builder
   loop:
     - calibre
-    - deluge
     - nextcloud-client
     - quassel-client
     - rsnapshot
     - terraform
     - terraform-lsp-bin
-
 
 - name: Create dotfiles directory
   file:
