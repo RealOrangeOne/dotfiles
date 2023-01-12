@@ -1,3 +1,10 @@
+- name: Uninstall vim
+  kewlfft.aur.aur:
+    name: vim
+    state: absent
+  become: true
+  become_user: aur_builder
+
 - name: Install neovim
   kewlfft.aur.aur:
     name: "{{ item }}"
