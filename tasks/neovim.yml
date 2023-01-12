@@ -15,6 +15,12 @@
   become: true
   become_user: "{{ user }}"
 
+- name: Create root config directory
+  file:
+    path: "/root/.config"
+    state: directory
+    mode: 0700
+
 - name: Install config for root user
   file:
     src: "{{ home }}/.config/nvim"
