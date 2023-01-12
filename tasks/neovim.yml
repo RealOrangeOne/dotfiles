@@ -1,5 +1,5 @@
 - name: Uninstall vim
-  kewlfft.aur.aur:
+  pacman:
     name: vim
     state: absent
   become: true
