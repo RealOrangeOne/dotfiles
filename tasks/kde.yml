@@ -1,0 +1,6 @@
+- name: Update animation speed
+  realorangeone.kconfig.kconfig:
+    state: present
+    group: KDE
+    key: AnimationDurationFactor
+    value: 0.5
