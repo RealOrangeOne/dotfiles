@@ -1,6 +1,122 @@
 - name: Update animation speed
   realorangeone.kconfig.kconfig:
-    state: present
     group: KDE
     key: AnimationDurationFactor
     value: 0.5
+
+- name: Set dark mode
+  realorangeone.kconfig.kconfig:
+    group: KDE
+    key: LookAndFeelPackage
+    value: org.kde.breezedark.desktop
+
+- name: Set accent colour to orange
+  realorangeone.kconfig.kconfig:
+    group: General
+    key: AccentColor
+    value: 233,100,58
+
+- name: Reduce size of borders
+  realorangeone.kconfig.kconfig:
+    file: kwinrc
+    group: org.kde.kdecoration2
+    key: "{{ item.key }}"
+    value: "{{ item.value }}"
+  loop:
+    - {key: BorderSize, value: None}
+    - {key: BorderSizeAuto, value: false}
+  loop_control:
+    label: "{{ item.key }}"
+
+# Why is this not the default?!
+- name: Click to select
+  realorangeone.kconfig.kconfig:
+    group: KDE
+    key: SingleClick
+    value: false
+
+- name: Enable night colour
+  realorangeone.kconfig.kconfig:
+    group: NightColor
+    file: kwinrc
+    key: "{{ item.key }}"
+    value: "{{ item.value }}"
+  loop:
+    - {key: Active, value: true}
+    - {key: Mode, value: Constant}
+    - {key: NightTemperature, value: 4500}
+  loop_control:
+    label: "{{ item.key }}"
+
+- name: Enable 'magic lamp' effect on window restore
+  realorangeone.kconfig.kconfig:
+    group: Plugins
+    file: kwinrc
+    key: "{{ item.key }}"
+    value: "{{ item.value }}"
+  loop:
+    - {key: kwin4_effect_squashEnabled, value: false}
+    - {key: magiclampEnabled, value: true}
+  loop_control:
+    label: "{{ item.key }}"
+
+- name: Enable automatic screen lock
+  realorangeone.kconfig.kconfig:
+    group: Daemon
+    file: kscreenlockerrc
+    key: "{{ item.key }}"
+    value: "{{ item.value }}"
+  loop:
+    - {key: LockGrace, value: 0}  # Require password, even for quick locks
+    - {key: Timeout, value: 10}  # minutes
+  loop_control:
+    label: "{{ item.key }}"
+
+- name: Use picture of the day (from NASA) for lockscreen
+  realorangeone.kconfig.kconfig:
+    group: Greeter
+    file: kscreenlockerrc
+    key: WallpaperPlugin
+    value: org.kde.potd
+
+- name: Don't restart session on login
+  realorangeone.kconfig.kconfig:
+    group: General
+    file: ksmserverrc
+    key: loginMode
+    value: emptySession
+
+- name: Shut down computer by default
+  realorangeone.kconfig.kconfig:
+    group: General
+    file: ksmserverrc
+    key: shutdownType
+    value: 2
+
+- name: Index directories
+  realorangeone.kconfig.kconfig:
+    group: General
+    file: ksmserverrc
+    key: folders
+    value: "{{ home }}/Documents/,{{ home }}/Projects/"
+
+- name: Don't index file content
+  realorangeone.kconfig.kconfig:
+    group: General
+    file: ksmserverrc
+    key: only basic indexing
+    value: true
+
+- name: Set do not disturb shortcut
+  realorangeone.kconfig.kconfig:
+    group: General
+    file: kglobalshortcutsrc
+    key: toggle do not disturb
+    value: Meta+N,,Toggle do not disturb
+
+- name: Send basic system information
+  realorangeone.kconfig.kconfig:
+    group: Global
+    file: PlasmaUserFeedback
+    key: FeedbackLevel
+    value: 16
