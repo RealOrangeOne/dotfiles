@@ -1,0 +1,11 @@
+[General]
+ActivateWhenTypingOnDesktop=false
+FreeFloating=true
+HistoryEnabled=false
+RetainPriorSearch=false
+
+[PlasmaRunnerManager]
+migrated=true
+
+[Plugins]
+baloosearchEnabled=true

@@ -1,3 +1,13 @@
+- name: Copy config files
+  template:
+    src: ./files/kde/{{ item }}
+    dest: "{{ home }}/.config/{{ item }}"
+    mode: 0644
+    owner: "{{ user }}"
+    group: users
+  loop:
+    - krunnerrc
+
 - name: Update animation speed
   realorangeone.kconfig.kconfig:
     group: KDE
