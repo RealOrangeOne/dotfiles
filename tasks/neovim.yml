@@ -24,7 +24,7 @@
 
 - name: Create root config directory
   file:
-    path: "/root/.config"
+    path: /root/.config
     state: directory
     mode: 0700
 
