@@ -40,7 +40,7 @@
     - zsh
     - zsh-completions
     - zsh-doc
-    - zsh-syntax-highlighting
+    - zsh-fast-syntax-highlighting
 
 - name: Install ZSH config
   template:

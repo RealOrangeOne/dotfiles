@@ -15,7 +15,7 @@ export COMPLETION_WAITING_DOTS="true"
 # Enable oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
 export fpath=(/usr/share/zsh/site-functions $fpath)
 
 autoload -U compinit && rm -f ~/.zcompdump && compinit
