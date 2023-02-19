@@ -82,6 +82,7 @@
       - bbenoist.vagrant
       - GitLab.gitlab-workflow
       - formulahendry.auto-rename-tag
+      - mkhl.direnv
 
 - name: Install VSCode extensions
   shell: code --install-extension {{ item }} --force

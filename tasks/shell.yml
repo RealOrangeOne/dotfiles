@@ -11,6 +11,7 @@
     - catimg
     - climate
     - cmatrix
+    - direnv
     - exa
     - fd
     - fpp
@@ -95,6 +96,19 @@
     mode: 0644
     owner: "{{ user }}"
 
+- name: Create direnv config directory
+  file:
+    path: "{{ home }}/.config/direnv/"
+    state: directory
+    owner: "{{ user }}"
+    mode: 0755
+
+- name: Create direnv config
+  copy:
+    src: ./files/direnv.toml
+    dest: "{{ home }}/.config/direnv/direnv.toml"
+    mode: 0644
+    owner: "{{ user }}"
 
 - name: Create terminator directory
   file:

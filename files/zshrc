@@ -24,6 +24,8 @@ autoload -Uz colors && colors
 local ret_status="%(?:%{$fg_bold[green]%}λ :%{$fg_bold[red]%}λ )"
 export PROMPT="${ret_status} %{$fg_bold[green]%}%n@%m%{$reset_color%}:%{$fg_bold[blue]%}%~%{$reset_color%}$ "
 
+eval "$(direnv hook zsh)"
+
 alias src="source {{ home }}/.zshrc && tmux source {{ home }}/.tmux.conf"
 
 # If not running interactively, don't do anything
