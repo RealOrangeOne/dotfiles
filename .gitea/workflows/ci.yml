@@ -1,0 +1,26 @@
+on: [pull_request, push]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.9
+      - uses: actions/cache@v3
+        with:
+          path: ~/.cache/pip
+          key: pip-${{ hashFiles('dev-requirements.txt') }}
+
+      # HACK: https://docs.ansible.com/ansible/devel/reference_appendices/config.html#cfg-in-world-writable-dir
+      - name: Fix permissions
+        run: chmod 0755 .
+
+      - name: Install system dependencies
+        run: apt-get update && apt-get install -y bash git
+      - name: Set up
+        run: ./scripts/setup.sh
+      - name: Lint
+        run: ./scripts/lint.sh
