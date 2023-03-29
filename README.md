@@ -1,7 +1,5 @@
 # Dotfiles
 
-![CI](https://git.theorangeone.net/sys/dotfiles/badges/master/pipeline.svg)
-
 Settings and Preferences for transfer between machines
 
 ## Requirements
