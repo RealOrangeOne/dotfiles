@@ -107,7 +107,7 @@
   lineinfile:
     path: /etc/mkinitcpio.conf
     regexp: ^HOOKS=
-    line: HOOKS=(base udev plymouth autodetect keyboard keymap modconf block plymouth-encrypt filesystems fsck)
+    line: HOOKS=(base udev plymouth autodetect keyboard keymap modconf block encrypt filesystems fsck)
   register: initrd_hooks
 
 - name: Rebuild initrd
@@ -120,5 +120,5 @@
 
 - name: Enable lightdm
   systemd:
-    name: lightdm-plymouth
+    name: lightdm
     enabled: true
