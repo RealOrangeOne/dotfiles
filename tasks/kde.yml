@@ -1,3 +1,11 @@
+- name: Install krunner plugins
+  kewlfft.aur.aur:
+    name: "{{ item }}"
+  become: true
+  become_user: aur_builder
+  loop:
+    - plasma-runner-vscode-git
+
 - name: Copy config files
   template:
     src: ./files/kde/{{ item }}
