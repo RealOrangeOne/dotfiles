@@ -127,7 +127,7 @@
 
 - name: Set do not disturb shortcut
   realorangeone.kconfig.kconfig:
-    group: General
+    group: plasmashell
     file: kglobalshortcutsrc
     key: toggle do not disturb
     value: Meta+N,,Toggle do not disturb
