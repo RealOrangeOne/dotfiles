@@ -152,3 +152,10 @@
     file: klipperrc
     key: KeepClipboardContents
     value: false
+
+- name: Customize fullscreen shortcut
+  realorangeone.kconfig.kconfig:
+    group: kwin
+    file: kglobalshortcutsrc
+    key: Window Fullscreen
+    value: Meta+F,,Make Window Fullscreen
