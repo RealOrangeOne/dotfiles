@@ -138,3 +138,10 @@
     file: PlasmaUserFeedback
     key: FeedbackLevel
     value: 16
+
+- name: Don't persist clipboard
+  realorangeone.kconfig.kconfig:
+    group: General
+    file: klipperrc
+    key: KeepClipboardContents
+    value: false
