@@ -54,10 +54,9 @@
       - mathematic.vscode-latex
       - streetsidesoftware.code-spell-checker
       - EditorConfig.EditorConfig
-      - vsciot-vscode.vscode-arduino
       - redhat.ansible
       - redhat.vscode-yaml
-      - rust-lang.rust
+      - rust-lang.rust-analyzer
       - pnp.polacode
       - mrmlnc.vscode-duplicate
       - Tyriar.sort-lines
@@ -68,20 +67,14 @@
       - yzhang.markdown-all-in-one
       - jock.svg
       - naumovs.color-highlight
-      - pranaygp.vscode-css-peek
       - hashicorp.terraform
-      - mhutchie.git-graph
       - ms-vscode.wordcount
       - ms-vscode-remote.remote-ssh
       - wmaurer.change-case
       - bibhasdn.django-html
-      - GitHub.vscode-pull-request-github
       - vstirbu.vscode-mermaid-preview
       - davidlday.languagetool-linter
-      - ms-toolsai.jupyter
       - bbenoist.vagrant
-      - GitLab.gitlab-workflow
-      - formulahendry.auto-rename-tag
       - mkhl.direnv
 
 - name: Install VSCode extensions
