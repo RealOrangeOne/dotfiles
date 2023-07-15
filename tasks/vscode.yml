@@ -76,6 +76,7 @@
       - davidlday.languagetool-linter
       - bbenoist.vagrant
       - mkhl.direnv
+      - charliermarsh.ruff
 
 - name: Install VSCode extensions
   shell: code --install-extension {{ item }} --force
