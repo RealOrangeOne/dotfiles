@@ -69,5 +69,6 @@
   "terminal.integrated.enablePersistentSessions": false,
   "languageToolLinter.plainText.languageIds": [
     "markdown"
-  ]
+  ],
+  "editor.bracketPairColorization.enabled": false
 }
