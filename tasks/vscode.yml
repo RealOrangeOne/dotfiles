@@ -6,7 +6,6 @@
   loop:
     - visual-studio-code-bin
     - ctags
-    - languagetool
 
 - name: Create VSCode user directory
   file:
@@ -73,7 +72,7 @@
       - wmaurer.change-case
       - bibhasdn.django-html
       - vstirbu.vscode-mermaid-preview
-      - davidlday.languagetool-linter
+      - valentjn.vscode-ltex
       - bbenoist.vagrant
       - mkhl.direnv
       - charliermarsh.ruff

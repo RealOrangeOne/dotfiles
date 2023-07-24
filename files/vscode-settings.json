@@ -59,16 +59,13 @@
     "args": [],
     "pathToBinary": "/usr/bin/terraform-lsp"
   },
-  "languageToolLinter.serviceType": "managed",
-  "languageToolLinter.managed.classPath": "/usr/share/languagetool:/usr/share/java/languagetool/*.jar",
-  "languageToolLinter.lintOnOpen": true,
-  "languageToolLinter.languageTool.language": "en-GB",
-  "languageToolLinter.languageTool.motherTongue": "en-GB",
   "python.languageServer": "Jedi",
   "python.experiments.enabled": false,
   "terminal.integrated.enablePersistentSessions": false,
-  "languageToolLinter.plainText.languageIds": [
-    "markdown"
-  ],
-  "editor.bracketPairColorization.enabled": false
+  "editor.bracketPairColorization.enabled": false,
+  "ltex.additionalRules.motherTongue": "en-GB",
+  "ltex.java.initialHeapSize": 32,
+  "ltex.java.maximumHeapSize": 128,
+  "ltex.language": "en-GB",
+  "ltex.sentenceCacheSize": 1000
 }
