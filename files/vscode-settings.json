@@ -65,5 +65,16 @@
   "rust-analyzer.inlayHints.parameterHints.enable": false,
   "rust-analyzer.inlayHints.typeHints.enable": false,
   "workbench.preferredDarkColorTheme": "Darcula",
-  "workbench.preferredLightColorTheme": "Visual Studio Light"
+  "workbench.preferredLightColorTheme": "Visual Studio Light",
+  "workbench.tree.indent": 6,
+  "workbench.editor.closeOnFileDelete": true,
+  "zenMode.hideTabs": false,
+  "zenMode.hideLineNumbers": false,
+  "explorer.autoRevealExclude": {
+    "**/bower_components": false,
+    "**/node_modules": false
+  },
+  "search.useGlobalIgnoreFiles": true,
+  "search.useParentIgnoreFiles": true,
+  "remote.downloadExtensionsLocally": true
 }
