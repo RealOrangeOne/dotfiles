@@ -64,4 +64,6 @@
   "rust-analyzer.inlayHints.chainingHints.enable": false,
   "rust-analyzer.inlayHints.parameterHints.enable": false,
   "rust-analyzer.inlayHints.typeHints.enable": false,
+  "workbench.preferredDarkColorTheme": "Darcula",
+  "workbench.preferredLightColorTheme": "Visual Studio Light"
 }
