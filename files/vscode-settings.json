@@ -26,7 +26,6 @@
   },
   "gitlens.keymap": "alternate",
   "editor.cursorBlinking": "smooth",
-  "editor.fontLigatures": true,
   "editor.smoothScrolling": true,
   "workbench.editor.enablePreview": false,
   "terminal.integrated.enableBell": true,
