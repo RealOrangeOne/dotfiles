@@ -31,7 +31,6 @@
     - screenfetch
     - speedtest-cli
     - sl
-    - terminator
     - thefuck
     - tmux
     - tmux-xpanes
@@ -106,20 +105,6 @@
   copy:
     src: ./files/direnv.toml
     dest: "{{ home }}/.config/direnv/direnv.toml"
-    mode: 0644
-    owner: "{{ user }}"
-
-- name: Create terminator directory
-  file:
-    path: "{{ home }}/.config/terminator/"
-    state: directory
-    owner: "{{ user }}"
-    mode: 0755
-
-- name: Create alacritty config
-  copy:
-    src: ./files/terminator.conf
-    dest: "{{ home }}/.config/terminator/config"
     mode: 0644
     owner: "{{ user }}"
 
