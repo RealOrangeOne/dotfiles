@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+# Based on https://github.com/no-gravity/git-retroamend
+
+set -e
+
+hash=$1
+
+if [[ ! -v hash ]]; then
+    echo "Please provide hash."
+    exit 1
+fi
+
+git commit --fixup $hash
+
+# 'GIT_EDITOR=true' makes the rebase non-interactive
+GIT_EDITOR=true git rebase -i --autosquash $hash^
