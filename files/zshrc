@@ -11,7 +11,7 @@ plugins=(
 )
 
 export COMPLETION_WAITING_DOTS="true"
-
+DISABLE_AUTO_UPDATE=true
 
 source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
 export fpath=(/usr/share/zsh/site-functions $fpath)
