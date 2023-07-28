@@ -45,20 +45,15 @@ export EDITOR=$(which nvim)
 
 
 # bash aliases
-alias refresh="cd $PWD > /dev/null"
 alias c="clear"
 alias e="exit"
 alias no="yes n"
 alias open="mimeopen"
-alias browse "mimeopen ."
+alias browse="mimeopen ."
 
 # colourify things!
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
-
-alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
-
-[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
 
 # Node stuff
@@ -75,13 +70,6 @@ nb() {
       command npm run build-${arg}
     done
   fi
-}
-
-nr() {
-  for arg in "$@"
-  do
-    command npm run $arg
-  done
 }
 
 nvm() {   # This takes ~1sec, so we lazy-load it.
@@ -120,17 +108,6 @@ git-cleanup() {
 
 alias t="tig"
 alias ts="tig status"
-
-
-# Gnome
-gd-lock() {
-  sessionid=`loginctl list-sessions | grep $USER | awk '{print $1}'`
-  loginctl lock-session $sessionid
-}
-gd-unlock() {
-  sessionid=`loginctl list-sessions | grep $USER | awk '{print $1}'`
-  loginctl unlock-session $sessionid
-}
 
 # miscellaneous software aliases
 alias serve="/usr/bin/python3 -m http.server"
