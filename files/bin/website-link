@@ -3,19 +3,17 @@
 import json
 import subprocess
 import urllib.request
-import operator
 from collections import OrderedDict
 
-URL = "https://theorangeone.net/index.json"
+URL = "https://theorangeone.net/api/page-links/?format=json"
+
 
 def main():
     with urllib.request.urlopen(URL) as response:
         data = json.load(response)
 
-    data = sorted(data, key=operator.itemgetter("date"), reverse=True)
-
     url_mapping = OrderedDict([
-        (d['title'], d['url'])
+        (d['title'], d['full_url'])
         for d in data
     ])
 
