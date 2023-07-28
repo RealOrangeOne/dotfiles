@@ -27,7 +27,6 @@
     - lazygit
     - postgresql
     - sublime-text
-    - tig
 
 - name: Add user to docker group
   user:

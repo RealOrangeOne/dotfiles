@@ -109,8 +109,7 @@ git-cleanup() {
   command git checkout -
 }
 
-alias t="tig"
-alias ts="tig status"
+alias lg="lazygit"
 
 # miscellaneous software aliases
 alias serve="/usr/bin/python3 -m http.server"
