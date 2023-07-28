@@ -21,6 +21,7 @@
     - docker
     - docker-compose
     - firefox-developer-edition
+    - git-filter-repo
     - github-cli
     - hugo
     - insomnia

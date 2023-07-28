@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+# https://til.simonwillison.net/git/git-filter-repo
+
+set -e
+
+base=$1
+
+if [[ ! -v base ]]; then
+    echo "Please provide base."
+    exit 1
+fi
+
+
+git filter-repo --commit-callback '
+    commit.committer_date = commit.author_date
+' --force --refs $base..HEAD
