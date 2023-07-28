@@ -3,11 +3,16 @@ export ZSH=/usr/share/oh-my-zsh/
 
 # Plugins
 plugins=(
-  pip
-  python
+  aliases
+  archlinux
   common-aliases
   extract
+  gh
   heroku
+  pip
+  poetry
+  python
+  vscode
 )
 
 export COMPLETION_WAITING_DOTS="true"
