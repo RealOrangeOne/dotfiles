@@ -31,8 +31,6 @@ source $ZSH/oh-my-zsh.sh
 
 eval "$(direnv hook zsh)"
 
-alias src="source {{ home }}/.zshrc && tmux source {{ home }}/.tmux.conf"
-
 # If not running interactively, don't do anything
 case $- in
   *i*) ;;

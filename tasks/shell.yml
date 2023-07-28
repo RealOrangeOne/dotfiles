@@ -44,14 +44,13 @@
     - zsh-fast-syntax-highlighting
 
 - name: Install ZSH config
-  template:
+  copy:
     src: ./files/zshrc
     dest: "{{ home }}/.zshrc"
     mode: 0644
     owner: "{{ user }}"
     validate: zsh -n %s
     backup: true
-    trim_blocks: false
 
 - name: Install global environment variables
   template:
