@@ -16,6 +16,12 @@
   loop:
     - krunnerrc
 
+- name: Install SDDM config
+  template:
+    src: ./files/sddm-kde.conf
+    dest: /etc/sddm.conf.d/kde_settings.conf
+    mode: 0644
+
 - name: Update animation speed
   realorangeone.kconfig.kconfig:
     group: KDE
