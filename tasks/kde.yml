@@ -97,6 +97,15 @@
     key: WallpaperPlugin
     value: org.kde.potd
 
+- name: Use picture of the day (from NASA) for desktop background
+  realorangeone.kconfig.kconfig:
+    group:
+      - Containments
+      - 1
+    file: plasma-org.kde.plasma.desktop-appletsrc
+    key: wallpaperplugin
+    value: org.kde.potd
+
 - name: Don't restart session on login
   realorangeone.kconfig.kconfig:
     group: General
