@@ -37,7 +37,7 @@
     line: "aur_builder ALL=(ALL) NOPASSWD: /usr/bin/pacman"
     create: true
     validate: visudo -cf %s
-    mode: 0644
+    mode: 0640
   changed_when: false
 
 - name: Install chaotic AUR

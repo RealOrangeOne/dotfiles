@@ -21,5 +21,8 @@
 
 - name: Give user sudo access
   lineinfile:
-    path: /etc/sudoers
+    path: /etc/sudoers.d/00_jake
     line: "{{ user }} ALL=(ALL) ALL"
+    create: true
+    validate: visudo -cf %s
+    mode: 0640
