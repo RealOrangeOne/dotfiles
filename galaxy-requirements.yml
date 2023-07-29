@@ -5,4 +5,3 @@ collections:
 
 roles:
   - src: geerlingguy.ntp
-  - src: realorangeone.reflector

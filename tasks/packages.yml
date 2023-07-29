@@ -92,6 +92,20 @@
 
 - name: Install pacman tools
   kewlfft.aur.aur:
-    name: pacman-contrib
+    name: "{{ item }}"
+  loop:
+    - pacman-contrib
+    - reflector
   become: true
   become_user: aur_builder
+
+- name: Install reflector config
+  template:
+    src: ./files/reflector.conf
+    dest: /etc/xdg/reflector/reflector.conf
+    mode: 0644
+
+- name: Enable reflector
+  systemd:
+    name: reflector
+    enabled: true
