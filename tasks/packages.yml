@@ -54,11 +54,17 @@
   become: true
   when: added_repo_keys.changed or pacman_conf.changed
 
-- name: Install yay
+- name: Install paru
   kewlfft.aur.aur:
-    name: yay
+    name: paru
   become: true
   become_user: aur_builder
+
+- name: Install paru config
+  template:
+    src: ./files/paru.conf
+    dest: /etc/paru.conf
+    mode: 0644
 
 - name: Install additional repo keyrings
   kewlfft.aur.aur:
