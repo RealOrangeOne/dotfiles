@@ -8,6 +8,7 @@
     - bitwarden-cli
     - firejail
     - mullvad-vpn-bin
+    - veracrypt
     - wireguard-tools
     - yubikey-personalization-gui
 

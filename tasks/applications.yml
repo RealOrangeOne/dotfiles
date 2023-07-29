@@ -14,6 +14,7 @@
   loop:
     - bleachbit
     - clamtk
+    - discord
     - filezilla
     - firefox
     - gimp
@@ -27,6 +28,7 @@
     - libreoffice-fresh-en-gb
     - minecraft-launcher
     - obs-studio
+    - obsidian
     - slack-desktop
     - steam
     - thunderbird
