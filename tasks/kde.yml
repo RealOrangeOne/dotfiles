@@ -4,7 +4,7 @@
   become: true
   become_user: aur_builder
   loop:
-    - plasma-runner-vscode-git
+    - plasma5-runners-vscode-git
 
 - name: Copy config files
   template:
