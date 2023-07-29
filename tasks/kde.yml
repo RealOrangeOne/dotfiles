@@ -6,15 +6,19 @@
   loop:
     - plasma5-runners-vscode-git
 
+- name: List KDE config files
+  find:
+    paths: ./files/kde
+  register: kde_config_files
+
 - name: Copy config files
   template:
-    src: ./files/kde/{{ item }}
-    dest: "{{ home }}/.config/{{ item }}"
+    src: "{{ item.path }}"
+    dest: "{{ home }}/.config/{{ item.path | basename }}"
     mode: 0644
     owner: "{{ user }}"
     group: users
-  loop:
-    - krunnerrc
+  loop: "{{ kde_config_files.files }}"
 
 - name: Install SDDM config
   template:
@@ -107,7 +111,7 @@
   realorangeone.kconfig.kconfig:
     group:
       - Containments
-      - 1
+      - "1"
     file: plasma-org.kde.plasma.desktop-appletsrc
     key: wallpaperplugin
     value: org.kde.potd
