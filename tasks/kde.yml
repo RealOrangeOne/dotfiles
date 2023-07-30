@@ -1,3 +1,16 @@
+- name: Install KDE packages
+  kewlfft.aur.aur:
+    name: "{{ item }}"
+  become: true
+  become_user: aur_builder
+  loop:
+    - filelight
+    - gwenview
+    - kamera
+    - kdeconnect
+    - okular
+    - print-manager
+
 - name: Install krunner plugins
   kewlfft.aur.aur:
     name: "{{ item }}"
