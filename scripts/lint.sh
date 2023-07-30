@@ -6,8 +6,8 @@ PATH=${PWD}/env/bin:${PATH}
 
 set -x
 
-yamllint -sc yamllint.yml yamllint.yml dotfiles.yml tasks/ vars.yml
+yamllint -s .
 
-ansible-lint dotfiles.yml -p -c .ansible-lint
+ansible-lint -p
 
 ansible-playbook dotfiles.yml --syntax-check
