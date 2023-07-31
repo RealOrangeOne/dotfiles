@@ -3,6 +3,8 @@ export LANG=en_GB.UTF-8
 export ARCHFLAGS="-arch x86_64"
 export MOZ_USE_XINPUT2=1
 
+export SSH_ASKPASS=ksshaskpass
+
 if ! pgrep -u "$USER" ssh-agent > /dev/null; then
     ssh-agent > "$XDG_RUNTIME_DIR/ssh-agent.env"
 fi
