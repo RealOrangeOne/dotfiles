@@ -26,3 +26,11 @@
     create: true
     validate: visudo -cf %s
     mode: 0640
+
+- name: Install xprofile
+  template:
+    src: ./files/xprofile.sh
+    dest: "{{ home }}/.xprofile"
+    mode: 0644
+    owner: "{{ user }}"
+    group: "{{ user }}"

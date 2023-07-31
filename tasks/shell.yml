@@ -51,14 +51,6 @@
     validate: zsh -n %s
     backup: true
 
-- name: Install global environment variables
-  template:
-    src: ./files/global-environment
-    dest: /etc/environment
-    mode: 0644
-    owner: root
-    group: root
-
 - name: Install tmux config
   template:
     src: ./files/tmux.conf
