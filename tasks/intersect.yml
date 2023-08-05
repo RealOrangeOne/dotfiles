@@ -18,6 +18,7 @@
     - deluge
     - nextcloud-client
     - quassel-client
+    - rsnapshot
     - terraform
     - terraform-lsp-bin
 
