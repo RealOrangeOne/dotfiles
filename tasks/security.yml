@@ -34,3 +34,9 @@
     path: "{{ home }}/Private"
     owner: "{{ user }}"
     mode: 0700
+
+- name: Install faillock config
+  copy:
+    src: ./files/faillock.conf
+    dest: /etc/security/faillock.conf
+    mode: 0644
