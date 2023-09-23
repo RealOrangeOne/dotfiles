@@ -38,6 +38,8 @@
     src: ./files/sddm-kde.conf
     dest: /etc/sddm.conf.d/kde_settings.conf
     mode: 0644
+  become: true
+  become_user: root
 
 - name: Update animation speed
   realorangeone.kconfig.kconfig:
