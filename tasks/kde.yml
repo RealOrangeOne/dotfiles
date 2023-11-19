@@ -193,3 +193,10 @@
     file: kglobalshortcutsrc
     key: Window Fullscreen
     value: Meta+F,,Make Window Fullscreen
+
+- name: Add window resize shortcut
+  realorangeone.kconfig.kconfig:
+    group: kwin
+    file: kglobalshortcutsrc
+    key: Window Resize
+    value: Meta+R,,Resize Window
