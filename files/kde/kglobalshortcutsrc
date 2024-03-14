@@ -1,5 +1,5 @@
 [ActivityManager]
-_k_friendly_name=Activity Manager
+_k_friendly_name=System Settings
 switch-to-activity-59f58da0-9510-4b8a-ad53-376f50a4e6e0=none,none,Switch to activity "Default"
 
 [KDE Keyboard Layout Switcher]
@@ -115,7 +115,7 @@ Switch to Screen to the Right=none,,Switch to Screen to the Right
 Toggle Night Color=none,none,Toggle Night Light
 Toggle Window Raise/Lower=none,,Toggle Window Raise/Lower
 Walk Through Windows=Alt+Tab,Alt+Tab,Walk Through Windows
-Walk Through Windows (Reverse)=Alt+Shift+Backtab,Alt+Shift+Tab,Walk Through Windows (Reverse)
+Walk Through Windows (Reverse)=Alt+Shift+Tab,Alt+Shift+Tab,Walk Through Windows (Reverse)
 Walk Through Windows Alternative=none,,Walk Through Windows Alternative
 Walk Through Windows Alternative (Reverse)=none,,Walk Through Windows Alternative (Reverse)
 Walk Through Windows of Current Application=Alt+`,Alt+`,Walk Through Windows of Current Application
@@ -159,7 +159,7 @@ Window Quick Tile Top=Meta+Up,Meta+Up,Quick Tile Window to the Top
 Window Quick Tile Top Left=none,,Quick Tile Window to the Top Left
 Window Quick Tile Top Right=none,,Quick Tile Window to the Top Right
 Window Raise=none,,Raise Window
-Window Resize=none,,Resize Window
+Window Resize=Meta+R,,Resize Window
 Window Shade=none,,Shade Window
 Window Shrink Horizontal=none,,Shrink Window Horizontally
 Window Shrink Vertical=none,,Shrink Window Vertically
@@ -269,7 +269,7 @@ Sleep=Sleep,Sleep,Suspend
 Toggle Keyboard Backlight=Keyboard Light On/Off,Keyboard Light On/Off,Toggle Keyboard Backlight
 Turn Off Screen=none,none,Turn Off Screen
 _k_friendly_name=KDE Power Management System
-powerProfile=Battery,Battery\tMeta+B,Switch Power Profile
+powerProfile=Battery\t,Battery\tMeta+B,Switch Power Profile
 
 [plasmashell]
 _k_friendly_name=plasmashell
@@ -303,6 +303,9 @@ toggle do not disturb=Meta+N,,Toggle do not disturb
 
 [services][org.kde.konsole.desktop]
 _launch=Meta+Return
+
+[services][org.kde.krunner.desktop]
+_launch=Alt+Space\tMeta+Space\tAlt+F2\tSearch
 
 [services][org.kde.spectacle.desktop]
 ActiveWindowScreenShot=none

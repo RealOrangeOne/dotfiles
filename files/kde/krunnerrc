@@ -8,5 +8,13 @@ RetainPriorSearch=false
 migrated=true
 
 [Plugins]
-baloosearchEnabled=true
+baloosearchEnabled=false
+browserhistoryEnabled=false
+krunner_appstreamEnabled=false
+krunner_sessionsEnabled=false
+krunner_shellEnabled=false
+plasma-runner-neochatEnabled=true
 vscodeEnabled=true
+
+[Plugins][Favorites]
+plugins=krunner_services

@@ -48,6 +48,12 @@
     key: AnimationDurationFactor
     value: 0.5
 
+- name: Use oxygen sounds
+  realorangeone.kconfig.kconfig:
+    group: Sounds
+    key: Theme
+    value: oxygen
+
 - name: Set dark mode
   realorangeone.kconfig.kconfig:
     group: KDE
@@ -173,3 +179,10 @@
     file: klipperrc
     key: KeepClipboardContents
     value: false
+
+- name: Don't persist clipboard
+  realorangeone.kconfig.kconfig:
+    group: Effect-overview
+    file: kwinrc
+    key: BorderActivate
+    value: 9
