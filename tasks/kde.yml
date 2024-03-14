@@ -160,22 +160,6 @@
     key: only basic indexing
     value: true
 
-- name: Set do not disturb shortcut
-  realorangeone.kconfig.kconfig:
-    group: plasmashell
-    file: kglobalshortcutsrc
-    key: toggle do not disturb
-    value: Meta+N,,Toggle do not disturb
-
-- name: Open terminal with Meta+Return
-  realorangeone.kconfig.kconfig:
-    group:
-      - services
-      - org.kde.konsole.desktop
-    file: kglobalshortcutsrc
-    key: _launch
-    value: Meta+Return
-
 - name: Send basic system information
   realorangeone.kconfig.kconfig:
     group: Global
@@ -189,17 +173,3 @@
     file: klipperrc
     key: KeepClipboardContents
     value: false
-
-- name: Customize fullscreen shortcut
-  realorangeone.kconfig.kconfig:
-    group: kwin
-    file: kglobalshortcutsrc
-    key: Window Fullscreen
-    value: Meta+F,,Make Window Fullscreen
-
-- name: Add window resize shortcut
-  realorangeone.kconfig.kconfig:
-    group: kwin
-    file: kglobalshortcutsrc
-    key: Window Resize
-    value: Meta+R,,Resize Window
