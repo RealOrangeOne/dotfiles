@@ -168,10 +168,12 @@
 
 - name: Open terminal with Meta+Return
   realorangeone.kconfig.kconfig:
-    group: org.kde.konsole.desktop
+    group:
+      - services
+      - org.kde.konsole.desktop
     file: kglobalshortcutsrc
     key: _launch
-    value: Meta+Return,Ctrl+Alt+T,Konsole
+    value: Meta+Return
 
 - name: Send basic system information
   realorangeone.kconfig.kconfig:
