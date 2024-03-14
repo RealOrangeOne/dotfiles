@@ -10,6 +10,7 @@
     - kdeconnect
     - okular
     - print-manager
+    - spectacle
 
 - name: Install krunner plugins
   kewlfft.aur.aur:

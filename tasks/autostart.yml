@@ -26,7 +26,6 @@
     force: true
   loop:
     - libinput-gestures
-    - org.flameshot.Flameshot
 
 - name: Autostart solaar
   get_url:
