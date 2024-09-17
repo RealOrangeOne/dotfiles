@@ -1,0 +1,5 @@
+- import_tasks: user.yml
+- import_tasks: packages.yml
+
+- include_role:
+    name: geerlingguy.ntp
