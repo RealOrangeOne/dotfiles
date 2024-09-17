@@ -5,6 +5,7 @@
   become_user: aur_builder
   loop:
     - gromit-mpx
+    - iio-sensor-proxy
     - libinput
     - libinput-gestures
     - solaar
