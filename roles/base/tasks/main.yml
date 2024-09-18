@@ -3,3 +3,5 @@
 
 - include_role:
     name: geerlingguy.ntp
+
+- import_tasks: boot.yml
