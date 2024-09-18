@@ -6,17 +6,8 @@
   loop:
     - gromit-mpx
     - iio-sensor-proxy
-    - libinput
-    - libinput-gestures
     - solaar
     - xorg-xev
-
-- name: Install libinput-gestures config
-  copy:
-    src: ./files/libinput-gestures.conf
-    dest: /etc/libinput-gestures.conf
-    mode: 0644
-    owner: "{{ user }}"
 
 - name: Create uniemoji config directory
   file:

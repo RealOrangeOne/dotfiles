@@ -5,28 +5,6 @@
     owner: "{{ user }}"
     mode: 0755
 
-- name: Autostart services
-  file:
-    src: /etc/xdg/autostart/{{ item }}.desktop
-    dest: "{{ home }}/.config/autostart/{{ item }}.desktop"
-    mode: 0644
-    owner: "{{ user }}"
-    state: link
-    force: true
-  loop:
-    - solaar
-
-- name: Autostart applications
-  file:
-    src: /usr/share/applications/{{ item }}.desktop
-    dest: "{{ home }}/.config/autostart/{{ item }}.desktop"
-    mode: 0644
-    owner: "{{ user }}"
-    state: link
-    force: true
-  loop:
-    - libinput-gestures
-
 - name: Autostart solaar
   get_url:
     url: https://raw.githubusercontent.com/pwr-Solaar/Solaar/master/share/autostart/solaar.desktop
