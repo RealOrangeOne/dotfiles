@@ -19,10 +19,11 @@
     owner: "{{ user }}"
     mode: 0700
 
-- name: Install assh config
-  copy:
-    src: ./files/assh.yml
-    dest: "{{ home }}/.ssh/assh.yml"
+- name: Install ssh config
+  file:
+    src: "{{ home }}/.dotfiles/ssh/ssh_config"
+    dest: "{{ home }}/.ssh/config"
+    state: link
     mode: 0644
     owner: "{{ user }}"
 

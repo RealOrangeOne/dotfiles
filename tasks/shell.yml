@@ -4,7 +4,6 @@
   become: true
   become_user: aur_builder
   loop:
-    - advanced-ssh-config
     - alacritty
     - arch-install-scripts
     - bat
