@@ -1,12 +1,3 @@
-- name: Install Spotify
-  kewlfft.aur.aur:
-    name: "{{ item }}"
-  become: true
-  become_user: aur_builder
-  loop:
-    - ffmpeg-compat-57
-    - spotify
-
 - name: Install media-related packages
   kewlfft.aur.aur:
     name: "{{ item }}"
@@ -18,3 +9,4 @@
     - bluez-utils-compat
     - handbrake
     - sof-firmware
+    - spotify
