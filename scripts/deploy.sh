@@ -2,4 +2,4 @@
 
 set -ex
 
-time sudo ansible-playbook dotfiles.yml $@
+time ansible-playbook dotfiles.yml -K $@
