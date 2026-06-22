@@ -6,7 +6,7 @@
   loop:
     - biber
     - pandoc-bin
-    - texlive-most
+    - typst
 
 - name: Install dev packages
   kewlfft.aur.aur:
