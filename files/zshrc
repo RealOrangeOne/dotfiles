@@ -87,6 +87,7 @@ npx () {
 
 eval $(thefuck --alias)
 eval "$(pazi init zsh)"
+eval "$(atuin init zsh --disable-up-arrow)"
 
 # git aliases
 alias gs="git status"

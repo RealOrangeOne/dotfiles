@@ -6,6 +6,7 @@
   loop:
     - alacritty
     - arch-install-scripts
+    - atuin
     - bat
     - catimg
     - climate
