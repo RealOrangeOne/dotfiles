@@ -5,18 +5,8 @@
   become_user: aur_builder
   loop:
     - all-repository-fonts
-    - fonts-meta-extended-lt
     - otf-font-awesome
     - ttf-fira-code
     - ttf-font-awesome
     - ttf-ms-fonts
     - ttf-wps-fonts
-
-- name: Install font configurations
-  file:
-    src: /etc/fonts/conf.avail/{{ item }}
-    dest: /etc/fonts/conf.d/{{ item }}
-    mode: 0644
-    state: link
-  loop:
-    - 30-infinality-aliases.conf
