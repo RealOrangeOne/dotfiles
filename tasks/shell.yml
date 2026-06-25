@@ -32,9 +32,6 @@
     - speedtest-cli
     - sl
     - thefuck
-    - tmux
-    - tmux-xpanes
-    - ruby-tmuxinator
     - xclip
     - xsel
     - zsh
@@ -50,27 +47,6 @@
     owner: "{{ user }}"
     validate: zsh -n %s
     backup: true
-
-- name: Install tmux config
-  template:
-    src: ./files/tmux.conf
-    dest: "{{ home }}/.tmux.conf"
-    mode: 0755
-    owner: "{{ user }}"
-    group: users
-
-- name: Install tmux packages
-  git:
-    repo: "{{ item }}"
-    dest: "{{ home }}/.tmux/plugins/{{ item.split('/')[-1] }}"
-    force: true
-  become: true
-  become_user: "{{ user }}"
-  loop:
-    - https://github.com/jimeh/tmux-themepack
-    - https://github.com/tmux-plugins/tmux-yank
-    - https://github.com/tmux-plugins/tmux-sensible
-    - https://github.com/tmux-plugins/tmux-fpp
 
 - name: Create alacritty config directory
   file:
@@ -99,15 +75,6 @@
     dest: "{{ home }}/.config/direnv/direnv.toml"
     mode: 0644
     owner: "{{ user }}"
-
-- name: Install tmuxinator config
-  copy:
-    src: ./files/tmuxinator
-    dest: "{{ home }}/.config"
-    mode: 0644
-    owner: "{{ user }}"
-    group: users
-    directory_mode: 0755
 
 - name: Install custom scripts
   copy:

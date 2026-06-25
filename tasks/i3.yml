@@ -4,11 +4,9 @@
   become: true
   become_user: aur_builder
   loop:
-    - arandr
     - rofi
     - rofi-calc
     - rofimoji
-    - xdotool
 
 - name: Create rofi config directory
   file:

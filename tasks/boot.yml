@@ -5,14 +5,12 @@
   failed_when: false
 
 - name: Install file system helpers
-  kewlfft.aur.aur:
+  package:
     name: "{{ item }}"
   become: true
-  become_user: aur_builder
   loop:
     - dosfstools
     - exfat-utils
-    - hfsprogs
     - ntfs-3g
     - btrfs-progs
 
@@ -26,10 +24,9 @@
     - intel-ucode
 
 - name: Install nohang
-  kewlfft.aur.aur:
-    name: nohang-git
+  package:
+    name: nohang
   become: true
-  become_user: aur_builder
 
 - name: Enable nohang
   systemd:

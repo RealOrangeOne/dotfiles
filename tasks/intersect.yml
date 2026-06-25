@@ -4,9 +4,7 @@
   become: true
   become_user: aur_builder
   loop:
-    - calibre
     - nextcloud-client
-    - quassel-client
     - rsnapshot
     - terraform
     - terraform-lsp-bin

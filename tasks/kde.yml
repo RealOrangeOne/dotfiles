@@ -12,14 +12,6 @@
     - print-manager
     - spectacle
 
-- name: Install krunner plugins
-  kewlfft.aur.aur:
-    name: "{{ item }}"
-  become: true
-  become_user: aur_builder
-  loop:
-    - plasma5-runners-vscode-git
-
 - name: List KDE config files
   find:
     paths: ./files/kde
