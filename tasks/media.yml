@@ -5,8 +5,6 @@
   become_user: aur_builder
   loop:
     - alsa-firmware
-    - bluez-firmware
-    - bluez-utils-compat
     - handbrake
     - sof-firmware
     - spotify
