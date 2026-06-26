@@ -40,3 +40,12 @@
     src: ./files/faillock.conf
     dest: /etc/security/faillock.conf
     mode: 0644
+
+- name: Start SSH Agent
+  systemd_service:
+    state: started
+    scope: user
+    enabled: true
+    name: ssh-agent
+  become: true
+  become_user: "{{ user }}"

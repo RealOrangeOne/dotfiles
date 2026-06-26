@@ -27,10 +27,10 @@
     validate: visudo -cf %s
     mode: 0640
 
-- name: Install xprofile
+- name: Install plasma workspace script
   template:
-    src: ./files/xprofile.sh
-    dest: "{{ home }}/.xprofile"
+    src: ./files/env.sh
+    dest: "{{ home }}/.config/plasma-workspace/env/env.sh"
     mode: 0644
     owner: "{{ user }}"
     group: "{{ user }}"

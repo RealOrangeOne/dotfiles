@@ -37,9 +37,11 @@ case $- in
   *) return;;
 esac
 
-# Set environment variables
-export DOTFILES=${HOME}/.dotfiles
 
+# Source environment variables set by KDE
+source ${HOME}/.config/plasma-workspace/env/env.sh || true
+
+# Set environment variables
 export TIMEFMT=$'\nreal\t%E\nuser\t%U\nsys\t%S'
 export HISTCONTROL=ignoreboth
 
