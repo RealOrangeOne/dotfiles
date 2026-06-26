@@ -1,0 +1,3 @@
+update_check = false
+sync_address = "https://atuin.jakehoward.tech"
+sync_frequency = "10m"

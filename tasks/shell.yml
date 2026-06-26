@@ -93,3 +93,17 @@
     line: KEYMAP=uk
     create: true
     mode: 0644
+
+- name: Create atuin config directory
+  file:
+    path: "{{ home }}/.config/atuin/"
+    state: directory
+    owner: "{{ user }}"
+    mode: 0755
+
+- name: Create atuin config
+  copy:
+    src: ./files/atuin.toml
+    dest: "{{ home }}/.config/atuin/config.toml"
+    mode: 0644
+    owner: "{{ user }}"
