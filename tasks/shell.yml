@@ -4,7 +4,6 @@
   become: true
   become_user: aur_builder
   loop:
-    - alacritty
     - arch-install-scripts
     - atuin
     - bat
@@ -50,20 +49,6 @@
     owner: "{{ user }}"
     validate: zsh -n %s
     backup: true
-
-- name: Create alacritty config directory
-  file:
-    path: "{{ home }}/.config/alacritty/"
-    state: directory
-    owner: "{{ user }}"
-    mode: 0755
-
-- name: Create alacritty config
-  copy:
-    src: ./files/alacritty.yml
-    dest: "{{ home }}/.config/alacritty/alacritty.yml"
-    mode: 0644
-    owner: "{{ user }}"
 
 - name: Create direnv config directory
   file:

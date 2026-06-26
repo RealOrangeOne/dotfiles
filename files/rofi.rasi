@@ -3,7 +3,7 @@ configuration {
 	width: 40;
 	lines: 10;
 	show-icons: true;
-	ssh-command: "alacritty -e {ssh-client} {host}";
+	ssh-command: "konsole -e {ssh-client} {host}";
 	sort: true;
 	matching: "glob";
 	kb-mode-next: "Alt+Right";
