@@ -72,3 +72,17 @@
     mode: 0644
     owner: "{{ user }}"
     group: users
+
+- name: Create lazygit config directory
+  file:
+    path: "{{ home }}/.config/lazygit/"
+    state: directory
+    owner: "{{ user }}"
+    mode: 0755
+
+- name: Create lazygit config
+  copy:
+    src: ./files/lazygit.yml
+    dest: "{{ home }}/.config/lazygit/config.yml"
+    mode: 0644
+    owner: "{{ user }}"

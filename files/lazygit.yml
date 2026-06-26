@@ -1,0 +1,8 @@
+gui:
+  nerdFontsVersion: "3"
+
+services:
+  'git.theorangeone.net': 'gitea:git.theorangeone.net'
+
+git:
+  overrideGpg: true
