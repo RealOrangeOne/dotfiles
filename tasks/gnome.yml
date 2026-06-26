@@ -1,13 +1,3 @@
-- name: Install Gnome packages
-  kewlfft.aur.aur:
-    name: "{{ item }}"
-  become: true
-  become_user: aur_builder
-  loop:
-    - gnome-calculator
-    - gnome-disk-utility
-    - gnome-firmware
-
 - name: Install GTK tools
   kewlfft.aur.aur:
     name: "{{ item }}"
