@@ -13,8 +13,8 @@ browserhistoryEnabled=false
 krunner_appstreamEnabled=false
 krunner_sessionsEnabled=false
 krunner_shellEnabled=false
+krunner_zedEnabled=true
 plasma-runner-neochatEnabled=true
-vscodeEnabled=true
 
 [Plugins][Favorites]
 plugins=krunner_services

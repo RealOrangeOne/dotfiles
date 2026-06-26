@@ -34,9 +34,9 @@
 
     - import_tasks: tasks/neovim.yml
     - import_tasks: tasks/intersect.yml
-    - import_tasks: tasks/vscode.yml
     - import_tasks: tasks/applications.yml
     - import_tasks: tasks/dev.yml
+    - import_tasks: tasks/zed.yml
     - import_tasks: tasks/media.yml
 
     - import_tasks: tasks/torchbox.yml

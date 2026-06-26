@@ -1,0 +1,22 @@
+- name: Install zed
+  kewlfft.aur.aur:
+    name: "{{ item }}"
+  become: true
+  become_user: aur_builder
+  loop:
+    - zed
+    - krunner-zed
+
+- name: Create zed config directory
+  file:
+    path: "{{ home }}/.config/zed"
+    state: directory
+    owner: "{{ user }}"
+    mode: 0755
+
+- name: Create zed settings
+  copy:
+    src: ./files/zed-settings.jsonc
+    dest: "{{ home }}/.config/zed/settings.json"
+    mode: 0644
+    owner: "{{ user }}"

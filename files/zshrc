@@ -12,7 +12,6 @@ plugins=(
   pip
   poetry
   python
-  vscode
 )
 
 export COMPLETION_WAITING_DOTS="true"

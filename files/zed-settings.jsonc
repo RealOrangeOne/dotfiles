@@ -1,0 +1,74 @@
+{
+  "cli_default_open_behavior": "existing_window",
+  "outline_panel": {
+    "dock": "left"
+  },
+  "collaboration_panel": {
+    "dock": "left"
+  },
+  "agent": {
+    "dock": "right",
+    "favorite_models": [],
+    "model_parameters": []
+  },
+  "git_panel": {
+    "dock": "left"
+  },
+  "format_on_save": "off",
+  "icon_theme": {
+    "mode": "light",
+    "light": "Material Icon Theme",
+    "dark": "Material Icon Theme"
+  },
+  "ui_font_size": 14,
+  "buffer_font_size": 14,
+  "base_keymap": "SublimeText",
+  "buffer_font_family": "Fira Code",
+  "buffer_font_weight": 300,
+  "theme": {
+    "mode": "dark",
+    "light": "One Light",
+    "dark": "GitHub Dark"
+  },
+  "load_direnv": "shell_hook",
+  "minimap": {
+    "show": "auto",
+    "thumb": "hover"
+  },
+  "tab_bar": {
+    "show_nav_history_buttons": false
+  },
+  "tabs": {
+    "file_icons": true
+  },
+  "git": {
+    "inline_blame": {
+      "enabled": false
+    }
+  },
+  "middle_click_paste": false,
+  "telemetry": {
+    "diagnostics": false
+  },
+  "terminal": {
+    "font_family": "Fira Code",
+    "font_size": 14
+  },
+  "title_bar": {
+    "show_branch_status_icon": true,
+    "show_sign_in": false
+  },
+  "project_panel": {
+    "dock": "left",
+    "indent_size": 15
+  },
+  "lsp": {
+      "harper-ls": {
+          "settings": {
+              "harper-ls": {
+                  "dialect": "British",
+              },
+          },
+      },
+  }
+}
