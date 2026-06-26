@@ -30,6 +30,27 @@
     - sublime-text
     - zeal
 
+- name: Install python packages
+  kewlfft.aur.aur:
+    name: "{{ item }}"
+  become: true
+  become_user: aur_builder
+  loop:
+    - pyenv
+    - python-pip
+    - python-virtualenv
+    - uv
+
+- name: Install Javascript packages
+  kewlfft.aur.aur:
+    name: "{{ item }}"
+  become: true
+  become_user: aur_builder
+  loop:
+    - nodejs
+    - npm
+    - nvm
+
 - name: Add user to docker group
   user:
     name: "{{ user }}"

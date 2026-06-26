@@ -33,12 +33,10 @@
     - import_tasks: tasks/fonts.yml
     - import_tasks: tasks/security.yml
 
-    - import_tasks: tasks/python.yml
     - import_tasks: tasks/neovim.yml
     - import_tasks: tasks/intersect.yml
     - import_tasks: tasks/vscode.yml
     - import_tasks: tasks/gnome.yml
-    - import_tasks: tasks/javascript.yml
     - import_tasks: tasks/applications.yml
     - import_tasks: tasks/dev.yml
     - import_tasks: tasks/media.yml
