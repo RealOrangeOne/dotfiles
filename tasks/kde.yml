@@ -4,11 +4,11 @@
   become: true
   become_user: aur_builder
   loop:
-    - filelight
     - gwenview
-    - kamera
+    - kde-graphics-meta
+    - kde-system-meta
+    - kde-utilities-meta
     - kdeconnect
-    - okular
     - print-manager
     - spectacle
 
