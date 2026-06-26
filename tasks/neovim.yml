@@ -1,10 +1,3 @@
-- name: Uninstall vim
-  pacman:
-    name: vim
-    state: absent
-  become: true
-  become_user: aur_builder
-
 - name: Install neovim
   kewlfft.aur.aur:
     name: "{{ item }}"
@@ -32,11 +25,4 @@
   file:
     src: "{{ home }}/.config/nvim"
     dest: /root/.config/nvim
-    state: link
-
-# Aliases are too boring
-- name: Install vim alias
-  file:
-    src: /usr/bin/nvim
-    dest: /usr/bin/vim
     state: link
