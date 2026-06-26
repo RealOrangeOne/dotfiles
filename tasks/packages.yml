@@ -100,6 +100,7 @@
   loop:
     - pacman-contrib
     - reflector
+    - paccache-hook
   become: true
   become_user: aur_builder
 
