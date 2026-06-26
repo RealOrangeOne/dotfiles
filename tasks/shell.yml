@@ -18,12 +18,14 @@
     - htop
     - jshon
     - jq
+    - man-db
     - nnn
     - oh-my-zsh-git
     - pazi
     - perl-file-mimeinfo
     - pipes.sh
     - playerctl
+    - posix
     - progress
     - reptyr
     - ripgrep
@@ -32,6 +34,7 @@
     - speedtest-cli
     - sl
     - thefuck
+    - usbutils
     - xclip
     - xsel
     - zsh
