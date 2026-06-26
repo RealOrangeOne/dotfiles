@@ -5,5 +5,5 @@
   become_user: aur_builder
   loop:
     - bind-tools
-    - gnu-netcat
+    - openbsd-netcat
     - nmap
