@@ -1,8 +1,0 @@
-- name: Install GTK tools
-  kewlfft.aur.aur:
-    name: "{{ item }}"
-  become: true
-  become_user: aur_builder
-  loop:
-    - matcha-gtk-theme
-    - numix-square-icon-theme
