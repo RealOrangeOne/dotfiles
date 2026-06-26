@@ -19,7 +19,6 @@
         name: geerlingguy.ntp
 
     - import_tasks: tasks/boot.yml
-    - import_tasks: tasks/i3.yml
 
     # Don't bother configuring KDE for root, just assume it's for me
     - import_tasks: tasks/kde.yml
