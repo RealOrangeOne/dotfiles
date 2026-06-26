@@ -1,19 +1,9 @@
-- name: Add file templates
-  copy:
-    src: ./files/Templates
-    dest: "{{ home }}"
-    mode: 0644
-    owner: "{{ user }}"
-    group: users
-    directory_mode: 0755
-
 - name: Install Gnome packages
   kewlfft.aur.aur:
     name: "{{ item }}"
   become: true
   become_user: aur_builder
   loop:
-    - fractal
     - gnome-calculator
     - gnome-disk-utility
     - gnome-firmware
