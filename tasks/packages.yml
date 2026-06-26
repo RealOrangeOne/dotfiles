@@ -111,5 +111,5 @@
 
 - name: Enable reflector
   systemd:
-    name: reflector
+    name: reflector.timer
     enabled: true
