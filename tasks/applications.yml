@@ -25,6 +25,7 @@
     - kodi
     - libreoffice-fresh
     - libreoffice-fresh-en-gb
+    - logrotate
     - minecraft-launcher
     - obs-studio
     - obsidian
@@ -36,3 +37,8 @@
     - virtualbox
     - vlc
     - vlc-plugins-extra
+
+- name: Enable logrotate
+  systemd_service:
+    enabled: true
+    name: logrotate.timer
