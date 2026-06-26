@@ -6,9 +6,9 @@
     mode: 0755
 
 - name: Autostart solaar
-  get_url:
-    url: https://raw.githubusercontent.com/pwr-Solaar/Solaar/master/share/autostart/solaar.desktop
+  file:
+    src: /usr/share/applications/solaar.desktop
     dest: "{{ home }}/.config/autostart/solaar.desktop"
-    mode: 0755
-    force: true
+    state: link
+    mode: 0644
     owner: "{{ user }}"
