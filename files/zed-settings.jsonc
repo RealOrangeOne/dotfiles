@@ -1,34 +1,37 @@
 {
-  "cli_default_open_behavior": "existing_window",
+  "proxy": "",
+  "cli_default_open_behavior": "new_window",
   "outline_panel": {
     "dock": "left"
   },
   "collaboration_panel": {
     "dock": "left"
   },
-  "agent": {
-    "dock": "right",
-    "favorite_models": [],
-    "model_parameters": []
-  },
   "git_panel": {
     "dock": "left"
   },
-  "format_on_save": "off",
-  "icon_theme": {
-    "mode": "light",
-    "light": "Material Icon Theme",
-    "dark": "Material Icon Theme"
+  "agent": {
+    "dock": "right",
+    "default_profile": "minimal",
+    "default_model": {
+      "effort": "high",
+      "enable_thinking": true,
+      "provider": "anthropic",
+      "model": "claude-sonnet-4-6"
+    },
+    "model_parameters": []
   },
-  "ui_font_size": 14,
-  "buffer_font_size": 14,
+  "format_on_save": "off",
+  "icon_theme": "Material Icon Theme",
+  "ui_font_size": 15,
+  "buffer_font_size": 15,
   "base_keymap": "SublimeText",
   "buffer_font_family": "Fira Code",
   "buffer_font_weight": 300,
   "theme": {
-    "mode": "dark",
+    "mode": "system",
     "light": "One Light",
-    "dark": "GitHub Dark"
+    "dark": "GitHub Dark Dimmed"
   },
   "load_direnv": "shell_hook",
   "minimap": {
@@ -39,9 +42,11 @@
     "show_nav_history_buttons": false
   },
   "tabs": {
-    "file_icons": true
+    "file_icons": true,
+    "activate_on_close": "neighbour"
   },
   "git": {
+    "enable_status": true,
     "inline_blame": {
       "enabled": false
     }
@@ -51,8 +56,10 @@
     "diagnostics": false
   },
   "terminal": {
-    "font_family": "Fira Code",
-    "font_size": 14
+    "toolbar": {
+      "breadcrumbs": false
+    },
+    "font_size": 15
   },
   "title_bar": {
     "show_branch_status_icon": true,
@@ -62,13 +69,4 @@
     "dock": "left",
     "indent_size": 15
   },
-  "lsp": {
-      "harper-ls": {
-          "settings": {
-              "harper-ls": {
-                  "dialect": "British",
-              },
-          },
-      },
-  }
 }
