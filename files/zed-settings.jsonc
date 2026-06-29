@@ -1,5 +1,21 @@
 {
   "proxy": "",
+  "auto_install_extensions": {
+    "html": true,
+    "git-firefly": true,
+    "toml": true,
+    "dockerfile": true,
+    "scss": true,
+    "make": true,
+    "material-icon-theme": true,
+    "terraform": true,
+    "github-theme": true,
+    "nginx": true,
+    "ansible": true,
+    "just": true,
+    "helm": true,
+    "jinja2": true,
+  },
   "cli_default_open_behavior": "new_window",
   "outline_panel": {
     "dock": "left"
