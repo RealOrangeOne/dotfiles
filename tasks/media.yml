@@ -5,6 +5,7 @@
   become_user: aur_builder
   loop:
     - alsa-firmware
+    - cameractrls
     - handbrake
     - sof-firmware
     - spotify
