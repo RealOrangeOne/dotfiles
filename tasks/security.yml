@@ -43,6 +43,18 @@
     dest: /etc/security/faillock.conf
     mode: 0644
 
+- name: Disable GCR SSH Agent
+  systemd_service:
+    state: stopped
+    scope: user
+    enabled: false
+    name: "{{ item }}"
+  become: true
+  become_user: "{{ user }}"
+  loop:
+    - gcr-ssh-agent.socket
+    - gcr-ssh-agent.service
+
 - name: Start SSH Agent
   systemd_service:
     state: started
