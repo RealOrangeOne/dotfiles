@@ -4,7 +4,7 @@
     home: "{{ home }}"
     comment: Jake Howard
     shell: /usr/bin/zsh
-    system: true
+    system: "{{ not is_torchbox }}"
     groups:
       - audio
       - games
@@ -17,7 +17,11 @@
       - users
       - uucp
       - video
-      - wheel
+
+- name: Give root a useful shell
+  user:
+    name: root
+    shell: /usr/bin/bash
 
 - name: Give user sudo access
   lineinfile:
@@ -26,6 +30,7 @@
     create: true
     validate: visudo -cf %s
     mode: 0640
+  when: not is_torchbox
 
 - name: Install plasma workspace script
   template:

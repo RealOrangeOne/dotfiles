@@ -11,3 +11,18 @@
     - redis
     - vagrant
     - zoom
+
+- name: Make Torchbox user
+  user:
+    name: torchbox
+    comment: Torchbox
+    shell: /usr/bin/bash
+    system: true
+
+- name: Give user sudo access
+  lineinfile:
+    path: /etc/sudoers.d/00_torchbox
+    line: "torchbox ALL=(ALL) ALL"
+    create: true
+    validate: visudo -cf %s
+    mode: 0640
