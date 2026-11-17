@@ -6,3 +6,6 @@ services:
 
 git:
   overrideGpg: true
+
+os:
+  editPreset: zed
