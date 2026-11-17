@@ -1,4 +1,5 @@
 user: jake
 home: /home/{{ user }}
+uid: 1000
 ntp_timezone: Europe/London
 is_torchbox: false

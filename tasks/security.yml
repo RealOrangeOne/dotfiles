@@ -51,6 +51,8 @@
     name: "{{ item }}"
   become: true
   become_user: "{{ user }}"
+  environment:
+     XDG_RUNTIME_DIR: "/run/user/{{ uid }}"
   loop:
     - gcr-ssh-agent.socket
     - gcr-ssh-agent.service
@@ -63,3 +65,5 @@
     name: ssh-agent
   become: true
   become_user: "{{ user }}"
+  environment:
+     XDG_RUNTIME_DIR: "/run/user/{{ uid }}"
