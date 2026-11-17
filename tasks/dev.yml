@@ -73,6 +73,13 @@
     owner: "{{ user }}"
     group: users
 
+- name: Install git config for root
+  template:
+    src: ./files/gitconfig.conf
+    dest: /root/.gitconfig
+    mode: 0644
+    owner: root
+
 - name: Create lazygit config directory
   file:
     path: "{{ home }}/.config/lazygit/"
