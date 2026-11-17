@@ -1,11 +1,3 @@
-- name: Install Virtualbox dependencies
-  kewlfft.aur.aur:
-    name: "{{ item }}"
-  become: true
-  become_user: aur_builder
-  loop:
-    - virtualbox-host-modules-arch
-
 - name: Install general applications
   kewlfft.aur.aur:
     name: "{{ item }}"
