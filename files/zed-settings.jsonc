@@ -33,7 +33,7 @@
       "effort": "high",
       "enable_thinking": true,
       "provider": "anthropic",
-      "model": "claude-sonnet-4-6"
+      "model": "claude-sonnet-5-5"
     },
     "model_parameters": []
   },
